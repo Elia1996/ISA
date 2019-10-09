@@ -1,0 +1,48 @@
+-- LeNet5 top file
+-- high-speed/low-power group
+-- Fiore, Neri, Zheng
+-- 
+-- keyword in MAIUSCOLO (es: STD_LOGIC)
+-- dati in minuscolo (es: data_in)
+-- segnali di controllo in MAIUSCOLO (es: EN)
+-- componenti instanziati con l'iniziale maiuscola (es: Shift_register_1)
+-- i segnali attivi bassi con _n finale (es: RST_n)
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+-- INFO
+-- i pesi sono su 18 bit per avere una precisione di 7micro, avendo notato che il peso piu piccolo è dell'ordine delle centinaia di micro
+
+ENTITY IIR_filter IS
+GENERIC(	N_in 						: NATURAL:=32; -- is the width of the input image
+			   M_in 						: NATURAL:=8;  -- is the parallelism of each pixel
+			   M_w 						 : NATURAL:=16; -- is the parallelism of weights
+			   N_out 					: NATURAL:=28; -- is the width of the output image
+			   M_out 					: NATURAL:=16;
+			   EXTRA_BIT		: NATURAL:=0);-- is the parallelism of each element of the output matrix
+PORT(	in_row_image			      : IN STD_LOGIC_VECTOR(N_in*M_in-1 DOWNTO 0);
+			CLK, RST_n 			       : IN STD_LOGIC;
+			EN_LOAD              : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			EN_SHIFT		           : IN STD_LOGIC;
+			SEL_MUX			      		   : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			EN_MPY, EN_ADD		 	   : IN STD_LOGIC;
+			SEL_ADD_1, SEL_ADD_2	: IN STD_LOGIC;
+			SEL_REG_ADD				      : IN STD_LOGIC;
+			output_element			    : OUT STD_LOGIC_VECTOR(M_out-1 DOWNTO 0)); -- questa uscita per ora non viene utilizzata
+END IIR_filter;
+
+
+ARCHITECTURE behavioral OF IIR_filter IS
+--------- COMPONENTS ---------
+
+--------- SIGNALS ---------
+TYPE matrix_5x5xMw	 IS ARRAY(0 TO 5, 0 TO 4) OF STD_LOGIC_VECTOR(5*M_w-1 DOWNTO 0); -- 0 TO 5 è la profondità (6 filtri)
+SIGNAL 	serial_in 					: STD_LOGIC_VECTOR(M_in-1 DOWNTO 0);
+
+
+--------- BEGIN ---------
+BEGIN
+
+END behavioral;
