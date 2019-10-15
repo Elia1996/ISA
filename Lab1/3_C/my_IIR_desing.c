@@ -4,9 +4,9 @@
 #define N 2 /// order of the filter 
 #define NB 8  /// number of bits
 
-const int b0 = 8; /// coefficient b0
-const int b[N]={17, 8}; /// b array
-const int a[N]={-147, 52}; /// a array
+const int b0 = 423; /// coefficient b0
+const int b[N]={846, 423}; /// b array
+const int a[N]={-757, 401}; /// a array
 
 /// Perform fixed point filtering assuming direct form II
 ///\param x is the new input sample
