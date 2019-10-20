@@ -77,7 +77,7 @@ SIGNAL d_in, d_out 					: DATA;
 
 --------- BEGIN ---------
 BEGIN
-	
+
 -- 	registro di ingresso dei dati  DIN -> d_in
 -- questo registro viene resettato dal segnale di ingresso dato
 -- che non c'è la control unit
@@ -140,5 +140,14 @@ v1b1_piu_v2b2 <= v1b1 + v2b2;
 
 -- Infine genero l'uscita dal feed-forward 
 d_out <= vb0 + v1b1_piu_v2b2;
+
+---	 CONTROLLO  ---------
+Reg_ctrl_1 : register_nbit
+	GENERIC MAP(1)
+	PORT
+
+Reg_ctrl_2 : register_nbit
+	GENERIC MAP(1)
+	PORT
 
 END behavioral;

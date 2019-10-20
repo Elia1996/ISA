@@ -1,0 +1,50 @@
+siti:
+http://rogerdudler.github.io/git-guide/
+
+0 Prima di iniziare qualsiasi lavoro su un repository
+	eseguire il pull ovvero l'update delle modifiche dal repo
+	git pull origin master
+
+1 create a new repository on the command line
+	echo "# lab_lowpower" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin git@github.com:Elia1996/lab_lowpower.git
+	git push -u origin master
+
+2 push an existing repository from the command line
+	git remote add origin git@github.com:Elia1996/lab_lowpower.git
+	git push -u origin master
+
+3 per modificare il progetto lo caricoo con il clone
+		git clone "https://github.com/Elia1996/lab_lowpower.git"
+	poi lo modifico e aggiungo i file all'indice
+		git add *
+	poi li aggungo alla testa
+		git commit -m "messaggio"
+	poi carico tutto sul server
+		git push -u origin master
+
+…or create a new repository on the command line
+
+echo "# piastra_saldante" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Elia1996/piastra_saldante.git
+git push -u origin master
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/Elia1996/piastra_saldante.git
+git push -u origin master
+
+4 Se ho cancellato cose ma non vengono committate:
+	git commit -a
+
+5 Per tornare indietro di commit:
+	1) vedere i commit
+		git log 
+	2) tornare temporanemente al commit precedente
+		git checkout numberofcommit
