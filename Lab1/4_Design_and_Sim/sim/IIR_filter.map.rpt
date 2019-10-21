@@ -1,0 +1,805 @@
+Analysis & Synthesis report for IIR_filter
+Mon Oct 21 12:26:45 2019
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_in
+ 12. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_delay_1
+ 13. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_delay_2
+ 14. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_out
+ 15. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_ctrl_1
+ 16. Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_ctrl_2
+ 17. Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult0
+ 18. Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult2
+ 19. Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult4
+ 20. Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult1
+ 21. Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult3
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "IIR_filter_gen:filter|register_nbit:Reg_ctrl_2"
+ 24. Port Connectivity Checks: "IIR_filter_gen:filter|register_nbit:Reg_ctrl_1"
+ 25. Port Connectivity Checks: "IIR_filter_gen:filter"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 21 12:26:45 2019         ;
+; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name                      ; IIR_filter                                    ;
+; Top-level Entity Name              ; IIR_filter                                    ;
+; Family                             ; Cyclone IV GX                                 ;
+; Total logic elements               ; 364                                           ;
+;     Total combinational functions  ; 364                                           ;
+;     Dedicated logic registers      ; 49                                            ;
+; Total registers                    ; 49                                            ;
+; Total pins                         ; 28                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total GXB Receiver Channel PCS     ; 0                                             ;
+; Total GXB Receiver Channel PMA     ; 0                                             ;
+; Total GXB Transmitter Channel PCS  ; 0                                             ;
+; Total GXB Transmitter Channel PMA  ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; IIR_filter         ; IIR_filter         ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+
+; ../src/IIR_package.vhd           ; yes             ; User VHDL File               ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_package.vhd    ;
+; ../src/register_nbit.vhd         ; yes             ; User VHDL File               ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/register_nbit.vhd  ;
+; ../src/IIR_filter_gen.vhd        ; yes             ; User VHDL File               ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_filter_gen.vhd ;
+; ../src/IIR_filter.vhd            ; yes             ; User VHDL File               ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_filter.vhd     ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/lpm_mult.tdf                    ;
+; aglobal110.inc                   ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/aglobal110.inc                  ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/lpm_add_sub.inc                 ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/multcore.inc                    ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/bypassff.inc                    ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/altshift.inc                    ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/multcore.tdf                    ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/csa_add.inc                     ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/mpar_add.inc                    ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/muleabz.inc                     ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/mul_lfrg.inc                    ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/mul_boothc.inc                  ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/alt_ded_mult.inc                ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/alt_ded_mult_y.inc              ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/dffpipe.inc                     ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/mpar_add.tdf                    ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/lpm_add_sub.tdf                 ;
+; addcore.inc                      ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/addcore.inc                     ;
+; look_add.inc                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/look_add.inc                    ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/alt_stratix_add_sub.inc         ;
+; db/add_sub_gkh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_gkh.tdf ;
+; db/add_sub_kkh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_kkh.tdf ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; /media/tesla/Storage/Linux/Scrivania/altera/quartus/libraries/megafunctions/altshift.tdf                    ;
+; db/add_sub_hkh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_hkh.tdf ;
+; db/add_sub_lkh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_lkh.tdf ;
+; db/add_sub_jkh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_jkh.tdf ;
+; db/add_sub_ekh.tdf               ; yes             ; Auto-Generated Megafunction  ; /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/sim/db/add_sub_ekh.tdf ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++----------------------+----------------------+
+; Resource             ; Usage                ;
++----------------------+----------------------+
+; I/O pins             ; 28                   ;
+; Maximum fan-out node ; RST_n~input          ;
+; Maximum fan-out      ; 51                   ;
+; Total fan-out        ; 1275                 ;
+; Average fan-out      ; 2.72                 ;
++----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |IIR_filter                                       ; 364 (0)           ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 28   ; 0            ; |IIR_filter                                                                                                                                              ;              ;
+;    |IIR_filter_gen:filter|                        ; 364 (35)          ; 49 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter                                                                                                                        ;              ;
+;       |lpm_mult:Mult0|                            ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 59 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_gkh:auto_generated|    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gkh:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_kkh:auto_generated| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_kkh:auto_generated ;              ;
+;       |lpm_mult:Mult1|                            ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 44 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_gkh:auto_generated|    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gkh:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_kkh:auto_generated| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_kkh:auto_generated ;              ;
+;       |lpm_mult:Mult2|                            ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 59 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_hkh:auto_generated|    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_hkh:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_lkh:auto_generated| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_lkh:auto_generated ;              ;
+;       |lpm_mult:Mult3|                            ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 56 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_jkh:auto_generated|    ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_jkh:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_ekh:auto_generated| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ekh:auto_generated ;              ;
+;       |lpm_mult:Mult4|                            ; 60 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4                                                                                                         ;              ;
+;          |multcore:mult_core|                     ; 60 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core                                                                                      ;              ;
+;             |mpar_add:padder|                     ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder                                                                      ;              ;
+;                |lpm_add_sub:adder[0]|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                   |add_sub_gkh:auto_generated|    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_gkh:auto_generated                      ;              ;
+;                |mpar_add:sub_par_add|             ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
+;                   |lpm_add_sub:adder[0]|          ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                      |add_sub_kkh:auto_generated| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_kkh:auto_generated ;              ;
+;       |register_nbit:Reg_ctrl_1|                  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_ctrl_1                                                                                               ;              ;
+;       |register_nbit:Reg_ctrl_2|                  ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_ctrl_2                                                                                               ;              ;
+;       |register_nbit:Reg_delay_1|                 ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_delay_1                                                                                              ;              ;
+;       |register_nbit:Reg_delay_2|                 ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_delay_2                                                                                              ;              ;
+;       |register_nbit:Reg_in|                      ; 13 (13)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_in                                                                                                   ;              ;
+;       |register_nbit:Reg_out|                     ; 12 (12)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_out                                                                                                  ;              ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++----------------------------------------------------------+----------------------------------------+
+; Register name                                            ; Reason for Removal                     ;
++----------------------------------------------------------+----------------------------------------+
+; IIR_filter_gen:filter|register_nbit:Reg_out|data_out[11] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1                    ;                                        ;
++----------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 11    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                               ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------------------------+----------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_out|data_out[1]      ;                            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_in|data_out[10]      ;                            ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; |IIR_filter|IIR_filter_gen:filter|register_nbit:Reg_delay_2|data_out[11] ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------------------------------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_in ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_delay_1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_delay_2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_out ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_ctrl_1 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IIR_filter_gen:filter|register_nbit:Reg_ctrl_2 ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 1     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult0 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 12            ; Untyped              ;
+; LPM_WIDTHB                                     ; 9             ; Untyped              ;
+; LPM_WIDTHP                                     ; 21            ; Untyped              ;
+; LPM_WIDTHR                                     ; 21            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult2 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 12            ; Untyped              ;
+; LPM_WIDTHB                                     ; 10            ; Untyped              ;
+; LPM_WIDTHP                                     ; 22            ; Untyped              ;
+; LPM_WIDTHR                                     ; 22            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult4 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 12            ; Untyped              ;
+; LPM_WIDTHB                                     ; 9             ; Untyped              ;
+; LPM_WIDTHP                                     ; 21            ; Untyped              ;
+; LPM_WIDTHR                                     ; 21            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult1 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 12            ; Untyped              ;
+; LPM_WIDTHB                                     ; 9             ; Untyped              ;
+; LPM_WIDTHP                                     ; 21            ; Untyped              ;
+; LPM_WIDTHR                                     ; 21            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: IIR_filter_gen:filter|lpm_mult:Mult3 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 12            ; Untyped              ;
+; LPM_WIDTHB                                     ; 12            ; Untyped              ;
+; LPM_WIDTHP                                     ; 24            ; Untyped              ;
+; LPM_WIDTHR                                     ; 24            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                               ;
++---------------------------------------+--------------------------------------+
+; Name                                  ; Value                                ;
++---------------------------------------+--------------------------------------+
+; Number of entity instances            ; 5                                    ;
+; Entity Instance                       ; IIR_filter_gen:filter|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 12                                   ;
+;     -- LPM_WIDTHB                     ; 9                                    ;
+;     -- LPM_WIDTHP                     ; 21                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
+; Entity Instance                       ; IIR_filter_gen:filter|lpm_mult:Mult2 ;
+;     -- LPM_WIDTHA                     ; 12                                   ;
+;     -- LPM_WIDTHB                     ; 10                                   ;
+;     -- LPM_WIDTHP                     ; 22                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
+; Entity Instance                       ; IIR_filter_gen:filter|lpm_mult:Mult4 ;
+;     -- LPM_WIDTHA                     ; 12                                   ;
+;     -- LPM_WIDTHB                     ; 9                                    ;
+;     -- LPM_WIDTHP                     ; 21                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
+; Entity Instance                       ; IIR_filter_gen:filter|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 12                                   ;
+;     -- LPM_WIDTHB                     ; 9                                    ;
+;     -- LPM_WIDTHP                     ; 21                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
+; Entity Instance                       ; IIR_filter_gen:filter|lpm_mult:Mult3 ;
+;     -- LPM_WIDTHA                     ; 12                                   ;
+;     -- LPM_WIDTHB                     ; 12                                   ;
+;     -- LPM_WIDTHP                     ; 24                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
++---------------------------------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "IIR_filter_gen:filter|register_nbit:Reg_ctrl_2" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "IIR_filter_gen:filter|register_nbit:Reg_ctrl_1" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "IIR_filter_gen:filter" ;
++--------------+-------+----------+-----------------+
+; Port         ; Type  ; Severity ; Details         ;
++--------------+-------+----------+-----------------+
+; a[1][11..10] ; Input ; Info     ; Stuck at VCC    ;
+; a[1][1..0]   ; Input ; Info     ; Stuck at VCC    ;
+; a[1][7..4]   ; Input ; Info     ; Stuck at GND    ;
+; a[1][9]      ; Input ; Info     ; Stuck at GND    ;
+; a[1][8]      ; Input ; Info     ; Stuck at VCC    ;
+; a[1][3]      ; Input ; Info     ; Stuck at VCC    ;
+; a[1][2]      ; Input ; Info     ; Stuck at GND    ;
+; a[0][8..7]   ; Input ; Info     ; Stuck at VCC    ;
+; a[0][11..9]  ; Input ; Info     ; Stuck at GND    ;
+; a[0][6..5]   ; Input ; Info     ; Stuck at GND    ;
+; a[0][3..1]   ; Input ; Info     ; Stuck at GND    ;
+; a[0][4]      ; Input ; Info     ; Stuck at VCC    ;
+; a[0][0]      ; Input ; Info     ; Stuck at VCC    ;
+; b[2][8..7]   ; Input ; Info     ; Stuck at VCC    ;
+; b[2][2..0]   ; Input ; Info     ; Stuck at VCC    ;
+; b[2][11..9]  ; Input ; Info     ; Stuck at GND    ;
+; b[2][4..3]   ; Input ; Info     ; Stuck at GND    ;
+; b[2][6]      ; Input ; Info     ; Stuck at GND    ;
+; b[2][5]      ; Input ; Info     ; Stuck at VCC    ;
+; b[1][9..8]   ; Input ; Info     ; Stuck at VCC    ;
+; b[1][3..1]   ; Input ; Info     ; Stuck at VCC    ;
+; b[1][11..10] ; Input ; Info     ; Stuck at GND    ;
+; b[1][5..4]   ; Input ; Info     ; Stuck at GND    ;
+; b[1][7]      ; Input ; Info     ; Stuck at GND    ;
+; b[1][6]      ; Input ; Info     ; Stuck at VCC    ;
+; b[1][0]      ; Input ; Info     ; Stuck at GND    ;
+; b[0][8..7]   ; Input ; Info     ; Stuck at VCC    ;
+; b[0][2..0]   ; Input ; Info     ; Stuck at VCC    ;
+; b[0][11..9]  ; Input ; Info     ; Stuck at GND    ;
+; b[0][4..3]   ; Input ; Info     ; Stuck at GND    ;
+; b[0][6]      ; Input ; Info     ; Stuck at GND    ;
+; b[0][5]      ; Input ; Info     ; Stuck at VCC    ;
++--------------+-------+----------+-----------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Oct 21 12:26:38 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IIR_filter -c IIR_filter
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 1 design units, including 0 entities, in source file /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_package.vhd
+    Info: Found design unit 1: type_for_IIR_pkg
+Info: Found 2 design units, including 1 entities, in source file /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/register_nbit.vhd
+    Info: Found design unit 1: register_nbit-behavior
+    Info: Found entity 1: register_nbit
+Info: Found 2 design units, including 1 entities, in source file /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_filter_gen.vhd
+    Info: Found design unit 1: IIR_filter_gen-behavioral
+    Info: Found entity 1: IIR_filter_gen
+Info: Found 2 design units, including 1 entities, in source file /media/tesla/Storage/Linux/Scrivania/Progetti_work/git/ISA_lab/Lab1/4_Design_and_Sim/src/IIR_filter.vhd
+    Info: Found design unit 1: IIR_filter-behavioral
+    Info: Found entity 1: IIR_filter
+Info: Elaborating entity "IIR_filter" for the top level hierarchy
+Info: Elaborating entity "IIR_filter_gen" for hierarchy "IIR_filter_gen:filter"
+Info: Elaborating entity "register_nbit" for hierarchy "IIR_filter_gen:filter|register_nbit:Reg_in"
+Info: Elaborating entity "register_nbit" for hierarchy "IIR_filter_gen:filter|register_nbit:Reg_ctrl_1"
+Info: Inferred 5 megafunctions from design logic
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "IIR_filter_gen:filter|Mult0"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "IIR_filter_gen:filter|Mult2"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "IIR_filter_gen:filter|Mult4"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "IIR_filter_gen:filter|Mult1"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "IIR_filter_gen:filter|Mult3"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Instantiated megafunction "IIR_filter_gen:filter|lpm_mult:Mult0" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "12"
+    Info: Parameter "LPM_WIDTHB" = "9"
+    Info: Parameter "LPM_WIDTHP" = "21"
+    Info: Parameter "LPM_WIDTHR" = "21"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info: Parameter "MAXIMIZE_SPEED" = "5"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_gkh.tdf
+    Info: Found entity 1: add_sub_gkh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_kkh.tdf
+    Info: Found entity 1: add_sub_kkh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Instantiated megafunction "IIR_filter_gen:filter|lpm_mult:Mult2" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "12"
+    Info: Parameter "LPM_WIDTHB" = "10"
+    Info: Parameter "LPM_WIDTHP" = "22"
+    Info: Parameter "LPM_WIDTHR" = "22"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info: Parameter "MAXIMIZE_SPEED" = "5"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_hkh.tdf
+    Info: Found entity 1: add_sub_hkh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkh.tdf
+    Info: Found entity 1: add_sub_lkh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult2"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult1"
+Info: Instantiated megafunction "IIR_filter_gen:filter|lpm_mult:Mult1" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "12"
+    Info: Parameter "LPM_WIDTHB" = "9"
+    Info: Parameter "LPM_WIDTHP" = "21"
+    Info: Parameter "LPM_WIDTHR" = "21"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info: Parameter "MAXIMIZE_SPEED" = "5"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Instantiated megafunction "IIR_filter_gen:filter|lpm_mult:Mult3" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "12"
+    Info: Parameter "LPM_WIDTHB" = "12"
+    Info: Parameter "LPM_WIDTHP" = "24"
+    Info: Parameter "LPM_WIDTHR" = "24"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info: Parameter "MAXIMIZE_SPEED" = "5"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_jkh.tdf
+    Info: Found entity 1: add_sub_jkh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_ekh.tdf
+    Info: Found entity 1: add_sub_ekh
+Info: Elaborated megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "IIR_filter_gen:filter|lpm_mult:Mult3"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DOUT[11]" is stuck at GND
+Info: Timing-Driven Synthesis is running
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 392 device resources after synthesis - the final resource count might be different
+    Info: Implemented 15 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 364 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 311 megabytes
+    Info: Processing ended: Mon Oct 21 12:26:45 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+
+
