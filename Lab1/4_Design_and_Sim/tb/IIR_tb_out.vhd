@@ -1,8 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
---use ieee.std_logic_arith.all;
+use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all; 
 use ieee.std_logic_textio.all;
+use work.type_for_IIR_pkg.all;
 
 library std;
 use std.textio.all;
@@ -27,18 +28,17 @@ begin  -- beh
 	file res_correct : text open READ_MODE is "../../3_C/results_c.txt";
     variable line_out, line_csv_out, line_dout_correct : line;
     variable int_from_c : integer;
-    variable good_read : boolean;
-    variable flag : boolean :='0';
+    variable flag : boolean := false;
 
     begin
      
-    if (flag='0') then
+    if (flag=false) then
 	-- scrivo la prima linea del file csv
 	write(line_csv_out, string'("#VIN,DIN,v,v1,v2,VOUT,DOUT,DOUT_correct,Error"));
 	writeline(res_csv_fp, line_csv_out);
     end if;
 
-    flag := '1';
+    flag := true;
 
 	if RST_n = '0' then                 -- asynchronous reset (active low)
       		null;
@@ -62,17 +62,17 @@ begin  -- beh
 	    write(line_csv_out, string'(","));
 		write(line_csv_out, conv_integer(signed(DIN)));
 	    	write(line_csv_out, string'(","));
-		write(line_csv_out, conv_integer(signed(dout_correct)));
+		write(line_csv_out, int_from_c);
 	    	write(line_csv_out, string'(","));
 		
 		readline(res_correct, line_dout_correct);
-		read(line_dout_correct, int_from_c, good_read);
-		next when not good_read;
+		read(line_dout_correct, int_from_c);
 		
-		if(int_from_c /= to_integer(signed(DIN))) then
-			write(line_csv_out,string'("Error,"));
-		else 
+		
+		if (int_from_c = conv_integer(signed(DIN))) then
 			write(line_csv_out,string'("OK,"));
+		else 
+			write(line_csv_out,string'("Error,"));
 		end if;
         writeline(res_fp, line_out);
 	writeline(res_csv_fp, line_csv_out);
