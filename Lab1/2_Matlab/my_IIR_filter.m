@@ -37,11 +37,11 @@ idy=find(yq==2^(nb-1));
 yq(idy)=2^(nb-1)-1;
 
 %% save input and output
-fp=fopen('samples.txt','w');
+fp=fopen('../4_Design_and_Sim/sim_in/samples.txt','w');
 fprintf(fp,'%d\n', xq);
 fclose(fp);
 
-fp=fopen('resultsm.txt', 'w');
+fp=fopen('../4_Design_and_Sim/sim_in/resultsm.txt', 'w');
 fprintf(fp, '%d\n', yq);
 fclose(fp);
 

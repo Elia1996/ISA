@@ -22,12 +22,12 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
-use ieee.std_logic_unsigned.all;
-use ieee.std_logic_arith.all;
+--use ieee.std_logic_arith.all;
 
 
 LIBRARY work;
 USE work.type_for_IIR_pkg.all;
+
 
 ENTITY IIR_filter_gen IS
 	PORT(		
@@ -106,40 +106,40 @@ BEGIN
 
 	-- Sommo l'uscita del segnale del registro Reg_in (ossia d_in)
 	-- al segnale di feed-back v1ao_piu_v2a1, questa somma va in v
-	v <= data_in + v1a0_piu_v2a1;
+	v <= std_logic_vector(signed(data_in) + signed(v1a0_piu_v2a1));
 
 	-- v viene moltiplicato per b0 ottenendo il dato da sommare alla
 	-- di feed-forward
-	vb0_f <= v * b(0);
+	vb0_f <= std_logic_vector(signed(v) * signed(B(0)));
 	vb0 <= vb0_f(Nb*2-1 downto Nb);
 	
 	-- Il dato v verr ritardato da Reg_delay_1 diventando v1
 	-- a questo punto si effettuano le  moltiplicazioni:
 	-- v1*a0 per il feed-back
-	v1a0_f <= v1 * a(0);
+	v1a0_f <= std_logic_vector(signed(v1) * signed(A(0)));
 	v1a0 <= v1a0_f(Nb*2-1 downto Nb);
 	
 	-- v1*b1 per il feed-forward
-	v1b1_f <= v1 * b(1);
+	v1b1_f <= std_logic_vector(signed(v1) * signed(B(1)));
 	v1b1 <= v1b1_f(Nb*2-1 downto Nb);
 	
 	-- Dopo un'ulteriore ritardo v1 diventa v2 e dev'essere 
 	-- moltiplicato per:
 	-- v2*a1  per il feed-back
-	v2a1_f <= v2 * a(1);
+	v2a1_f <= std_logic_vector(signed(v2) * signed(A(1)));
 	v2a1 <= v2a1_f(Nb*2-1 downto Nb);
 	
  	-- v2*b2  per il feed-forward
-	v2b2_f <= v2 * b(2);
+	v2b2_f <= std_logic_vector(signed(v2) * signed(B(2)));
 	v2b2 <= v2b2_f(Nb*2-1 downto Nb); 
 	
 	-- Viene ora generato il dato di feed-back finale
-	v1a0_piu_v2a1 <= v1a0 + v2a1;
+	v1a0_piu_v2a1 <= std_logic_vector(signed(v1a0) + signed(v2a1));
 	-- Viene generato il dato di feed-forward
-	v1b1_piu_v2b2 <= v1b1 + v2b2;
+	v1b1_piu_v2b2 <= std_logic_vector(signed(v1b1) + signed(v2b2));
 
 	-- Infine genero l'uscita dal feed-forward 
-	data_out <= vb0 + v1b1_piu_v2b2;
+	data_out <= std_logic_vector(signed(vb0) + signed(v1b1_piu_v2b2));
 
 	---	 CONTROLLO  ---------
 
