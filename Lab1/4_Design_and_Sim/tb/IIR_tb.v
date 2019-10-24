@@ -5,13 +5,13 @@ module tb_fir ();
    // signals
    wire CLK_i;
    wire RST_n_i;
-   wire [15:0] DIN_i;
+   wire [11:0] DIN_i;
+   wire [11:0] v_filter_i;
+   wire [11:0] v1_filter_i;
+   wire [11:0] v2_filter_i;
+   wire VIN_filter;
    wire VIN_i;
-   wire [15:0] H0_i;
-   wire [15:0] H1_i;
-   wire [15:0] H2_i;
-   wire [15:0] H3_i;
-   wire [15:0] DOUT_i;
+   wire [11:0] DOUT_i;
    wire VOUT_i;
    wire END_SIM_i;
    // port map
@@ -19,32 +19,36 @@ module tb_fir ();
   	      .CLK(CLK_i),
 	      .RST_n(RST_n_i));
 
-   data_maker SM(.CLK(CLK_i),
-	         .RST_n(RST_n_i),
+   IIR_tb_in TB_IN(
+	     .CLK(CLK_i),
+	     .RST_n(RST_n_i),
 		 .VOUT(VIN_i),
 		 .DOUT(DIN_i),
-		 .H0(H0_i),
-		 .H1(H1_i),
-		 .H2(H2_i),
-		 .H3(H3_i),
 		 .END_SIM(END_SIM_i));
 
    myfir UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
-             .VIN(VIN_i),
-	     .H0(H0_i),
-	     .H1(H1_i),
-	     .H2(H2_i),
-	     .H3(H3_i),
-             .DOUT(DOUT_i),
-             .VOUT(VOUT_i));
+         .VIN(VIN_i),
+         .DOUT(DOUT_i),
+         .VOUT(VOUT_i),
+		 .v(v_filter),
+	     .v1(v1_filter_i),
+	     .v2(v2_filter_i));   
+	     );
 
-   data_sink DS(.CLK(CLK_i),
+   IIR_tb_out TB_OUT(
+	    .CLK(CLK_i),
 		.RST_n(RST_n_i),
 		.VIN(VOUT_i),
-		.DIN(DOUT_i));   
-
+		.DIN(DOUT_i),
+		//Vin e Din del filtro sono prese direttamente dal
+		// testbench precendente.
+		.VIN_filter(VIN_i),
+		.DIN_filter(VIN_i),
+		.v_filter(v_filter),
+	    .v1_filter(v1_filter_i),
+	    .v2_filter(v2_filter_i));   
 endmodule
 
-		   
+

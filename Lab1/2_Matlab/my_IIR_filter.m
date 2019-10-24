@@ -45,3 +45,16 @@ fp=fopen('../4_Design_and_Sim/sim_in/resultsm.txt', 'w');
 fprintf(fp, '%d\n', yq);
 fclose(fp);
 
+fp=fopen('../4_Design_and_Sim/sim_in/vin_samples.txt', 'w');
+% cycle to create vin std_logic signal, we have length(tt) number
+% of sample so we should print exactly length(tt) 1 in vin_samples.txt
+% file. but we want that in this file are present 0's too.
+n_of_0=0
+while n_of_0 < length(tt)
+	var=rand*2<=1;
+	fprintf(fp, '%d \n',var);
+	if var==1
+		n_of_0=n_of_0+1;
+	end
+end
+fclose(fp);
