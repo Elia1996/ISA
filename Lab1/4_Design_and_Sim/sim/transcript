@@ -13,471 +13,6 @@ do compile.do
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package numeric_std
-# ** Error: (vcom-11) Could not find ./work.type_for_iir_pkg.
-# ** Error: ../src/IIR_filter.vhd(22): (vcom-1195) Cannot find expanded name: 'work.type_for_iir_pkg'.
-# ** Error: ../src/IIR_filter.vhd(22): Unknown record element "type_for_iir_pkg".
-# ** Error: ../src/IIR_filter.vhd(24): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# ** Error: (vcom-11) Could not find ./work.type_for_iir_pkg.
-# ** Error: ../src/IIR_filter.vhd(22): (vcom-1195) Cannot find expanded name: 'work.type_for_iir_pkg'.
-# ** Error: ../src/IIR_filter.vhd(22): Unknown record element "type_for_iir_pkg".
-# ** Error: ../src/IIR_filter.vhd(24): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-vcom -93 -work ./work ../src/IIR_package.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Compiling package type_for_iir_pkg
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# ** Error: ../src/IIR_filter_gen.vhd(108): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(108): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(108): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(108): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(112): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(112): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(112): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(112): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(118): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(122): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(122): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(122): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(122): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(128): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(132): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(132): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(132): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(132): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(136): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(136): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(136): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(136): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(138): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(141): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(141): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(141): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(141): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(164): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# ** Error: ../src/IIR_filter_gen.vhd(108): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(108): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(108): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(108): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(112): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(112): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(112): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(112): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(118): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(122): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(122): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(122): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(122): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(128): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(132): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(132): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(132): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(132): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(136): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(136): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(136): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(136): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(138): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(141): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(141): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(141): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(141): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(164): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# ** Error: ../src/IIR_filter_gen.vhd(114): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(114): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(114): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(114): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(118): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(118): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(124): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(124): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(124): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(124): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(128): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(128): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(134): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(134): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(134): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(134): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(138): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(138): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(142): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(142): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(142): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(142): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(144): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(144): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(144): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(144): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(147): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(147): (vcom-1078) Identifier "signed" is not directly visible.
-#    Potentially visible declarations are:
-#         ieee.std_logic_arith.signed (type declaration)
-#         ieee.numeric_std.signed (type declaration)
-# ** Error: ../src/IIR_filter_gen.vhd(147): Cannot resolve expression type of infix expression.
-# ** Error: ../src/IIR_filter_gen.vhd(147): Illegal type conversion to ieee.std_logic_1164.std_logic_vector (operand type is not known).
-# ** Error: ../src/IIR_filter_gen.vhd(170): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# ** Error: (vcom-11) Could not find /software/mentor/modelsim_6.2g/linux/../ieee.type_for_iir_pkg.
-# ** Error: ../tb/IIR_tb_in.vhd(6): (vcom-1195) Cannot find expanded name: 'ieee.type_for_iir_pkg'.
-# ** Error: ../tb/IIR_tb_in.vhd(6): Unknown record element "type_for_iir_pkg".
-# ** Error: ../tb/IIR_tb_in.vhd(10): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# ** Error: (vcom-11) Could not find /software/mentor/modelsim_6.2g/linux/../ieee.type_for_iir_pkg.
-# ** Error: ../tb/IIR_tb_in.vhd(6): (vcom-1195) Cannot find expanded name: 'ieee.type_for_iir_pkg'.
-# ** Error: ../tb/IIR_tb_in.vhd(6): Unknown record element "type_for_iir_pkg".
-# ** Error: ../tb/IIR_tb_in.vhd(10): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(18): Labels do not match: 'iir_tb_in' and 'data_maker'.
-# ** Error: ../tb/IIR_tb_in.vhd(18): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
 # -- Loading package type_for_iir_pkg
 # -- Compiling entity iir_filter
 # -- Compiling architecture behavioral of iir_filter
@@ -499,44 +34,7 @@ do compile.do
 # -- Loading package type_for_iir_pkg
 # -- Compiling entity iir_tb_in
 # -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(46): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_in.vhd(46): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_in.vhd(50): (vcom-1136) Unknown identifier "conv_std_logic_vector".
-# ** Error: ../tb/IIR_tb_in.vhd(77): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(47): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_in.vhd(47): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_in.vhd(51): (vcom-1136) Unknown identifier "conv_std_logic_vector".
+# ** Error: ../tb/IIR_tb_in.vhd(47): Variable "v_in" is type std.standard.integer; expecting type std.standard.boolean.
 # ** Error: ../tb/IIR_tb_in.vhd(78): VHDL Compiler exiting
 # ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
 # Error in macro ./compile.do line 2
@@ -569,496 +67,157 @@ do compile.do
 # -- Loading package type_for_iir_pkg
 # -- Compiling entity iir_tb_in
 # -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(47): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_in.vhd(47): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_in.vhd(51): (vcom-1136) Unknown identifier "conv_std_logic_vector".
-# ** Error: ../tb/IIR_tb_in.vhd(78): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(47): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_in.vhd(47): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_in.vhd(51): (vcom-1136) Unknown identifier "conv_std_logic_vector".
-# ** Error: ../tb/IIR_tb_in.vhd(78): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(51): (vcom-1136) Unknown identifier "conv_std_logic_vector".
-# ** Error: ../tb/IIR_tb_in.vhd(78): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(15): (vcom-1136) Unknown identifier "nb".
-# ** Error: ../tb/IIR_tb_out.vhd(15): Bad expression in left bound of range expression.
-# ** Error: ../tb/IIR_tb_out.vhd(15): Type error in range expression.
-# ** Error: ../tb/IIR_tb_out.vhd(17): (vcom-1136) Unknown identifier "nb".
-# ** Error: ../tb/IIR_tb_out.vhd(17): Bad expression in left bound of range expression.
-# ** Error: ../tb/IIR_tb_out.vhd(17): Type error in range expression.
-# ** Error: ../tb/IIR_tb_out.vhd(18): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(32): Enumeration literal '0' is not of type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(36): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_out.vhd(36): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(42): Incompatible types for variable assignment.
-# ** Error: ../tb/IIR_tb_out.vhd(50): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(54): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(56): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(58): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(60): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(64): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(66): (vcom-1136) Unknown identifier "signed".
-# ** Error: ../tb/IIR_tb_out.vhd(71): (vcom-1093) EXIT and NEXT statements must be inside of a LOOP statement.
-# ** Error: ../tb/IIR_tb_out.vhd(73): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(73): Type error resolving infix expression "/=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(86): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(32): Integer literal 0 is not of type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(36): No feasible entries for infix operator "=".
-# ** Error: ../tb/IIR_tb_out.vhd(36): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(42): Assignment target type std.standard.boolean is different from expression type Integer.
-# ** Error: ../tb/IIR_tb_out.vhd(66): (vcom-1136) Unknown identifier "dout_correct".
-# ** Error: ../tb/IIR_tb_out.vhd(71): (vcom-1093) EXIT and NEXT statements must be inside of a LOOP statement.
-# ** Error: ../tb/IIR_tb_out.vhd(73): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(73): Type error resolving infix expression "/=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(86): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(66): (vcom-1136) Unknown identifier "dout_correct".
-# ** Error: ../tb/IIR_tb_out.vhd(71): (vcom-1093) EXIT and NEXT statements must be inside of a LOOP statement.
-# ** Error: ../tb/IIR_tb_out.vhd(73): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(73): Type error resolving infix expression "/=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(86): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(66): Illegal type conversion from std.standard.integer to ieee.std_logic_arith.signed (numeric to array).
-# ** Error: ../tb/IIR_tb_out.vhd(71): (vcom-1093) EXIT and NEXT statements must be inside of a LOOP statement.
-# ** Error: ../tb/IIR_tb_out.vhd(73): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(73): Type error resolving infix expression "/=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(86): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(71): (vcom-1093) EXIT and NEXT statements must be inside of a LOOP statement.
-# ** Error: ../tb/IIR_tb_out.vhd(73): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(73): Type error resolving infix expression "/=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(86): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(72): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(72): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(85): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(72): (vcom-1136) Unknown identifier "tointeger".
-# ** Error: ../tb/IIR_tb_out.vhd(72): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(85): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(72): Illegal type conversion from ieee.std_logic_arith.signed to std.standard.integer (array to numeric).
-# ** Error: ../tb/IIR_tb_out.vhd(85): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
-# ** Error: ../tb/IIR_tb_out.vhd(72): (vcom-1136) Unknown identifier "to_integer".
-# ** Error: ../tb/IIR_tb_out.vhd(72): Type error resolving infix expression "=" as type std.standard.boolean.
-# ** Error: ../tb/IIR_tb_out.vhd(85): VHDL Compiler exiting
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 2
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../tb/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity data_sink
-# -- Compiling architecture beh of data_sink
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
 # -- Compiling entity clk_gen
 # -- Compiling architecture beh of clk_gen
-# Load canceled
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing ./work.IIR_tb
+# Loading work.IIR_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+add wave sim:/IIR_tb/TB_IN/end_sim_i
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_filter
+# -- Compiling architecture behavioral of iir_filter
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity iir_filter_gen
+# -- Compiling architecture behavioral of iir_filter_gen
+# -- Compiling package type_for_iir_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing ./work.IIR_tb
+# Loading work.IIR_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_filter
+# -- Compiling architecture behavioral of iir_filter
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity iir_filter_gen
+# -- Compiling architecture behavioral of iir_filter_gen
+# -- Compiling package type_for_iir_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing ./work.IIR_tb
+# Loading work.IIR_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+radix -decimal
+# decimal

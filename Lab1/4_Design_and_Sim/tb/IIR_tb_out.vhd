@@ -8,7 +8,7 @@ use work.type_for_IIR_pkg.all;
 library std;
 use std.textio.all;
 
-entity data_sink is
+entity IIR_tb_out is
   port (
     CLK   : in std_logic;
     RST_n : in std_logic;
@@ -16,9 +16,9 @@ entity data_sink is
     DIN   : in std_logic_vector(Nb-1 downto 0);
   	VIN_filter: in std_logic;
   	DIN_filter, v_filter, v1_filter, v2_filter: in std_logic_vector(Nb-1 downto 0));
-end data_sink;
+end IIR_tb_out;
 
-architecture beh of data_sink is
+architecture beh of IIR_tb_out is
 
 begin  -- beh
 

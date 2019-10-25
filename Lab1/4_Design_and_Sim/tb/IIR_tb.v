@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_fir ();
+module IIR_tb ();
 
    // signals
    wire CLK_i;
@@ -26,16 +26,15 @@ module tb_fir ();
 		 .DOUT(DIN_i),
 		 .END_SIM(END_SIM_i));
 
-   IIT_filter UUT(.CLK(CLK_i),
+   IIR_filter UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
          .VIN(VIN_i),
          .DOUT(DOUT_i),
          .VOUT(VOUT_i),
-		 .v(v_filter),
+		 .v(v_filter_i),
 	     .v1(v1_filter_i),
-	     .v2(v2_filter_i));   
-	     );
+	     .v2(v2_filter_i));
 
    IIR_tb_out TB_OUT(
 	    .CLK(CLK_i),
@@ -45,8 +44,8 @@ module tb_fir ();
 		//Vin e Din del filtro sono prese direttamente dal
 		// testbench precendente.
 		.VIN_filter(VIN_i),
-		.DIN_filter(VIN_i),
-		.v_filter(v_filter),
+		.DIN_filter(DIN_i),
+		.v_filter(v_filter_i),
 	    .v1_filter(v1_filter_i),
 	    .v2_filter(v2_filter_i));   
 endmodule

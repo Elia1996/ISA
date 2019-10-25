@@ -34,7 +34,7 @@ begin  -- beh
     file fp_vin : text open READ_MODE is "../sim_in/vin_samples.txt";
     variable line_in, line_vin : line;
     variable d_in: integer;
-    variable v_in : boolean;
+    variable v_in : integer;
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
       DOUT <= (others => '0') after tco;      
@@ -44,7 +44,7 @@ begin  -- beh
 	  if not endfile(fp_vin) then
 		readline(fp_vin, line_vin);
 		read(line_vin, v_in);
-		if v_in then
+		if v_in = 1 then
       		if not endfile(fp_in) then
         		readline(fp_in, line_in);
         		read(line_in, d_in);

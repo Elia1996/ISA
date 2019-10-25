@@ -145,8 +145,8 @@ BEGIN
 	data_out <= std_logic_vector(signed(vb0) + signed(v1b1_piu_v2b2));
 
 	v_out <= v;
-	v1_out <= v2;
-	v2_out <= v3;
+	v1_out <= v1;
+	v2_out <= v2;
 
 	---	 CONTROLLO  ---------
 

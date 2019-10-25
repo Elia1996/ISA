@@ -26,21 +26,21 @@ ENTITY IIR_filter IS
 			CLK,RST_n 	: IN STD_LOGIC;
 			VIN 		: IN STD_LOGIC;
 			DOUT 		: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-			VOUT 		: OUT STD_LOGIC);
+			VOUT 		: OUT STD_LOGIC;
 			v 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 			v1 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-			v2 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+			v2 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0));
 END IIR_filter;
 
 ARCHITECTURE behavioral OF IIR_filter IS
 	----------- COMPONENTS --------------------
 	COMPONENT IIR_filter_gen IS
-	PORT(	d_in			      	: IN STD_LOGIC_VECTOR(11 DOWNTO 0); 
+	PORT(	d_in			      	: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0); 
 			CLK, RST_n 				: IN STD_LOGIC;
 			VIN              		: IN STD_LOGIC;
 			a						: IN FB_COEFF_A;
 			b						: IN FF_COEFF_B;
-			d_out		        	: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+			d_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v1_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v2_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
