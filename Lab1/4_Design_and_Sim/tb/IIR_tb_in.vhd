@@ -40,26 +40,27 @@ begin  -- beh
       DOUT <= (others => '0') after tco;      
       VOUT <= '0' after tco;
       sEndSim <= '0' after tco;
-    elsif CLK'event and CLK = '1' then  -- rising clock edge
-	  if not endfile(fp_vin) then
-		readline(fp_vin, line_vin);
-		read(line_vin, v_in);
-		if v_in = 1 then
-      		if not endfile(fp_in) then
-        		readline(fp_in, line_in);
-        		read(line_in, d_in);
-        		DOUT <= conv_std_logic_vector(d_in, Nb) after tco;
-        		VOUT <= '1' after tco;
+    elsif CLK'event and CLK = '1' then  -- rising clock edge 
+	  	if not endfile(fp_vin) then
+			readline(fp_vin, line_vin);
+			read(line_vin, v_in);
+			-- I take input value only if vin=1
+			if v_in = 1 then
+				if not endfile(fp_in) then
+					readline(fp_in, line_in);
+					read(line_in, d_in);
+					DOUT <= conv_std_logic_vector(d_in, Nb) after tco;
+					VOUT <= '1' after tco;
+					sEndSim <= '0' after tco;
+				else
+					VOUT <= '0' after tco;       
+					sEndSim <= '1' after tco;
+				end if;
+			else
+        		VOUT <= '0' after tco;
         		sEndSim <= '0' after tco;
-      		else
-        		VOUT <= '0' after tco;       
-        		sEndSim <= '1' after tco;
 			end if;
-		else
-        	VOUT <= '0' after tco;
-        	sEndSim <= '0' after tco;
-		end if;
-      end if;
+      	end if;
     end if;
   end process;
 
