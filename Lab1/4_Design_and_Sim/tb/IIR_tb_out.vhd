@@ -30,54 +30,54 @@ begin  -- beh
     variable int_from_c : integer;
     variable flag : boolean := false;
 
-    begin
+  begin
      
     if (flag=false) then
-	-- scrivo la prima linea del file csv
-	write(line_csv_out, string'("#VIN,DIN,v,v1,v2,VOUT,DOUT,DOUT_correct,Error"));
-	writeline(res_csv_fp, line_csv_out);
+		-- scrivo la prima linea del file csv
+		write(line_csv_out, string'("#VIN,DIN,v,v1,v2,VOUT,DOUT,DOUT_correct,Error"));
+		writeline(res_csv_fp, line_csv_out);
     end if;
 
     flag := true;
 
 	if RST_n = '0' then                 -- asynchronous reset (active low)
-      		null;
-    	elsif CLK'event and CLK = '1' then  -- rising clock edge
-      	
-	if (VIN = '1') then
-		
-            write(line_out, conv_integer(signed(DIN)));
-		
-		write(line_csv_out, VIN_filter);
-	    write(line_csv_out, string'(","));
-	    	write(line_csv_out, conv_integer(signed(DIN_filter)));
-	    write(line_csv_out, string'(","));
-		write(line_csv_out, conv_integer(signed(v_filter)));
-	    write(line_csv_out, string'(","));
-		write(line_csv_out, conv_integer(signed(v1_filter)));
-	    write(line_csv_out, string'(","));
-		write(line_csv_out, conv_integer(signed(v2_filter)));
-	    write(line_csv_out, string'(","));
-		write(line_csv_out, VIN);
-	    write(line_csv_out, string'(","));
-		write(line_csv_out, conv_integer(signed(DIN)));
-	    	write(line_csv_out, string'(","));
-		write(line_csv_out, int_from_c);
-	    	write(line_csv_out, string'(","));
-		
-		readline(res_correct, line_dout_correct);
-		read(line_dout_correct, int_from_c);
-		
-		
-		if (int_from_c = conv_integer(signed(DIN))) then
-			write(line_csv_out,string'("OK,"));
-		else 
-			write(line_csv_out,string'("Error,"));
+      	null;
+    elsif CLK'event and CLK = '1' then  -- rising clock edge
+      	if (VIN = '1') then
+			-- I simply write output of filter in txt file
+			write(line_out, conv_integer(signed(DIN)));
+			
+			-- I read correct value from file creataed by c code
+			readline(res_correct, line_dout_correct);
+			read(line_dout_correct, int_from_c);
+
+			-- I write in csv file all data
+			write(line_csv_out, VIN_filter);
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(DIN_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v1_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v2_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, VIN);
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(DIN)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, int_from_c);
+			write(line_csv_out, string'(","));
+			
+			
+			if (int_from_c = conv_integer(signed(DIN))) then
+				write(line_csv_out,string'("OK,"));
+			else 
+				write(line_csv_out,string'("Error,"));
+			end if;
+			writeline(res_fp, line_out);
+			writeline(res_csv_fp, line_csv_out);
 		end if;
-        writeline(res_fp, line_out);
-	writeline(res_csv_fp, line_csv_out);
-	
-      end if;
     end if;
 
   end process;
