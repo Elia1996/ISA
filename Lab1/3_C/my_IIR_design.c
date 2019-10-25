@@ -98,7 +98,7 @@ int main (int argc, char **argv)
   }
   #if DEBUG
 	fp_out = fopen(argv[2], "w");
-	fp_report = fopen("report.csv","w");
+	fp_report = fopen("../4_Design_and_Sim/sim_out/results_c.csv","w");
 	fprintf(fp_report,"B (FF):, %d",b0);
 	for(i=0; i<N; i++){
 		   fprintf(fp_report,", %d\n",b[i]);

@@ -87,7 +87,7 @@ BEGIN
 	Reg_delay_1 : register_nbit
 		GENERIC MAP(Nb)
 		PORT MAP(		v,
-						REG_CTRL_1_OUT, CLK, RST_n,
+						Reg_ctrl_1_out, CLK, RST_n,
 						v1);
 
 
@@ -95,14 +95,14 @@ BEGIN
 	Reg_delay_2 : register_nbit
 		GENERIC MAP(Nb)
 		PORT MAP(		v1,
-						REG_CTRL_1_OUT, CLK, RST_n,
+						Reg_ctrl_1_out, CLK, RST_n,
 						v2);
 
 	-- Registro di uscita d_out -> DOUT
 	Reg_out: register_nbit
 		GENERIC MAP(Nb)
 		PORT MAP(		data_out,
-						REG_CTRL_1_OUT, CLK, RST_n,
+						Reg_ctrl_1_out, CLK, RST_n,
 						d_out);
 
 	-- Collegamenti e operazioni di somma e moltiplicazione
