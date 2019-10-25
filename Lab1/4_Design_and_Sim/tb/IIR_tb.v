@@ -26,7 +26,7 @@ module tb_fir ();
 		 .DOUT(DIN_i),
 		 .END_SIM(END_SIM_i));
 
-   myfir UUT(.CLK(CLK_i),
+   IIT_filter UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
          .VIN(VIN_i),
@@ -50,5 +50,4 @@ module tb_fir ();
 	    .v1_filter(v1_filter_i),
 	    .v2_filter(v2_filter_i));   
 endmodule
-
 
