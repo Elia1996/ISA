@@ -1,6 +1,6 @@
 //`timescale 1ns
 
-module tb_fir ();
+module IIR_tb ();
 
    // signals
    wire CLK_i;
@@ -34,8 +34,7 @@ module tb_fir ();
          .VOUT(VOUT_i),
 		 .v(v_filter),
 	     .v1(v1_filter_i),
-	     .v2(v2_filter_i));   
-	     );
+	     .v2(v2_filter_i));
 
    IIR_tb_out TB_OUT(
 	    .CLK(CLK_i),
