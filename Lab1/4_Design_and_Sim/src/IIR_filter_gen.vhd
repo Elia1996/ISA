@@ -31,12 +31,15 @@ USE work.type_for_IIR_pkg.all;
 
 ENTITY IIR_filter_gen IS
 	PORT(		
-				d_in			      : IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0); 
-				CLK, RST_n 			: IN STD_LOGIC;
-				VIN              	: IN STD_LOGIC;
+				d_in			      	: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0); 
+				CLK, RST_n 				: IN STD_LOGIC;
+				VIN              		: IN STD_LOGIC;
 				a						: IN FB_COEFF_A;
 				b						: IN FF_COEFF_B;
 				d_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+				v_out		        		: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+				v1_out						: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+				v2_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 				VOUT			      	: OUT STD_LOGIC);
 END IIR_filter_gen;
 
@@ -140,6 +143,10 @@ BEGIN
 
 	-- Infine genero l'uscita dal feed-forward 
 	data_out <= std_logic_vector(signed(vb0) + signed(v1b1_piu_v2b2));
+
+	v_out <= v;
+	v1_out <= v2;
+	v2_out <= v3;
 
 	---	 CONTROLLO  ---------
 
