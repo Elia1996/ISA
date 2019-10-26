@@ -25,7 +25,7 @@ begin  -- beh
   process (CLK, RST_n)
         file res_fp : text open WRITE_MODE is "../sim_out/results_v.txt";
 	file res_csv_fp : text open WRITE_MODE is "../sim_out/results_v.csv";
-	file res_correct : text open READ_MODE is "../../3_C/results_c.txt";
+	file res_correct : text open READ_MODE is "../sim_out/results_c.txt";
     variable line_out, line_csv_out, line_dout_correct : line;
     variable int_from_c : integer;
     variable flag : boolean := false;
@@ -75,6 +75,28 @@ begin  -- beh
 			else 
 				write(line_csv_out,string'("Error,"));
 			end if;
+			writeline(res_fp, line_out);
+			writeline(res_csv_fp, line_csv_out);
+		else
+			
+			-- I write in csv file all data
+			write(line_csv_out, VIN_filter);
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(DIN_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v1_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(v2_filter)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, VIN);
+			write(line_csv_out, string'(","));
+			write(line_csv_out, conv_integer(signed(DIN)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, int_from_c);
+			write(line_csv_out, string'(","));
+			write(line_csv_out,string'(" ,"));
 			writeline(res_fp, line_out);
 			writeline(res_csv_fp, line_csv_out);
 		end if;
