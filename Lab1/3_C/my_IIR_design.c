@@ -46,11 +46,12 @@ int myfilter(int DIN, FILE *fp)
   for (i=0; i<N; i++)
   {
 	// tronco NB, prendo quelli più significativi
-    fb -= (sw[i]*a[i]) >> (NB-1);
+    fb += (sw[i]*-a[i]) >> (NB-1);
     ff += (sw[i]*b[i]) >> (NB-1);
   }
   /// compute intermediate value (w) and output sample
   w = DIN + fb;
+  __print(fb,fp);
   __print(w,fp);
   for(i=0; i<N; i++){
 	     __print(sw[i],fp);
@@ -109,7 +110,7 @@ int main (int argc, char **argv)
 		   fprintf(fp_report,", %d\n",a[i]);
 	}*/
 	// creo l'intestazione del file di output csv
-	fprintf(fp_report, "DIN,v");
+	fprintf(fp_report, "DIN,fb,v");
 	for(i=1; i<N+1; i++){
 			fprintf(fp_report,",v%d,v%d*a%d,v%d*b%d",i,i,i-1,i,i);
 	}

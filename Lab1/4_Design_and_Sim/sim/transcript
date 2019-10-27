@@ -490,3 +490,63 @@ do compile.do
 # Refreshing ./work.iir_tb_out(beh)
 # Loading work.iir_tb_out(beh)
 # decimal
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_filter
+# -- Compiling architecture behavioral of iir_filter
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity iir_filter_gen
+# -- Compiling architecture behavioral of iir_filter_gen
+# -- Compiling package type_for_iir_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing ./work.IIR_tb
+# Loading work.IIR_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# decimal
