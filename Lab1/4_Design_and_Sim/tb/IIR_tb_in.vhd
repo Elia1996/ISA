@@ -11,8 +11,8 @@ entity IIR_tb_in  is
   port (
     CLK     : in  std_logic;
     RST_n   : in  std_logic;
-    VOUT    : out std_logic;
-    DOUT    : out std_logic_vector(Nb-1 downto 0);
+    VIN    : out std_logic;
+    DIN    : out std_logic_vector(Nb-1 downto 0);
    -- H0      : out std_logic_vector(15 downto 0);
     END_SIM : out std_logic);
 end IIR_tb_in;
@@ -49,15 +49,15 @@ begin  -- beh
 				if not endfile(fp_in) then
 					readline(fp_in, line_in);
 					read(line_in, d_in);
-					DOUT <= conv_std_logic_vector(d_in, Nb) after tco;
-					VOUT <= '1' after tco;
+					DIN <= conv_std_logic_vector(d_in, Nb) after tco;
+					VIN <= '1' after tco;
 					sEndSim <= '0' after tco;
 				else
-					VOUT <= '0' after tco;       
+					VIN <= '0' after tco;       
 					sEndSim <= '1' after tco;
 				end if;
 			else
-        		VOUT <= '0' after tco;
+        		VIN <= '0' after tco;
         		sEndSim <= '0' after tco;
 			end if;
       	end if;

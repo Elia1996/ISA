@@ -30,6 +30,9 @@ ENTITY IIR_filter IS
 			v 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 			v1 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 			v2 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0));
+			v1a0, v2a1     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			v1b1, v2b2      : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			vb0                     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 END IIR_filter;
 
 ARCHITECTURE behavioral OF IIR_filter IS
@@ -44,6 +47,9 @@ ARCHITECTURE behavioral OF IIR_filter IS
 			v_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v1_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v2_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			v1a0_out, v2a1_out      : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			v1b1_out, v2b2_out      : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			vb0_out                     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			VOUT			      	: OUT STD_LOGIC);
 	END COMPONENT IIR_filter_gen;
 
@@ -66,6 +72,11 @@ BEGIN
 				v_out => v,
 				v1_out => v1,
 				v2_out => v2,
+				v1a0_out => v1a0;
+				v2a1_out => v2a1;
+				v1b1_out => v1b1;
+				v2b2_out => v2b2;
+				vb0_out => vb0; 
 				VOUT => VOUT);
 
 END behavioral;
