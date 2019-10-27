@@ -31,16 +31,16 @@ USE work.type_for_IIR_pkg.all;
 
 ENTITY IIR_filter_gen IS
 	PORT(		
-				d_in			      	: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0); 
-				CLK, RST_n 				: IN STD_LOGIC;
-				VIN              		: IN STD_LOGIC;
-				a						: IN FB_COEFF_A;
-				b						: IN FF_COEFF_B;
-				d_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-				v_out		        		: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-				v1_out						: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-				v2_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-				VOUT			      	: OUT STD_LOGIC);
+		d_in			      	: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0); 
+		CLK, RST_n 				: IN STD_LOGIC;
+		VIN              		: IN STD_LOGIC;
+		a						: IN FB_COEFF_A;
+		b						: IN FF_COEFF_B;
+		d_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		v_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		v1_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		v2_out					: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		VOUT			      	: OUT STD_LOGIC);
 END IIR_filter_gen;
 
 
@@ -68,7 +68,7 @@ ARCHITECTURE behavioral OF IIR_filter_gen IS
 	SIGNAL v1a0_f, v2a1_f, v1b1_f, v2b2_f, vb0_f : 	STD_LOGIC_VECTOR(Nb*2-1 DOWNTO 0);
 
 	-- Segnali di controllo
-	SIGNAL REG_CTRL_1_OUT				: STD_LOGIC;
+	SIGNAL Reg_ctrl_1_out				: STD_LOGIC;
 
 
 	--------- BEGIN ---------

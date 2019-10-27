@@ -48,8 +48,9 @@ ARCHITECTURE behavioral OF IIR_filter IS
 	END COMPONENT IIR_filter_gen;
 
 	----------- SIGNALS  --------------------
-	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(-757,DIN'length)),
-								std_logic_vector(to_signed(401, DIN'length)));
+	-- I valori di a vanno messi negativi
+	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(757,DIN'length)),
+								std_logic_vector(to_signed(-401, DIN'length)));
 	CONSTANT B : FF_COEFF_B  := (std_logic_vector(to_signed(423, DIN'length)),
 								std_logic_vector(to_signed(846, DIN'length)),
 								std_logic_vector(to_signed(423, DIN'length)));
