@@ -29,10 +29,10 @@ ENTITY IIR_filter IS
 			VOUT 		: OUT STD_LOGIC;
 			v 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 			v1 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-			v2 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0));
+			v2 			: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 			v1a0, v2a1     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			v1b1, v2b2      : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-			vb0                     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			vb0                     : OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0));
 END IIR_filter;
 
 ARCHITECTURE behavioral OF IIR_filter IS
@@ -54,9 +54,9 @@ ARCHITECTURE behavioral OF IIR_filter IS
 	END COMPONENT IIR_filter_gen;
 
 	----------- SIGNALS  --------------------
-	-- I valori di a vanno messi negativi
-	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(757,DIN'length)),
-								std_logic_vector(to_signed(-401, DIN'length)));
+	-- I valori di a vanno messi negativi, A0 è il secondo numero
+	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(-401,DIN'length)),
+								std_logic_vector(to_signed(757, DIN'length)));
 	CONSTANT B : FF_COEFF_B  := (std_logic_vector(to_signed(423, DIN'length)),
 								std_logic_vector(to_signed(846, DIN'length)),
 								std_logic_vector(to_signed(423, DIN'length)));
@@ -72,11 +72,11 @@ BEGIN
 				v_out => v,
 				v1_out => v1,
 				v2_out => v2,
-				v1a0_out => v1a0;
-				v2a1_out => v2a1;
-				v1b1_out => v1b1;
-				v2b2_out => v2b2;
-				vb0_out => vb0; 
+				v1a0_out => v1a0,
+				v2a1_out => v2a1,
+				v1b1_out => v1b1,
+				v2b2_out => v2b2,
+				vb0_out => vb0,
 				VOUT => VOUT);
 
 END behavioral;

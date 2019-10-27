@@ -23,7 +23,7 @@ module IIR_tb ();
   	      .CLK(CLK_s),
 	      .RST_n(RST_n_s));
 
-   IIR_tb_sn TB_IN(
+   IIR_tb_in TB_IN(
 	     .CLK(CLK_s),
 	     .RST_n(RST_n_s),
 		 .VIN(VIN_s),
@@ -60,7 +60,7 @@ module IIR_tb ();
 	 	 .v1a0(v1a0_s),
 		 .v2a1(v2a1_s),
 	 	 .v1b1(v1b1_s),
-	 	 .v2b2(v2b2_S),
+	 	 .v2b2(v2b2_s),
 	 	 .vb0(vb0_s));
 endmodule
 

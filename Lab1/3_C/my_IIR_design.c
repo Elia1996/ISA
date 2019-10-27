@@ -3,7 +3,7 @@
 #define DEBUG 1
 
 #if DEBUG
-#define __print(d_int,fp)(fprintf(fp,",%d",d_int))
+#define __print(d_int,fp)(fprintf(fp,"%d,",d_int))
 #define __newline(fp)(fprintf(fp,"\n"))
 #else
 #define __print(d_int,fp)()
@@ -13,7 +13,7 @@
 #define N 2 /// order of the filter 
 // un int è 32 bit percui per avere 12 bit in uscita dai
 // moltiplicatori NB dev'essere 20
-#define NB 12  /// number of bits
+#define NB 13  /// number of bits
 
 const int b0 = 423; /// coefficient b0
 const int b[N]={846, 423}; /// b array
@@ -54,7 +54,7 @@ int myfilter(int DIN, FILE *fp)
   __print(w,fp);
   for(i=0; i<N; i++){
 	     __print(sw[i],fp);
-		var = (sw[i]*a[i]) >> (NB-1);
+		var = (-sw[i]*a[i]) >> (NB-1);
 		 __print(var,fp);
 		var = (sw[i]*b[i]) >> (NB-1);
 		 __print(var,fp);
@@ -99,6 +99,7 @@ int main (int argc, char **argv)
   #if DEBUG
 	fp_out = fopen(argv[2], "w");
 	fp_report = fopen("../4_Design_and_Sim/sim_out/results_c.csv","w");
+	/*
 	fprintf(fp_report,"B (FF):, %d",b0);
 	for(i=0; i<N; i++){
 		   fprintf(fp_report,", %d\n",b[i]);
@@ -106,10 +107,11 @@ int main (int argc, char **argv)
 	fprintf(fp_report,"A (FB):,%d",a[0]);
 	for(i=1; i<N; i++){
 		   fprintf(fp_report,", %d\n",a[i]);
-	}
+	}*/
+	// creo l'intestazione del file di output csv
 	fprintf(fp_report, "DIN,v");
 	for(i=1; i<N+1; i++){
-			fprintf(fp_report,",v%d,v%d*a,v%d*b",i,i,i);
+			fprintf(fp_report,",v%d,v%d*a%d,v%d*b%d",i,i,i-1,i,i);
 	}
 	fprintf(fp_report, ",fb,ff,DOUT\n");
   #endif

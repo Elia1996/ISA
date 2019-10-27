@@ -45,13 +45,7 @@ begin  -- beh
 	if RST_n = '0' then                 -- asynchronous reset (active low)
       	null;
     elsif CLK'event and CLK = '1' then  -- rising clock edge
-      	if (VIN = '1') then
-			-- I simply write output of filter in txt file
-			write(line_out, conv_integer(signed(DOUT)));
-			
-			-- I read correct value from file creataed by c code
-			readline(res_correct, line_dout_correct);
-			read(line_dout_correct, int_from_c);
+		
 
 			-- I write in csv file all data
 			write(line_csv_out, VIN );
@@ -76,52 +70,30 @@ begin  -- beh
 			write(line_csv_out, string'(","));
 			write(line_csv_out, VOUT);
 			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(DOUT)));
+      	
+		if (vout = '1') then	
+		    -- i simply write output of filter in txt file
+			write(line_out, conv_integer(signed(dout)));
+		 
+		    -- i read correct value from file creataed by c code
+			readline(res_correct, line_dout_correct);
+			read(line_dout_correct, int_from_c);
+			
+			write(line_csv_out, conv_integer(signed(dout)));
 			write(line_csv_out, string'(","));
 			write(line_csv_out, int_from_c);
 			write(line_csv_out, string'(","));
 			
-			
-			if (int_from_c = conv_integer(signed(DIN))) then
-				write(line_csv_out,string'("OK,"));
+			if (int_from_c = conv_integer(signed(dout))) then
+				write(line_csv_out,string'("ok,"));
 			else 
-				write(line_csv_out,string'("Error,"));
+				write(line_csv_out,string'("error,"));
 			end if;
-			writeline(res_fp, line_out);
-			writeline(res_csv_fp, line_csv_out);
 		else
-			
-			-- I write in csv file all data
-			write(line_csv_out, VIN );
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(DIN)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1a0)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2a1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(vb0)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1b1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2b2)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, VOUT);
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(DOUT)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, int_from_c);
-			write(line_csv_out, string'(","));
-			write(line_csv_out,string'(" ,"));
-			writeline(res_fp, line_out);
-			writeline(res_csv_fp, line_csv_out);
+			write(line_csv_out,string'(" , , ,"));
 		end if;
+		writeline(res_fp, line_out);
+		writeline(res_csv_fp, line_csv_out);
     end if;
 
   end process;

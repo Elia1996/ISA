@@ -37,8 +37,8 @@ begin  -- beh
     variable v_in : integer;
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
-      DOUT <= (others => '0') after tco;      
-      VOUT <= '0' after tco;
+      DIN <= (others => '0') after tco;      
+      VIN <= '0' after tco;
       sEndSim <= '0' after tco;
     elsif CLK'event and CLK = '1' then  -- rising clock edge 
 	  	if not endfile(fp_vin) then
