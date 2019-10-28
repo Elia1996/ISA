@@ -15,8 +15,7 @@ entity IIR_tb_out is
     VOUT   : in std_logic;
     DOUT   : in std_logic_vector(Nb-1 downto 0);
   	VIN: in std_logic;
-  	DIN, v, v1, v2: in std_logic_vector(Nb-1 downto 0);
-    v1a0, v2a1, v1b1, v2b2, vb0 :  in std_logic_vector(Nb-1 downto 0));
+  	DIN: in std_logic_vector(Nb-1 downto 0);
     
 end IIR_tb_out;
 
@@ -36,7 +35,7 @@ begin  -- beh
      
     if (flag=false) then
 		-- scrivo la prima linea del file csv
-		write(line_csv_out, string'("#VIN,DIN,v1,v2,v1a0,v2a1,v,vb0,v1b1,v2b2,VOUT,DOUT,DOUT_correct,Error"));
+		write(line_csv_out, string'("#VIN,DIN,VOUT,DOUT,DOUT_correct,Error"));
 		writeline(res_csv_fp, line_csv_out);
     end if;
 
@@ -51,22 +50,6 @@ begin  -- beh
 			write(line_csv_out, VIN );
 			write(line_csv_out, string'(","));
 			write(line_csv_out, conv_integer(signed(DIN)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1a0)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2a1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(vb0)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v1b1)));
-			write(line_csv_out, string'(","));
-			write(line_csv_out, conv_integer(signed(v2b2)));
 			write(line_csv_out, string'(","));
 			write(line_csv_out, VOUT);
 			write(line_csv_out, string'(","));
