@@ -15,6 +15,19 @@ do compile.do
 # -- Loading package numeric_std
 # -- Loading package type_for_iir_pkg
 # -- Compiling entity iir_filter
+# ** Error: ../src/IIR_filter.vhd(30): near "END": expecting: IDENTIFIER
+# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
+# Error in macro ./compile.do line 1
+# /software/mentor/modelsim_6.2g/linux/vcom failed.
+#     while executing
+# "vcom -93 -work ./work ../src/*.vhd"
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_filter
 # -- Compiling architecture behavioral of iir_filter
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
@@ -35,102 +48,7 @@ do compile.do
 # -- Compiling entity iir_tb_in
 # -- Compiling architecture beh of iir_tb_in
 # -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal
-quit -sim
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# ** Error: ../src/IIR_filter.vhd(33): near "v1a0": expecting: END
-# ** Error: ../src/IIR_filter.vhd(75): near ";": expecting: ')' ','
-# ** Error: ../src/IIR_filter.vhd(77): near "=>": expecting: <= :=
-# ** Error: ../src/IIR_filter.vhd(78): near "=>": expecting: <= :=
-# ** Error: ../src/IIR_filter.vhd(79): near "=>": expecting: <= :=
-# ** Error: ../src/IIR_filter.vhd(80): near "=>": expecting: <= :=
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# ** Error: ../src/IIR_filter.vhd(36): near "END": expecting: IDENTIFIER
-# ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
-# Error in macro ./compile.do line 1
-# /software/mentor/modelsim_6.2g/linux/vcom failed.
-#     while executing
-# "vcom -93 -work ./work ../src/*.vhd"
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# ** Error: ../tb/IIR_tb_in.vhd(40): Illegal target for signal assignment.
-# ** Error: ../tb/IIR_tb_in.vhd(40): (vcom-1136) Unknown identifier "dout".
-# ** Error: ../tb/IIR_tb_in.vhd(41): Illegal target for signal assignment.
-# ** Error: ../tb/IIR_tb_in.vhd(41): (vcom-1136) Unknown identifier "vout".
-# ** Error: ../tb/IIR_tb_in.vhd(79): VHDL Compiler exiting
+# ** Error: ../tb/IIR_tb_out.vhd(20): near "end": expecting: IDENTIFIER
 # ** Error: /software/mentor/modelsim_6.2g/linux/vcom failed.
 # Error in macro ./compile.do line 2
 # /software/mentor/modelsim_6.2g/linux/vcom failed.
@@ -174,379 +92,761 @@ do compile.do
 # vsim -t 1ns -novopt work.IIR_tb 
 # Refreshing ./work.IIR_tb
 # Loading work.IIR_tb
-# ** Error: (vsim-3033) ../tb/IIR_tb.v(31): Instantiation of 'IIR_tb_sn' failed. The design unit was not found.
-#         Region: /IIR_tb
-#         Searched libraries:
-#             ./work
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# decimal
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 75 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 85 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 95 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 105 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 115 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 135 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 165 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 175 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 195 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 225 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 235 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 255 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 265 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 285 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 295 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 305 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 335 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 385 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 405 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 415 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 425 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 445 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 455 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 475 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 485 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 495 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 515 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 535 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 565 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 575 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 625 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 635 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 665 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 675 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 705 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 715 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 735 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 745 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 755 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 775 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 785 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 795 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 805 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 845 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 855 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 865 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 885 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 905 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 915 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 925 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 935 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 965 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 975 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 985 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 995 ns  Iteration: 2  Instance: /IIR_tb/TB_OUT
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_filter
+# -- Compiling architecture behavioral of iir_filter
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity iir_filter_gen
+# -- Compiling architecture behavioral of iir_filter_gen
+# -- Compiling package type_for_iir_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing ./work.IIR_tb
+# Loading work.IIR_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Refreshing ./work.type_for_iir_pkg
+# Loading work.type_for_iir_pkg
+# Refreshing ./work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing ./work.iir_filter(behavioral)
+# Loading work.iir_filter(behavioral)
+# Refreshing ./work.iir_filter_gen(behavioral)
+# Loading work.iir_filter_gen(behavioral)
+# Refreshing ./work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing ./work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# decimal
+vsim -voptargs=+acc -L /software/dk/nangate45/verilog/msim6.5c -sdftyp /FC1_tb/FC1_top=FC1.sdf work.testbench -t 1ps
+# vsim -L /software/dk/nangate45/verilog/msim6.5c -voptargs=+acc -sdftyp /FC1_tb/FC1_top=FC1.sdf -t 1ps work.testbench 
+# ** Error: (vsim-SDF-3196) Failed to find SDF file "FC1.sdf".
 # Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./compile.do PAUSED at line 4
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# ** Fatal: (vsim-3363) ../tb/IIR_tb.v(64): The array length (12) of VHDL port 'v2b2' does not match the width (1) of its Verilog connection (13th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /IIR_tb/TB_OUT File: ../tb/IIR_tb_out.vhd Line: 19
-# FATAL ERROR while loading design
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./compile.do PAUSED at line 4
-quit -sim
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal
-quit -sim
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal
-do compile.do
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_filter
-# -- Compiling architecture behavioral of iir_filter
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity iir_filter_gen
-# -- Compiling architecture behavioral of iir_filter_gen
-# -- Compiling package type_for_iir_pkg
-# -- Compiling entity register_nbit
-# -- Compiling architecture behavior of register_nbit
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package textio
-# -- Loading package std_logic_textio
-# -- Loading package numeric_std
-# -- Loading package type_for_iir_pkg
-# -- Compiling entity iir_tb_in
-# -- Compiling architecture beh of iir_tb_in
-# -- Compiling entity iir_tb_out
-# -- Compiling architecture beh of iir_tb_out
-# -- Compiling entity clk_gen
-# -- Compiling architecture beh of clk_gen
-# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
-# -- Compiling module IIR_tb
-# 
-# Top level modules:
-# 	IIR_tb
-# vsim -t 1ns -novopt work.IIR_tb 
-# Refreshing ./work.IIR_tb
-# Loading work.IIR_tb
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
-# Refreshing ./work.clk_gen(beh)
-# Loading work.clk_gen(beh)
-# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Refreshing ./work.type_for_iir_pkg
-# Loading work.type_for_iir_pkg
-# Refreshing ./work.iir_tb_in(beh)
-# Loading work.iir_tb_in(beh)
-# Refreshing ./work.iir_filter(behavioral)
-# Loading work.iir_filter(behavioral)
-# Refreshing ./work.iir_filter_gen(behavioral)
-# Loading work.iir_filter_gen(behavioral)
-# Refreshing ./work.register_nbit(behavior)
-# Loading work.register_nbit(behavior)
-# Refreshing ./work.iir_tb_out(beh)
-# Loading work.iir_tb_out(beh)
-# decimal

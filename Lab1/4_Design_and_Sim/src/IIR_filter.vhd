@@ -22,11 +22,11 @@ USE work.all;
 USE work.type_for_IIR_pkg.all;
 
 ENTITY IIR_filter IS 
-	PORT(	DIN 		: IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+	PORT(	DIN 		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			CLK,RST_n 	: IN STD_LOGIC;
 			VIN 		: IN STD_LOGIC;
-			DOUT 		: OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-			VOUT 		: OUT STD_LOGIC;
+			DOUT 		: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+			VOUT 		: OUT STD_LOGIC);
 END IIR_filter;
 
 ARCHITECTURE behavioral OF IIR_filter IS
@@ -37,6 +37,7 @@ ARCHITECTURE behavioral OF IIR_filter IS
 			VIN              		: IN STD_LOGIC;
 			a						: IN FB_COEFF_A;
 			b						: IN FF_COEFF_B;
+			d_out		        	: OUT STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 			VOUT			      	: OUT STD_LOGIC);
 	END COMPONENT IIR_filter_gen;
 
@@ -55,6 +56,7 @@ BEGIN
 				VIN => VIN,
 				a => A,
 				b => B,
+				d_out => DOUT,
 				VOUT => VOUT);
 
 END behavioral;

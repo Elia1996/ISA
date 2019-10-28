@@ -15,7 +15,7 @@ entity IIR_tb_out is
     VOUT   : in std_logic;
     DOUT   : in std_logic_vector(Nb-1 downto 0);
   	VIN: in std_logic;
-  	DIN: in std_logic_vector(Nb-1 downto 0);
+  	DIN: in std_logic_vector(Nb-1 downto 0));
     
 end IIR_tb_out;
 
