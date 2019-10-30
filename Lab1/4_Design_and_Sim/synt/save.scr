@@ -1,0 +1,22 @@
+source variables.scr
+# script per salvare la simulazione in modo da effettuare
+# poi il calcolo della potenza con la switching activity
+
+# metto tutti i blocchi allo stesso livello di gerarchia
+ungroup -all -flatten
+# per esportare la netlist in verilog dobbiamo cambiare i
+# nomi secondo le regole del verilog
+change_names -hierarchy -rules verilog
+
+# creiamo il file di ritardi della netlist
+write_sdf ../netlist/$top_entity.sdf
+
+# scriviamo la netlist
+write -f verilog -hierarchy -output ../netlist/$top_entity.v
+# salviamo i limiti
+write_sdc ../netlist/$top_entity.sdc
+# usciamo da synopsys
+# questo dev'essere fatto ogni volta perchè se non si esce
+# le nuove simulazioni vengono fatte anche in base a quelle vecchie
+# e non sono più riproducibili.
+quit 

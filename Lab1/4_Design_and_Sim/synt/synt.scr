@@ -1,0 +1,37 @@
+source variables.scr
+# This file analyze, elaborate and compile vhdl file
+
+# -f indica il formato dei file
+# -lib indica dove mettere i file su cui lavora sysnopsys
+analyze -f vhdl -lib WORK { $file_to_synt }
+# preserviamo i nomi delle netlist della rete
+set power_preserve_rtl_hier_names true
+# elaborazione dei file, viene data la top entity
+elaborate $top_entity -arch behavioral -lib WORK > $out_dir/elaborate.txt
+
+###  Applico le limitazioni 
+# creo il clock di sistema, in ns
+create_clock -name MY_CLK -period $period CLK
+# poichè il clock è un segnale particolare
+# setto la proprietà don't touch
+# ciò è fatto perchè col comando ungroup vengono modificate tutte
+# le celle tranne quelle dont_touch
+set_dont_touch_network MY_CLK
+# setto l'incertezza del clock
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+# setto in ritardo di tutti gli ingressi, che si suppone uguale
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
+# setto il ritardo di tutte le uscite
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+# setto il carico di ciascun uscita che si suppone uguale a quello 
+#  di un buffer
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
+set load $OLOAD [all outputs]
+# compilo
+compile -exact_map > $out_dir/compile.txt
+
+report_timing > $out_dir/report_timing.txt
+
+report_area > $out_dir/report_area.txt
+
+
