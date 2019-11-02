@@ -45,7 +45,7 @@ ARCHITECTURE behavioral OF IIR_filter_gen IS
 
 	--------- COMPONENTS ---------
 	COMPONENT register_nbit IS
-	GENERIC(	N 					: NATURAL:=Nb);
+	GENERIC(	N 					: NATURAL);
 	PORT(		data_in 			: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 				EN, CLK, RST_n : IN STD_LOGIC;
 				data_out		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));

@@ -1,0 +1,42 @@
+Warning: Unable to resolve reference 'register_nbit_N12_0' in 'IIR_filter_gen'. (LINK-5)
+Warning: Unable to resolve reference 'register_nbit_N12_3' in 'IIR_filter_gen'. (LINK-5)
+Warning: Unable to resolve reference 'register_nbit_N12_2' in 'IIR_filter_gen'. (LINK-5)
+Warning: Unable to resolve reference 'register_nbit_N12_1' in 'IIR_filter_gen'. (LINK-5)
+Warning: Unable to resolve reference 'register_nbit_N1_0' in 'IIR_filter_gen'. (LINK-5)
+Warning: Unable to resolve reference 'register_nbit_N1_1' in 'IIR_filter_gen'. (LINK-5)
+Warning: Design 'IIR_filter' has '6' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_filter
+Version: O-2018.06-SP4
+Date   : Sat Nov  2 18:28:05 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: filter/Reg_out/data_out[11] (internal pin)
+  Endpoint: DOUT[11] (output port clocked by MY_CLK)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  filter/Reg_out/data_out[11] (register_nbit_N12_1)       0.00       0.00 r
+  filter/d_out[11] (IIR_filter_gen)                       0.00       0.00 r
+  DOUT[11] (out)                                          0.02       0.02 r
+  data arrival time                                                  0.02
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

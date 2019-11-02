@@ -1,0 +1,13 @@
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/IIR_filter.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'IIR_filter'.
+Warning: Design 'IIR_filter' has '6' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1

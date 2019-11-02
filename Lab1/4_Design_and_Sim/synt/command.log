@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Wed Oct 30 16:43:10 2019
+#@ # Date:   Sat Nov  2 18:34:26 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6555,90 +6555,4 @@ source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
 #@ 11
 #@ 0Q%hCgKxhC,tEw
 #@ p
-#@ 10 0 95 14 0 0 40 0 5 10 10 -1 -1
-#@ 95
-#@ /rS=!1Gwjw'E&s!H=rH&9N2,!4>##!#0E<!1NE<!@4`H&-fvpv5|8X!6Sp3w25bpv/o=6#7)
-#@ tl#2Q/X!.EW<!5TN<!7`8s!9;|X!-BW<!>&#pv4P60%(w!!
 #@ 10
-#@ GFIOwG17n#/6!
-#@ 10
-#@ Vv)7#Gh17#,-!
-#@ 14
-#@ x
-#@ 18
-#@ kaT5Bm<NaE1fsiCqRo;@Syw
-#@ x
-#@ 1
-#@ P!
-#@ x
-#@ 15
-#@ kaT5BgxUgCr6m*E_I-,
-#@ x
-#@ 22
-#@ kaT5Bm<NaEomK;@'(ur@g^CkBHSw
-#@ x
-#@ 4
-#@ *dmID
-#@ x
-#@ 1
-#@ -v
-#@ x
-#@ 14
-#@ 4rBfD1-0CFq&fwGJ%%
-#@ x
-#@ 4
-#@ DP)*F
-#@ x
-#@ 36
-#@ =P6X5r*r<+fF'Z?qd,r@yR>SAfsUgCg'm*E!YfRA(pDTA
-#@ x
-#@ 7
-#@ A;lcE_iGw
-#@ x
-#@ 7
-#@ =P6X5R^`w
-#@ x
-#@ 5
-#@ )lP)F1v
-#@ x
-#@ 19
-#@ ,v(Z?!aiaEmo3mBm+BRAyOl,
-#@ x
-#@ 21
-#@ w3F/D'gi'FrZ!iC`jbSAp#K^F<v
-#@ 0
-#@ 0
-#@ 1 3
-#@ 9
-#@ o4jY?m'cSAQ!
-#@ 0 0 256
-#@ 8
-#@ o4jY?m'cSA
-#@ 1 0 0
-#@ 4
-#@ g3IID
-#@ 2 0 0
-#@ x
-#@ 15
-#@ rpwhC;Z2b3<?<+EfqT+
-#@ 0
-#@ 0
-#@ }
-#@ # -- End source /software/synopsys/syn_current_64.18/auxx/syn/lc_commands.tbc
-
-#@ # -- End source /software/synopsys/syn_current_64.18/admin/setup/.synopsys_dc.setup
-
-source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
-#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
-
-#@ define_design_lib WORK -path ./work
-#@ set search_path [list . /software/synopsys/syn_current_64.18/libraries/syn /software/dk/nangate45/synopsys ]
-#@ set link_library [list "*" "NangateOpenCellLibrary_typical_ecsm_nowlm.db" "dw_foundation.sldb" ]
-#@ set target_library [list "NangateOpenCellLibrary_typical_ecsm_nowlm.db" ]
-#@ set synthetic_library [list "dw_foundation.sldb" ]
-#@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
-
-help ungroup
-ungroup --help
-ungroup -help
-man ungroup

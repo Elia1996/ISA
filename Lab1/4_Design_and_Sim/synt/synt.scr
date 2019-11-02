@@ -3,7 +3,7 @@ source variables.scr
 
 # -f indica il formato dei file
 # -lib indica dove mettere i file su cui lavora sysnopsys
-analyze -f vhdl -lib WORK { $file_to_synt }
+analyze -f vhdl -lib WORK { ../src/IIR_package.vhd ../src/IIR_filter.vhd ../src/IIR_filter_gen.vhd ../src/register_nbit.vhd}
 # preserviamo i nomi delle netlist della rete
 set power_preserve_rtl_hier_names true
 # elaborazione dei file, viene data la top entity
@@ -26,7 +26,7 @@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 # setto il carico di ciascun uscita che si suppone uguale a quello 
 #  di un buffer
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
-set load $OLOAD [all outputs]
+set_load $OLOAD [all_outputs]
 # compilo
 compile -exact_map > $out_dir/compile.txt
 

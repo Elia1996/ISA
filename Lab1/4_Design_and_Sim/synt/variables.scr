@@ -1,6 +1,8 @@
 # file da sintetizzare
-variable file_to_synt "../src/IIR_package.vhd ../scr/IIR_filter.vhd ../src/IIR_filter_gen.vhd"
+variable filetosynt "../src/IIR_package.vhd ../scr/IIR_filter.vhd ../src/IIR_filter_gen.vhd"
 # top entity
 variable top_entity "IIR_filter"
 # output directory of syntesys file
 variable out_dir "./synt_out"
+# period of clock
+variable period 2.78

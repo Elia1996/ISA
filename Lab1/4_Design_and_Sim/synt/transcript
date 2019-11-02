@@ -1,6 +1,6 @@
-# //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
+# //  ModelSim SE-64 6.5c Aug 27 2009 Linux 3.10.0-957.5.1.el7.x86_64
 # //
-# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //  Copyright 1991-2009 Mentor Graphics Corporation
 # //              All Rights Reserved.
 # //
 # //  THIS WORK CONTAINS TRADE SECRET AND 
@@ -8,19 +8,3 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-help vcd
-# Partial command name. Choices are: vcd add, vcd checkpoint, vcd comment, vcd dumpports, vcd dumpportsall, vcd dumpportsflush, vcd dumpportslimit, vcd dumpportsoff, vcd dumpportson, vcd file, vcd files, vcd flush, vcd limit, vcd off, vcd on
-# Usage: vcd add|checkpoint|comment|dumpports|dumpportsall|dumpportsflush|dumpportslimit|dumpportsoff|dumpportson|file|files|flush|limit|off|on
-help vcd add
-# The vcd add command adds the specified objects to a VCD file.
-# Usage: vcd add [-r] [-in] [-out] [-inout] [-internal] [-ports] [-file <filename>] [-dumpports] <object_name> ...
-vcd --help
-# Error while executing: vcd
-# Usage: vcd add|checkpoint|comment|dumpports|dumpportsall|dumpportsflush|dumpportslimit|dumpportsoff|dumpportson|file|files|flush|limit|off|on
-man vcd
-# No manual entry for vcd
-vcd -h
-# Error while executing: vcd
-# Usage: vcd add|checkpoint|comment|dumpports|dumpportsall|dumpportsflush|dumpportslimit|dumpportsoff|dumpportson|file|files|flush|limit|off|on
-guide
-# invalid command name "guide"
