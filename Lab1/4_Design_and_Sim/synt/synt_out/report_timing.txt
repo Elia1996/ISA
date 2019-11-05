@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : IIR_filter
 Version: O-2018.06-SP4
-Date   : Tue Nov  5 13:05:41 2019
+Date   : Tue Nov  5 15:49:09 2019
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
