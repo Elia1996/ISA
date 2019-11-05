@@ -1,5 +1,5 @@
 source variables.scr
-read_verilog -netlist ../netlist/iir_filter.v
-read saif -input ../saif/iir_filter.saif -instance iir_tb/UUT -unit ns -scale 1
+read_verilog -netlist ../netlist/IIR_filter.v
+read saif -input ../saif/iir_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
 create clock -name MY_CLK CLK
 report_power > $out_dir/report_power_final.txt

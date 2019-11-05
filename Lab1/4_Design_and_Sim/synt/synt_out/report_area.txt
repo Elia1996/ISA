@@ -3,14 +3,14 @@
 Report : area
 Design : IIR_filter
 Version: O-2018.06-SP4
-Date   : Sat Nov  2 18:59:12 2019
+Date   : Tue Nov  5 13:05:42 2019
 ****************************************
 
 Library(s) Used:
 
     NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
 
-Number of ports:                          626
+Number of ports:                          676
 Number of nets:                          3255
 Number of cells:                         2457
 Number of combinational cells:           2384

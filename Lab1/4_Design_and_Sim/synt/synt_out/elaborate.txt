@@ -12,7 +12,7 @@ Information: Building the design 'register_nbit' instantiated from design 'IIR_f
 	the parameters "N=12". (HDL-193)
 
 Inferred memory devices in process
-	in routine register_nbit_N12 line 23 in file
+	in routine register_nbit_N12 line 24 in file
 		'../src/register_nbit.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -24,7 +24,7 @@ Information: Building the design 'register_nbit' instantiated from design 'IIR_f
 	the parameters "N=1". (HDL-193)
 
 Inferred memory devices in process
-	in routine register_nbit_N1 line 23 in file
+	in routine register_nbit_N1 line 24 in file
 		'../src/register_nbit.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |

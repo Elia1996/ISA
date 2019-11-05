@@ -48,7 +48,8 @@ ARCHITECTURE behavioral OF IIR_filter_gen IS
 	GENERIC(	N 					: NATURAL);
 	PORT(		data_in 			: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 				EN, CLK, RST_n : IN STD_LOGIC;
-				data_out		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+				data_out		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+				data_out_n		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));		
 	END COMPONENT register_nbit;
 
 	--------- SIGNALS ---------
@@ -78,14 +79,14 @@ BEGIN
 		GENERIC MAP(Nb)
 		PORT MAP(		d_in,
 						VIN, CLK, RST_n,
-						data_in);
+						data_in, open);
 
 	-- Registro centrale che ritarda di uno v: v -> v1
 	Reg_delay_1 : register_nbit
 		GENERIC MAP(Nb)
 		PORT MAP(		v,
 						Reg_ctrl_1_out, CLK, RST_n,
-						v1);
+						v1, open);
 
 
 	-- Registro centrale che ritarda di uno v1: v1 -> v2
@@ -93,14 +94,14 @@ BEGIN
 		GENERIC MAP(Nb)
 		PORT MAP(		v1,
 						Reg_ctrl_1_out, CLK, RST_n,
-						v2);
+						v2, open);
 
 	-- Registro di uscita d_out -> DOUT
 	Reg_out: register_nbit
 		GENERIC MAP(Nb)
 		PORT MAP(		data_out,
 						Reg_ctrl_1_out, CLK, RST_n,
-						d_out);
+						d_out, open);
 
 	-- Collegamenti e operazioni di somma e moltiplicazione
 
@@ -149,7 +150,7 @@ BEGIN
 				EN => '1',
 				CLK => CLK,
 				RST_n => RST_n,
-				data_out(0) => Reg_ctrl_1_out);
+				data_out(0) => Reg_ctrl_1_out, data_out_n=>open);
 
 	Reg_ctrl_2 : register_nbit
 		GENERIC MAP(1)
@@ -157,7 +158,7 @@ BEGIN
 				EN => '1',
 				CLK => CLK,
 				RST_n => RST_n,
-				data_out(0) => VOUT);
+				data_out(0) => VOUT, data_out_n=>open);
 
 
 
