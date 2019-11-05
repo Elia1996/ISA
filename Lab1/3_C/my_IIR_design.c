@@ -13,7 +13,7 @@
 #define N 2 /// order of the filter 
 // un int è 32 bit percui per avere 12 bit in uscita dai
 // moltiplicatori NB dev'essere 20
-#define NB 13  /// number of bits
+#define NB 12  /// number of bits
 
 const int b0 = 423; /// coefficient b0
 const int b[N]={846, 423}; /// b array
@@ -55,7 +55,7 @@ int myfilter(int DIN, FILE *fp)
   __print(w,fp);
   for(i=0; i<N; i++){
 	     __print(sw[i],fp);
-		var = (-sw[i]*a[i]) >> (NB-1);
+		var = (sw[i]*-a[i]) >> (NB-1);
 		 __print(var,fp);
 		var = (sw[i]*b[i]) >> (NB-1);
 		 __print(var,fp);
@@ -130,4 +130,5 @@ int main (int argc, char **argv)
   return 0;
 
 }
+
 
