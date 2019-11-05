@@ -14,8 +14,7 @@ ENTITY register_nbit IS
 GENERIC(	N 					: NATURAL:=8);
 PORT(	data_in 			    : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 			EN, CLK, RST_n : IN STD_LOGIC;
-			data_out 		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0);
-			data_out_n			: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+			data_out 		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
 END register_nbit;
 
 ARCHITECTURE behavior OF register_nbit IS

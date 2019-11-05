@@ -22,7 +22,7 @@ module IIR_tb ();
 		 .DIN(DIN_s),
 		 .END_SIM(END_SIM_s));
 
-   IIR_filter UUT(.CLK(CLK_s),
+   IIR_filter_optimized UUT(.CLK(CLK_s),
 	     .RST_n(RST_n_s),
 	     .DIN(DIN_s),
          .VIN(VIN_s),

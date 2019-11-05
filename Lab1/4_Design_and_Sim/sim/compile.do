@@ -1,3 +1,4 @@
+vcom -93 -work ./work ../src/IIR_package_optimized.vhd
 vcom -93 -work ./work ../src/*.vhd
 vcom -93 -work ./work ../tb/*.vhd
 vlog -93 -work ./work ../tb/*.v

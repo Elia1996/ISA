@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all; 
 use ieee.std_logic_textio.all;
-use work.type_for_IIR_pkg.all;
+use work.type_for_IIR_optimized_pkg.all;
 
 library std;
 use std.textio.all;
