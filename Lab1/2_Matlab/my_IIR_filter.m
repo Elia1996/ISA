@@ -41,7 +41,7 @@ fp=fopen('../4_Design_and_Sim/sim_in/samples.txt','w');
 fprintf(fp,'%d\n', xq);
 fclose(fp);
 
-fp=fopen('../4_Design_and_Sim/sim_in/resultsm.txt', 'w');
+fp=fopen('../4_Design_and_Sim/sim_out/resultsm.txt', 'w');
 fprintf(fp, '%d\n', yq);
 fclose(fp);
 
