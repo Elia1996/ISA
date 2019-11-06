@@ -5,4 +5,4 @@ variable top_entity "IIR_filter"
 # output directory of syntesys file
 variable out_dir "./synt_out"
 # period of clock
-variable period 2.90
+variable period 3.9

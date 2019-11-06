@@ -34,4 +34,7 @@ report_timing > $out_dir/report_timing.txt
 
 report_area > $out_dir/report_area.txt
 
+# salvo la sintesi corrente
+write_partition -type post -destination synt_db
 
+quit

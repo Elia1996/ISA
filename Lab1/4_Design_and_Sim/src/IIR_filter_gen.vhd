@@ -112,27 +112,27 @@ BEGIN
 	-- v viene moltiplicato per b0 ottenendo il dato da sommare alla
 	-- di feed-forward
 	vb0_f <= std_logic_vector(signed(v) * signed(B(0)));
-	vb0 <= vb0_f(Nb*2-1 downto Nb);
+	vb0 <= vb0_f(Nb*2-2 downto Nb-1);
 	
 	-- Il dato v verr ritardato da Reg_delay_1 diventando v1
 	-- a questo punto si effettuano le  moltiplicazioni:
 	-- v1*a0 per il feed-back
 	v1a0_f <= std_logic_vector(signed(v1) * signed(A(0)));
-	v1a0 <= v1a0_f(Nb*2-1 downto Nb);
+	v1a0 <= v1a0_f(Nb*2-2 downto Nb-1);
 	
 	-- v1*b1 per il feed-forward
 	v1b1_f <= std_logic_vector(signed(v1) * signed(B(1)));
-	v1b1 <= v1b1_f(Nb*2-1 downto Nb);
+	v1b1 <= v1b1_f(Nb*2-2 downto Nb-1);
 	
 	-- Dopo un'ulteriore ritardo v1 diventa v2 e dev'essere 
 	-- moltiplicato per:
 	-- v2*a1  per il feed-back
 	v2a1_f <= std_logic_vector(signed(v2) * signed(A(1)));
-	v2a1 <= v2a1_f(Nb*2-1 downto Nb);
+	v2a1 <= v2a1_f(Nb*2-2 downto Nb-1);
 	
  	-- v2*b2  per il feed-forward
 	v2b2_f <= std_logic_vector(signed(v2) * signed(B(2)));
-	v2b2 <= v2b2_f(Nb*2-1 downto Nb); 
+	v2b2 <= v2b2_f(Nb*2-2 downto Nb-1); 
 	
 	-- Viene ora generato il dato di feed-back finale
 	v1a0_piu_v2a1 <= std_logic_vector(signed(v1a0) + signed(v2a1));

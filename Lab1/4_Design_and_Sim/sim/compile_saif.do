@@ -8,3 +8,4 @@ vcd file ../vcd/IIR_filter.vcd
 vcd add /IIR_tb/UUT/*
 add wave *
 run 1000ns
+quit

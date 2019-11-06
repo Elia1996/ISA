@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov  5 15:54:20 2019
+#@ # Date:   Wed Nov  6 18:37:50 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6638,8 +6638,8 @@ source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 
-source final_power.scr
-#@ # -- Starting source final_power.scr
+source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
+#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
 
 #@ source variables.scr
 #@ # -- Starting source variables.scr
@@ -6651,36 +6651,12 @@ source final_power.scr
 #@ # output directory of syntesys file
 #@ variable out_dir "./synt_out"
 #@ # period of clock
-#@ variable period 2.90
-#@ # -- End source variables.scr
-
-#@ read_verilog -netlist ../netlist/IIR_filter.v
-#@ read saif -input ../saif/iir_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
-#@ create_clock -name MY_CLK CLK
-#@ report_power > $out_dir/report_power_final.txt
-#@ # -- End source final_power.scr
-
-error_info
-error_info
-source final_power.scr
-#@ # -- Starting source final_power.scr
-
-#@ source variables.scr
-#@ # -- Starting source variables.scr
-
-#@ # file da sintetizzare
-#@ variable filetosynt "../src/IIR_package.vhd ../scr/IIR_filter.vhd ../src/IIR_filter_gen.vhd"
-#@ # top entity
-#@ variable top_entity "IIR_filter"
-#@ # output directory of syntesys file
-#@ variable out_dir "./synt_out"
-#@ # period of clock
-#@ variable period 2.90
+#@ variable period 3.9
 #@ # -- End source variables.scr
 
 #@ read_verilog -netlist ../netlist/IIR_filter.v
 #@ read_saif -input ../saif/iir_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
 #@ create_clock -name MY_CLK CLK
 #@ report_power > $out_dir/report_power_final.txt
-#@ # -- End source final_power.scr
+#@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
 
