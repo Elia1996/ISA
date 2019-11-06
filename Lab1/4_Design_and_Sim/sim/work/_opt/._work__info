@@ -3,7 +3,7 @@ m255
 cModel Technology
 d/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/sim
 T_opt
-VRdVa]gfVR;I:MAHA7Y6md0
+V>80imi;131aOdS2@0Ufz93
 06 6 4 ./work IIR_tb fast 0
 o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../netlist/IIR_filter.sdf -suppress 1948
 tExplicit 1
@@ -38,9 +38,9 @@ OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
 vIIR_filter
-IYE;LbH0H@3l>ccT8_fY4b2
+I2e=kS=BYYL7nIkmn6k7F81
 VJjSSG?S7M9_:VH25oGRmM2
-w1573060591
+w1573062920
 8../netlist/IIR_filter.v
 F../netlist/IIR_filter.v
 L0 8

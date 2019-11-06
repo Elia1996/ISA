@@ -121,7 +121,7 @@ Reading ddc file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Loaded 17 designs.
 Current design is 'IIR_filter'.
-IIR_filter register_nbit_N12_0 register_nbit_N12_3 register_nbit_N12_2 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_1 IIR_filter_gen_DW_mult_tc_4 IIR_filter_gen_DW_mult_tc_3 IIR_filter_gen_DW01_add_3 IIR_filter_gen_DW_mult_tc_2 IIR_filter_gen_DW01_add_2 IIR_filter_gen_DW_mult_tc_1 IIR_filter_gen_DW01_add_1 IIR_filter_gen_DW_mult_tc_0 IIR_filter_gen_DW01_add_0 IIR_filter_gen
+IIR_filter register_nbit_N12_0 register_nbit_N12_3 register_nbit_N12_2 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_1 IIR_filter_gen_DW_mult_tc_4 IIR_filter_gen_DW_mult_tc_3 IIR_filter_gen_DW_mult_tc_2 IIR_filter_gen_DW01_add_3 IIR_filter_gen_DW01_add_2 IIR_filter_gen_DW_mult_tc_1 IIR_filter_gen_DW01_add_1 IIR_filter_gen_DW_mult_tc_0 IIR_filter_gen_DW01_add_0 IIR_filter_gen
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
 Information: Updating graph... (UID-83)
@@ -150,4 +150,6 @@ write_sdc ../netlist/$top_entity.sdc
 # questo dev'essere fatto ogni volta perchè se non si esce
 # le nuove simulazioni vengono fatte anche in base a quelle vecchie
 # e non sono più riproducibili.
-dc_shell> 
+quit
+
+Thank you...

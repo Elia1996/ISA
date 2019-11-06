@@ -32,9 +32,9 @@
 # vsim -L /software/dk/nangate45/verilog/msim6.2g work.IIR_tb 
 # ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
 # File in use by: isa22  Hostname: localhost.localdomain  ProcessID: 26088
-#           Attempting to use alternate file "./wlftyH8Y9c".
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftyH8Y9c instead.
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftyH8Y9c instead.
+#           Attempting to use alternate file "./wlftC8EXYs".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftC8EXYs instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftC8EXYs instead.
 # Design is being optimized...
 # //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
 # //
@@ -47,15 +47,12 @@
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
 # Loading work.IIR_tb(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X2(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X2(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XNOR2_X1(fast)
@@ -68,17 +65,9 @@
 # Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.HA_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X4(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X4(fast)
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
@@ -89,127 +78,130 @@
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
 # Loading work.type_for_iir_pkg
 # Loading work.iir_tb_in(beh)
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(879): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(686): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(881): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(688): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_1_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(883): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(690): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(885): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(692): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(887): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(694): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(889): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(696): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(891): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(698): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(893): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(700): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(895): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(702): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(897): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(704): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(899): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(706): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(901): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(708): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(960): [TFMPC] - Too few port connections. Expected 4, found 3.
-#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(962): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(765): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(966): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(767): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_1_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(769): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(968): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(771): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(970): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(773): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_4_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(775): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(972): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(777): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(974): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(779): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(976): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(781): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(978): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(783): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(980): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(785): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(982): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(787): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1046): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(845): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1052): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(847): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_1_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(849): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_2_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(851): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1054): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(853): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1056): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(855): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1058): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(857): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1060): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(859): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1062): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(861): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1064): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(863): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1066): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(865): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1068): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(867): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1128): [TFMPC] - Too few port connections. Expected 4, found 3.
-#         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1130): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(925): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1132): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(927): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_1_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1134): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(929): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1136): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(931): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1138): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(933): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1140): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(935): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1142): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(937): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1144): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(939): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1146): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(941): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1148): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(943): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1150): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(945): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1158): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(947): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_11_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(955): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_ctrl_1_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1165): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(962): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_ctrl_2_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(2599): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3076): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_1_root_add_0_root_add_143_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3947): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3117): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_0_root_add_0_root_add_143_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(4849): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3853): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_0_root_add_110_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(5890): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(4589): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_1_root_add_110_U1_11
 # Loading work.iir_tb_out(beh)
 # vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftype /IIR_tb/UUT=../netlist/IIR_filter.sdf work.IIR_tb 
 # ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
 # File in use by: isa22  Hostname: localhost.localdomain  ProcessID: 26088
-#           Attempting to use alternate file "./wlftPb0IDC".
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftPb0IDC instead.
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftPb0IDC instead.
+#           Attempting to use alternate file "./wlftwsZM1A".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftwsZM1A instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftwsZM1A instead.
 # Design is being optimized due to module recompilation...
 # Loading work.IIR_tb(fast)
 # Loading work.IIR_filter(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.CLKBUF_X3(fast)
+# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.AOI22_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X2(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.DFF_X2(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.INV_X1(fast__1)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X1(fast)
@@ -223,17 +215,9 @@
 # Loading /software/dk/nangate45/verilog/msim6.2g.OR3_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.XOR2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.HA_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.FA_X1(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.AND2_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.NAND2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X1(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.INV_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AND3_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.AOI222_X4(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.OR2_X2(fast)
-# Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X4(fast)
 # Loading instances from ../netlist/IIR_filter.sdf
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
@@ -245,107 +229,113 @@
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
 # Loading work.type_for_iir_pkg
 # Loading work.iir_tb_in(beh)
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(879): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(686): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(881): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(688): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_1_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(883): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(690): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(885): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(692): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(887): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(694): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(889): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(696): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(891): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(698): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(893): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(700): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(895): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(702): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(897): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(704): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(899): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(706): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(901): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(708): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_in_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(960): [TFMPC] - Too few port connections. Expected 4, found 3.
-#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(962): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(765): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(966): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(767): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_1_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(769): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(968): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(771): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(970): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(773): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_4_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(775): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(972): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(777): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(974): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(779): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(976): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(781): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(978): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(783): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(980): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(785): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(982): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(787): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_1_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1046): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(845): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1052): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(847): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_1_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(849): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_2_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(851): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1054): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(853): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1056): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(855): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1058): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(857): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1060): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(859): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1062): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(861): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1064): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(863): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1066): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(865): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1068): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(867): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_delay_2_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1128): [TFMPC] - Too few port connections. Expected 4, found 3.
-#         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_11_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1130): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(925): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1132): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(927): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_1_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1134): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(929): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_2_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1136): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(931): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_3_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1138): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(933): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_4_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1140): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(935): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_5_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1142): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(937): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_6_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1144): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(939): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_7_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1146): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(941): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_8_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1148): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(943): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_9_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1150): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(945): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_10_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1158): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(947): [TFMPC] - Too few port connections. Expected 4, found 3.
+#         Region: /IIR_tb/UUT/filter_Reg_out_data_out_reg_11_
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(955): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_ctrl_1_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(1165): [TFMPC] - Too few port connections. Expected 4, found 3.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(962): [TFMPC] - Too few port connections. Expected 4, found 3.
 #         Region: /IIR_tb/UUT/filter_Reg_ctrl_2_data_out_reg_0_
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(2599): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3076): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_1_root_add_0_root_add_143_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3947): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3117): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_0_root_add_0_root_add_143_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(4849): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(3853): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_0_root_add_110_U1_11
-# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(5890): [TFMPC] - Too few port connections. Expected 5, found 4.
+# ** Warning: (vsim-3017) ../netlist/IIR_filter.v(4589): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: /IIR_tb/UUT/filter_add_1_root_add_110_U1_11
 # Loading work.iir_tb_out(beh)
 # Loading timing data from ../netlist/IIR_filter.sdf

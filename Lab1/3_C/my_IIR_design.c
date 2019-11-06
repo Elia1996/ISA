@@ -46,6 +46,8 @@ int myfilter(int DIN, FILE *fp)
   for (i=0; i<N; i++)
   {
 	// tronco NB, prendo quelli più significativi
+	//         00.000000 00000|000 00000000        
+	// 00000000 00000000 00000|000 00000000
     fb += (sw[i]*-a[i]) >> (NB-1);
     ff += (sw[i]*b[i]) >> (NB-1);
   }
