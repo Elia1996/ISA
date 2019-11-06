@@ -44,12 +44,12 @@ END IIR_filter_gen_optimized;
 ARCHITECTURE behavioral OF IIR_filter_gen_optimized IS
 
 	--------- COMPONENTS ---------
-	COMPONENT register_Nb_intoit IS
-	GENERIC(	N 					: NATURAL:=Nb_into);
+	COMPONENT register_Nb IS
+	GENERIC(	N 					: NATURAL:=Nb);
 	PORT(		data_in 			: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 				EN, CLK, RST_n : IN STD_LOGIC;
 				data_out		    : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
-	END COMPONENT register_Nb_intoit;
+	END COMPONENT register_Nb;
 
 	--------- SIGNALS ---------
 	
@@ -80,32 +80,32 @@ BEGIN
 	-- registro di ingresso dei dati  DIN -> d_in
 	-- questo registro viene resettato dal segnale di ingresso dato
 	-- che non c' la control unit
-	Reg_in: register_Nb_intoit
+	Reg_in: register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(		d_in,
 							VIN, CLK, RST_n,
 							data_in);
 
 	-- Registro che salva x(n-1)
-	Reg_x_delay_1 : register_Nb_intoit
+	Reg_x_delay_1 : register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(	data_in,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						x_delay_1);
 	-- Registro che salva x(n-2)
-	Reg_x_delay_2 : register_Nb_intoit
+	Reg_x_delay_2 : register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(	x_delay_1,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						x_delay_2);
 	-- Registro che salva x(n-3)
-	Reg_x_delay_3 : register_Nb_intoit
+	Reg_x_delay_3 : register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(	x_delay_2,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						x_delay_3);
 	-- Registro che salva x(n-4)
-	Reg_x_delay_4 : register_Nb_intoit
+	Reg_x_delay_4 : register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(	x_delay_3,
 						REG_CTRL_1_OUT, CLK, RST_n,
@@ -131,31 +131,31 @@ BEGIN
 	
 
 	-- Registro che salva m1
-	Reg_m1 : register_Nb_intoit
+	Reg_m1 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_1,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						reg_m_1);
 	-- Registro che salva m2
-	Reg_m2 : register_Nb_intoit
+	Reg_m2 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_2,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						reg_m_2);
 	-- Registro che salva m3
-	Reg_m3 : register_Nb_intoit
+	Reg_m3 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_3,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						reg_m_3);
 	-- Registro che salva m4
-	Reg_m4 : register_Nb_intoit
+	Reg_m4 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_4,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						reg_m_4);
 	-- Registro che salva m5
-	Reg_m5 : register_Nb_intoit
+	Reg_m5 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_5,
 						REG_CTRL_1_OUT, CLK, RST_n,
@@ -173,7 +173,7 @@ BEGIN
 	s_4 <= std_logic_vector(signed(s_1) + signed(reg_m_5));
 	
 	-- Registro che salva s4
-	Reg_s4 : register_Nb_intoit
+	Reg_s4 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	s_4,
 						REG_CTRL_1_OUT, CLK, RST_n,
@@ -183,20 +183,20 @@ BEGIN
 	---------------- FINE PRIMO PEZZO DEL DP --------------------
 	
 	-- Registro che salva y(n-1)
-	Reg_y_delay_1 : register_Nb_intoit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	s_6,
+	Reg_y_delay_1 : register_Nb
+		GENERIC MAP(Nb)
+		PORT MAP(	s_6(Nb_into-1 DOWNTO Nb_into-Nb),
 						REG_CTRL_1_OUT, CLK, RST_n,
 						y_delay_1);
 	-- Registro che salva y(n-2)
-	Reg_y_delay_2 : register_Nb_intoit
-		GENERIC MAP(Nb_into)
+	Reg_y_delay_2 : register_Nb
+		GENERIC MAP(Nb)
 		PORT MAP(	y_delay_1,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						y_delay_2);
 	-- Registro che salva y(n-3)
-	Reg_y_delay_3 : register_Nb_intoit
-		GENERIC MAP(Nb_into)
+	Reg_y_delay_3 : register_Nb
+		GENERIC MAP(Nb)
 		PORT MAP(	y_delay_2,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						y_delay_3);
@@ -210,13 +210,13 @@ BEGIN
 	m_7 <= m_7_tmp(Nb+Nb_into-1 downto Nb);
 	
 	-- Registro che salva m6
-	Reg_m6 : register_Nb_intoit
+	Reg_m6 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_6,
 						REG_CTRL_1_OUT, CLK, RST_n,
 						reg_m_6);
 	-- Registro che salva m7
-	Reg_m7 : register_Nb_intoit
+	Reg_m7 : register_Nb
 		GENERIC MAP(Nb_into)
 		PORT MAP(	m_7,
 						REG_CTRL_1_OUT, CLK, RST_n,
@@ -229,7 +229,7 @@ BEGIN
 	
 	
 	-- Registro di uscita dei dati  s_6 -> d_out
-	Reg_out : register_Nb_intoit
+	Reg_out : register_Nb
 		GENERIC MAP(Nb)
 		PORT MAP(	s_6(Nb_into-1 DOWNTO Nb_into-Nb),
 						REG_CTRL_1_OUT, CLK, RST_n,
@@ -238,7 +238,7 @@ BEGIN
 
 	--------  CONTROLLO  ---------
 
-	Reg_ctrl_1 : register_Nb_intoit
+	Reg_ctrl_1 : register_Nb
 		GENERIC MAP(1)
 		PORT MAP( data_in(0) => VIN,
 				EN => '1',
@@ -246,7 +246,7 @@ BEGIN
 				RST_n => RST_n,
 				data_out(0) => Reg_ctrl_1_out);
 
-	Reg_ctrl_2 : register_Nb_intoit
+	Reg_ctrl_2 : register_Nb
 		GENERIC MAP(1)
 		PORT MAP ( data_in(0) => Reg_ctrl_1_out,
 				EN => '1',
