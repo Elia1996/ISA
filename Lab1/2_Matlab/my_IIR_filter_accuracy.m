@@ -57,13 +57,14 @@ A=fi(A,1,new_width,new_width-1);
 %new_width=22;
 
 xx = myfi([zeros(1,4) xq],12);
-yy = zeros(1,length(xq)+4);
+yy = myfi(zeros(1,length(xq)+4),12);
 for n=1:(length(xq))
    x_sum = myfi(sum(myfi(xx(n:n+4).*flip(B),new_width)),new_width); 
-   yy(n+4) = myfi(sum(myfi(yy(n:n+1).*flip(A),new_width)) + x_sum,12);
+   yy(n+4) = myfi(myfi(sum(myfi(yy(n:n+1).*flip(A),new_width)),new_width) + x_sum, new_width);
+   yy(n+4)=myfi(yy(n+4),12);
 end
 
-yy=myfi(yy,12);
+
 % yy=fi(yy*2^(new_width-12),1,12,11,'RoundingMethod','Floor','OverflowAction','Wrap');
 
 % % xx = [zeros(1,4) xq]/2^11;
