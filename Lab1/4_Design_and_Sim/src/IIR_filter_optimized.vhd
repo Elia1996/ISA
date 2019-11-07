@@ -42,14 +42,14 @@ ARCHITECTURE behavioral OF IIR_filter_optimized IS
 	END COMPONENT IIR_filter_gen_optimized;
 
 	----------- SIGNALS  --------------------
-	CONSTANT A : FB_COEFF_A  := (	std_logic_vector(to_signed(-6177,Nb_into)),
-											std_logic_vector(to_signed(759, Nb_into)));
+	CONSTANT A : FB_COEFF_A  := (	std_logic_vector(to_signed(759,Nb_into)),
+					std_logic_vector(to_signed(-6177, Nb_into)));
 											
-	CONSTANT B : FF_COEFF_B  := (	std_logic_vector(to_signed(13536, Nb_into)),
-											std_logic_vector(to_signed(32075, Nb_into)),
-											std_logic_vector(to_signed(22742, Nb_into)),
-											std_logic_vector(to_signed(3401, Nb_into)),
-											std_logic_vector(to_signed(-801, Nb_into)));
+	CONSTANT B : FF_COEFF_B  := (	std_logic_vector(to_signed(-801, Nb_into)),
+					std_logic_vector(to_signed(3401, Nb_into)),
+					std_logic_vector(to_signed(22742, Nb_into)),
+					std_logic_vector(to_signed(32075, Nb_into)),
+					std_logic_vector(to_signed(13536, Nb_into)));
 BEGIN
 	filter: IIR_filter_gen_optimized
 	PORT MAP(	d_in => DIN,
