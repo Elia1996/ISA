@@ -11,7 +11,7 @@
 #endif
 
 #define N 2 /// order of the filter 
-// un int è 32 bit percui per avere 12 bit in uscita dai
+// un int è 32 bit per cui per avere 12 bit in uscita dai
 // moltiplicatori NB dev'essere 20
 #define NB 12  /// number of bits
 
@@ -128,7 +128,8 @@ int main (int argc, char **argv)
 
   fclose(fp_in);
   fclose(fp_out);
-	printf("%d",sizeof(int));
+	printf("size of int %zu\n",sizeof(int));
+	printf("size of multiplication: %zu\n", sizeof(x*a[1]));
   return 0;
 
 }

@@ -2,11 +2,11 @@
 -- 		IIR filter
 -- DESCRIPTION
 -- 		Questo file contiene l'interfaccia fra l'architettura del filtro
---		generico IIR_filter_gen e il testbench, si  descritta questa 
+--		generico IIR_filter_gen e il testbench, si è descritta questa 
 --		architettura esterna per far si che l'interfaccia con il simulatore
---		si la stessa degli altri gruppi ma allo stesso tempo si avesse una 
+--		sia la stessa degli altri gruppi ma allo stesso tempo si avesse una 
 --		descrizione generica del filtro IIR nel file IIR_filter_gen.vhd
--- AUTHOR 
+-- AUTHORS 
 --		Fiore, Neri, RIbaldone, Zheng
 -- VHDL NOTATION
 --		 keyword in MAIUSCOLO (es: STD_LOGIC)

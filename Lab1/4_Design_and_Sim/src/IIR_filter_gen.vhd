@@ -1,15 +1,15 @@
 -- NAME 
 --		IIR generic filter
 -- DESCRIPTION
--- 		Questa  l'architettura di un filtro IIR di ordine N, e numero 
+-- 		Questa  è l'architettura di un filtro IIR di ordine N, e numero 
 --		di bit Nb, entrambi vanno settati nel package type_for_IIR_pkg
--- 		instanziato sotto. 
+-- 		instanziato nel file IIR_package.vhd. 
 --		L'equazione implementata :
 --		y(z) = (b0 + z^-1*b1 + z^-2*b2)/(1 - z^-1*a0 -z^-2*a1)
 -- 		ovvero in notazione nel tempo
 --		yi = xi*b0 + x(i-1)*bi + x(i-2)*b2 - y(i-1)*a0 - y(i-2)*a1
--- 		 stata riportata l'equazione per un filtro di ordine 2.
--- AUTHOR
+-- 		è  stata riportata per un filtro di ordine 2.
+-- AUTHORS
 -- 		Fiore, Neri, Ribaldone, Zheng
 -- VHDL NOTATION
 --		 keyword in MAIUSCOLO (es: STD_LOGIC)
@@ -73,7 +73,7 @@ ARCHITECTURE behavioral OF IIR_filter_gen IS
 BEGIN
 
 	-- 	registro di ingresso dei dati  DIN -> d_in
-	-- questo registro viene resettato dal segnale di ingresso dato
+	-- questo registro viene abilitato dal segnale di ingresso dato
 	-- che non c' la control unit
 	Reg_in: register_nbit
 		GENERIC MAP(Nb)
@@ -124,8 +124,7 @@ BEGIN
 	v1b1_f <= std_logic_vector(signed(v1) * signed(B(1)));
 	v1b1 <= v1b1_f(Nb*2-2 downto Nb-1);
 	
-	-- Dopo un'ulteriore ritardo v1 diventa v2 e dev'essere 
-	-- moltiplicato per:
+	-- Dopo un'ulteriore ritardo v1 diventa v2:
 	-- v2*a1  per il feed-back
 	v2a1_f <= std_logic_vector(signed(v2) * signed(A(1)));
 	v2a1 <= v2a1_f(Nb*2-2 downto Nb-1);
