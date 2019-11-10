@@ -30,9 +30,11 @@ set_load $OLOAD [all_outputs]
 # compilo
 compile -exact_map > $out_dir/compile.txt
 
-report_timing > $out_dir/report_timing.txt
+report_timing > $out_dir/report_timing_optimized.txt
 
-report_area > $out_dir/report_area.txt
+report_area > $out_dir/report_area_optimized.txt
+
+# salvo la sintesi corrente
+write_partition -type post -destination synt_db
 
 quit
-

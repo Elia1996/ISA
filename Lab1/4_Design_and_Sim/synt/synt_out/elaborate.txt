@@ -7,12 +7,41 @@ Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'IIR_filter_optimized'.
 Information: Building the design 'IIR_filter_gen_optimized'. (HDL-193)
-Error:  ../src/IIR_filter_gen_optimized.vhd:186: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:192: Width of the actual at the port 'data_in' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:192: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:198: Width of the actual at the port 'data_in' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:198: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-*** Presto compilation terminated with 5 errors. ***
-Information: Building the design 'IIR_filter_gen_optimized'. (HDL-193)
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
+	the parameters "N=12". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N12 line 23 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
+	the parameters "N=17". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N17 line 23 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  17   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
+	the parameters "N=1". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N1 line 23 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
 1

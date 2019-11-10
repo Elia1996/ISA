@@ -1,30 +1,44 @@
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
 | DesignWare Building Block Library  |         Version         | Available |
 ============================================================================
 | Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
-| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |           |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
 ============================================================================
+
+
+Information: There are 125 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
+  Processing 'register_nbit_N1_0'
+  Processing 'register_nbit_N12_0'
+  Processing 'register_nbit_N17_0'
+  Processing 'IIR_filter_gen_optimized'
   Processing 'IIR_filter_optimized'
-Information: Building the design 'IIR_filter_gen_optimized'. (HDL-193)
-Error:  ../src/IIR_filter_gen_optimized.vhd:186: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:192: Width of the actual at the port 'data_in' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:192: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:198: Width of the actual at the port 'data_in' does not match. (12 != 17) (ELAB-353)
-Error:  ../src/IIR_filter_gen_optimized.vhd:198: Width of the actual at the port 'data_out' does not match. (12 != 17) (ELAB-353)
-*** Presto compilation terminated with 5 errors. ***
-Information: Building the design 'IIR_filter_gen_optimized'. (HDL-193)
-Warning: Unable to resolve reference 'IIR_filter_gen_optimized' in 'IIR_filter_optimized'. (LINK-5)
 
   Updating timing information
 Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_0'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_1'
+  Processing 'IIR_filter_gen_optimized_DW01_add_0'
+  Processing 'IIR_filter_gen_optimized_DW01_add_1'
+  Processing 'IIR_filter_gen_optimized_DW01_add_2'
+  Processing 'IIR_filter_gen_optimized_DW01_add_3'
+  Processing 'IIR_filter_gen_optimized_DW01_add_4'
+  Processing 'IIR_filter_gen_optimized_DW01_add_5'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_2'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_3'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_4'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_5'
+  Mapping 'IIR_filter_gen_optimized_DW_mult_tc_6'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
@@ -33,18 +47,26 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
+    0:00:14    7828.4      0.15       1.4     149.2                          
+    0:00:14    7828.4      0.15       1.4     149.2                          
+    0:00:14    7828.4      0.15       1.4     149.2                          
+    0:00:14    7828.4      0.15       1.4     149.2                          
+    0:00:14    7828.4      0.15       1.4     149.2                          
+    0:00:16    7430.7      0.20       1.5       0.0                          
+    0:00:17    7441.6      0.15       0.9       0.0                          
+    0:00:18    7462.6      0.13       0.7       0.0                          
+    0:00:18    7479.4      0.09       0.4       0.0                          
+    0:00:19    7487.4      0.07       0.2       0.0                          
+    0:00:19    7489.0      0.04       0.1       0.0                          
+    0:00:19    7487.4      0.00       0.0       0.0                          
+    0:00:19    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
 
 
 
@@ -55,9 +77,9 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -67,17 +89,23 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
-    0:00:02       0.0      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7484.7      0.00       0.0       0.0                          
+    0:00:20    7458.1      0.01       0.0       0.0                          
+    0:00:20    7453.3      0.01       0.0       0.0                          
+    0:00:20    7452.5      0.01       0.0       0.0                          
+    0:00:20    7452.0      0.01       0.0       0.0                          
+    0:00:20    7452.0      0.01       0.0       0.0                          
+    0:00:20    7452.0      0.01       0.0       0.0                          
+    0:00:21    7454.1      0.00       0.0       0.0                          
+    0:00:21    7445.6      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
+    0:00:21    7444.0      0.00       0.0       0.0                          
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 
 

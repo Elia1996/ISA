@@ -36,7 +36,6 @@ Compiling Architecture BEHAVIORAL of IIR_FILTER_GEN_OPTIMIZED
 -- Compiling Source File ../src/register_nbit.vhd
 Compiling Entity Declaration REGISTER_NBIT
 Compiling Architecture BEHAVIOR of REGISTER_NBIT
-Warning:  ../src/register_nbit.vhd:20: The architecture behavior has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
@@ -49,27 +48,21 @@ elaborate $top_entity -arch behavioral -lib WORK > $out_dir/elaborate.txt
 ###  Applico le limitazioni 
 # creo il clock di sistema, in ns
 create_clock -name MY_CLK -period $period CLK
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
 1
 # poichè il clock è un segnale particolare
 # setto la proprietà don't touch
 # ciò è fatto perchè col comando ungroup vengono modificate tutte
 # le celle tranne quelle dont_touch
 set_dont_touch_network MY_CLK
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
 1
 # setto l'incertezza del clock
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
 1
 # setto in ritardo di tutti gli ingressi, che si suppone uguale
 set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
 1
 # setto il ritardo di tutte le uscite
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
-Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
 1
 # setto il carico di ciascun uscita che si suppone uguale a quello 
 #  di un buffer
@@ -81,6 +74,14 @@ set_load $OLOAD [all_outputs]
 compile -exact_map > $out_dir/compile.txt
 report_timing > $out_dir/report_timing.txt
 report_area > $out_dir/report_area.txt
+# salvo la sintesi corrente
+write_partition -type post -destination synt_db
+Information: Use of command 'write_partition' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Current design is 'IIR_filter_optimized'.
+Information: Use of command 'shell_is_in_xg_mode' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Information: Use of command 'acs_get_path' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Writing ddc file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc'.
+1
 quit
 
 Thank you...
@@ -108,31 +109,47 @@ Initializing...
 source variables.scr
 # script per salvare la simulazione in modo da effettuare
 # poi il calcolo della potenza con la switching activity
+# carico l'ultima sintesi
+read_file -format ddc {/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc}
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Reading ddc file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Loaded 36 designs.
+Current design is 'IIR_filter_optimized'.
+IIR_filter_optimized register_nbit_N12_0 register_nbit_N12_8 register_nbit_N12_7 register_nbit_N12_6 register_nbit_N12_5 register_nbit_N17_0 register_nbit_N17_7 register_nbit_N17_6 register_nbit_N17_5 register_nbit_N17_4 register_nbit_N17_3 register_nbit_N12_4 register_nbit_N12_3 register_nbit_N12_2 register_nbit_N17_2 register_nbit_N17_1 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_3 register_nbit_N1_2 register_nbit_N1_1 IIR_filter_gen_optimized_DW_mult_tc_0 IIR_filter_gen_optimized_DW_mult_tc_1 IIR_filter_gen_optimized_DW01_add_1 IIR_filter_gen_optimized_DW01_add_0 IIR_filter_gen_optimized_DW01_add_5 IIR_filter_gen_optimized_DW01_add_4 IIR_filter_gen_optimized_DW01_add_3 IIR_filter_gen_optimized_DW01_add_2 IIR_filter_gen_optimized_DW_mult_tc_2 IIR_filter_gen_optimized_DW_mult_tc_3 IIR_filter_gen_optimized_DW_mult_tc_4 IIR_filter_gen_optimized_DW_mult_tc_5 IIR_filter_gen_optimized_DW_mult_tc_6 IIR_filter_gen_optimized
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
-Error: Current design is not defined. (UID-4)
-0
+Information: Updating graph... (UID-83)
+Warning: Design 'IIR_filter_optimized' inherited license information from design 'IIR_filter_gen_optimized_DW_mult_tc_0'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'IIR_filter_optimized'. (DDB-72)
+1
 # per esportare la netlist in verilog dobbiamo cambiare i
 # nomi secondo le regole del verilog
 change_names -hierarchy -rules verilog
-Error: Current design is not defined. (UID-4)
-0
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
 # creiamo il file di ritardi della netlist
 write_sdf ../netlist/$top_entity.sdf
-Error: Current design is not defined. (UID-4)
-0
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
 # scriviamo la netlist
 write -f verilog -hierarchy -output ../netlist/$top_entity.v
-Error: No files or designs were specified. (UID-22)
-0
+Writing verilog file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.v'.
+1
 # salviamo i limiti
 write_sdc ../netlist/$top_entity.sdc
-Error: Current design is not defined. (UID-4)
-0
+1
 # usciamo da synopsys
 # questo dev'essere fatto ogni volta perchè se non si esce
 # le nuove simulazioni vengono fatte anche in base a quelle vecchie
 # e non sono più riproducibili.
-quit 
+quit
 
 Thank you...

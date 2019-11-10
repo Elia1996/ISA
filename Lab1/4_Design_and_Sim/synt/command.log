@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sun Nov 10 19:21:01 2019
+#@ # Date:   Sun Nov 10 20:46:03 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6638,8 +6638,8 @@ source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 
-source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/save.scr
-#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/save.scr
+source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
+#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
 
 #@ source variables.scr
 #@ # -- Starting source variables.scr
@@ -6654,24 +6654,9 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/save.sc
 #@ variable period 2.90
 #@ # -- End source variables.scr
 
-#@ # script per salvare la simulazione in modo da effettuare
-#@ # poi il calcolo della potenza con la switching activity
-#@ 
-#@ # metto tutti i blocchi allo stesso livello di gerarchia
-#@ ungroup -all -flatten
-#@ # per esportare la netlist in verilog dobbiamo cambiare i
-#@ # nomi secondo le regole del verilog
-#@ change_names -hierarchy -rules verilog
-#@ 
-#@ # creiamo il file di ritardi della netlist
-#@ write_sdf ../netlist/$top_entity.sdf
-#@ 
-#@ # scriviamo la netlist
-#@ write -f verilog -hierarchy -output ../netlist/$top_entity.v
-#@ # salviamo i limiti
-#@ write_sdc ../netlist/$top_entity.sdc
-#@ # usciamo da synopsys
-#@ # questo dev'essere fatto ogni volta perchè se non si esce
-#@ # le nuove simulazioni vengono fatte anche in base a quelle vecchie
-#@ # e non sono più riproducibili.
-#@ quit 
+#@ read_verilog -netlist ../netlist/IIR_filter_optimized.v
+#@ read_saif -input ../saif/iir_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
+#@ create_clock -name MY_CLK CLK
+#@ report_power > $out_dir/report_power_final_optimized.txt
+#@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
+
