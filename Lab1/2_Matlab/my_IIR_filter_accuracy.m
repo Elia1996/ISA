@@ -95,3 +95,11 @@ plot(1:1:length(xq),yq_butter-yy(5:end).*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
 title("Differences between matlab filter-function and optimized model");
+
+
+fp=fopen('resultsMATLAB_DF1.txt', 'w');
+for i=1:length(yy(5:end))
+    a=yy(i+4);
+    fprintf(fp, '%s\n', a.bin);
+end
+fclose(fp);

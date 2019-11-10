@@ -58,12 +58,13 @@ A=fi(A,1,new_width,new_width-1);
 
 xx = myfi([zeros(1,4) xq],12);
 yy = myfi(zeros(1,length(xq)+4),12);
-for n=1:5%(length(xq))
+for n=1:(length(xq))
    x_sum = myfi(sum(myfi(xx(n:n+4).*flip(B),new_width)),new_width); 
-   yy(n+4) = myfi(sum(myfi(yy(n:n+1).*flip(A),new_width)) + x_sum,12);
+   yy(n+4) = myfi(myfi(sum(myfi(yy(n:n+1).*flip(A),new_width)),new_width) + x_sum, new_width);
+   yy(n+4)=myfi(yy(n+4),12);
 end
 
-yy=myfi(yy,12);
+
 % yy=fi(yy*2^(new_width-12),1,12,11,'RoundingMethod','Floor','OverflowAction','Wrap');
 
 % % xx = [zeros(1,4) xq]/2^11;
@@ -94,3 +95,9 @@ plot(1:1:length(xq),yq_butter-yy(5:end).*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
 title("Differences between matlab filter-function and optimized model");
+
+
+fp=fopen('resultsMATLAB_DF1.txt', 'w');
+for i=1:length(yy(5:end))
+fprintf(fp, '%d\n', yq);
+fclose(fp);
