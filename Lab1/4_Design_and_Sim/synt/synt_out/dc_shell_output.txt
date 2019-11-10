@@ -153,3 +153,5 @@ write_sdc ../netlist/$top_entity.sdc
 quit
 
 Thank you...
+
+Received Signal 15 from: PID=5497 (UID=1024)
