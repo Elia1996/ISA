@@ -55,23 +55,23 @@ ARCHITECTURE behavioral OF IIR_filter_gen_optimized IS
 	
 	SIGNAL data_in							: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);	
 	-- Segnali di ingresso ritardati
-	SIGNAL 	s_A1_reg_delay1, s_A1_reg_delay2, s_A1_reg_delay3	: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+	SIGNAL 	s_A1_reg_delay1, s_A1_reg_delay2, s_A1_reg_delay3	: STD_LOGIC_VECTOR(Nb+1 -1 DOWNTO 0);
 
 	
 	-- Segnali di uscita dai moltiplicatori
-	SIGNAL 	m_A1_tmp, m_A2_tmp				: STD_LOGIC_VECTOR(Nb+Nb_into-1 DOWNTO 0); -- extended parallelism
+	SIGNAL 	m_A1_tmp, m_A2_tmp				: STD_LOGIC_VECTOR(Nb+Nb_into+1 -1 DOWNTO 0); -- extended parallelism
 	SIGNAL 	m_A1, m_A2					: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0); -- reduced parallelism
 	-- Segnali di uscita dai registri a valle dei moltiplicatori
 	SIGNAL 	m_A1_reg, m_A2_reg				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
 	-- Segnali di uscita dai sommatori
-	SIGNAL 	s_A1, s_A1_reg 						: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+	SIGNAL 	s_A1, s_A1_reg 					: STD_LOGIC_VECTOR(Nb+1 -1 DOWNTO 0);
 	SIGNAL	s_A2						: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
 	-- Segnali di uscita dai registri a valle dei moltiplicatori
   	SIGNAL 	s_B0_reg, s_B1_reg          		: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
 
 
 	-- Segnali di uscita dai moltiplicatori
-	SIGNAL 	m_B0_tmp, m_B1_tmp, m_B2_tmp, m_B3_tmp, m_B4_tmp	: STD_LOGIC_VECTOR(Nb+Nb_into-1 DOWNTO 0); -- extended parallelism
+	SIGNAL 	m_B0_tmp, m_B1_tmp, m_B2_tmp, m_B3_tmp, m_B4_tmp	: STD_LOGIC_VECTOR(Nb+Nb_into+1 -1 DOWNTO 0); -- extended parallelism
 	SIGNAL 	m_B0, m_B1, m_B2, m_B3, m_B4				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0); -- reduced parallelism
 	-- Segnali di uscita dai registri a valle dei moltiplicatori
 	SIGNAL 	m_B0_reg, m_B1_reg, m_B2_reg, m_B3_reg, m_B4_reg			: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
@@ -96,25 +96,25 @@ BEGIN
 					data_in);
 
 
-	s_A1 <= std_logic_vector(signed(data_in) + signed(s_A2(Nb_into-1 DOWNTO Nb_into-Nb)));
+	s_A1 <= std_logic_vector(signed(data_in(Nb-1) & data_in) + signed(s_A2(Nb_into-1 DOWNTO Nb_into-Nb)));
 	
 	-- Registro che salva s_A1
 	Reg_s_A1_0 : register_nbit
-		GENERIC MAP(Nb)
+		GENERIC MAP(Nb+1)
 		PORT MAP(	s_A1,
 				Reg_ctrl_1_out, CLK, RST_n,
 				s_A1_reg);
 
 	-- Registro che salva s_A1_delay1
 	Reg_s_A1_1: register_nbit
-		GENERIC MAP(Nb)
+		GENERIC MAP(Nb+1)
 		PORT MAP(	s_A1_reg,
 				Reg_ctrl_1_out, CLK, RST_n,
 				s_A1_reg_delay1);
 
 	-- Registro che salva s_A1_delay2
 	Reg_s_A1_2 : register_nbit
-		GENERIC MAP(Nb)
+		GENERIC MAP(Nb+1)
 		PORT MAP(	s_A1_reg_delay1,
 				Reg_ctrl_1_out, CLK, RST_n,
 				s_A1_reg_delay2);
@@ -195,7 +195,7 @@ BEGIN
 	
 	-- Registro che salva s_A1_reg_delay3
 	Reg_s_A1_reg_delay3 : register_nbit
-		GENERIC MAP(Nb)
+		GENERIC MAP(Nb+1)
 		PORT MAP(	s_A1_reg_delay2,
 				Reg_ctrl_2_out, CLK, RST_n,
 				s_A1_reg_delay3);

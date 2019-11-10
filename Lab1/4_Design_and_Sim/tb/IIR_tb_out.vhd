@@ -26,8 +26,10 @@ begin  -- beh
   process (CLK, RST_n)
         file res_fp : text open WRITE_MODE is "../sim_out/results_v.txt";
 	file res_csv_fp : text open WRITE_MODE is "../sim_out/results_v.csv";
-	file res_correct : text open READ_MODE is "../sim_out/results_c.txt";
-    variable line_out, line_csv_out, line_dout_correct : line;
+	file res_correct : text open READ_MODE is "../sim_out/results_m.txt";
+	file res_c	 : text open READ_MODE is "../sim_out/results_c.txt";
+    variable line_out, line_csv_out, line_dout_correct, line_dout_c : line;
+    variable int_from_m : integer;
     variable int_from_c : integer;
     variable flag : boolean := false;
 
@@ -35,7 +37,7 @@ begin  -- beh
      
     if (flag=false) then
 		-- scrivo la prima linea del file csv
-		write(line_csv_out, string'("#VIN,DIN,VOUT,DOUT,DOUT_correct,Error"));
+		write(line_csv_out, string'("#VIN,DIN,VOUT,DOUT,DOUT_correct,DOUT_c,Error"));
 		writeline(res_csv_fp, line_csv_out);
     end if;
 
@@ -60,14 +62,20 @@ begin  -- beh
 		 
 		    -- i read correct value from file creataed by c code
 			readline(res_correct, line_dout_correct);
-			read(line_dout_correct, int_from_c);
-			
+			read(line_dout_correct, int_from_m);
+		
+		    -- i read correct value from file creataed by c code
+			readline(res_c, line_dout_c);
+			read(line_dout_c, int_from_c);
+
 			write(line_csv_out, conv_integer(signed(dout)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, int_from_m);
 			write(line_csv_out, string'(","));
 			write(line_csv_out, int_from_c);
 			write(line_csv_out, string'(","));
 			
-			if (int_from_c = conv_integer(signed(dout))) then
+			if (int_from_m = conv_integer(signed(dout))) then
 				write(line_csv_out,string'("ok,"));
 			else 
 				write(line_csv_out,string'("error,"));

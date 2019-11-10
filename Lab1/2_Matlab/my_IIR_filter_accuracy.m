@@ -125,3 +125,6 @@ title("Differences between DF1 and DF2 optimized model");
 fin = fopen('resultsMATLAB_DF2.txt','w');
 fprintf(fin,'%d\n',yy.*2^11);
 fclose(fin);
+fin = fopen('../4_Design_and_Sim/sim_out/results_m.txt','w');
+fprintf(fin,'%d\n',yy.*2^11);
+fclose(fin);

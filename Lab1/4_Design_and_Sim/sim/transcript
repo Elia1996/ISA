@@ -541,3 +541,237 @@ do compile.do
 # Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_out(beh)
 # Loading work.iir_tb_out(beh)
 # decimal
+do compile.do
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling package type_for_iir_optimized_pkg
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_filter_gen_optimized
+# -- Compiling architecture behavioral of iir_filter_gen_optimized
+# -- Compiling entity iir_filter_optimized
+# -- Compiling architecture behavioral of iir_filter_optimized
+# -- Compiling package type_for_iir_optimized_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.IIR_tb
+# Loading work.IIR_tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.type_for_iir_optimized_pkg
+# Loading work.type_for_iir_optimized_pkg
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_optimized(behavioral)
+# Loading work.iir_filter_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_gen_optimized(behavioral)
+# Loading work.iir_filter_gen_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# decimal
+do compile.do
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling package type_for_iir_optimized_pkg
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_filter_gen_optimized
+# -- Compiling architecture behavioral of iir_filter_gen_optimized
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(126): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(129): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(150): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(161): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(174): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(185): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(203): (vcom-1272) Length of expected is 29; length of actual is 30.
+# ** Error: ../src/IIR_filter_gen_optimized.vhd(277): VHDL Compiler exiting
+# ** Error: /software/mentor/modelsim_6.5c/modeltech/linux_x86_64/vcom failed.
+# Error in macro ./compile.do line 2
+# /software/mentor/modelsim_6.5c/modeltech/linux_x86_64/vcom failed.
+#     while executing
+# "vcom -93 -work ./work ../src/*.vhd"
+do compile.do
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling package type_for_iir_optimized_pkg
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_filter_gen_optimized
+# -- Compiling architecture behavioral of iir_filter_gen_optimized
+# -- Compiling entity iir_filter_optimized
+# -- Compiling architecture behavioral of iir_filter_optimized
+# -- Compiling package type_for_iir_optimized_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.IIR_tb
+# Loading work.IIR_tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.type_for_iir_optimized_pkg
+# Loading work.type_for_iir_optimized_pkg
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_optimized(behavioral)
+# Loading work.iir_filter_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_gen_optimized(behavioral)
+# Loading work.iir_filter_gen_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# decimal
+do compile.do
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling package type_for_iir_optimized_pkg
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_filter_gen_optimized
+# -- Compiling architecture behavioral of iir_filter_gen_optimized
+# -- Compiling entity iir_filter_optimized
+# -- Compiling architecture behavioral of iir_filter_optimized
+# -- Compiling package type_for_iir_optimized_pkg
+# -- Compiling entity register_nbit
+# -- Compiling architecture behavior of register_nbit
+# Model Technology ModelSim SE-64 vcom 6.5c Compiler 2009.08 Aug 27 2009
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package numeric_std
+# -- Loading package type_for_iir_optimized_pkg
+# -- Compiling entity iir_tb_in
+# -- Compiling architecture beh of iir_tb_in
+# -- Compiling entity iir_tb_out
+# -- Compiling architecture beh of iir_tb_out
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# Model Technology ModelSim SE-64 vlog 6.5c Compiler 2009.08 Aug 27 2009
+# -- Compiling module IIR_tb
+# 
+# Top level modules:
+# 	IIR_tb
+# vsim -t 1ns -novopt work.IIR_tb 
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.IIR_tb
+# Loading work.IIR_tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading std.textio(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.numeric_std(body)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.type_for_iir_optimized_pkg
+# Loading work.type_for_iir_optimized_pkg
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_in(beh)
+# Loading work.iir_tb_in(beh)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_optimized(behavioral)
+# Loading work.iir_filter_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_filter_gen_optimized(behavioral)
+# Loading work.iir_filter_gen_optimized(behavioral)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.register_nbit(behavior)
+# Loading work.register_nbit(behavior)
+# Refreshing /home/lp19.17/Desktop/ISA/Lab1/4_Design_and_Sim/sim/work.iir_tb_out(beh)
+# Loading work.iir_tb_out(beh)
+# ** Error: (vsim-7) Failed to open VHDL file "../sim_out/results_m.txt" in r mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ns  Iteration: 0  Instance: /IIR_tb/TB_OUT
+# decimal
+# ** Fatal: (vsim-7) Failed to open VHDL file "../sim_out/results_m.txt" in r mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 75 ns  Iteration: 2  Process: /IIR_tb/TB_OUT/line__26 File: ../tb/IIR_tb_out.vhd
+# Fatal error in Process line__26 at ../tb/IIR_tb_out.vhd line 64
+# 
+# HDL call sequence:
+# Stopped at ../tb/IIR_tb_out.vhd 64 Process line__26
+# 
