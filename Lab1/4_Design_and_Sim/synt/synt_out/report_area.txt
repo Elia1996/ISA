@@ -1,30 +1,33 @@
+Warning: Design 'IIR_filter_optimized' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : area
-Design : IIR_filter
+Design : IIR_filter_optimized
 Version: O-2018.06-SP4
-Date   : Tue Nov  5 13:05:42 2019
+Date   : Sun Nov 10 19:20:55 2019
 ****************************************
 
 Library(s) Used:
 
-    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+    No libraries used.
 
-Number of ports:                          676
-Number of nets:                          3255
-Number of cells:                         2457
-Number of combinational cells:           2384
-Number of sequential cells:                50
+Number of ports:                           28
+Number of nets:                            30
+Number of cells:                            3
+Number of combinational cells:              0
+Number of sequential cells:                 1
 Number of macros/black boxes:               0
-Number of buf/inv:                        467
+Number of buf/inv:                          0
 Number of references:                       1
 
-Combinational area:               3475.556006
-Buf/Inv area:                      306.432001
-Noncombinational area:             226.631992
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                  3702.187998
+Total cell area:                     0.000000
 Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
 1
