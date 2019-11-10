@@ -53,22 +53,31 @@ ARCHITECTURE behavioral OF IIR_filter_gen_optimized IS
 
 	--------- SIGNALS ---------
 	
-	SIGNAL data_in						: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);	
+	SIGNAL data_in							: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);	
 	-- Segnali di ingresso ritardati
-	SIGNAL 	x_delay_1, x_delay_2, x_delay_3, x_delay_4	: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
-	-- Segnali di uscita ritardati
-	SIGNAL 	y_delay_1, y_delay_2, y_delay_3			: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+	SIGNAL 	s_A1_reg_delay1, s_A1_reg_delay2, s_A1_reg_delay3	: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+
 	
 	-- Segnali di uscita dai moltiplicatori
-	SIGNAL 	m_1_tmp, m_2_tmp, m_3_tmp, m_4_tmp, m_5_tmp, m_6_tmp, m_7_tmp	: STD_LOGIC_VECTOR(Nb+Nb_into-1 DOWNTO 0); -- extended parallelism
-	SIGNAL 	m_1, m_2, m_3, m_4, m_5, m_6, m_7				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0); -- reduced parallelism
+	SIGNAL 	m_A1_tmp, m_A2_tmp				: STD_LOGIC_VECTOR(Nb+Nb_into-1 DOWNTO 0); -- extended parallelism
+	SIGNAL 	m_A1, m_A2					: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0); -- reduced parallelism
 	-- Segnali di uscita dai registri a valle dei moltiplicatori
-	SIGNAL 	reg_m_1, reg_m_2, reg_m_3, reg_m_4, reg_m_5, reg_m_6, reg_m_7	: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
-	
+	SIGNAL 	m_A1_reg, m_A2_reg				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
 	-- Segnali di uscita dai sommatori
-	SIGNAL 	s_1, s_2, s_3, s_4, s_5, s_6				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
+	SIGNAL 	s_A1, s_A1_reg 						: STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+	SIGNAL	s_A2						: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
 	-- Segnali di uscita dai registri a valle dei moltiplicatori
-  	SIGNAL 	reg_s_4                         : STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
+  	SIGNAL 	s_B0_reg, s_B1_reg          		: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
+
+
+	-- Segnali di uscita dai moltiplicatori
+	SIGNAL 	m_B0_tmp, m_B1_tmp, m_B2_tmp, m_B3_tmp, m_B4_tmp	: STD_LOGIC_VECTOR(Nb+Nb_into-1 DOWNTO 0); -- extended parallelism
+	SIGNAL 	m_B0, m_B1, m_B2, m_B3, m_B4				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0); -- reduced parallelism
+	-- Segnali di uscita dai registri a valle dei moltiplicatori
+	SIGNAL 	m_B0_reg, m_B1_reg, m_B2_reg, m_B3_reg, m_B4_reg			: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
+	-- Segnali di uscita dai sommatori
+	SIGNAL 	s_B0, s_B1, s_B2, s_B3, s_B4				: STD_LOGIC_VECTOR(Nb_into-1 DOWNTO 0);
+	
   
 	-- Segnali di controllo
 	SIGNAL REG_CTRL_1_OUT,REG_CTRL_2_OUT,REG_CTRL_3_OUT		: STD_LOGIC;
@@ -86,155 +95,147 @@ BEGIN
 					VIN, CLK, RST_n,
 					data_in);
 
-	-- Registro che salva x(n-1)
-	Reg_x_delay_1 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	data_in,
-				VIN, CLK, RST_n,
-				x_delay_1);
-	-- Registro che salva x(n-2)
-	Reg_x_delay_2 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	x_delay_1,
-				VIN, CLK, RST_n,
-				x_delay_2);
-	-- Registro che salva x(n-3)
-	Reg_x_delay_3 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	x_delay_2,
-				VIN, CLK, RST_n,
-				x_delay_3);
-	-- Registro che salva x(n-4)
-	Reg_x_delay_4 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	x_delay_3,
-				VIN, CLK, RST_n,
-				x_delay_4);
-						
-						
-						
-	-- Collegamenti e operazioni di moltiplicazione
-	m_1_tmp <= std_logic_vector(signed(data_in) * signed(B(0)));
-	m_1 <= m_1_tmp(Nb+Nb_into-2 downto Nb-1);
+
+	s_A1 <= std_logic_vector(signed(data_in) + signed(s_A2(Nb_into-1 DOWNTO Nb_into-Nb)));
 	
-	m_2_tmp <= std_logic_vector(signed(x_delay_1) * signed(B(1)));
-	m_2 <= m_2_tmp(Nb+Nb_into-2 downto Nb-1);
+	-- Registro che salva s_A1
+	Reg_s_A1_0 : register_nbit
+		GENERIC MAP(Nb)
+		PORT MAP(	s_A1,
+				Reg_ctrl_1_out, CLK, RST_n,
+				s_A1_reg);
+
+	-- Registro che salva s_A1_delay1
+	Reg_s_A1_1: register_nbit
+		GENERIC MAP(Nb)
+		PORT MAP(	s_A1_reg,
+				Reg_ctrl_1_out, CLK, RST_n,
+				s_A1_reg_delay1);
+
+	-- Registro che salva s_A1_delay2
+	Reg_s_A1_2 : register_nbit
+		GENERIC MAP(Nb)
+		PORT MAP(	s_A1_reg_delay1,
+				Reg_ctrl_1_out, CLK, RST_n,
+				s_A1_reg_delay2);
 	
-	m_3_tmp <= std_logic_vector(signed(x_delay_2) * signed(B(2)));
-	m_3 <= m_3_tmp(Nb+Nb_into-2 downto Nb-1);
-	
-	m_4_tmp <= std_logic_vector(signed(x_delay_3) * signed(B(3)));
-	m_4 <= m_4_tmp(Nb+Nb_into-2 downto Nb-1);
-	
-	m_5_tmp <= std_logic_vector(signed(x_delay_4) * signed(B(4)));
-	m_5 <= m_5_tmp(Nb+Nb_into-2 downto Nb-1);
 	
 
-	-- Registro che salva m1
-	Reg_m1 : register_nbit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	m_1,
-				REG_CTRL_1_OUT, CLK, RST_n,
-				reg_m_1);
-	-- Registro che salva m2
-	Reg_m2 : register_nbit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	m_2,
-				REG_CTRL_1_OUT, CLK, RST_n,
-				reg_m_2);
-	-- Registro che salva m3
-	Reg_m3 : register_nbit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	m_3,
-				REG_CTRL_1_OUT, CLK, RST_n,
-				reg_m_3);
-	-- Registro che salva m4
-	Reg_m4 : register_nbit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	m_4,
-				REG_CTRL_1_OUT, CLK, RST_n,
-				reg_m_4);
-	-- Registro che salva m5
-	Reg_m5 : register_nbit
-		GENERIC MAP(Nb_into)
-		PORT MAP(	m_5,
-				REG_CTRL_1_OUT, CLK, RST_n,
-				reg_m_5);
+	s_A2 <= std_logic_vector(signed(m_A1_reg) + signed(m_A2_reg));
+
+	m_A1_tmp <= std_logic_vector(signed(s_A1_reg_delay1) * signed(A(0)));
+	m_A1 <= m_A1_tmp(Nb+Nb_into-2 downto Nb-1);
 	
+	m_A2_tmp <= std_logic_vector(signed(s_A1_reg_delay2) * signed(A(1)));
+	m_A2 <= m_A2_tmp(Nb+Nb_into-2 downto Nb-1);
+
+
+	-- Registro che salva m_A1
+	Reg_m_A1 : register_nbit
+		GENERIC MAP(Nb_into)
+		PORT MAP(	m_A1,
+				Reg_ctrl_1_out, CLK, RST_n,
+				m_A1_reg);
+
+	-- Registro che salva m_A2
+	Reg_m_A2 : register_nbit
+		GENERIC MAP(Nb_into)
+		PORT MAP(	m_A2,
+				Reg_ctrl_1_out, CLK, RST_n,
+				m_A2_reg);
+
+
+---------------- FINE PRIMO PEZZO DEL DP --------------------
+
+	m_B0_tmp <= std_logic_vector(signed(s_A1_reg) * signed(B(0)));
+	m_B0 <= m_B0_tmp(Nb+Nb_into-2 downto Nb-1);
+
+
+	-- Registro che salva m_B0
+	Reg_m_B0 : register_nbit
+		GENERIC MAP(Nb_into)
+		PORT MAP(	m_B0,
+				Reg_ctrl_2_out, CLK, RST_n,
+				m_B0_reg);
+	
+	m_B1_tmp <= std_logic_vector(signed(s_A1_reg) * signed(B(1)));
+	m_B1 <= m_B1_tmp(Nb+Nb_into-2 downto Nb-1);
+
+
+	-- Registro che salva m_B1
+	Reg_m_B1 : register_nbit
+		GENERIC MAP(Nb_into)
+		PORT MAP(	m_B1,
+				Reg_ctrl_2_out, CLK, RST_n,
+				m_B1_reg);
 
 	
-	-- Collegamenti e operazioni di somma
-	s_1 <= std_logic_vector(signed(reg_m_1) + signed(reg_m_2));
 
-	s_2 <= std_logic_vector(signed(s_1) + signed(reg_m_3));
-	
-	s_3 <= std_logic_vector(signed(s_2) + signed(reg_m_4));
-	
-	s_4 <= std_logic_vector(signed(s_3) + signed(reg_m_5));
-	
-	-- Registro che salva s4
-	Reg_s4 : register_nbit
+	m_B2_tmp <= std_logic_vector(signed(s_A1_reg_delay1) * signed(B(2)));
+	m_B2 <= m_B2_tmp(Nb+Nb_into-2 downto Nb-1);
+
+
+	-- Registro che salva m_B2
+	Reg_m_B2 : register_nbit
 		GENERIC MAP(Nb_into)
-		PORT MAP(	s_4,
-				REG_CTRL_2_OUT, CLK, RST_n,
-				reg_s_4);
-						
+		PORT MAP(	m_B2,
+				Reg_ctrl_2_out, CLK, RST_n,
+				m_B2_reg);
+
+	m_B3_tmp <= std_logic_vector(signed(s_A1_reg_delay2) * signed(B(3)));
+	m_B3 <= m_B3_tmp(Nb+Nb_into-2 downto Nb-1);
+
+
+	-- Registro che salva m_B3
+	Reg_m_B3 : register_nbit
+		GENERIC MAP(Nb_into)
+		PORT MAP(	m_B3,
+				Reg_ctrl_2_out, CLK, RST_n,
+				m_B3_reg);
 	
-	---------------- FINE PRIMO PEZZO DEL DP --------------------
-	
-	-- Registro che salva y(n-1)
-	Reg_y_delay_1 : register_nbit
+	-- Registro che salva s_A1_reg_delay3
+	Reg_s_A1_reg_delay3 : register_nbit
 		GENERIC MAP(Nb)
-		PORT MAP(	s_6(Nb_into-1 DOWNTO Nb_into-Nb),
-				REG_CTRL_3_OUT, CLK, RST_n,
-				y_delay_1);
-	-- Registro che salva y(n-2)
-	Reg_y_delay_2 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	y_delay_1,
-				REG_CTRL_3_OUT, CLK, RST_n,
-				y_delay_2);
-	-- Registro che salva y(n-3)
-	Reg_y_delay_3 : register_nbit
-		GENERIC MAP(Nb)
-		PORT MAP(	y_delay_2,
-				REG_CTRL_3_OUT, CLK, RST_n,
-				y_delay_3);
+		PORT MAP(	s_A1_reg_delay2,
+				Reg_ctrl_2_out, CLK, RST_n,
+				s_A1_reg_delay3);
+
+	m_B4_tmp <= std_logic_vector(signed(s_A1_reg_delay3) * signed(B(4)));
+	m_B4 <= m_B4_tmp(Nb+Nb_into-2 downto Nb-1);
 
 
-	-- Collegamenti e operazioni di moltiplicazione
-	m_6_tmp <= std_logic_vector(signed(y_delay_3) * signed(A(1)));
-	m_6 <= m_6_tmp(Nb+Nb_into-2 downto Nb-1);	
-	
-	m_7_tmp <= std_logic_vector(signed(y_delay_2) * signed(A(0)));
-	m_7 <= m_7_tmp(Nb+Nb_into-2 downto Nb-1);
-	
-	-- Registro che salva m6
-	Reg_m6 : register_nbit
+	-- Registro che salva m_B4
+	Reg_m_B4 : register_nbit
 		GENERIC MAP(Nb_into)
-		PORT MAP(	m_6,
-				REG_CTRL_3_OUT, CLK, RST_n,
-				reg_m_6);
+		PORT MAP(	m_B4,
+				Reg_ctrl_2_out, CLK, RST_n,
+				m_B4_reg);
 
-	-- Registro che salva m7
-	Reg_m7 : register_nbit
+	
+	s_B3 <= std_logic_vector(signed(m_B4_reg) + signed(m_B3_reg));
+
+	s_B2 <= std_logic_vector(signed(s_B3) + signed(m_B2_reg));
+
+	s_B1 <= std_logic_vector(signed(s_B2) + signed(m_B1_reg));
+
+	-- Registro che salva s_B1
+	Reg_s_B1 : register_nbit
 		GENERIC MAP(Nb_into)
-		PORT MAP(	m_7,
-				REG_CTRL_3_OUT, CLK, RST_n,
-				reg_m_7);
-	
-	-- Collegamenti e operazioni di somma
-	s_5 <= std_logic_vector(signed(reg_s_4) + signed(reg_m_6));
+		PORT MAP(	s_B1,
+				Reg_ctrl_2_out, CLK, RST_n,
+				s_B1_reg);
 
-	s_6 <= std_logic_vector(signed(s_5) + signed(reg_m_7));
-	
-	
-	-- Registro di uscita dei dati  s_6 -> d_out
+	s_B0 <= std_logic_vector(signed(m_B0_reg) + signed(s_B1_reg));
+
+
+	-- Registro di uscita dei dati  s_B0 -> d_out
 	Reg_out : register_nbit
 		GENERIC MAP(Nb)
-		PORT MAP(	s_6(Nb_into-1 DOWNTO Nb_into-Nb),
+		PORT MAP(	s_B0(Nb_into-1 DOWNTO Nb_into-Nb),
 				REG_CTRL_3_OUT, CLK, RST_n,
 				d_out);
+
+
 
 
 	--------  CONTROLLO  ---------
