@@ -1,4 +1,4 @@
-clear all
+clear
 close all
 clc
 format short
@@ -41,7 +41,7 @@ B=fi(B,1,new_width,new_width-1);
 A=fi(A,1,new_width,new_width-1);
 
 
-xx = fi(xq,1,new_width,new_width-1,'RoundingMethod','Floor','OverflowAction','Wrap');
+xx = myfi(xq,new_width);
 yy = zeros(1,length(xx));
 V=0;
 V1=0;
@@ -60,9 +60,9 @@ for n=1:(length(xx))
     m5 = myfi(V*B(1), new_width);
     yy(n) = myfi(s2+m5, new_width);
     
-    if(n<5)
-        fprintf("%10d %10d %10d %10d %10d %10d %10d %10d %10d %10d\n",V*2048,V1*2048,m1*2048,m3*2048,V2*2048,m2*2048,m4*2048,s1*2048,s2*2048,yy(n)*2048);
-    end
+%     if(n<5)
+%         fprintf("%10d %10d %10d %10d %10d %10d %10d %10d %10d %10d\n",V*2048,V1*2048,m1*2048,m3*2048,V2*2048,m2*2048,m4*2048,s1*2048,s2*2048,yy(n)*2048);
+%     end
     
     V2=V1;
     V1=V;
@@ -70,3 +70,19 @@ end
 
 yy=fi(yy*2^11,1,12,0,'RoundingMethod','Floor','OverflowAction','Wrap');
 
+
+figure
+plot(1:1:length(xx),yy,'r*')
+hold on
+plot(1:1:length(xx),yq,'bo')
+hold on
+legend('OLD MODEL','REFERENCE MODEL (C)')
+xlabel("N-th sample");
+ylabel("y[N]");
+title("Comparisons between reference and no optimized");
+
+figure
+plot(1:1:length(xq),yq-yy,'*')
+xlabel("N-th sample");
+ylabel("y_{REFERENCE}[N] - y_{NO-OPTIMIZED}[N]");
+title("Differences between reference and optimized models");
