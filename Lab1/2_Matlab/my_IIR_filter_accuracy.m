@@ -119,5 +119,9 @@ fclose(fin);
 figure
 plot(1:1:length(yy),df1-yy.*2^11,'*')
 xlabel("N-th sample");
-ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
-title("Differences between matlab filter-function and optimized model");
+ylabel("y_{OPT-DF1}[N] - y_{OPT-DF2}[N]");
+title("Differences between DF1 and DF2 optimized model");
+
+fin = fopen('resultsMATLAB_DF2.txt','w');
+fprintf(fin,'%d\n',yy.*2^11);
+fclose(fin);
