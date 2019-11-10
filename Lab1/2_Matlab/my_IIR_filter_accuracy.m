@@ -56,12 +56,26 @@ A=fi(A,1,new_width,new_width-1);
 
 %new_width=22;
 
-xx = myfi([zeros(1,4) xq],12);
-yy = myfi(zeros(1,length(xq)+4),12);
+xx = myfi(xq,12);
+yy = myfi(zeros(1,length(xq)),12);
+sA1 = myfi2(zeros(1,length(xq)+4),13);
+
 for n=1:(length(xq))
-   x_sum = myfi(sum(myfi(xx(n:n+4).*flip(B),new_width)),new_width); 
-   yy(n+4) = myfi(myfi(sum(myfi(yy(n:n+1).*flip(A),new_width)),new_width) + x_sum, new_width);
-   yy(n+4)=myfi(yy(n+4),12);
+    mA1 = myfi(A(1)*sA1(n+1), new_width);
+    mA2 = myfi(A(2)*sA1(n), new_width);
+    
+    sA2 = myfi(mA1 + mA2, new_width);
+    sA1(n+4) = myfi2(xx(n) + sA2, 13);
+    
+    mB0 = myfi(B(1)*sA1(n+4), new_width);
+    mB1 = myfi(B(2)*sA1(n+3), new_width);
+    mB2 = myfi(B(3)*sA1(n+2), new_width);
+    mB3 = myfi(B(4)*sA1(n+1), new_width);
+    mB4 = myfi(B(5)*sA1(n), new_width);
+    
+    s_final = myfi(mB0+mB1+mB2+mB3+mB4, new_width);
+    
+    yy(n)=myfi(s_final,12);
 end
 
 
@@ -75,7 +89,7 @@ end
 % % end
 
 figure
-plot(1:1:length(xq),yy(5:end)*2^11,'g*')
+plot(1:1:length(xq),yy*2^11,'g*')
 hold on
 plot(1:1:length(xq),yq,'bo')
 hold on
@@ -85,13 +99,13 @@ ylabel("y[N]");
 title("Comparisons among reference, no optimized and optimized models");
 
 figure
-plot(1:1:length(xq),yq-yy(5:end).*2^11,'*')
+plot(1:1:length(xq),yq-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{REFERENCE}[N] - y_{OPTIMIZED}[N]");
 title("Differences between reference and optimized models");
 
 figure
-plot(1:1:length(xq),yq_butter-yy(5:end).*2^11,'*')
+plot(1:1:length(xq),yq_butter-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
 title("Differences between matlab filter-function and optimized model");
