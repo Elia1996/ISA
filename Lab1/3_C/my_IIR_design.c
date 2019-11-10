@@ -128,8 +128,8 @@ int main (int argc, char **argv)
 
   fclose(fp_in);
   fclose(fp_out);
-	printf("size of int %zu\n",sizeof(int));
-	printf("size of multiplication: %zu\n", sizeof(x*a[1]));
+	//printf("size of int %zu\n",sizeof(int));
+	//printf("size of multiplication: %zu\n", sizeof(x*a[1]));
   return 0;
 
 }
