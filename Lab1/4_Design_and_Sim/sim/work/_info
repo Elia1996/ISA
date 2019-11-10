@@ -3,9 +3,9 @@ m255
 cModel Technology
 d/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/sim
 T_opt
-VVQImB5Zej=l5@G]`[AGED2
+VDI]zA72F:Y2ORYl6[RZzh1
 06 6 4 ./work IIR_tb fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../netlist/IIR_filter_optimized.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../innovus/IIR_filter_optimized.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
@@ -102,12 +102,12 @@ OE;C;6.2g;35
 o-93 -work ./work
 tExplicit 1
 vIIR_filter_optimized
-IJ31T0iT4He3OYeTF2Jzkk1
+IFVV`bE<I=8Z?@aQC0<C`40
 V>NARJNX6^T?`M8`6EdUNz1
-w1573410903
-8../netlist/IIR_filter_optimized.v
-F../netlist/IIR_filter_optimized.v
-L0 8
+w1573421324
+8../innovus/IIR_filter_optimized.v
+F../innovus/IIR_filter_optimized.v
+L0 15
 V>NARJNX6^T?`M8`6EdUNz1
 OE;L;6.2g;35
 r1
