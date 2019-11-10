@@ -98,6 +98,5 @@ title("Differences between matlab filter-function and optimized model");
 
 
 fp=fopen('resultsMATLAB_DF1.txt', 'w');
-for i=1:length(yy(5:end))
-fprintf(fp, '%d\n', yq);
+fprintf(fp, '%d\n', a.bin);
 fclose(fp);
