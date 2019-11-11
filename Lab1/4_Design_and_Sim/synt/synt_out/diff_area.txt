@@ -1,0 +1,28 @@
+6c6
+< Date   : Mon Nov 11 18:48:26 2019
+---
+> Date   : Mon Nov 11 18:49:10 2019
+14,16c14,16
+< Number of nets:                          3211
+< Number of cells:                         2311
+< Number of combinational cells:           2236
+---
+> Number of nets:                          2800
+> Number of cells:                         1852
+> Number of combinational cells:           1777
+19c19
+< Number of buf/inv:                        305
+---
+> Number of buf/inv:                        217
+22,24c22,24
+< Combinational area:               3755.388006
+< Buf/Inv area:                      194.180000
+< Noncombinational area:             236.207992
+---
+> Combinational area:               3464.916019
+> Buf/Inv area:                      119.700001
+> Noncombinational area:             235.143991
+28c28
+< Total cell area:                  3991.595998
+---
+> Total cell area:                  3700.060010

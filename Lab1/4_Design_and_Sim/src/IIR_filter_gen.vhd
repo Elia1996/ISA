@@ -108,7 +108,8 @@ BEGIN
 
 	-- Sommo l'uscita del segnale del registro Reg_in (ossia d_in)
 	-- al segnale di feed-back v1ao_piu_v2a1, questa somma va in v
-	v <= std_logic_vector(signed(data_in) + signed(v1a0_piu_v2a1));
+	v(Nb-1 downto 0) <= std_logic_vector(signed(data_in) + signed(v1a0_piu_v2a1));
+	v(Nb) <= v(Nb-1);
 
 	-- v viene moltiplicato per b0 ottenendo il dato da sommare alla
 	-- di feed-forward

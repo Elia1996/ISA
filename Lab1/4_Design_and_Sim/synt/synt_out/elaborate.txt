@@ -21,6 +21,18 @@ Inferred memory devices in process
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen' with
+	the parameters "N=13". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N13 line 24 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen' with
 	the parameters "N=1". (HDL-193)
 
 Inferred memory devices in process

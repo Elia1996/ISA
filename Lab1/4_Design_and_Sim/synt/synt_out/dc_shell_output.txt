@@ -71,9 +71,9 @@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 set_load $OLOAD [all_outputs]
 1
 # compilo
-compile -exact_map > $out_dir/compile.txt
-report_timing > $out_dir/report_timing.txt
-report_area > $out_dir/report_area.txt
+compile -exact_map > $out_dir/compile$ext.txt
+report_timing > $out_dir/report_timing$ext.txt
+report_area > $out_dir/report_area$ext.txt
 # salvo la sintesi corrente
 write_partition -type post -destination synt_db
 Information: Use of command 'write_partition' is not recommended. This command will be obsolete in a future release. (INFO-103)
@@ -121,7 +121,7 @@ Reading ddc file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Loaded 17 designs.
 Current design is 'IIR_filter'.
-IIR_filter register_nbit_N12_0 register_nbit_N12_3 register_nbit_N12_2 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_1 IIR_filter_gen_DW_mult_tc_4 IIR_filter_gen_DW_mult_tc_3 IIR_filter_gen_DW_mult_tc_2 IIR_filter_gen_DW01_add_3 IIR_filter_gen_DW01_add_2 IIR_filter_gen_DW_mult_tc_1 IIR_filter_gen_DW01_add_1 IIR_filter_gen_DW_mult_tc_0 IIR_filter_gen_DW01_add_0 IIR_filter_gen
+IIR_filter register_nbit_N12_0 register_nbit_N13_0 register_nbit_N13_1 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_1 IIR_filter_gen_DW_mult_tc_4 IIR_filter_gen_DW_mult_tc_3 IIR_filter_gen_DW_mult_tc_2 IIR_filter_gen_DW01_add_3 IIR_filter_gen_DW01_add_2 IIR_filter_gen_DW_mult_tc_1 IIR_filter_gen_DW01_add_1 IIR_filter_gen_DW_mult_tc_0 IIR_filter_gen_DW01_add_0 IIR_filter_gen
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
 Information: Updating graph... (UID-83)
@@ -153,5 +153,3 @@ write_sdc ../netlist/$top_entity.sdc
 quit
 
 Thank you...
-
-Received Signal 15 from: PID=5497 (UID=1024)

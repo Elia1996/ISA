@@ -28,13 +28,15 @@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
 set_load $OLOAD [all_outputs]
 # compilo
-compile -exact_map > $out_dir/compile.txt
+compile -exact_map > $out_dir/compile$ext.txt
 
-report_timing > $out_dir/report_timing.txt
+report_timing > $out_dir/report_timing$ext.txt
 
-report_area > $out_dir/report_area.txt
+report_area > $out_dir/report_area$ext.txt
 
 # salvo la sintesi corrente
 write_partition -type post -destination synt_db
 
 quit
+
+
