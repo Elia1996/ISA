@@ -2,11 +2,11 @@
 -- 		IIR filter
 -- DESCRIPTION
 -- 		Questo file contiene l'interfaccia fra l'architettura del filtro
---		generico IIR_filter_gen e il testbench, si  descritta questa 
+--		generico IIR_filter_gen e il testbench, si è descritta questa 
 --		architettura esterna per far si che l'interfaccia con il simulatore
---		si la stessa degli altri gruppi ma allo stesso tempo si avesse una 
+--		sia la stessa degli altri gruppi ma allo stesso tempo si avesse una 
 --		descrizione generica del filtro IIR nel file IIR_filter_gen.vhd
--- AUTHOR 
+-- AUTHORS 
 --		Fiore, Neri, RIbaldone, Zheng
 -- VHDL NOTATION
 --		 keyword in MAIUSCOLO (es: STD_LOGIC)
@@ -43,11 +43,11 @@ ARCHITECTURE behavioral OF IIR_filter IS
 
 	----------- SIGNALS  --------------------
 	-- I valori di a vanno messi negativi, A0 è il secondo numero
-	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(-401,DIN'length)),
-								std_logic_vector(to_signed(757, DIN'length)));
-	CONSTANT B : FF_COEFF_B  := (std_logic_vector(to_signed(423, DIN'length)),
-								std_logic_vector(to_signed(846, DIN'length)),
-								std_logic_vector(to_signed(423, DIN'length)));
+	CONSTANT A : FB_COEFF_A  := (std_logic_vector(to_signed(-401,Nb+1)),
+								std_logic_vector(to_signed(757, Nb+1)));
+	CONSTANT B : FF_COEFF_B  := (std_logic_vector(to_signed(423, Nb+1)), --DIN'length)),
+								std_logic_vector(to_signed(846, Nb+1)),
+								std_logic_vector(to_signed(423, Nb+1)));
 BEGIN
 	filter: IIR_filter_gen
 	PORT MAP(	d_in => DIN,
