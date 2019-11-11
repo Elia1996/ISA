@@ -2,6 +2,9 @@ source variables.scr
 # script per salvare la simulazione in modo da effettuare
 # poi il calcolo della potenza con la switching activity
 
+# carico l'ultima sintesi
+read_file -format ddc {/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc}
+
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
 # per esportare la netlist in verilog dobbiamo cambiare i
@@ -19,4 +22,4 @@ write_sdc ../netlist/$top_entity.sdc
 # questo dev'essere fatto ogni volta perchè se non si esce
 # le nuove simulazioni vengono fatte anche in base a quelle vecchie
 # e non sono più riproducibili.
-quit 
+quit
