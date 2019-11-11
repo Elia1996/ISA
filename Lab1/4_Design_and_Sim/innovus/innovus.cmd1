@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Nov  7 14:12:34 2019                
+#  Created on Mon Nov 11 20:39:13 2019                
 #                                                     
 #######################################################
 
@@ -39,10 +39,10 @@ set_power_output_dir ./
 set_default_switching_activity -reset
 set_default_switching_activity -input_activity 0.2 -period 10.0
 read_activity_file -reset
+read_activity_file -format VCD -scope {} -start {} -end {} -block {} ../vcd/design.vcd
 read_activity_file -format VCD -scope /IIR_tb/UUT -start {} -end {} -block {} ../vcd/design.vcd
 set_power -reset
 set_powerup_analysis -reset
 set_dynamic_power_simulation -reset
 report_power -rail_analysis_format VS -outfile .//IIR_filter.rpt
-report_power -sort { total }
-report_power -outfile power_innovus -sort { total }
+report_power -outfile Power_report_Innovus.txt -sort { total }
