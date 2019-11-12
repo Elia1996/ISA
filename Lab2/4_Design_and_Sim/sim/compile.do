@@ -1,20 +1,17 @@
-vcom -93 -work ./work ../src/IIR_package.vhd
-vcom -93 -work ./work ../src/*.vhd
+vcom -93 -work ./work ../src/common/*.vhd
+
+vcom -93 -work ./work ../src/multiplier/fpmul_stage1.vhd
+vcom -93 -work ./work ../src/multiplier/fpmul_stage2.vhd
+vcom -93 -work ./work ../src/multiplier/fpmul_stage3.vhd
+vcom -93 -work ./work ../src/multiplier/fpmul_stage4.vhd
+vcom -93 -work ./work ../src/multiplier/fpmul_single_cycle.vhd
+vcom -93 -work ./work ../src/multiplier/fpmul_pipeline.vhd
+
 vcom -93 -work ./work ../tb/*.vhd
 vlog -93 -work ./work ../tb/*.v
-<<<<<<< HEAD
-vsim -t 1ns -novopt work.IIR_tb(IIR_tb)
+vsim -t 1ns -novopt work.mul_pipe_tb
 add wave *
-run
-=======
-vsim -t 1ns -novopt work.IIR_tb
-add wave *
-add wave /IIR_tb/TB_IN/end_sim_i
-add wave sim:/IIR_tb/UUT/filter/reg_ctrl_1/data_in
-add wave sim:/IIR_tb/UUT/filter/reg_ctrl_1/data_out
-add wave sim:/IIR_tb/UUT/filter/reg_ctrl_2/data_in
-add wave sim:/IIR_tb/UUT/filter/reg_ctrl_2/data_out
-add wave sim:/IIR_tb/UUT/filter/reg_in/data_out
 radix -decimal
-run 1000ns
->>>>>>> c6788b3
+run 1000
+
+
