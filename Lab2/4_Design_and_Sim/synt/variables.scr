@@ -1,0 +1,11 @@
+# file da sintetizzare
+variable filetosynt "../src/IIR_package.vhd ../scr/IIR_filter.vhd ../src/IIR_filter_gen.vhd"
+# top entity
+variable top_entity "IIR_filter"
+# output directory of syntesys file
+variable out_dir "./synt_out"
+# period of clock
+# max clk = 3.9ns
+# we set period equal to 4*Tclkmin
+variable period 15
+variable ext _period_x4
