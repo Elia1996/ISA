@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : IIR_filter
 Version: O-2018.06-SP4
-Date   : Mon Nov 11 18:49:09 2019
+Date   : Wed Nov 13 20:12:46 2019
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
@@ -42,15 +42,15 @@ Wire Load Model Mode: top
   filter/mult_122/U607/ZN (AOI222_X1)                     0.13       0.86 r
   filter/mult_122/U606/ZN (OAI222_X1)                     0.07       0.92 f
   filter/mult_122/U605/ZN (AOI222_X1)                     0.10       1.02 r
-  filter/mult_122/U377/ZN (INV_X1)                        0.03       1.05 f
+  filter/mult_122/U376/ZN (INV_X1)                        0.03       1.05 f
   filter/mult_122/U604/ZN (AOI222_X1)                     0.09       1.14 r
-  filter/mult_122/U376/ZN (INV_X1)                        0.03       1.17 f
+  filter/mult_122/U375/ZN (INV_X1)                        0.03       1.17 f
   filter/mult_122/U603/ZN (AOI222_X1)                     0.09       1.26 r
   filter/mult_122/U379/ZN (INV_X1)                        0.03       1.29 f
   filter/mult_122/U602/ZN (AOI222_X1)                     0.09       1.38 r
   filter/mult_122/U378/ZN (INV_X1)                        0.03       1.41 f
   filter/mult_122/U601/ZN (AOI222_X1)                     0.09       1.50 r
-  filter/mult_122/U375/ZN (INV_X1)                        0.03       1.53 f
+  filter/mult_122/U377/ZN (INV_X1)                        0.03       1.53 f
   filter/mult_122/U15/CO (FA_X1)                          0.09       1.62 f
   filter/mult_122/U14/CO (FA_X1)                          0.09       1.71 f
   filter/mult_122/U13/CO (FA_X1)                          0.09       1.80 f
@@ -83,7 +83,7 @@ Wire Load Model Mode: top
   filter/mult_116/U538/ZN (AOI222_X1)                     0.11       3.47 r
   filter/mult_116/U335/ZN (INV_X1)                        0.03       3.49 f
   filter/mult_116/U537/ZN (AOI222_X1)                     0.09       3.59 r
-  filter/mult_116/U340/ZN (INV_X1)                        0.03       3.61 f
+  filter/mult_116/U343/ZN (INV_X1)                        0.03       3.61 f
   filter/mult_116/U15/CO (FA_X1)                          0.09       3.70 f
   filter/mult_116/U14/CO (FA_X1)                          0.09       3.79 f
   filter/mult_116/U13/CO (FA_X1)                          0.09       3.88 f
@@ -106,22 +106,22 @@ Wire Load Model Mode: top
   filter/add_0_root_add_0_root_add_144/SUM[11] (IIR_filter_gen_DW01_add_2)
                                                           0.00       4.88 r
   filter/Reg_out/data_in[11] (register_nbit_N12_1)        0.00       4.88 r
-  filter/Reg_out/U7/ZN (AOI22_X1)                         0.03       4.91 f
-  filter/Reg_out/U6/ZN (INV_X1)                           0.03       4.94 r
+  filter/Reg_out/U21/ZN (AOI22_X1)                        0.03       4.91 f
+  filter/Reg_out/U20/ZN (INV_X1)                          0.03       4.94 r
   filter/Reg_out/data_out_reg[11]/D (DFF_X1)              0.01       4.95 r
   data arrival time                                                  4.95
 
-  clock MY_CLK (rise edge)                               15.00      15.00
-  clock network delay (ideal)                             0.00      15.00
-  clock uncertainty                                      -0.07      14.93
-  filter/Reg_out/data_out_reg[11]/CK (DFF_X1)             0.00      14.93 r
-  library setup time                                     -0.03      14.90
-  data required time                                                14.90
+  clock MY_CLK (rise edge)                               11.40      11.40
+  clock network delay (ideal)                             0.00      11.40
+  clock uncertainty                                      -0.07      11.33
+  filter/Reg_out/data_out_reg[11]/CK (DFF_X1)             0.00      11.33 r
+  library setup time                                     -0.03      11.30
+  data required time                                                11.30
   --------------------------------------------------------------------------
-  data required time                                                14.90
+  data required time                                                11.30
   data arrival time                                                 -4.95
   --------------------------------------------------------------------------
-  slack (MET)                                                        9.95
+  slack (MET)                                                        6.35
 
 
 1

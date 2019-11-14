@@ -1,0 +1,159 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_filter
+Version: O-2018.06-SP4
+Date   : Wed Nov 13 19:49:25 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: filter/Reg_delay_1/data_out_reg[3]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: filter/Reg_out/data_out_reg[11]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  filter/Reg_delay_1/data_out_reg[3]/CK (DFF_X1)          0.00       0.00 r
+  filter/Reg_delay_1/data_out_reg[3]/Q (DFF_X1)           0.10       0.10 r
+  filter/Reg_delay_1/data_out[3] (register_nbit_N13_0)
+                                                          0.00       0.10 r
+  filter/mult_122/a[3] (IIR_filter_gen_DW_mult_tc_0)      0.00       0.10 r
+  filter/mult_122/U749/Z (XOR2_X1)                        0.07       0.18 r
+  filter/mult_122/U471/ZN (NAND2_X1)                      0.05       0.22 f
+  filter/mult_122/U596/ZN (OAI22_X1)                      0.06       0.28 r
+  filter/mult_122/U96/S (FA_X1)                           0.12       0.40 f
+  filter/mult_122/U461/ZN (AND2_X1)                       0.04       0.45 f
+  filter/mult_122/U462/ZN (NOR3_X1)                       0.06       0.50 r
+  filter/mult_122/U746/ZN (OAI222_X1)                     0.05       0.55 f
+  filter/mult_122/U483/ZN (INV_X1)                        0.04       0.59 r
+  filter/mult_122/U484/ZN (OAI222_X1)                     0.05       0.64 f
+  filter/mult_122/U495/ZN (NAND2_X1)                      0.04       0.68 r
+  filter/mult_122/U478/ZN (NAND3_X1)                      0.04       0.72 f
+  filter/mult_122/U492/ZN (NAND2_X1)                      0.03       0.75 r
+  filter/mult_122/U476/ZN (NAND3_X1)                      0.04       0.79 f
+  filter/mult_122/U485/ZN (NAND2_X1)                      0.03       0.82 r
+  filter/mult_122/U379/ZN (AND3_X2)                       0.06       0.87 r
+  filter/mult_122/U490/ZN (OAI222_X1)                     0.05       0.93 f
+  filter/mult_122/U525/ZN (NAND2_X1)                      0.04       0.96 r
+  filter/mult_122/U527/ZN (NAND3_X1)                      0.04       1.01 f
+  filter/mult_122/U540/ZN (NAND2_X1)                      0.04       1.04 r
+  filter/mult_122/U542/ZN (NAND3_X1)                      0.04       1.08 f
+  filter/mult_122/U545/ZN (NAND2_X1)                      0.04       1.12 r
+  filter/mult_122/U422/ZN (NAND3_X1)                      0.04       1.16 f
+  filter/mult_122/U520/ZN (NAND2_X1)                      0.04       1.20 r
+  filter/mult_122/U522/ZN (NAND3_X1)                      0.04       1.24 f
+  filter/mult_122/U480/ZN (NAND2_X1)                      0.04       1.28 r
+  filter/mult_122/U482/ZN (NAND3_X1)                      0.04       1.32 f
+  filter/mult_122/U548/ZN (NAND2_X1)                      0.03       1.35 r
+  filter/mult_122/U454/ZN (NAND3_X1)                      0.04       1.39 f
+  filter/mult_122/U553/ZN (NAND2_X1)                      0.04       1.43 r
+  filter/mult_122/U554/ZN (NAND3_X1)                      0.04       1.47 f
+  filter/mult_122/U558/ZN (NAND2_X1)                      0.04       1.51 r
+  filter/mult_122/U560/ZN (NAND3_X1)                      0.04       1.54 f
+  filter/mult_122/U466/ZN (NAND2_X1)                      0.03       1.58 r
+  filter/mult_122/U469/ZN (NAND3_X1)                      0.04       1.62 f
+  filter/mult_122/U531/ZN (NAND2_X1)                      0.04       1.66 r
+  filter/mult_122/U463/ZN (NAND3_X1)                      0.04       1.70 f
+  filter/mult_122/U536/ZN (NAND2_X1)                      0.03       1.73 r
+  filter/mult_122/U538/ZN (NAND3_X1)                      0.03       1.76 f
+  filter/mult_122/U569/ZN (XNOR2_X1)                      0.05       1.81 r
+  filter/mult_122/U500/ZN (XNOR2_X1)                      0.06       1.87 r
+  filter/mult_122/U499/ZN (XNOR2_X1)                      0.06       1.93 r
+  filter/mult_122/product[22] (IIR_filter_gen_DW_mult_tc_0)
+                                                          0.00       1.93 r
+  filter/add_1_root_add_111/B[11] (IIR_filter_gen_DW01_add_0)
+                                                          0.00       1.93 r
+  filter/add_1_root_add_111/U1_11/S (FA_X1)               0.12       2.05 f
+  filter/add_1_root_add_111/SUM[11] (IIR_filter_gen_DW01_add_0)
+                                                          0.00       2.05 f
+  filter/add_0_root_add_111/B[11] (IIR_filter_gen_DW01_add_1)
+                                                          0.00       2.05 f
+  filter/add_0_root_add_111/U1_11/S (FA_X1)               0.15       2.20 r
+  filter/add_0_root_add_111/SUM[11] (IIR_filter_gen_DW01_add_1)
+                                                          0.00       2.20 r
+  filter/mult_116/a[11] (IIR_filter_gen_DW_mult_tc_2)     0.00       2.20 r
+  filter/mult_116/U672/Z (XOR2_X1)                        0.08       2.28 r
+  filter/mult_116/U478/ZN (NAND2_X1)                      0.04       2.32 f
+  filter/mult_116/U640/ZN (OAI22_X1)                      0.06       2.38 r
+  filter/mult_116/U388/Z (XOR2_X1)                        0.08       2.46 r
+  filter/mult_116/U64/CO (FA_X1)                          0.08       2.54 r
+  filter/mult_116/U377/ZN (XNOR2_X1)                      0.06       2.60 r
+  filter/mult_116/U57/S (FA_X1)                           0.12       2.72 f
+  filter/mult_116/U14/S (FA_X1)                           0.13       2.86 f
+  filter/mult_116/product[12] (IIR_filter_gen_DW_mult_tc_2)
+                                                          0.00       2.86 f
+  filter/add_0_root_add_0_root_add_144/B[1] (IIR_filter_gen_DW01_add_2)
+                                                          0.00       2.86 f
+  filter/add_0_root_add_0_root_add_144/U35/ZN (NAND2_X1)
+                                                          0.04       2.89 r
+  filter/add_0_root_add_0_root_add_144/U24/ZN (NAND3_X1)
+                                                          0.04       2.93 f
+  filter/add_0_root_add_0_root_add_144/U40/ZN (NAND2_X1)
+                                                          0.04       2.97 r
+  filter/add_0_root_add_0_root_add_144/U16/ZN (NAND3_X1)
+                                                          0.04       3.01 f
+  filter/add_0_root_add_0_root_add_144/U19/ZN (NAND2_X1)
+                                                          0.03       3.04 r
+  filter/add_0_root_add_0_root_add_144/U7/ZN (NAND3_X1)
+                                                          0.04       3.08 f
+  filter/add_0_root_add_0_root_add_144/U28/ZN (NAND2_X1)
+                                                          0.03       3.11 r
+  filter/add_0_root_add_0_root_add_144/U30/ZN (NAND3_X1)
+                                                          0.03       3.14 f
+  filter/add_0_root_add_0_root_add_144/U1_5/CO (FA_X1)
+                                                          0.10       3.24 f
+  filter/add_0_root_add_0_root_add_144/U10/ZN (NAND2_X1)
+                                                          0.03       3.27 r
+  filter/add_0_root_add_0_root_add_144/U13/ZN (NAND3_X1)
+                                                          0.04       3.31 f
+  filter/add_0_root_add_0_root_add_144/U1_7/CO (FA_X1)
+                                                          0.10       3.40 f
+  filter/add_0_root_add_0_root_add_144/U46/ZN (NAND2_X1)
+                                                          0.04       3.44 r
+  filter/add_0_root_add_0_root_add_144/U1/ZN (NAND3_X1)
+                                                          0.04       3.48 f
+  filter/add_0_root_add_0_root_add_144/U53/ZN (NAND2_X1)
+                                                          0.03       3.51 r
+  filter/add_0_root_add_0_root_add_144/U54/ZN (NAND3_X1)
+                                                          0.03       3.55 f
+  filter/add_0_root_add_0_root_add_144/U1_10/CO (FA_X1)
+                                                          0.09       3.64 f
+  filter/add_0_root_add_0_root_add_144/U1_11/S (FA_X1)
+                                                          0.13       3.77 r
+  filter/add_0_root_add_0_root_add_144/SUM[11] (IIR_filter_gen_DW01_add_2)
+                                                          0.00       3.77 r
+  filter/Reg_out/data_in[11] (register_nbit_N12_1)        0.00       3.77 r
+  filter/Reg_out/U29/ZN (AOI22_X1)                        0.03       3.80 f
+  filter/Reg_out/U28/ZN (INV_X1)                          0.03       3.83 r
+  filter/Reg_out/data_out_reg[11]/D (DFF_X1)              0.01       3.84 r
+  data arrival time                                                  3.84
+
+  clock MY_CLK (rise edge)                                3.60       3.60
+  clock network delay (ideal)                             0.00       3.60
+  clock uncertainty                                      -0.07       3.53
+  filter/Reg_out/data_out_reg[11]/CK (DFF_X1)             0.00       3.53 r
+  library setup time                                     -0.03       3.50
+  data required time                                                 3.50
+  --------------------------------------------------------------------------
+  data required time                                                 3.50
+  data arrival time                                                 -3.84
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.34
+
+
+1

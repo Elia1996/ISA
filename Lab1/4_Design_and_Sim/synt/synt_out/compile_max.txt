@@ -1,0 +1,165 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 96 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'register_nbit_N1_0'
+  Processing 'register_nbit_N12_0'
+  Processing 'register_nbit_N13_0'
+  Processing 'IIR_filter_gen'
+  Processing 'IIR_filter'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'IIR_filter_gen_DW01_add_0'
+  Mapping 'IIR_filter_gen_DW_mult_tc_0'
+  Processing 'IIR_filter_gen_DW01_add_1'
+  Mapping 'IIR_filter_gen_DW_mult_tc_1'
+  Processing 'IIR_filter_gen_DW01_add_2'
+  Mapping 'IIR_filter_gen_DW_mult_tc_2'
+  Processing 'IIR_filter_gen_DW01_add_3'
+  Mapping 'IIR_filter_gen_DW_mult_tc_3'
+  Mapping 'IIR_filter_gen_DW_mult_tc_4'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10    3880.1      0.70       3.2      17.8                          
+    0:00:10    3880.1      0.70       3.2      17.8                          
+    0:00:10    3880.1      0.70       3.2      17.8                          
+    0:00:10    3880.1      0.70       3.2      17.8                          
+    0:00:10    3880.1      0.70       3.2      17.8                          
+    0:00:11    3767.9      0.70       3.0      16.3                          
+    0:00:11    3770.0      0.68       2.9      16.3                          
+    0:00:11    3770.3      0.66       2.8      16.3                          
+    0:00:11    3771.6      0.62       2.4      16.3                          
+    0:00:12    3772.4      0.60       2.3      16.3                          
+    0:00:12    3774.8      0.57       2.1      16.3                          
+    0:00:12    3776.7      0.55       2.0      16.3                          
+    0:00:12    3779.3      0.54       1.9      16.3                          
+    0:00:12    3780.1      0.54       1.9      16.3                          
+    0:00:12    3780.1      0.54       1.9      16.3                          
+    0:00:12    3780.1      0.54       1.9      16.3                          
+    0:00:12    3782.8      0.54       1.9       0.0                          
+    0:00:12    3782.8      0.54       1.9       0.0                          
+    0:00:12    3782.8      0.54       1.9       0.0                          
+    0:00:12    3782.8      0.54       1.9       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:12    3782.8      0.54       1.9       0.0                          
+    0:00:13    3792.1      0.48       1.6       9.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:13    3814.4      0.47       1.5       9.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:13    3826.1      0.44       1.4       9.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:14    3831.2      0.40       1.1       9.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:14    3829.1      0.35       0.9      18.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:14    3839.7      0.33       0.8      18.1 filter/Reg_out/data_out_reg[11]/D
+    0:00:15    3859.1      0.29       0.7      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:15    3869.8      0.26       0.5      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:16    3876.2      0.24       0.5      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:16    3892.1      0.22       0.4      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:16    3897.4      0.21       0.4      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:17    3901.4      0.19       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:17    3903.8      0.19       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:17    3905.1      0.18       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:18    3905.9      0.18       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:18    3905.9      0.18       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:19    3925.6      0.17       0.3      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:19    3932.5      0.15       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:19    3933.1      0.14       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:20    3933.1      0.14       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:20    3938.4      0.14       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:20    3940.8      0.13       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:20    3940.8      0.13       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:21    3948.2      0.13       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:21    3948.5      0.12       0.2      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:22    3949.6      0.12       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:22    3948.2      0.11       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:22    3956.0      0.11       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:23    3958.9      0.10       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:24    3959.4      0.10       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:24    3960.5      0.10       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:25    3962.6      0.10       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:26    3970.8      0.08       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:26    3975.4      0.07       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:26    3977.0      0.06       0.1      41.6 filter/Reg_out/data_out_reg[11]/D
+    0:00:27    3986.3      0.05       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:27    4000.4      0.04       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:28    4004.9      0.02       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:28    4008.9      0.01       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:29    4016.9      0.01       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:29    4016.6      0.01       0.0      50.7 filter/Reg_out/data_out_reg[11]/D
+    0:00:29    4019.5      0.00       0.0      50.7                          
+    0:00:29    4019.5      0.00       0.0      50.7                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:29    4019.5      0.00       0.0      50.7                          
+    0:00:29    4014.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:29    4014.5      0.00       0.0       0.0                          
+    0:00:29    4014.5      0.00       0.0       0.0                          
+    0:00:30    4000.9      0.00       0.0       0.0                          
+    0:00:30    3999.6      0.00       0.0       0.0                          
+    0:00:30    3999.6      0.00       0.0       0.0                          
+    0:00:30    3999.6      0.00       0.0       0.0                          
+    0:00:30    3999.6      0.00       0.0       0.0                          
+    0:00:30    4000.1      0.00       0.0       0.0                          
+    0:00:30    4000.6      0.00       0.0       0.0                          
+    0:00:30    3969.8      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+    0:00:30    3969.0      0.00       0.0       0.0                          
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

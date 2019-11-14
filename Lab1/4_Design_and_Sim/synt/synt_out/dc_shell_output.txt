@@ -1,5 +1,6 @@
 
-                           Design Compiler Graphical 
+Received Signal 15 from: PID=4830 (UID=1024)
+aphical 
                                  DC Ultra (TM)
                                   DFTMAX (TM)
                               Power Compiler (TM)

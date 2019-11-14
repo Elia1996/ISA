@@ -2,9 +2,9 @@
 
 dir=$(pwd)
 # tclk minimo 
-tmin=3.9
+tmin=2.85
 # tclk minimo * 4 
-tmax=15
+tmax=11.40
 
 # sintesi dell'architettura col clock massimo per torvare l'area 
 /home/isa22/script/lib/sepf.sh -f $dir/variables_gen.scr -d $dir/variables.scr -p PERIOD,EXTENSION -n $tmin,_period  
