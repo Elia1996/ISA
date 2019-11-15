@@ -96,20 +96,24 @@ hold on
 legend('NEW MODEL','REFERENCE MODEL (C)')
 xlabel("N-th sample");
 ylabel("y[N]");
-title("Comparisons among reference, no optimized and optimized models");
+title("Comparisons among reference and DF2 optimized models");
+xlim([0 208])
 
 figure
 plot(1:1:length(xq),yq-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{REFERENCE}[N] - y_{OPTIMIZED}[N]");
 title("Differences between reference and optimized models");
+ylim([-3 2])
+xlim([0 208])
 
 figure
 plot(1:1:length(xq),yq_butter-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
 title("Differences between matlab filter-function and optimized model");
-
+ylim([-3 2])
+xlim([0 208])
 
 fin = fopen('resultsMATLAB_DF1.txt','r');
 df1 = fscanf(fin,'%d');
@@ -121,6 +125,8 @@ plot(1:1:length(yy),df1-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{OPT-DF1}[N] - y_{OPT-DF2}[N]");
 title("Differences between DF1 and DF2 optimized model");
+ylim([-3 2])
+xlim([0 208])
 
 fin = fopen('resultsMATLAB_DF2.txt','w');
 fprintf(fin,'%d\n',yy.*2^11);
