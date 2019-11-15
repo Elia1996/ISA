@@ -1,6 +1,6 @@
 ##################### variables (modificare solo questa parte)
 # top entity
-variable top_entity "IIR_filter"
+variable top_entity "IIR_filter_optimized"
 # output file
 variable power_report "Power_report_Innovus.txt"
 # test-bench
@@ -8,7 +8,7 @@ variable test_bench "IIR_tb"
 # path of the innovus folder
 variable innovus_path "/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus"
 # file vcd (potrebbe essere top_entity.vcd)
-variable design_vcd "design.vcd"
+variable design_vcd "IIR_filter_optimized.vcd"
 #################################################################
 
 
