@@ -89,6 +89,14 @@ end
 % % end
 
 figure
+plot(1:1:length(xq),yq-yq_butter,'*')
+xlabel("N-th sample");
+ylabel("y_{C-REFERENCE}[N] - y_{FILTER}[N]");
+title("Differences between C-reference and filter-function models");
+ylim([-3.5 3.5])
+xlim([0 208])
+
+figure
 plot(1:1:length(xq),yy*2^11,'g*')
 hold on
 plot(1:1:length(xq),yq,'bo')
@@ -96,23 +104,23 @@ hold on
 legend('NEW MODEL','REFERENCE MODEL (C)')
 xlabel("N-th sample");
 ylabel("y[N]");
-title("Comparisons among reference and DF2 optimized models");
+title("Comparisons between C-reference and DF2-optimized models");
 xlim([0 208])
 
 figure
 plot(1:1:length(xq),yq-yy.*2^11,'*')
 xlabel("N-th sample");
-ylabel("y_{REFERENCE}[N] - y_{OPTIMIZED}[N]");
-title("Differences between reference and optimized models");
-ylim([-3 2])
+ylabel("y_{C-REFERENCE}[N] - y_{DF2-OPTIMIZED}[N]");
+title("Differences between C-reference and DF2-optimized models");
+ylim([-3.5 3.5])
 xlim([0 208])
 
 figure
 plot(1:1:length(xq),yq_butter-yy.*2^11,'*')
 xlabel("N-th sample");
-ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
-title("Differences between matlab filter-function and optimized model");
-ylim([-3 2])
+ylabel("y_{FILTER}[N] - y_{DF2-OPTIMIZED}[N]");
+title("Differences between matlab filter-function and DF2-optimized model");
+ylim([-3.5 3.5])
 xlim([0 208])
 
 fin = fopen('resultsMATLAB_DF1.txt','r');
@@ -125,7 +133,7 @@ plot(1:1:length(yy),df1-yy.*2^11,'*')
 xlabel("N-th sample");
 ylabel("y_{OPT-DF1}[N] - y_{OPT-DF2}[N]");
 title("Differences between DF1 and DF2 optimized model");
-ylim([-3 2])
+ylim([-3.5 3.5])
 xlim([0 208])
 
 fin = fopen('resultsMATLAB_DF2.txt','w');
