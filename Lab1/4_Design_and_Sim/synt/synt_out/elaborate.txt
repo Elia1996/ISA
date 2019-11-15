@@ -5,14 +5,14 @@ Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sld
 Running PRESTO HDLC
 Presto compilation completed successfully.
 Elaborated 1 design.
-Current design is now 'IIR_filter'.
-Information: Building the design 'IIR_filter_gen'. (HDL-193)
+Current design is now 'IIR_filter_optimized'.
+Information: Building the design 'IIR_filter_gen_optimized'. (HDL-193)
 Presto compilation completed successfully.
-Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen' with
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
 	the parameters "N=12". (HDL-193)
 
 Inferred memory devices in process
-	in routine register_nbit_N12 line 24 in file
+	in routine register_nbit_N12 line 23 in file
 		'../src/register_nbit.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -20,11 +20,35 @@ Inferred memory devices in process
 |    data_out_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen' with
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
+	the parameters "N=13". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N13 line 23 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
+	the parameters "N=17". (HDL-193)
+
+Inferred memory devices in process
+	in routine register_nbit_N17 line 23 in file
+		'../src/register_nbit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |  17   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register_nbit' instantiated from design 'IIR_filter_gen_optimized' with
 	the parameters "N=1". (HDL-193)
 
 Inferred memory devices in process
-	in routine register_nbit_N1 line 24 in file
+	in routine register_nbit_N1 line 23 in file
 		'../src/register_nbit.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
