@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Tue Nov 12 00:04:06 2019                
+#  Created on Fri Nov 15 20:07:44 2019                
 #                                                     
 #######################################################
 
@@ -13,6 +13,11 @@
 #@(#)CDS: CPE v17.11-s095
 #@(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
 
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
 set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
 suppressMessage ENCEXT-2799
 getDrawView
@@ -44,4 +49,4 @@ set_power -reset
 set_powerup_analysis -reset
 set_dynamic_power_simulation -reset
 report_power -rail_analysis_format VS -outfile .//IIR_filter_optimized.rpt
-report_power -outfile power_report_innovus.txt -sort { total }
+report_power -outfile Power_report_Innovus.txt -sort { total }

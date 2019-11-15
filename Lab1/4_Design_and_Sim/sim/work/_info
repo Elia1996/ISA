@@ -3,9 +3,9 @@ m255
 cModel Technology
 d/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/sim
 T_opt
-V1Mg`^BIiZBgCM>R[IH8Lm2
+VBZQM0NzB2fJmA77D2gi8o3
 06 6 4 ./work IIR_tb fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../netlist/IIR_filter_optimized.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../innovus/IIR_filter_optimized.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
@@ -38,12 +38,12 @@ M1 ieee std_logic_unsigned
 o-93 -work ./work
 tExplicit 1
 vIIR_filter_optimized
-IJ31T0iT4He3OYeTF2Jzkk1
+I7oD_n10^olIn3<;3XH9SN0
 V>NARJNX6^T?`M8`6EdUNz1
-w1573651669
-8../netlist/IIR_filter_optimized.v
-F../netlist/IIR_filter_optimized.v
-L0 8
+w1573843001
+8../innovus/IIR_filter_optimized.v
+F../innovus/IIR_filter_optimized.v
+L0 15
 V>NARJNX6^T?`M8`6EdUNz1
 OE;L;6.2g;35
 r1
@@ -53,7 +53,7 @@ n@i@i@r_filter_optimized
 vIIR_tb
 Iejo1Z?9egfaDaBN6kj0G23
 VeF>1f;3VOAD2W7@8aEoRo2
-w1573649438
+w1573771078
 8../tb/IIR_tb.v
 F../tb/IIR_tb.v
 L0 3
@@ -64,7 +64,7 @@ r1
 o-work ./work
 n@i@i@r_tb
 Eiir_tb_in
-w1573649438
+w1573771078
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP work type_for_iir_optimized_pkg 36nm^Y:Y2d?0m6]VmbKC^3
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
@@ -105,7 +105,7 @@ M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Eiir_tb_out
-w1573649496
+w1573771078
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP work type_for_iir_optimized_pkg 36nm^Y:Y2d?0m6]VmbKC^3
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
@@ -148,7 +148,7 @@ tExplicit 1
 Ptype_for_iir_optimized_pkg
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-w1573649496
+w1573771078
 8../src/IIR_package_optimized.vhd
 F../src/IIR_package_optimized.vhd
 l0

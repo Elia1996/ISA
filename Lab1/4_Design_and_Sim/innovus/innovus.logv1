@@ -1,260 +1,264 @@
-[11/12 00:03:25      0s] 
-[11/12 00:03:25      0s] Cadence Innovus(TM) Implementation System.
-[11/12 00:03:25      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
-[11/12 00:03:25      0s] 
-[11/12 00:03:25      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
-[11/12 00:03:25      0s] Options:	
-[11/12 00:03:25      0s] Date:		Tue Nov 12 00:03:25 2019
-[11/12 00:03:25      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
-[11/12 00:03:25      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
-[11/12 00:03:25      0s] 
-[11/12 00:03:25      0s] License:
-[11/12 00:03:25      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
-[11/12 00:03:25      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
-[11/12 00:04:04     20s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
-[11/12 00:04:04     20s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
-[11/12 00:04:04     20s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
-[11/12 00:04:04     20s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
-[11/12 00:04:04     20s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
-[11/12 00:04:04     20s] @(#)CDS: CPE v17.11-s095
-[11/12 00:04:04     20s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
-[11/12 00:04:04     20s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
-[11/12 00:04:04     20s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
-[11/12 00:04:04     20s] @(#)CDS: RCDB 11.10
-[11/12 00:04:04     20s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
-[11/12 00:04:04     20s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ.
+[11/15 20:07:16      0s] 
+[11/15 20:07:16      0s] Cadence Innovus(TM) Implementation System.
+[11/15 20:07:16      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/15 20:07:16      0s] 
+[11/15 20:07:16      0s] Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+[11/15 20:07:16      0s] Options:	
+[11/15 20:07:16      0s] Date:		Fri Nov 15 20:07:16 2019
+[11/15 20:07:16      0s] Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+[11/15 20:07:16      0s] OS:		CentOS Linux release 7.6.1810 (Core) 
+[11/15 20:07:16      0s] 
+[11/15 20:07:16      0s] License:
+[11/15 20:07:16      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[11/15 20:07:16      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/15 20:07:43     20s] @(#)CDS: Innovus v17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+[11/15 20:07:43     20s] @(#)CDS: NanoRoute 17.11-s080_1 NR170721-2155/17_11-UB (database version 2.30, 390.7.1) {superthreading v1.44}
+[11/15 20:07:43     20s] @(#)CDS: AAE 17.11-s034 (64bit) 08/04/2017 (Linux 2.6.18-194.el5)
+[11/15 20:07:43     20s] @(#)CDS: CTE 17.11-s053_1 () Aug  1 2017 23:31:41 ( )
+[11/15 20:07:43     20s] @(#)CDS: SYNTECH 17.11-s012_1 () Jul 21 2017 02:29:12 ( )
+[11/15 20:07:43     20s] @(#)CDS: CPE v17.11-s095
+[11/15 20:07:43     20s] @(#)CDS: IQRC/TQRC 16.1.1-s215 (64bit) Thu Jul  6 20:18:10 PDT 2017 (Linux 2.6.18-194.el5)
+[11/15 20:07:43     20s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[11/15 20:07:43     20s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[11/15 20:07:43     20s] @(#)CDS: RCDB 11.10
+[11/15 20:07:43     20s] --- Running on localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB) ---
+[11/15 20:07:43     20s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y.
 
-[11/12 00:04:04     20s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
-[11/12 00:04:06     21s] 
-[11/12 00:04:06     21s] **INFO:  MMMC transition support version v31-84 
-[11/12 00:04:06     21s] 
-[11/12 00:04:06     21s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
-[11/12 00:04:06     21s] <CMD> suppressMessage ENCEXT-2799
-[11/12 00:04:07     21s] <CMD> getDrawView
-[11/12 00:04:07     21s] <CMD> loadWorkspace -name Physical
-[11/12 00:04:07     21s] <CMD> win
-[11/12 00:05:30     26s] <CMD> encMessage warning 0
-[11/12 00:05:30     26s] Suppress "**WARN ..." messages.
-[11/12 00:05:30     26s] <CMD> encMessage debug 0
-[11/12 00:05:30     26s] <CMD> encMessage info 0
-[11/12 00:05:30     26s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
-[11/12 00:05:30     27s] Loading view definition file from /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus/IIR_filter_optimized.enc.dat/viewDefinition.tcl
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:31     27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-[11/12 00:05:34     29s] *** End library_loading (cpu=0.04min, real=0.07min, mem=18.9M, fe_cpu=0.49min, fe_real=2.17min, fe_mem=523.2M) ***
-[11/12 00:05:35     29s] *** Netlist is unique.
-[11/12 00:05:35     29s] Loading preference file /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus/IIR_filter_optimized.enc.dat/gui.pref.tcl ...
-[11/12 00:05:35     29s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
-[11/12 00:05:38     31s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
-[11/12 00:06:06     33s] <CMD> reset_parasitics
-[11/12 00:06:06     33s] Performing RC Extraction ...
-[11/12 00:06:06     33s] <CMD> extractRC
-[11/12 00:06:06     33s] Extraction called for design 'IIR_filter_optimized' of instances=11501 and nets=4394 using extraction engine 'postRoute' at effort level 'low' .
-[11/12 00:06:06     33s] **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
-[11/12 00:06:06     33s] Type 'man IMPEXT-3530' for more detail.
-[11/12 00:06:06     33s] PostRoute (effortLevel low) RC Extraction called for design IIR_filter_optimized.
-[11/12 00:06:06     33s] RC Extraction called in multi-corner(1) mode.
-[11/12 00:06:06     33s] Process corner(s) are loaded.
-[11/12 00:06:06     33s]  Corner: my_rc
-[11/12 00:06:06     33s] extractDetailRC Option : -outfile /tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d  -extended
-[11/12 00:06:06     33s] RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
-[11/12 00:06:06     33s]       RC Corner Indexes            0   
-[11/12 00:06:06     33s] Capacitance Scaling Factor   : 1.00000 
-[11/12 00:06:06     33s] Coupling Cap. Scaling Factor : 1.00000 
-[11/12 00:06:06     33s] Resistance Scaling Factor    : 1.00000 
-[11/12 00:06:06     33s] Clock Cap. Scaling Factor    : 1.00000 
-[11/12 00:06:06     33s] Clock Res. Scaling Factor    : 1.00000 
-[11/12 00:06:06     33s] Shrink Factor                : 1.00000
-[11/12 00:06:06     33s] Initializing multi-corner capacitance tables ... 
-[11/12 00:06:06     33s] Initializing multi-corner resistance tables ...
-[11/12 00:06:06     33s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 860.8M)
-[11/12 00:06:06     33s] Creating parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for storing RC.
-[11/12 00:06:06     33s] Extracted 10.005% (CPU Time= 0:00:00.1  MEM= 918.0M)
-[11/12 00:06:06     33s] Extracted 20.0044% (CPU Time= 0:00:00.2  MEM= 919.0M)
-[11/12 00:06:07     33s] Extracted 30.0039% (CPU Time= 0:00:00.2  MEM= 919.0M)
-[11/12 00:06:07     33s] Extracted 40.0033% (CPU Time= 0:00:00.2  MEM= 920.0M)
-[11/12 00:06:07     33s] Extracted 50.0055% (CPU Time= 0:00:00.2  MEM= 920.0M)
-[11/12 00:06:07     33s] Extracted 60.005% (CPU Time= 0:00:00.3  MEM= 920.0M)
-[11/12 00:06:07     33s] Extracted 70.0044% (CPU Time= 0:00:00.3  MEM= 921.0M)
-[11/12 00:06:07     33s] Extracted 80.0039% (CPU Time= 0:00:00.4  MEM= 921.0M)
-[11/12 00:06:07     33s] Extracted 90.0033% (CPU Time= 0:00:00.5  MEM= 922.0M)
-[11/12 00:06:07     33s] Extracted 100% (CPU Time= 0:00:00.6  MEM= 922.0M)
-[11/12 00:06:07     33s] Number of Extracted Resistors     : 57694
-[11/12 00:06:07     33s] Number of Extracted Ground Cap.   : 61995
-[11/12 00:06:07     33s] Number of Extracted Coupling Cap. : 79308
-[11/12 00:06:07     33s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:07     33s] Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
-[11/12 00:06:07     33s]  Corner: my_rc
-[11/12 00:06:07     33s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 898.0M)
-[11/12 00:06:07     33s] Creating parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb_Filter.rcdb.d' for storing RC.
-[11/12 00:06:07     33s] Closing parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d'. 4361 times net's RC data read were performed.
-[11/12 00:06:07     34s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=902.031M)
-[11/12 00:06:07     34s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:07     34s] processing rcdb (/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d) for hinst (top) of cell (IIR_filter_optimized);
-[11/12 00:06:08     34s] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:01.0, current mem=902.031M)
-[11/12 00:06:08     34s] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.8  Real Time: 0:00:02.0  MEM: 902.031M)
-[11/12 00:06:08     34s] <CMD> rcOut -setload IIR_filter_optimized.setload -rc_corner my_rc
-[11/12 00:06:08     34s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:08     34s] RC Out has the following PVT Info:
-[11/12 00:06:08     34s]    RC:my_rc, Operating temperature 25 C
-[11/12 00:06:08     34s] RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 902.0M)
-[11/12 00:06:08     34s] Closing parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d'. 4361 times net's RC data read were performed.
-[11/12 00:06:08     34s] <CMD> rcOut -setres IIR_filter_optimized.setres -rc_corner my_rc
-[11/12 00:06:08     34s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:08     34s] RC Out has the following PVT Info:
-[11/12 00:06:08     34s]    RC:my_rc, Operating temperature 25 C
-[11/12 00:06:08     34s] RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 902.0M)
-[11/12 00:06:08     34s] Closing parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d'. 4361 times net's RC data read were performed.
-[11/12 00:06:08     34s] <CMD> rcOut -spf IIR_filter_optimized.spf -rc_corner my_rc
-[11/12 00:06:08     34s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:08     34s] RC Out has the following PVT Info:
-[11/12 00:06:08     34s]    RC:my_rc, Operating temperature 25 C
-[11/12 00:06:08     34s] Printing *|NET...
-[11/12 00:06:09     34s] RC Out from RCDB Completed (CPU Time= 0:00:00.6  MEM= 902.0M)
-[11/12 00:06:09     34s] Closing parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d'. 4361 times net's RC data read were performed.
-[11/12 00:06:09     34s] <CMD> rcOut -spef IIR_filter_optimized.spef -rc_corner my_rc
-[11/12 00:06:09     34s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:06:09     34s] RC Out has the following PVT Info:
-[11/12 00:06:09     34s]    RC:my_rc, Operating temperature 25 C
-[11/12 00:06:09     34s] Dumping Spef file.....
-[11/12 00:06:09     34s] Printing D_NET...
-[11/12 00:06:10     35s] RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 902.0M)
-[11/12 00:06:10     35s] Closing parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d'. 4361 times net's RC data read were performed.
-[11/12 00:06:28     36s] <CMD> set_power_analysis_mode -reset
-[11/12 00:06:28     36s] <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
-[11/12 00:11:12     55s] <CMD> set_power_output_dir -reset
-[11/12 00:11:12     55s] <CMD> set_power_output_dir ./
-[11/12 00:11:12     55s] <CMD> set_default_switching_activity -reset
-[11/12 00:11:12     55s] <CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
-[11/12 00:11:12     55s] <CMD> read_activity_file -reset
-[11/12 00:11:12     55s] <CMD> read_activity_file -format VCD -scope /IIR_tb/UUT -start {} -end {} -block {} ../vcd/IIR_filter_optimized.vcd
-[11/12 00:11:12     55s] <CMD> set_power -reset
-[11/12 00:11:12     55s] <CMD> set_powerup_analysis -reset
-[11/12 00:11:12     55s] <CMD> set_dynamic_power_simulation -reset
-[11/12 00:11:12     55s] <CMD> report_power -rail_analysis_format VS -outfile .//IIR_filter_optimized.rpt
-[11/12 00:11:12     55s] 
-[11/12 00:11:12     55s] Power Net Detected:
-[11/12 00:11:12     55s]     Voltage	    Name
-[11/12 00:11:12     55s]     0.00V	    VSS
-[11/12 00:11:12     55s]     1.10V	    VDD
-[11/12 00:11:12     55s] Starting SI iteration 1 using Infinite Timing Windows
-[11/12 00:11:12     55s] #################################################################################
-[11/12 00:11:12     55s] # Design Stage: PostRoute
-[11/12 00:11:12     55s] # Design Name: IIR_filter_optimized
-[11/12 00:11:12     55s] # Design Mode: 90nm
-[11/12 00:11:12     55s] # Analysis Mode: MMMC OCV 
-[11/12 00:11:12     55s] # Parasitics Mode: SPEF/RCDB
-[11/12 00:11:12     55s] # Signoff Settings: SI On 
-[11/12 00:11:12     55s] #################################################################################
-[11/12 00:11:13     55s] AAE_INFO: 1 threads acquired from CTE.
-[11/12 00:11:13     55s] Setting infinite Tws ...
-[11/12 00:11:13     55s] First Iteration Infinite Tw... 
-[11/12 00:11:13     55s] Calculate early delays in OCV mode...
-[11/12 00:11:13     55s] Calculate late delays in OCV mode...
-[11/12 00:11:13     55s] Topological Sorting (REAL = 0:00:00.0, MEM = 902.0M, InitMEM = 902.0M)
-[11/12 00:11:13     55s] Start delay calculation (fullDC) (1 T). (MEM=902.031)
-[11/12 00:11:13     55s] Initializing multi-corner capacitance tables ... 
-[11/12 00:11:13     55s] Initializing multi-corner resistance tables ...
-[11/12 00:11:14     55s] Start AAE Lib Loading. (MEM=918.188)
-[11/12 00:11:14     55s] End AAE Lib Loading. (MEM=1118.47 CPU=0:00:00.0 Real=0:00:00.0)
-[11/12 00:11:14     55s] End AAE Lib Interpolated Model. (MEM=1118.47 CPU Time=0:00:00.0, Real Time=0:00:00.0)
-[11/12 00:11:14     56s] Opening parasitic data file '/tmp/innovus_temp_5047_localhost.localdomain_isa22_D0xwqJ/IIR_filter_optimized_5047_Jjw49i.rcdb.d' for reading.
-[11/12 00:11:14     56s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1089.9M)
-[11/12 00:11:14     56s] AAE_INFO: 1 threads acquired from CTE.
-[11/12 00:11:19     59s] Total number of fetched objects 4621
-[11/12 00:11:19     59s] AAE_INFO-618: Total number of nets in the design is 4394,  100.0 percent of the nets selected for SI analysis
-[11/12 00:11:19     59s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
-[11/12 00:11:19     59s] End delay calculation. (MEM=1158.63 CPU=0:00:03.5 REAL=0:00:05.0)
-[11/12 00:11:19     59s] End delay calculation (fullDC). (MEM=1061.26 CPU=0:00:04.1 REAL=0:00:06.0)
-[11/12 00:11:19     59s] *** CDM Built up (cpu=0:00:04.4  real=0:00:07.0  mem= 1061.3M) ***
-[11/12 00:11:20     60s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1061.3M)
-[11/12 00:11:20     60s] Add other clocks and setupCteToAAEClockMapping during iter 1
-[11/12 00:11:20     60s] Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1061.3M)
-[11/12 00:11:20     60s] Starting SI iteration 2
-[11/12 00:11:21     60s] Calculate early delays in OCV mode...
-[11/12 00:11:21     60s] Calculate late delays in OCV mode...
-[11/12 00:11:21     60s] Start delay calculation (fullDC) (1 T). (MEM=1069.31)
-[11/12 00:11:21     60s] End AAE Lib Interpolated Model. (MEM=1069.31 CPU Time=0:00:00.0, Real Time=0:00:00.0)
-[11/12 00:11:21     60s] Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
-[11/12 00:11:21     60s] Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 4621. 
-[11/12 00:11:21     60s] Total number of fetched objects 4621
-[11/12 00:11:21     60s] AAE_INFO-618: Total number of nets in the design is 4394,  0.0 percent of the nets selected for SI analysis
-[11/12 00:11:21     60s] End delay calculation. (MEM=1037.3 CPU=0:00:00.1 REAL=0:00:00.0)
-[11/12 00:11:21     60s] End delay calculation (fullDC). (MEM=1037.3 CPU=0:00:00.1 REAL=0:00:00.0)
-[11/12 00:11:21     60s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 1037.3M) ***
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] Begin Power Analysis
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s]     0.00V	    VSS
-[11/12 00:11:21     60s]     1.10V	    VDD
-[11/12 00:11:21     60s] Begin Processing Timing Library for Power Calculation
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] Begin Processing Timing Library for Power Calculation
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] Begin Processing Power Net/Grid for Power Calculation
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=819.78MB/819.78MB)
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] Begin Processing Timing Window Data for Power Calculation
-[11/12 00:11:21     60s] 
-[11/12 00:11:21     60s] MY_CLK(344.828MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=819.91MB/819.91MB)
-[11/12 00:11:21     60s] 
-[11/12 00:11:22     60s] Begin Processing User Attributes
-[11/12 00:11:22     60s] 
-[11/12 00:11:22     60s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=833.62MB/833.62MB)
-[11/12 00:11:22     60s] 
-[11/12 00:11:22     60s] Begin Processing Signal Activity
-[11/12 00:11:22     60s] 
-[11/12 00:11:24     61s] Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:01, mem(process/total)=833.82MB/833.82MB)
-[11/12 00:11:24     61s] 
-[11/12 00:11:24     61s] Begin Power Computation
-[11/12 00:11:24     61s] 
-[11/12 00:11:24     61s]       ----------------------------------------------------------
-[11/12 00:11:24     61s]       # of cell(s) missing both power/leakage table: 0
-[11/12 00:11:24     61s]       # of cell(s) missing power table: 0
-[11/12 00:11:24     61s]       # of cell(s) missing leakage table: 0
-[11/12 00:11:24     61s]       # of MSMV cell(s) missing power_level: 0
-[11/12 00:11:24     61s]       ----------------------------------------------------------
-[11/12 00:11:24     61s] 
-[11/12 00:11:24     61s] 
-[11/12 00:11:28     63s] Ended Power Computation: (cpu=0:00:02, real=0:00:04, mem(process/total)=834.19MB/834.19MB)
-[11/12 00:11:28     63s] 
-[11/12 00:11:28     63s] Begin Processing User Attributes
-[11/12 00:11:28     63s] 
-[11/12 00:11:28     63s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=834.19MB/834.19MB)
-[11/12 00:11:28     63s] 
-[11/12 00:11:28     63s] Ended Power Analysis: (cpu=0:00:03, real=0:00:07, mem(process/total)=834.24MB/834.24MB)
-[11/12 00:11:28     63s] 
-[11/12 00:12:40     67s] <CMD> report_power -outfile power_report_innovus.txt -sort { total }
-[11/12 00:13:14     69s] 
-[11/12 00:13:14     69s] *** Memory Usage v#1 (Current mem = 1041.312M, initial mem = 179.684M) ***
-[11/12 00:13:14     69s] 
-[11/12 00:13:14     69s] *** Summary of all messages that are not suppressed in this session:
-[11/12 00:13:14     69s] Severity  ID               Count  Summary                                  
-[11/12 00:13:14     69s] WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
-[11/12 00:13:14     69s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
-[11/12 00:13:14     69s] WARNING   GLOBAL-100           2  Global '%s' has become obsolete. It will...
-[11/12 00:13:14     69s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
-[11/12 00:13:14     69s] *** Message Summary: 24 warning(s), 0 error(s)
-[11/12 00:13:14     69s] 
-[11/12 00:13:14     69s] --- Ending "Innovus" (totcpu=0:01:09, real=0:09:49, mem=1041.3M) ---
+[11/15 20:07:43     20s] Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+[11/15 20:07:45     21s] 
+[11/15 20:07:45     21s] **INFO:  MMMC transition support version v31-84 
+[11/15 20:07:45     21s] 
+[11/15 20:07:45     21s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/15 20:07:45     21s] <CMD> suppressMessage ENCEXT-2799
+[11/15 20:07:45     21s] <CMD> getDrawView
+[11/15 20:07:45     21s] <CMD> loadWorkspace -name Physical
+[11/15 20:07:45     21s] <CMD> win
+[11/15 20:09:17     30s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/15 20:09:17     30s] <CMD> suppressMessage ENCEXT-2799
+[11/15 20:09:17     30s] <CMD> getDrawView
+[11/15 20:09:17     30s] <CMD> loadWorkspace -name Physical
+[11/15 20:09:17     30s] <CMD> win
+[11/15 20:09:17     30s] <CMD> encMessage warning 0
+[11/15 20:09:17     30s] Suppress "**WARN ..." messages.
+[11/15 20:09:17     30s] <CMD> encMessage debug 0
+[11/15 20:09:17     30s] <CMD> encMessage info 0
+[11/15 20:09:18     30s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/15 20:09:18     30s] Loading view definition file from /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus/IIR_filter_optimized.enc.dat/viewDefinition.tcl
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:18     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:19     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:19     31s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+[11/15 20:09:21     33s] *** End library_loading (cpu=0.04min, real=0.05min, mem=27.8M, fe_cpu=0.55min, fe_real=2.08min, fe_mem=511.8M) ***
+[11/15 20:09:21     33s] *** Netlist is unique.
+[11/15 20:09:22     33s] Loading preference file /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus/IIR_filter_optimized.enc.dat/gui.pref.tcl ...
+[11/15 20:09:22     33s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[11/15 20:09:24     35s] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[11/15 20:09:24     35s] <CMD> reset_parasitics
+[11/15 20:09:24     35s] <CMD> extractRC
+[11/15 20:09:24     35s] Extraction called for design 'IIR_filter_optimized' of instances=11501 and nets=4394 using extraction engine 'postRoute' at effort level 'low' .
+[11/15 20:09:24     35s] **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+[11/15 20:09:24     35s] Type 'man IMPEXT-3530' for more detail.
+[11/15 20:09:24     35s] PostRoute (effortLevel low) RC Extraction called for design IIR_filter_optimized.
+[11/15 20:09:24     35s] RC Extraction called in multi-corner(1) mode.
+[11/15 20:09:24     35s] Process corner(s) are loaded.
+[11/15 20:09:24     35s]  Corner: my_rc
+[11/15 20:09:24     35s] extractDetailRC Option : -outfile /tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d  -extended
+[11/15 20:09:24     35s] RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+[11/15 20:09:24     35s]       RC Corner Indexes            0   
+[11/15 20:09:24     35s] Capacitance Scaling Factor   : 1.00000 
+[11/15 20:09:24     35s] Coupling Cap. Scaling Factor : 1.00000 
+[11/15 20:09:24     35s] Resistance Scaling Factor    : 1.00000 
+[11/15 20:09:24     35s] Clock Cap. Scaling Factor    : 1.00000 
+[11/15 20:09:24     35s] Clock Res. Scaling Factor    : 1.00000 
+[11/15 20:09:24     35s] Shrink Factor                : 1.00000
+[11/15 20:09:24     35s] Initializing multi-corner capacitance tables ... 
+[11/15 20:09:24     35s] Initializing multi-corner resistance tables ...
+[11/15 20:09:25     35s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 725.7M)
+[11/15 20:09:25     35s] Creating parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for storing RC.
+[11/15 20:09:25     35s] Extracted 10.005% (CPU Time= 0:00:00.1  MEM= 791.9M)
+[11/15 20:09:25     35s] Extracted 20.0044% (CPU Time= 0:00:00.2  MEM= 792.9M)
+[11/15 20:09:25     35s] Extracted 30.0039% (CPU Time= 0:00:00.2  MEM= 792.9M)
+[11/15 20:09:25     35s] Extracted 40.0033% (CPU Time= 0:00:00.2  MEM= 793.9M)
+[11/15 20:09:25     36s] Extracted 50.0055% (CPU Time= 0:00:00.3  MEM= 793.9M)
+[11/15 20:09:25     36s] Extracted 60.005% (CPU Time= 0:00:00.3  MEM= 793.9M)
+[11/15 20:09:25     36s] Extracted 70.0044% (CPU Time= 0:00:00.3  MEM= 794.9M)
+[11/15 20:09:25     36s] Extracted 80.0039% (CPU Time= 0:00:00.4  MEM= 794.9M)
+[11/15 20:09:25     36s] Extracted 90.0033% (CPU Time= 0:00:00.5  MEM= 795.9M)
+[11/15 20:09:26     36s] Extracted 100% (CPU Time= 0:00:00.6  MEM= 795.9M)
+[11/15 20:09:26     36s] Number of Extracted Resistors     : 57694
+[11/15 20:09:26     36s] Number of Extracted Ground Cap.   : 61995
+[11/15 20:09:26     36s] Number of Extracted Coupling Cap. : 79308
+[11/15 20:09:26     36s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:26     36s] Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
+[11/15 20:09:26     36s]  Corner: my_rc
+[11/15 20:09:26     36s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 779.9M)
+[11/15 20:09:26     36s] Creating parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb_Filter.rcdb.d' for storing RC.
+[11/15 20:09:26     36s] Closing parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d'. 4361 times net's RC data read were performed.
+[11/15 20:09:26     36s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=779.867M)
+[11/15 20:09:26     36s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:26     36s] processing rcdb (/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d) for hinst (top) of cell (IIR_filter_optimized);
+[11/15 20:09:26     36s] Lumped Parasitic Loading Completed (total cpu=0:00:00.0, real=0:00:00.0, current mem=779.867M)
+[11/15 20:09:26     36s] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.8  Real Time: 0:00:02.0  MEM: 779.867M)
+[11/15 20:09:26     36s] <CMD> rcOut -setload IIR_filter_optimized.setload -rc_corner my_rc
+[11/15 20:09:26     36s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:26     36s] RC Out has the following PVT Info:
+[11/15 20:09:26     36s]    RC:my_rc, Operating temperature 25 C
+[11/15 20:09:26     36s] RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 779.9M)
+[11/15 20:09:26     36s] Closing parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d'. 4361 times net's RC data read were performed.
+[11/15 20:09:26     36s] <CMD> rcOut -setres IIR_filter_optimized.setres -rc_corner my_rc
+[11/15 20:09:26     36s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:26     36s] RC Out has the following PVT Info:
+[11/15 20:09:26     36s]    RC:my_rc, Operating temperature 25 C
+[11/15 20:09:26     36s] RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 779.9M)
+[11/15 20:09:26     36s] Closing parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d'. 4361 times net's RC data read were performed.
+[11/15 20:09:26     36s] <CMD> rcOut -spf IIR_filter_optimized.spf -rc_corner my_rc
+[11/15 20:09:26     36s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:26     36s] RC Out has the following PVT Info:
+[11/15 20:09:26     36s]    RC:my_rc, Operating temperature 25 C
+[11/15 20:09:26     36s] Printing *|NET...
+[11/15 20:09:27     37s] RC Out from RCDB Completed (CPU Time= 0:00:00.6  MEM= 779.9M)
+[11/15 20:09:27     37s] Closing parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d'. 4361 times net's RC data read were performed.
+[11/15 20:09:27     37s] <CMD> rcOut -spef IIR_filter_optimized.spef -rc_corner my_rc
+[11/15 20:09:27     37s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:27     37s] RC Out has the following PVT Info:
+[11/15 20:09:27     37s]    RC:my_rc, Operating temperature 25 C
+[11/15 20:09:27     37s] Dumping Spef file.....
+[11/15 20:09:27     37s] Printing D_NET...
+[11/15 20:09:27     37s] RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 779.9M)
+[11/15 20:09:27     37s] Closing parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d'. 4361 times net's RC data read were performed.
+[11/15 20:09:27     37s] <CMD> set_power_analysis_mode -reset
+[11/15 20:09:27     37s] <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+[11/15 20:09:27     37s] <CMD> set_power_output_dir -reset
+[11/15 20:09:27     37s] <CMD> set_power_output_dir ./
+[11/15 20:09:27     37s] <CMD> set_default_switching_activity -reset
+[11/15 20:09:27     37s] <CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+[11/15 20:09:27     37s] <CMD> read_activity_file -reset
+[11/15 20:09:27     37s] <CMD> read_activity_file -format VCD -scope /IIR_tb/UUT -start {} -end {} -block {} ../vcd/IIR_filter_optimized.vcd
+[11/15 20:09:27     37s] <CMD> set_power -reset
+[11/15 20:09:27     37s] <CMD> set_powerup_analysis -reset
+[11/15 20:09:27     37s] <CMD> set_dynamic_power_simulation -reset
+[11/15 20:09:27     37s] <CMD> report_power -rail_analysis_format VS -outfile .//IIR_filter_optimized.rpt
+[11/15 20:09:27     37s] 
+[11/15 20:09:27     37s] Power Net Detected:
+[11/15 20:09:27     37s]     Voltage	    Name
+[11/15 20:09:27     37s]     0.00V	    VSS
+[11/15 20:09:27     37s]     1.10V	    VDD
+[11/15 20:09:27     37s] Starting SI iteration 1 using Infinite Timing Windows
+[11/15 20:09:28     37s] #################################################################################
+[11/15 20:09:28     37s] # Design Stage: PostRoute
+[11/15 20:09:28     37s] # Design Name: IIR_filter_optimized
+[11/15 20:09:28     37s] # Design Mode: 90nm
+[11/15 20:09:28     37s] # Analysis Mode: MMMC OCV 
+[11/15 20:09:28     37s] # Parasitics Mode: SPEF/RCDB
+[11/15 20:09:28     37s] # Signoff Settings: SI On 
+[11/15 20:09:28     37s] #################################################################################
+[11/15 20:09:28     38s] AAE_INFO: 1 threads acquired from CTE.
+[11/15 20:09:28     38s] Setting infinite Tws ...
+[11/15 20:09:28     38s] First Iteration Infinite Tw... 
+[11/15 20:09:28     38s] Calculate early delays in OCV mode...
+[11/15 20:09:28     38s] Calculate late delays in OCV mode...
+[11/15 20:09:28     38s] Topological Sorting (REAL = 0:00:00.0, MEM = 779.9M, InitMEM = 779.9M)
+[11/15 20:09:28     38s] Start delay calculation (fullDC) (1 T). (MEM=779.867)
+[11/15 20:09:28     38s] Initializing multi-corner capacitance tables ... 
+[11/15 20:09:28     38s] Initializing multi-corner resistance tables ...
+[11/15 20:09:28     38s] Start AAE Lib Loading. (MEM=796.023)
+[11/15 20:09:28     38s] End AAE Lib Loading. (MEM=986.766 CPU=0:00:00.0 Real=0:00:00.0)
+[11/15 20:09:28     38s] End AAE Lib Interpolated Model. (MEM=986.766 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/15 20:09:29     38s] Opening parasitic data file '/tmp/innovus_temp_4839_localhost.localdomain_isa22_9QhK0y/IIR_filter_optimized_4839_YxPKkc.rcdb.d' for reading.
+[11/15 20:09:29     38s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 958.2M)
+[11/15 20:09:29     38s] AAE_INFO: 1 threads acquired from CTE.
+[11/15 20:09:33     41s] Total number of fetched objects 4621
+[11/15 20:09:33     41s] AAE_INFO-618: Total number of nets in the design is 4394,  100.0 percent of the nets selected for SI analysis
+[11/15 20:09:33     42s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/15 20:09:33     42s] End delay calculation. (MEM=1026.93 CPU=0:00:03.4 REAL=0:00:04.0)
+[11/15 20:09:33     42s] End delay calculation (fullDC). (MEM=929.559 CPU=0:00:04.1 REAL=0:00:05.0)
+[11/15 20:09:33     42s] *** CDM Built up (cpu=0:00:04.4  real=0:00:05.0  mem= 929.6M) ***
+[11/15 20:09:33     42s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 929.6M)
+[11/15 20:09:33     42s] Add other clocks and setupCteToAAEClockMapping during iter 1
+[11/15 20:09:33     42s] Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 929.6M)
+[11/15 20:09:33     42s] Starting SI iteration 2
+[11/15 20:09:33     42s] Calculate early delays in OCV mode...
+[11/15 20:09:33     42s] Calculate late delays in OCV mode...
+[11/15 20:09:33     42s] Start delay calculation (fullDC) (1 T). (MEM=937.605)
+[11/15 20:09:34     42s] End AAE Lib Interpolated Model. (MEM=937.605 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/15 20:09:34     42s] Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
+[11/15 20:09:34     42s] Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 4621. 
+[11/15 20:09:34     42s] Total number of fetched objects 4621
+[11/15 20:09:34     42s] AAE_INFO-618: Total number of nets in the design is 4394,  0.0 percent of the nets selected for SI analysis
+[11/15 20:09:34     42s] End delay calculation. (MEM=905.602 CPU=0:00:00.1 REAL=0:00:00.0)
+[11/15 20:09:34     42s] End delay calculation (fullDC). (MEM=905.602 CPU=0:00:00.1 REAL=0:00:01.0)
+[11/15 20:09:34     42s] *** CDM Built up (cpu=0:00:00.1  real=0:00:01.0  mem= 905.6M) ***
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] Begin Power Analysis
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s]     0.00V	    VSS
+[11/15 20:09:34     42s]     1.10V	    VDD
+[11/15 20:09:34     42s] Begin Processing Timing Library for Power Calculation
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] Begin Processing Timing Library for Power Calculation
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] Begin Processing Power Net/Grid for Power Calculation
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=668.91MB/668.91MB)
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] Begin Processing Timing Window Data for Power Calculation
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     42s] MY_CLK(344.828MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=669.82MB/669.82MB)
+[11/15 20:09:34     42s] 
+[11/15 20:09:34     43s] Begin Processing User Attributes
+[11/15 20:09:34     43s] 
+[11/15 20:09:34     43s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=683.82MB/683.82MB)
+[11/15 20:09:34     43s] 
+[11/15 20:09:34     43s] Begin Processing Signal Activity
+[11/15 20:09:34     43s] 
+[11/15 20:09:35     43s] Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=684.02MB/684.02MB)
+[11/15 20:09:35     43s] 
+[11/15 20:09:35     43s] Begin Power Computation
+[11/15 20:09:35     43s] 
+[11/15 20:09:35     43s]       ----------------------------------------------------------
+[11/15 20:09:35     43s]       # of cell(s) missing both power/leakage table: 0
+[11/15 20:09:35     43s]       # of cell(s) missing power table: 0
+[11/15 20:09:35     43s]       # of cell(s) missing leakage table: 0
+[11/15 20:09:35     43s]       # of MSMV cell(s) missing power_level: 0
+[11/15 20:09:35     43s]       ----------------------------------------------------------
+[11/15 20:09:35     43s] 
+[11/15 20:09:35     43s] 
+[11/15 20:09:37     45s] Ended Power Computation: (cpu=0:00:01, real=0:00:02, mem(process/total)=684.39MB/684.39MB)
+[11/15 20:09:37     45s] 
+[11/15 20:09:37     45s] Begin Processing User Attributes
+[11/15 20:09:37     45s] 
+[11/15 20:09:37     45s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=684.39MB/684.39MB)
+[11/15 20:09:37     45s] 
+[11/15 20:09:37     45s] Ended Power Analysis: (cpu=0:00:02, real=0:00:03, mem(process/total)=684.44MB/684.44MB)
+[11/15 20:09:37     45s] 
+[11/15 20:09:38     46s] <CMD> report_power -outfile Power_report_Innovus.txt -sort { total }
+[11/15 20:19:17    106s] 
+[11/15 20:19:17    106s] *** Memory Usage v#1 (Current mem = 927.109M, initial mem = 179.684M) ***
+[11/15 20:19:17    106s] 
+[11/15 20:19:17    106s] *** Summary of all messages that are not suppressed in this session:
+[11/15 20:19:17    106s] Severity  ID               Count  Summary                                  
+[11/15 20:19:17    106s] WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
+[11/15 20:19:17    106s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[11/15 20:19:17    106s] WARNING   GLOBAL-100           2  Global '%s' has become obsolete. It will...
+[11/15 20:19:17    106s] WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+[11/15 20:19:17    106s] *** Message Summary: 24 warning(s), 0 error(s)
+[11/15 20:19:17    106s] 
+[11/15 20:19:17    106s] --- Ending "Innovus" (totcpu=0:01:46, real=0:12:01, mem=927.1M) ---

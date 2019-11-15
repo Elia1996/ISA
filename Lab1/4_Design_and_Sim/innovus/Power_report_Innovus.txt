@@ -2,7 +2,7 @@
 *	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2019-Nov-12 00:12:40 (2019-Nov-11 23:12:40 GMT)
+* 	Date & Time:	2019-Nov-15 20:09:38 (2019-Nov-15 19:09:38 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -20,7 +20,7 @@
 *
 *	Switching Activity File used: 
 *	        ../vcd/IIR_filter_optimized.vcd
-*			Vcd Window used(Start Time, Stop Time):(9.17153e+46, 9.17158e+46) 
+*			Vcd Window used(Start Time, Stop Time):(-7.78638e+43, -7.78637e+43) 
 *                     Vcd Scale Factor: 1 
 **                    Design annotation coverage: 0/4368 = 0% 
 *
@@ -40,7 +40,7 @@
 *
 *	Time Units = 1e-09 secs 
 *
-*       report_power -outfile power_report_innovus.txt -sort total
+*       report_power -outfile Power_report_Innovus.txt -sort total
 *
 -----------------------------------------------------------------------------------------
 
