@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Wed Nov 13 15:09:58 2019
+#@ # Date:   Sat Nov 16 11:14:34 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6638,8 +6638,8 @@ source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 #@ set synthetic_library [list "dw_foundation.sldb" ]
 #@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/.synopsys_dc.setup
 
-source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
-#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
+source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt.scr
+#@ # -- Starting source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt.scr
 
 #@ source variables.scr
 #@ # -- Starting source variables.scr
@@ -6651,12 +6651,36 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_p
 #@ # output directory of syntesys file
 #@ variable out_dir "./synt_out"
 #@ # period of clock
-#@ variable period 2.90
+#@ variable period 0.2
 #@ # -- End source variables.scr
 
-#@ read_verilog -netlist ../netlist/IIR_filter_optimized.v
-#@ read_saif -input ../saif/iir_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
-#@ create_clock -name MY_CLK CLK
-#@ report_power > $out_dir/report_power_final_optimized.txt
-#@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
-
+#@ # This file analyze, elaborate and compile vhdl file
+#@ 
+#@ # -f indica il formato dei file
+#@ # -lib indica dove mettere i file su cui lavora sysnopsys
+#@ analyze -f vhdl -lib WORK { ../src/IIR_package_optimized.vhd ../src/IIR_filter_optimized.vhd ../src/IIR_filter_gen_optimized.vhd ../src/register_nbit.vhd}
+#@ # preserviamo i nomi delle netlist della rete
+#@ set power_preserve_rtl_hier_names true
+#@ # elaborazione dei file, viene data la top entity
+#@ elaborate $top_entity -arch behavioral -lib WORK > $out_dir/elaborate.txt
+#@ 
+#@ ###  Applico le limitazioni 
+#@ # creo il clock di sistema, in ns
+#@ create_clock -name MY_CLK -period $period CLK
+#@ # poichè il clock è un segnale particolare
+#@ # setto la proprietà don't touch
+#@ # ciò è fatto perchè col comando ungroup vengono modificate tutte
+#@ # le celle tranne quelle dont_touch
+#@ set_dont_touch_network MY_CLK
+#@ # setto l'incertezza del clock
+#@ set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+#@ # setto in ritardo di tutti gli ingressi, che si suppone uguale
+#@ set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
+#@ # setto il ritardo di tutte le uscite
+#@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+#@ # setto il carico di ciascun uscita che si suppone uguale a quello 
+#@ #  di un buffer
+#@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
+#@ set_load $OLOAD [all_outputs]
+#@ # compilo
+#@ compile -exact_map > $out_dir/compile.txt
