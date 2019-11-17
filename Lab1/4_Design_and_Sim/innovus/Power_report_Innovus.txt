@@ -2,7 +2,7 @@
 *	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2019-Nov-11 20:51:21 (2019-Nov-11 19:51:21 GMT)
+* 	Date & Time:	2019-Nov-17 18:26:44 (2019-Nov-17 17:26:44 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -19,15 +19,10 @@
 *       User-Defined Activity : N.A.
 *
 *	Switching Activity File used: 
-*	        ../vcd/design.vcd
-*			Vcd Window used(Start Time, Stop Time):(1.41414e-28, 1.41414e-28) 
+*	        ../vcd/IIR_filter.vcd
+*			Vcd Window used(Start Time, Stop Time):(-3.20508e+45, -3.20508e+45) 
 *                     Vcd Scale Factor: 1 
-**                    Design annotation coverage: 0/2152 = 0% 
-*	        ../vcd/design.vcd
-*			Vcd Window used(Start Time, Stop Time):(1.41414e-28, 1.41414e-28) 
-*                     Vcd Scale Factor: 1 
-**                    Design annotation coverage: 0/2152 = 0% 
-*            Total Design annotation coverage: 0/2152 = 0% 
+**                    Design annotation coverage: 0/2171 = 0% 
 *
 *       Hierarchical Global Activity: N.A.
 *
@@ -52,39 +47,39 @@
 
 Total Power 
 -----------------------------------------------------------------------------------------
-Total Internal Power:        0.71093014 	   49.8401%
-Total Switching Power:       0.64289076 	   45.0702%
-Total Leakage Power:         0.07260061 	    5.0897%
-Total Power:                 1.42642151 
+Total Internal Power:        0.81821546 	   50.0590%
+Total Switching Power:       0.74290872 	   45.4517%
+Total Leakage Power:         0.07337734 	    4.4893%
+Total Power:                 1.63450152 
 -----------------------------------------------------------------------------------------
 
 
 Group                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Sequential                       0.03985     0.02326    0.004091      0.0672       4.711 
+Sequential                       0.05164     0.02492    0.004091     0.08065       4.934 
 Macro                                  0           0           0           0           0 
 IO                                     0           0           0           0           0 
-Combinational                     0.6711      0.6196     0.06851       1.359       95.29 
+Combinational                     0.7666       0.718     0.06929       1.554       95.07 
 Clock (Combinational)                  0           0           0           0           0 
 Clock (Sequential)                     0           0           0           0           0 
 -----------------------------------------------------------------------------------------
-Total                             0.7109      0.6429      0.0726       1.426         100 
+Total                             0.8182      0.7429     0.07338       1.635         100 
 -----------------------------------------------------------------------------------------
 
 
 Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-VDD                       1.1     0.7109      0.6429      0.0726       1.426         100 
+VDD                       1.1     0.8182      0.7429     0.07338       1.635         100 
 
 
 -----------------------------------------------------------------------------------------
 *	Power Distribution Summary: 
-* 		Highest Average Power: filter_add_0_root_add_111_U1_1 (FA_X1): 	  0.006206 
+* 		Highest Average Power: filter_add_0_root_add_111_U1_1 (FA_X1): 	  0.006396 
 * 		Highest Leakage Power: filter_Reg_out_data_out_reg_11_ (DFF_X1): 	 7.885e-05 
-* 		Total Cap: 	1.08608e-11 F
-* 		Total instances in design:  1736
+* 		Total Cap: 	1.09543e-11 F
+* 		Total instances in design:  1755
 * 		Total instances in design with no power:     0
 *          Total instances in design with no activity:     0
 * 		Total Fillers and Decap:     0
