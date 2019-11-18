@@ -3,7 +3,7 @@ L 39 /software/dk/nangate45/verilog/msim6.2g 39 /software/dk/nangate45/verilog/m
 L 4 ieee 19 $MODEL_TECH/../ieee
 L 3 std 18 $MODEL_TECH/../std
 L 4 work 6 ./work
-S 35 ../innovus/IIR_filter_optimized.sdf 6 __sdf1 1 3930025 1574099787
+S 35 ../innovus/IIR_filter_optimized.sdf 6 __sdf1 1 3930025 1574102304
 A 11 /IIR_tb/UUT 1 0
 D 27 ./work.IIR_filter_optimized ji[AJ0@d>HfzHRDEA_jQ_0 32 0
 D 13 ./work.IIR_tb ejo1Z?9egfaDaBN6kj0G23 34 0
@@ -45,9 +45,10 @@ D 50 /software/dk/nangate45/verilog/msim6.2g.seq_DFF_X1 o<>Z>fHnW^I3PCbc`ohM52 1
 2 4 fast 0 =z[4kS1WTM]hE^7GHhMMC0 2 4 1
 2 4 fast 0 _@z71>hnGzi[BQ9A`2TXa1 3 5 1
 2 4 fast 0 fUEVmJGMdL2hzG=hKG1?J2 4 6 1
-2 4 fast 0 mnz=P5gMD^DXF>o8;c]ij0 7 9 1
 2 4 fast 0 n9`c=8Bi_Jln9aXeb7K0c3 27 29 1
 2 0  0 NFzSf0Ie8?DARQUX[fGFn0 0 0 1
+2 4 fast 0 mnz=P5gMD^DXF>o8;c]ij0 7 9 1
+2 4 fast 0 QUj>9RINQ14Of2oY4bG>K2 22 24 1
 2 4 fast 0 :^XeFC4bA[QhUS[0KeiK63 5 7 1
 2 4 fast 0 _FP8PX]VjZBEH2AH9=IJR0 6 8 1
 2 4 fast 0 `W7Kbh9^;>iSl[L@?j;h_0 8 10 1
@@ -57,14 +58,13 @@ D 50 /software/dk/nangate45/verilog/msim6.2g.seq_DFF_X1 o<>Z>fHnW^I3PCbc`ohM52 1
 2 7 verilog 0 o<>Z>fHnW^I3PCbc`ohM52 12 14 0
 2 4 fast 0 db3hY4^QCb]I^MaGaK>kV3 13 15 1
 2 4 fast 0 [_ahfg^N;hkA:MIE5ZaJ71 15 17 1
-2 4 fast 0 k_=:7UgkQN]`:5fZ4noAN1 14 16 1
 2 4 fast 0 1H;Gi]F1Z0CiJ0ImU6k9U3 17 19 1
+2 4 fast 0 k_=:7UgkQN]`:5fZ4noAN1 14 16 1
 2 4 fast 0 DX@Ch1IEz;7JXU0<6?[ZJ0 16 18 1
 2 4 fast 0 1dbZz=OTQ5LEWgYMz2;D^0 19 21 1
 2 4 fast 0 Y]Vo`Q;WP[N2NmZ><9ZX52 18 20 1
 2 4 fast 0 >cQ4Q4X<Nhc_42U>3@HlQ1 20 22 1
 2 4 fast 0 Kgzajc;i[;MU;?]^E;Z9N1 21 23 1
-2 4 fast 0 QUj>9RINQ14Of2oY4bG>K2 22 24 1
 2 4 fast 0 STRB_2WdGJlg7oiz8a:Ga3 30 32 1
 2 4 fast 0 LRf5RXnUNjTiKCZ=^mf0C0 25 27 1
 2 4 fast 0 ba2Nb77i0dPUD^iLWP@X51 23 25 1
