@@ -200,3 +200,5 @@ report_power > $out_dir/report_power_final$ext.txt
 quit
 
 Thank you...
+
+Received Signal 15 from: PID=9024 (UID=1024)
