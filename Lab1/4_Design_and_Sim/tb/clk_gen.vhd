@@ -26,6 +26,9 @@ begin  -- beh
       CLK_i <= not(CLK_i);
     end if;
     wait for Ts/2;
+	if END_SIM = '1' then
+	      wait;
+	end if;
   end process;
 
   CLK <= CLK_i and not(END_SIM);

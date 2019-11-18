@@ -58,8 +58,10 @@ begin  -- beh
 				end if;
 			else
         		VIN <= '0' after tco;
-        		sEndSim <= '0' after tco;
 			end if;
+		else
+        	VIN <= '0' after tco;
+			sEndSim <= '1' after tco;
       	end if;
     end if;
   end process;

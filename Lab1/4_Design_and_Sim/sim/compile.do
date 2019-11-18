@@ -6,4 +6,4 @@ vsim -t 1ns -novopt work.IIR_tb
 add wave *
 add wave /IIR_tb/TB_IN/end_sim_i
 radix -decimal
-run 1000ns
+run -all
