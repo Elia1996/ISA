@@ -11,7 +11,7 @@ tmax=15
 echo "Creation of variables.scr with tclk min"
 ./synt_save.sh
 
-# sintesi dell'architettura col clock massimo*4 per trovarei area la potenza
+# sintesi dell'architettura col clock massimo*4 per trovare l'area e la potenza
 /home/isa22/script/lib/sepf.sh -f $dir/variables_gen.scr -d $dir/variables.scr -p PERIOD,EXTENSION -n $tmax,_period_x4  
 echo "Creation of variables.scr with tclk min*4"
 ./synt_save.sh

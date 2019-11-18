@@ -4,7 +4,7 @@ vcom -93 -work ./work ../src/multiplier/fpmul_stage1.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage2.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage3.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage4.vhd
-vcom -93 -work ./work ../src/multiplier/fpmul_single_cycle.vhd
+#vcom -93 -work ./work ../src/multiplier/fpmul_single_cycle.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_pipeline.vhd
 
 vcom -93 -work ./work ../tb/*.vhd

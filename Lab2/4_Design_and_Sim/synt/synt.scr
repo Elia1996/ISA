@@ -7,7 +7,7 @@ analyze -f vhdl -lib WORK { ../src/IIR_package.vhd ../src/IIR_filter.vhd ../src/
 # preserviamo i nomi delle netlist della rete
 set power_preserve_rtl_hier_names true
 # elaborazione dei file, viene data la top entity
-elaborate $top_entity -arch behavioral -lib WORK > $out_dir/elaborate.txt
+elaborate $top_entity -arch pipeline -lib WORK > $out_dir/elaborate.txt
 
 ###  Applico le limitazioni 
 # creo il clock di sistema, in ns

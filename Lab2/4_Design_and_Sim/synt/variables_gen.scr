@@ -1,7 +1,7 @@
 # file da sintetizzare
-variable filetosynt "../src/IIR_package.vhd ../scr/IIR_filter.vhd ../src/IIR_filter_gen.vhd"
+variable filetosynt "../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/fpmul_pipeline.vhd"
 # top entity
-variable top_entity "IIR_filter"
+variable top_entity "fpmul_pipeline"
 # output directory of syntesys file
 variable out_dir "./synt_out"
 # period of clock
