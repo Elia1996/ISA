@@ -4,7 +4,7 @@ Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
 Options:	
-Date:		Sun Nov 17 18:23:24 2019
+Date:		Mon Nov 18 19:28:44 2019
 Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
 OS:		CentOS Linux release 7.6.1810 (Core) 
 
@@ -52,7 +52,7 @@ Loading view definition file from /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
-*** End library_loading (cpu=0.04min, real=0.07min, mem=31.1M, fe_cpu=0.47min, fe_real=2.87min, fe_mem=515.0M) ***
+*** End library_loading (cpu=0.04min, real=0.15min, mem=38.0M, fe_cpu=0.46min, fe_real=2.70min, fe_mem=521.9M) ***
 *** Netlist is unique.
 Loading preference file /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus/IIR_filter.enc.dat/gui.pref.tcl ...
 **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
@@ -67,7 +67,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_4868_localhost.localdomain_isa22_tGSy46/IIR_filter_4868_BEtvkJ.rcdb.d  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_27851_localhost.localdomain_isa22_9e2DzE/IIR_filter_27851_gut7ge.rcdb.d  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -78,12 +78,12 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 729.1M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 729.0M)
 Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 784.4M)
 Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 784.4M)
 Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 784.4M)
 Extracted 40.0092% (CPU Time= 0:00:00.1  MEM= 784.4M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 785.4M)
+Extracted 50.0087% (CPU Time= 0:00:00.1  MEM= 785.4M)
 Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 785.4M)
 Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 785.4M)
 Extracted 80.0069% (CPU Time= 0:00:00.2  MEM= 785.4M)
@@ -94,27 +94,27 @@ Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 770.4M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 770.398M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 770.3M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.4  Real Time: 0:00:03.0  MEM: 770.336M)
 <CMD> rcOut -setload IIR_filter.setload -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 770.4M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 770.3M)
 <CMD> rcOut -setres IIR_filter.setres -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 770.4M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 770.3M)
 <CMD> rcOut -spf IIR_filter.spf -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Printing *|NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 770.4M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 770.3M)
 <CMD> rcOut -spef IIR_filter.spef -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Dumping Spef file.....
 Printing D_NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 770.4M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 770.3M)
 <CMD> set_power_analysis_mode -reset
 <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
 <CMD> set_power_output_dir -reset
@@ -146,27 +146,27 @@ Starting SI iteration 1 using Infinite Timing Windows
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=770.398)
+Start delay calculation (fullDC) (1 T). (MEM=770.336)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 AAE_INFO: 1 threads acquired from CTE.
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1017.46 CPU=0:00:02.0 REAL=0:00:05.0)
-End delay calculation (fullDC). (MEM=920.09 CPU=0:00:02.5 REAL=0:00:06.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 920.1M)
+End delay calculation. (MEM=1017.4 CPU=0:00:01.9 REAL=0:00:04.0)
+End delay calculation (fullDC). (MEM=920.027 CPU=0:00:02.5 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 920.0M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 920.1M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 920.0M)
 Starting SI iteration 2
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=928.137)
+Start delay calculation (fullDC) (1 T). (MEM=928.074)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=896.133 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=896.133 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation. (MEM=896.07 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=896.07 CPU=0:00:00.1 REAL=0:00:00.0)
 
 Begin Power Analysis
 
@@ -181,29 +181,29 @@ Begin Processing Timing Library for Power Calculation
 
 Begin Processing Power Net/Grid for Power Calculation
 
-Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=654.77MB/654.77MB)
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=665.30MB/665.30MB)
 
 Begin Processing Timing Window Data for Power Calculation
 
-MY_CLK(87.7193MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=655.64MB/655.64MB)
+MY_CLK(87.7193MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=666.16MB/666.16MB)
 
 Parsing VCD file ../vcd/IIR_filter.vcd
 
 Starting Reading VCD variables
-2019-Nov-17 18:26:38 (2019-Nov-17 17:26:38 GMT)
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT)
 
 Finished Reading VCD variables
-2019-Nov-17 18:26:38 (2019-Nov-17 17:26:38 GMT)
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT)
    
 The vcd command required:
-   		0.04 user, 0.01 system, and 0.25 real seconds
+   		0.15 user, 0.05 system, and 0.30 real seconds
 
    Total number of value changes: 0.
 
-   Total simulation time: 1e-06s.
+   Total simulation time: 4.036e-06s.
 
-   With this vcd command,  0 value changes and 1e-06 second simulation time
-were counted for power consumption calculation.
+   With this vcd command,  0 value changes and 4.036e-06 second simulation
+time were counted for power consumption calculation.
 
   Filename (activity)                    : ../vcd/IIR_filter.vcd
   Names in file that matched to design   : 0/0
@@ -215,39 +215,39 @@ were counted for power consumption calculation.
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=668.82MB/668.82MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=718.50MB/718.50MB)
 
 Begin Processing Signal Activity
 
 
 Starting Levelizing
-2019-Nov-17 18:26:38 (2019-Nov-17 17:26:38 GMT)
-2019-Nov-17 18:26:38 (2019-Nov-17 17:26:38 GMT): 10%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 20%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 30%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 40%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 50%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 60%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 70%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 80%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 90%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT)
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 10%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 20%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 30%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 40%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 50%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 60%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 70%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 80%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 90%
 
 Finished Levelizing
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT)
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT)
 
 Starting Activity Propagation
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT)
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 10%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 20%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 30%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 40%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 50%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 60%
-2019-Nov-17 18:26:39 (2019-Nov-17 17:26:39 GMT): 70%
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 80%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT)
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 10%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 20%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 30%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 40%
+2019-Nov-18 19:31:53 (2019-Nov-18 18:31:53 GMT): 50%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 60%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 70%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 80%
 
 Finished Activity Propagation
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT)
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT)
 
 Activity annotation summary:
         Primary Inputs : 1/15 = 6.66667%
@@ -256,7 +256,7 @@ Activity annotation summary:
       Tristate outputs : 0/0 = 0%
             Total Nets : 1/2171 = 0.0460617%
 
-Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:01, mem(process/total)=669.02MB/669.02MB)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=718.70MB/718.70MB)
 
 Begin Power Computation
 
@@ -270,28 +270,28 @@ Begin Power Computation
 
 
 Starting Calculating power
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT)
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT)
  ... Calculating switching power
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 10%
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 20%
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 30%
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 40%
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 50%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 10%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 20%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 30%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 40%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 50%
  ... Calculating internal and leakage power
-2019-Nov-17 18:26:40 (2019-Nov-17 17:26:40 GMT): 60%
-2019-Nov-17 18:26:41 (2019-Nov-17 17:26:41 GMT): 70%
-2019-Nov-17 18:26:42 (2019-Nov-17 17:26:42 GMT): 80%
-2019-Nov-17 18:26:42 (2019-Nov-17 17:26:42 GMT): 90%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 60%
+2019-Nov-18 19:31:54 (2019-Nov-18 18:31:54 GMT): 70%
+2019-Nov-18 19:31:55 (2019-Nov-18 18:31:55 GMT): 80%
+2019-Nov-18 19:31:55 (2019-Nov-18 18:31:55 GMT): 90%
 
 Finished Calculating power
-2019-Nov-17 18:26:44 (2019-Nov-17 17:26:44 GMT)
-Ended Power Computation: (cpu=0:00:01, real=0:00:03, mem(process/total)=669.39MB/669.39MB)
+2019-Nov-18 19:31:56 (2019-Nov-18 18:31:56 GMT)
+Ended Power Computation: (cpu=0:00:01, real=0:00:01, mem(process/total)=719.08MB/719.08MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=669.39MB/669.39MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=719.08MB/719.08MB)
 
-Ended Power Analysis: (cpu=0:00:01, real=0:00:05, mem(process/total)=669.45MB/669.45MB)
+Ended Power Analysis: (cpu=0:00:01, real=0:00:03, mem(process/total)=719.13MB/719.13MB)
 
 Begin Static Power Report Generation
 *
@@ -306,11 +306,11 @@ Total Leakage Power:         0.07337734 	    4.4893%
 Total Power:                 1.63450152
 -----------------------------------------------------------------------------------------
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total)=669.75MB/669.75MB)
+mem(process/total)=719.46MB/719.46MB)
 
 Begin Creating Binary Database
 Ended Creating Binary Database: (cpu=0:00:00, real=0:00:00,
-mem(process/total)=669.76MB/669.76MB)
+mem(process/total)=719.47MB/719.47MB)
 
 Output file is .//IIR_filter.rpt.
 <CMD> report_power -outfile Power_report_Innovus.txt -sort { total }
@@ -327,12 +327,12 @@ Total Leakage Power:         0.07337734 	    4.4893%
 Total Power:                 1.63450152
 -----------------------------------------------------------------------------------------
 Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
-mem(process/total)=669.98MB/669.98MB)
+mem(process/total)=719.68MB/719.68MB)
 
 
 Output file is .//Power_report_Innovus.txt.
 
-*** Memory Usage v#1 (Current mem = 918.234M, initial mem = 179.684M) ***
+*** Memory Usage v#1 (Current mem = 932.078M, initial mem = 179.684M) ***
 *** Message Summary: 24 warning(s), 0 error(s)
 
---- Ending "Innovus" (totcpu=0:00:48.1, real=0:08:33, mem=918.2M) ---
+--- Ending "Innovus" (totcpu=0:00:39.4, real=0:05:05, mem=932.1M) ---

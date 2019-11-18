@@ -4,7 +4,7 @@ Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
 Options:	
-Date:		Sun Nov 17 18:08:07 2019
+Date:		Mon Nov 18 19:08:29 2019
 Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-957.5.1.el7.x86_64) (1core*2cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
 OS:		CentOS Linux release 7.6.1810 (Core) 
 
@@ -41,15 +41,15 @@ Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_si
 <CMD> set init_pwr_net VDD
 <CMD> set init_mmmc_file mmm_design.tcl
 <CMD> init_design
-#% Begin Load MMMC data ... (date=11/17 18:10:54, mem=407.8M)
-#% End Load MMMC data ... (date=11/17 18:10:54, total cpu=0:00:00.0, real=0:00:00.0, peak res=407.9M, current mem=407.9M)
+#% Begin Load MMMC data ... (date=11/18 19:10:49, mem=441.3M)
+#% End Load MMMC data ... (date=11/18 19:10:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=441.5M, current mem=441.5M)
 my_rc
 
 Loading LEF file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
 Set DBUPerIGU to M2 pitch 380.
 
-viaInitial starts at Sun Nov 17 18:10:54 2019
-viaInitial ends at Sun Nov 17 18:10:54 2019
+viaInitial starts at Mon Nov 18 19:10:49 2019
+viaInitial ends at Mon Nov 18 19:10:49 2019
 Loading view definition file from mmm_design.tcl
 Reading MY_LIBSET timing library '/software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib' ...
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
@@ -74,17 +74,17 @@ Reading MY_LIBSET timing library '/software/dk/nangate45/liberty/NangateOpenCell
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
 Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
 Read 134 cells in library 'NangateOpenCellLibrary' 
-*** End library_loading (cpu=0.04min, real=0.07min, mem=34.3M, fe_cpu=0.57min, fe_real=2.85min, fe_mem=518.3M) ***
-#% Begin Load netlist data ... (date=11/17 18:10:58, mem=505.7M)
-*** Begin netlist parsing (mem=518.3M) ***
+*** End library_loading (cpu=0.04min, real=0.08min, mem=28.1M, fe_cpu=0.45min, fe_real=2.42min, fe_mem=509.5M) ***
+#% Begin Load netlist data ... (date=11/18 19:10:54, mem=537.9M)
+*** Begin netlist parsing (mem=509.5M) ***
 Created 134 new cells from 1 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist '../netlist/IIR_filter.v'
 
-*** Memory Usage v#1 (Current mem = 518.305M, initial mem = 179.684M) ***
-*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=518.3M) ***
-#% End Load netlist data ... (date=11/17 18:10:58, total cpu=0:00:00.1, real=0:00:00.0, peak res=505.7M, current mem=435.2M)
+*** Memory Usage v#1 (Current mem = 509.492M, initial mem = 179.684M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=509.5M) ***
+#% End Load netlist data ... (date=11/18 19:10:54, total cpu=0:00:00.1, real=0:00:00.0, peak res=537.9M, current mem=466.0M)
 Set top cell to IIR_filter.
 Hooked 134 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -94,7 +94,7 @@ Building hierarchical netlist for Cell IIR_filter ...
 ** info: there are 135 modules.
 ** info: there are 1829 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 541.973M, initial mem = 179.684M) ***
+*** Memory Usage v#1 (Current mem = 531.160M, initial mem = 179.684M) ***
 Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
 Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
 Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
@@ -103,13 +103,13 @@ Set Default Net Load as 0.5 pF.
 Set Default Input Pin Transition as 0.1 ps.
 *Info: initialize multi-corner CTS.
 Reading timing constraints file '../netlist/IIR_filter.sdc' ...
-Current (total cpu=0:00:35.1, real=0:02:53, peak res=561.5M, current mem=561.5M)
+Current (total cpu=0:00:27.7, real=0:02:28, peak res=592.4M, current mem=592.4M)
 INFO (CTE): Constraints read successfully.
 WARNING (CTE-25): Line: 8 of File ../netlist/IIR_filter.sdc : Skipped unsupported command: set_units
 
 
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=576.3M, current mem=576.3M)
-Current (total cpu=0:00:35.3, real=0:02:53, peak res=576.3M, current mem=576.3M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=607.1M, current mem=607.1M)
+Current (total cpu=0:00:27.8, real=0:02:28, peak res=607.1M, current mem=607.1M)
 Total number of combinational cells: 99
 Total number of sequential cells: 29
 Total number of tristate cells: 6
@@ -195,18 +195,18 @@ addRing command will consider rows while creating rings.
 addRing command will disallow rings to go over rows.
 addRing command will ignore shorts while creating rings.
 <CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 1.8 bottom 1.8 left 1.8 right 1.8} -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=11/17 18:11:00, mem=581.4M)
+#% Begin addRing (date=11/18 19:10:58, mem=612.2M)
 
 **WARN: (IMPPP-220):	The power planner does not create core rings outside the design boundary. Check the design boundary, or specify valid offsets.
 **WARN: (IMPPP-4051):	Fail to add rings. Gaps among IO cells may exist. Execute command addIoFiller to fill gaps among cells before addRing.
-#% End addRing (date=11/17 18:11:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=582.2M, current mem=582.2M)
+#% End addRing (date=11/18 19:10:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=612.9M, current mem=612.9M)
 <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
 The ring targets are set to core/block ring wires.
 addRing command will consider rows while creating rings.
 addRing command will disallow rings to go over rows.
 addRing command will ignore shorts while creating rings.
 <CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
-#% Begin addRing (date=11/17 18:11:01, mem=582.2M)
+#% Begin addRing (date=11/18 19:10:58, mem=612.9M)
 
 Ring generation is complete.
 vias are now being generated.
@@ -219,14 +219,14 @@ ViaGen created 8 vias, deleted 0 via to avoid violation.
 |  via1  |        8       |        0       |
 | metal2 |        4       |       NA       |
 +--------+----------------+----------------+
-#% End addRing (date=11/17 18:11:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=583.4M, current mem=583.4M)
+#% End addRing (date=11/18 19:10:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=614.2M, current mem=614.2M)
 <CMD> clearGlobalNets
 <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
 <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
 <CMD> setSrouteMode -viaConnectToShape { noshape }
 <CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal10(10) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal10(10) }
-#% Begin sroute (date=11/17 18:11:01, mem=583.7M)
-*** Begin SPECIAL ROUTE on Sun Nov 17 18:11:01 2019 ***
+#% Begin sroute (date=11/18 19:10:58, mem=614.4M)
+*** Begin SPECIAL ROUTE on Mon Nov 18 19:10:58 2019 ***
 SPECIAL ROUTE ran on directory: /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/innovus
 SPECIAL ROUTE ran on machine: localhost.localdomain (Linux 3.10.0-957.5.1.el7.x86_64 x86_64 1.99Ghz)
 
@@ -250,7 +250,7 @@ srouteRoutePowerBarPortOnBothDir set to true
 srouteStopBlockPin set to "nearestTarget"
 srouteTopLayerLimit set to 10
 srouteTopTargetLayerLimit set to 10
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1435.00 megs.
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1424.00 megs.
 
 Reading DB technology information...
 Finished reading DB technology information.
@@ -284,7 +284,7 @@ CPU time for FollowPin 0 seconds
   Number of Pad ports routed: 0
   Number of Power Bump ports routed: 0
   Number of Followpin connections: 57
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1445.00 megs.
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1434.00 megs.
 
 
 
@@ -300,7 +300,7 @@ ViaGen created 114 vias, deleted 0 via to avoid violation.
 | metal1 |       171      |       NA       |
 |  via1  |       114      |        0       |
 +--------+----------------+----------------+
-#% End sroute (date=11/17 18:11:02, total cpu=0:00:00.2, real=0:00:01.0, peak res=596.9M, current mem=596.9M)
+#% End sroute (date=11/18 19:10:59, total cpu=0:00:00.2, real=0:00:01.0, peak res=627.4M, current mem=627.4M)
 <CMD> setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
 <CMD> setPlaceMode -fp false
 <CMD> placeDesign
@@ -309,18 +309,18 @@ ViaGen created 114 vias, deleted 0 via to avoid violation.
 Info: Detect buffers to remove automatically.
 Analyzing netlist ...
 Updating netlist
-AAE DB initialization (MEM=726.176 CPU=0:00:00.2 REAL=0:00:00.0) 
+AAE DB initialization (MEM=716.988 CPU=0:00:00.2 REAL=0:00:01.0) 
 siFlow : Timing analysis mode is single, using late cdB files
 
 *summary: 46 instances (buffers/inverters) removed
-*** Finish deleteBufferTree (0:00:00.6) ***
+*** Finish deleteBufferTree (0:00:00.7) ***
 **INFO: Enable pre-place timing setting for timing analysis
 Set Using Default Delay Limit as 101.
 **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
 Set Default Net Delay as 0 ps.
 Set Default Net Load as 0 pF. 
 **INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.29820 path_group
+Effort level <high> specified for reg2reg_tmp.15273 path_group
 #################################################################################
 # Design Stage: PreRoute
 # Design Name: IIR_filter
@@ -330,24 +330,24 @@ Effort level <high> specified for reg2reg_tmp.29820 path_group
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in Single mode...
-Start delay calculation (fullDC) (1 T). (MEM=930.215)
+Start delay calculation (fullDC) (1 T). (MEM=928.285)
 Total number of fetched objects 2268
-End delay calculation. (MEM=1002.52 CPU=0:00:01.1 REAL=0:00:03.0)
-End delay calculation (fullDC). (MEM=905.148 CPU=0:00:01.7 REAL=0:00:03.0)
+End delay calculation. (MEM=1000.59 CPU=0:00:01.0 REAL=0:00:03.0)
+End delay calculation (fullDC). (MEM=903.219 CPU=0:00:01.6 REAL=0:00:05.0)
 **INFO: Disable pre-place timing setting for timing analysis
 Set Using Default Delay Limit as 1000.
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 **INFO: Pre-place timing setting for timing analysis already disabled
 Deleted 0 physical inst  (cell - / prefix -).
-*** Starting "NanoPlace(TM) placement v#10 (mem=891.0M)" ...
+*** Starting "NanoPlace(TM) placement v#10 (mem=889.1M)" ...
 total jobs 1303
 multi thread init TemplateIndex for each ta. thread num 1
 Wait...
 *** Build Buffered Sizing Timing Model
-(cpu=0:00:00.8 mem=891.0M) ***
+(cpu=0:00:00.7 mem=889.1M) ***
 *** Build Virtual Sizing Timing Model
-(cpu=0:00:00.9 mem=891.0M) ***
+(cpu=0:00:00.9 mem=889.1M) ***
 No user setting net weight.
 Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
 Scan chains were not defined.
@@ -365,51 +365,51 @@ Pin Density = 0.2875.
 Clock gating cells determined by native netlist tracing.
 Iteration  1: Total net bbox = 1.494e-11 (0.00e+00 1.49e-11)
               Est.  stn bbox = 1.590e-11 (0.00e+00 1.59e-11)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 865.8M
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 863.1M
 Iteration  2: Total net bbox = 1.494e-11 (0.00e+00 1.49e-11)
               Est.  stn bbox = 1.590e-11 (0.00e+00 1.59e-11)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 866.8M
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 864.1M
 Iteration  3: Total net bbox = 6.285e+02 (3.17e+02 3.12e+02)
               Est.  stn bbox = 7.265e+02 (3.66e+02 3.60e+02)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 882.8M
+              cpu = 0:00:00.1 real = 0:00:01.0 mem = 880.1M
 Active setup views:
     MyAnView
 Iteration  4: Total net bbox = 8.613e+03 (4.23e+03 4.38e+03)
               Est.  stn bbox = 1.078e+04 (4.96e+03 5.82e+03)
-              cpu = 0:00:00.9 real = 0:00:02.0 mem = 882.8M
+              cpu = 0:00:00.9 real = 0:00:04.0 mem = 880.1M
 Iteration  5: Total net bbox = 1.196e+04 (5.80e+03 6.16e+03)
               Est.  stn bbox = 1.504e+04 (6.87e+03 8.17e+03)
-              cpu = 0:00:01.0 real = 0:00:03.0 mem = 882.8M
+              cpu = 0:00:01.0 real = 0:00:02.0 mem = 880.1M
 Iteration  6: Total net bbox = 1.355e+04 (6.61e+03 6.94e+03)
               Est.  stn bbox = 1.653e+04 (7.51e+03 9.02e+03)
-              cpu = 0:00:00.9 real = 0:00:01.0 mem = 882.8M
+              cpu = 0:00:00.9 real = 0:00:02.0 mem = 880.1M
 Iteration  7: Total net bbox = 1.672e+04 (8.38e+03 8.34e+03)
               Est.  stn bbox = 1.978e+04 (9.34e+03 1.04e+04)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 882.8M
+              cpu = 0:00:00.1 real = 0:00:01.0 mem = 880.1M
 Iteration  8: Total net bbox = 1.672e+04 (8.38e+03 8.34e+03)
               Est.  stn bbox = 1.978e+04 (9.34e+03 1.04e+04)
-              cpu = 0:00:01.5 real = 0:00:02.0 mem = 882.8M
+              cpu = 0:00:01.5 real = 0:00:02.0 mem = 880.1M
 Iteration  9: Total net bbox = 1.428e+04 (6.96e+03 7.32e+03)
               Est.  stn bbox = 1.722e+04 (7.80e+03 9.42e+03)
-              cpu = 0:00:00.6 real = 0:00:01.0 mem = 880.8M
+              cpu = 0:00:00.6 real = 0:00:02.0 mem = 877.6M
 Iteration 10: Total net bbox = 1.747e+04 (8.80e+03 8.67e+03)
               Est.  stn bbox = 2.049e+04 (9.70e+03 1.08e+04)
-              cpu = 0:00:01.8 real = 0:00:03.0 mem = 880.8M
+              cpu = 0:00:01.9 real = 0:00:05.0 mem = 877.6M
 Iteration 11: Total net bbox = 1.747e+04 (8.80e+03 8.67e+03)
               Est.  stn bbox = 2.049e+04 (9.70e+03 1.08e+04)
-              cpu = 0:00:00.0 real = 0:00:00.0 mem = 880.8M
-*** cost = 1.747e+04 (8.80e+03 8.67e+03) (cpu for global=0:00:06.5) real=0:00:12.0***
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 877.6M
+*** cost = 1.747e+04 (8.80e+03 8.67e+03) (cpu for global=0:00:06.6) real=0:00:18.0***
 Info: 0 clock gating cells identified, 0 (on average) moved
-Solver runtime cpu: 0:00:04.6 real: 0:00:08.9
-Core Placement runtime cpu: 0:00:04.8 real: 0:00:10.0
+Solver runtime cpu: 0:00:04.6 real: 0:00:13.2
+Core Placement runtime cpu: 0:00:04.9 real: 0:00:15.0
 **WARN: (IMPSP-9025):	No scan chain specified/traced.
 Type 'man IMPSP-9025' for more detail.
-*** Starting refinePlace (0:00:46.9 mem=880.8M) ***
+*** Starting refinePlace (0:00:39.5 mem=877.6M) ***
 Total net bbox length = 1.747e+04 (8.801e+03 8.671e+03) (ext = 2.648e+03)
 Density distribution unevenness ratio = 5.967%
 Move report: Detail placement moves 1796 insts, mean move: 0.65 um, max move: 26.11 um
 	Max move on inst (filter_mult_116_U339): (45.54, 40.00) --> (49.21, 62.44)
-	Runtime: CPU: 0:00:00.6 REAL: 0:00:01.0 MEM: 880.8MB
+	Runtime: CPU: 0:00:00.5 REAL: 0:00:01.0 MEM: 878.6MB
 Summary Report:
 Instances move: 1796 (out of 1796 movable)
 Instances flipped: 0
@@ -417,12 +417,12 @@ Mean displacement: 0.65 um
 Max displacement: 26.11 um (Instance: filter_mult_116_U339) (45.536, 40.0025) -> (49.21, 62.44)
 	Length: 2 sites, height: 1 rows, site name: FreePDK45_38x28_10R_NP_162NW_34O, cell type: INV_X1
 Total net bbox length = 1.668e+04 (7.928e+03 8.753e+03) (ext = 2.625e+03)
-Runtime: CPU: 0:00:00.6 REAL: 0:00:01.0 MEM: 880.8MB
-*** Finished refinePlace (0:00:47.5 mem=880.8M) ***
-*** End of Placement (cpu=0:00:08.8, real=0:00:15.0, mem=880.8M) ***
+Runtime: CPU: 0:00:00.5 REAL: 0:00:01.0 MEM: 878.6MB
+*** Finished refinePlace (0:00:40.0 mem=878.6M) ***
+*** End of Placement (cpu=0:00:08.8, real=0:00:24.0, mem=878.6M) ***
 default core: bins with density >  0.75 =    0 % ( 0 / 36 )
 Density distribution unevenness ratio = 5.972%
-*** Free Virtual Timing Model ...(mem=880.8M)
+*** Free Virtual Timing Model ...(mem=878.6M)
 Starting congestion repair ...
 [NR-eGR] honorMsvRouteConstraint: false
 [NR-eGR] honorClockSpecNDR      : 0
@@ -489,9 +489,9 @@ Skipped repairing congestion.
 [NR-eGR] --------------------------------------------------------------------------
 [NR-eGR] Total clock nets wire length: 1.928800e+02um 
 [NR-eGR] --------------------------------------------------------------------------
-End of congRepair (cpu=0:00:00.1, real=0:00:00.0)
+End of congRepair (cpu=0:00:00.1, real=0:00:01.0)
 *** Finishing placeDesign default flow ***
-**placeDesign ... cpu = 0: 0:12, real = 0: 0:21, mem = 857.9M **
+**placeDesign ... cpu = 0: 0:12, real = 0: 0:33, mem = 856.2M **
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
@@ -552,7 +552,7 @@ Type 'man IMPOPT-665' for more detail.
 To increase the message display limit, refer to the product command reference manual.
 Setting timing_disable_library_data_to_data_checks to 'true'.
 Setting timing_disable_user_data_to_data_checks to 'true'.
-**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 639.2M, totSessionCpu=0:00:49 **
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 673.1M, totSessionCpu=0:00:41 **
 Added -handlePreroute to trialRouteMode
 *** optDesign -postCTS ***
 DRC Margin: user margin 0.0; extra margin 0.2
@@ -564,7 +564,7 @@ No user sequential activity specified, applying default sequential activity of "
 Multi-VT timing optimization disabled based on library information.
 Start to check current routing status for nets...
 All nets are already routed correctly.
-End to check current routing status for nets (mem=875.2M)
+End to check current routing status for nets (mem=873.5M)
 Extraction called for design 'IIR_filter' of instances=1796 and nets=2214 using extraction engine 'preRoute' .
 **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
 Type 'man IMPEXT-3530' for more detail.
@@ -582,7 +582,7 @@ Using capacitance table file ...
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 869.195M)
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:01.0  MEM: 867.516M)
 
 Footprint cell infomation for calculating maxBufDist
 *info: There are 9 candidate Buffer cells
@@ -598,11 +598,11 @@ Compute RC Scale Done ...
 # Signoff Settings: SI Off 
 #################################################################################
 Calculate delays in Single mode...
-Start delay calculation (fullDC) (1 T). (MEM=1088.93)
+Start delay calculation (fullDC) (1 T). (MEM=1085.25)
 Total number of fetched objects 2268
-End delay calculation. (MEM=1121.06 CPU=0:00:01.3 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=1121.06 CPU=0:00:01.5 REAL=0:00:02.0)
-*** Done Building Timing Graph (cpu=0:00:01.6 real=0:00:02.0 totSessionCpu=0:00:51.7 mem=1121.1M)
+End delay calculation. (MEM=1117.38 CPU=0:00:01.2 REAL=0:00:03.0)
+End delay calculation (fullDC). (MEM=1117.38 CPU=0:00:01.4 REAL=0:00:04.0)
+*** Done Building Timing Graph (cpu=0:00:01.6 real=0:00:04.0 totSessionCpu=0:00:44.1 mem=1117.4M)
 
 ------------------------------------------------------------
              Initial Summary                             
@@ -633,16 +633,16 @@ Setup views included:
 
 Density: 59.645%
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:03, real = 0:00:03, mem = 733.9M, totSessionCpu=0:00:52 **
+**optDesign ... cpu = 0:00:03, real = 0:00:07, mem = 767.8M, totSessionCpu=0:00:44 **
 ** INFO : this run is activating low effort ccoptDesign flow
-*** Starting optimizing excluded clock nets MEM= 976.9M) ***
+*** Starting optimizing excluded clock nets MEM= 975.2M) ***
 *info: There are no clock nets marked defIn, clock nets will not be optimized.
 *info: No excluded clock nets to be optimized.
-*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 976.9M) ***
-*** Starting optimizing excluded clock nets MEM= 976.9M) ***
+*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 975.2M) ***
+*** Starting optimizing excluded clock nets MEM= 975.2M) ***
 *info: There are no clock nets marked defIn, clock nets will not be optimized.
 *info: No excluded clock nets to be optimized.
-*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 976.9M) ***
+*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 975.2M) ***
 Begin: GigaOpt DRV Optimization
 Info: 1 clock net  excluded from IPO operation.
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -651,22 +651,22 @@ Info: 1 clock net  excluded from IPO operation.
 | nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |    12|   342|    -0.05|    18|    18|    -0.04|     0|     0|     0|     0|     7.27|     0.00|       0|       0|       0|  59.64|          |         |
-|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.31|     0.00|       4|       0|      14|  59.78| 0:00:02.0|  1139.5M|
-|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.31|     0.00|       0|       0|       0|  59.78| 0:00:00.0|  1139.5M|
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.31|     0.00|       4|       0|      14|  59.78| 0:00:04.0|  1137.8M|
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.31|     0.00|       0|       0|       0|  59.78| 0:00:00.0|  1137.8M|
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
 **** Begin NDR-Layer Usage Statistics ****
 0 Ndr or Layer constraints added by optimization 
 **** End NDR-Layer Usage Statistics ****
 
-*** Finish DRV Fixing (cpu=0:00:01.7 real=0:00:02.0 mem=1139.5M) ***
+*** Finish DRV Fixing (cpu=0:00:01.7 real=0:00:04.0 mem=1137.8M) ***
 
-*** Starting refinePlace (0:00:55.7 mem=1155.5M) ***
+*** Starting refinePlace (0:00:48.3 mem=1153.8M) ***
 Total net bbox length = 1.668e+04 (7.928e+03 8.754e+03) (ext = 2.625e+03)
 Density distribution unevenness ratio = 5.940%
 Density distribution unevenness ratio = 5.940%
 Move report: Detail placement moves 7 insts, mean move: 0.39 um, max move: 1.40 um
 	Max move on inst (FE_OFC0_filter_v1_1): (47.69, 55.44) --> (47.69, 54.04)
-	Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 1155.5MB
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1153.8MB
 Summary Report:
 Instances move: 7 (out of 1800 movable)
 Instances flipped: 0
@@ -674,16 +674,16 @@ Mean displacement: 0.39 um
 Max displacement: 1.40 um (Instance: FE_OFC0_filter_v1_1) (47.69, 55.44) -> (47.69, 54.04)
 	Length: 4 sites, height: 1 rows, site name: FreePDK45_38x28_10R_NP_162NW_34O, cell type: CLKBUF_X2
 Total net bbox length = 1.668e+04 (7.929e+03 8.756e+03) (ext = 2.625e+03)
-Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 1155.5MB
-*** Finished refinePlace (0:00:55.8 mem=1155.5M) ***
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1153.8MB
+*** Finished refinePlace (0:00:48.4 mem=1153.8M) ***
 *** maximum move = 1.40 um ***
-*** Finished re-routing un-routed nets (1155.5M) ***
+*** Finished re-routing un-routed nets (1153.8M) ***
 
-*** Finish Physical Update (cpu=0:00:00.2 real=0:00:00.0 mem=1155.5M) ***
+*** Finish Physical Update (cpu=0:00:00.2 real=0:00:01.0 mem=1153.8M) ***
 End: GigaOpt DRV Optimization
 
 ------------------------------------------------------------
-     Summary (cpu=0.06min real=0.08min mem=986.9M)                             
+     Summary (cpu=0.06min real=0.18min mem=985.2M)                             
 ------------------------------------------------------------
 
 Setup views included:
@@ -712,7 +712,7 @@ Setup views included:
 Density: 59.783%
 Routing Overflow: 0.00% H and 0.00% V
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:07, real = 0:00:09, mem = 749.3M, totSessionCpu=0:00:56 **
+**optDesign ... cpu = 0:00:07, real = 0:00:19, mem = 783.0M, totSessionCpu=0:00:49 **
 
 Active setup views:
  MyAnView
@@ -730,40 +730,40 @@ Reclaim Optimization WNS Slack 0.020  TNS Slack 0.000 Density 59.78
 +----------+---------+--------+--------+------------+--------+
 | Density  | Commits |  WNS   |  TNS   |    Real    |  Mem   |
 +----------+---------+--------+--------+------------+--------+
-|    59.78%|        -|   0.020|   0.000|   0:00:00.0| 1136.4M|
-|    59.08%|       54|   0.020|   0.000|   0:00:17.0| 1140.4M|
-|    58.71%|       27|   0.020|   0.000|   0:00:15.0| 1141.4M|
-|    58.48%|       18|   0.020|   0.000|   0:00:09.0| 1141.4M|
-|    58.26%|       17|   0.020|   0.000|   0:00:06.0| 1143.4M|
-|    58.04%|       17|   0.020|   0.000|   0:00:05.0| 1143.4M|
-|    58.04%|        0|   0.020|   0.000|   0:00:00.0| 1143.4M|
-|    57.60%|       19|   0.020|   0.000|   0:00:00.0| 1143.4M|
-|    57.59%|        1|   0.020|   0.000|   0:00:00.0| 1143.4M|
-|    57.59%|        0|   0.020|   0.000|   0:00:01.0| 1143.4M|
-|    57.59%|        0|   0.020|   0.000|   0:00:00.0| 1143.4M|
+|    59.78%|        -|   0.020|   0.000|   0:00:00.0| 1134.8M|
+|    59.08%|       54|   0.020|   0.000|   0:00:29.0| 1137.8M|
+|    58.71%|       27|   0.020|   0.000|   0:00:17.0| 1138.8M|
+|    58.48%|       18|   0.020|   0.000|   0:00:09.0| 1138.8M|
+|    58.26%|       17|   0.020|   0.000|   0:00:06.0| 1140.8M|
+|    58.04%|       17|   0.020|   0.000|   0:00:07.0| 1140.8M|
+|    58.04%|        0|   0.020|   0.000|   0:00:00.0| 1140.8M|
+|    57.60%|       19|   0.020|   0.000|   0:00:01.0| 1140.8M|
+|    57.59%|        1|   0.020|   0.000|   0:00:00.0| 1140.8M|
+|    57.59%|        0|   0.020|   0.000|   0:00:00.0| 1140.8M|
+|    57.59%|        0|   0.020|   0.000|   0:00:00.0| 1140.8M|
 +----------+---------+--------+--------+------------+--------+
 Reclaim Optimization End WNS Slack 0.020  TNS Slack 0.000 Density 57.59
 **** Begin NDR-Layer Usage Statistics ****
 0 Ndr or Layer constraints added by optimization 
 **** End NDR-Layer Usage Statistics ****
-** Finished Core Area Reclaim Optimization (cpu = 0:00:31.8) (real = 0:00:54.0) **
-*** Starting refinePlace (0:01:28 mem=1143.4M) ***
+** Finished Core Area Reclaim Optimization (cpu = 0:00:31.5) (real = 0:01:11) **
+*** Starting refinePlace (0:01:20 mem=1140.8M) ***
 Total net bbox length = 1.671e+04 (7.920e+03 8.794e+03) (ext = 2.628e+03)
 Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um
-	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1143.4MB
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1140.8MB
 Summary Report:
 Instances move: 0 (out of 1755 movable)
 Instances flipped: 49
 Mean displacement: 0.00 um
 Max displacement: 0.00 um 
 Total net bbox length = 1.672e+04 (7.920e+03 8.797e+03) (ext = 2.628e+03)
-Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1143.4MB
-*** Finished refinePlace (0:01:28 mem=1143.4M) ***
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1140.8MB
+*** Finished refinePlace (0:01:20 mem=1140.8M) ***
 *** maximum move = 0.00 um ***
-*** Finished re-routing un-routed nets (1143.4M) ***
+*** Finished re-routing un-routed nets (1140.8M) ***
 
-*** Finish Physical Update (cpu=0:00:00.1 real=0:00:00.0 mem=1143.4M) ***
-*** Finished Area Reclaim Optimization (cpu=0:00:32, real=0:00:54, mem=993.90M, totSessionCpu=0:01:28).
+*** Finish Physical Update (cpu=0:00:00.2 real=0:00:01.0 mem=1140.8M) ***
+*** Finished Area Reclaim Optimization (cpu=0:00:32, real=0:01:12, mem=991.22M, totSessionCpu=0:01:20).
 [NR-eGR] honorMsvRouteConstraint: false
 [NR-eGR] honorClockSpecNDR      : 0
 [NR-eGR] minRouteLayer          : 2
@@ -827,8 +827,8 @@ Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1143.4MB
 [NR-eGR] --------------------------------------------------------------------------
 [NR-eGR] Total clock nets wire length: 1.927800e+02um 
 [NR-eGR] --------------------------------------------------------------------------
-[NR-eGR] End Peak syMemory usage = 971.5 MB
-[NR-eGR] Early Global Router Kernel+IO runtime : 0.15 seconds
+[NR-eGR] End Peak syMemory usage = 968.8 MB
+[NR-eGR] Early Global Router Kernel+IO runtime : 0.17 seconds
 Extraction called for design 'IIR_filter' of instances=1755 and nets=2189 using extraction engine 'preRoute' .
 **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
 Type 'man IMPEXT-3530' for more detail.
@@ -846,7 +846,7 @@ Using capacitance table file ...
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 971.477M)
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 968.797M)
 Compute RC Scale Done ...
 [hotspot] +------------+---------------+---------------+
 [hotspot] |            |   max hotspot | total hotspot |
@@ -864,10 +864,10 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #################################################################################
 AAE_INFO: 1 threads acquired from CTE.
 Calculate delays in Single mode...
-Start delay calculation (fullDC) (1 T). (MEM=1024.71)
+Start delay calculation (fullDC) (1 T). (MEM=1022.03)
 Total number of fetched objects 2227
-End delay calculation. (MEM=1059.92 CPU=0:00:01.3 REAL=0:00:01.0)
-End delay calculation (fullDC). (MEM=1059.92 CPU=0:00:01.5 REAL=0:00:01.0)
+End delay calculation. (MEM=1057.24 CPU=0:00:01.2 REAL=0:00:03.0)
+End delay calculation (fullDC). (MEM=1057.24 CPU=0:00:01.5 REAL=0:00:03.0)
 Begin: GigaOpt postEco DRV Optimization
 Info: 1 clock net  excluded from IPO operation.
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -876,13 +876,13 @@ Info: 1 clock net  excluded from IPO operation.
 | nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
 |     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0|  57.59|          |         |
-|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0|  57.59| 0:00:00.0|  1136.2M|
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0|  57.59| 0:00:00.0|  1133.6M|
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
 **** Begin NDR-Layer Usage Statistics ****
 0 Ndr or Layer constraints added by optimization 
 **** End NDR-Layer Usage Statistics ****
 
-*** Finish DRV Fixing (cpu=0:00:00.2 real=0:00:00.0 mem=1136.2M) ***
+*** Finish DRV Fixing (cpu=0:00:00.2 real=0:00:00.0 mem=1133.6M) ***
 
 End: GigaOpt postEco DRV Optimization
 *** Steiner Routed Nets: 0.646%; Threshold: 100; Threshold for Hold: 100
@@ -903,7 +903,7 @@ PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
 Using capacitance table file ...
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 990.633M)
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 987.703M)
 #################################################################################
 # Design Stage: PreRoute
 # Design Name: IIR_filter
@@ -914,10 +914,10 @@ PreRoute RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 990
 #################################################################################
 AAE_INFO: 1 threads acquired from CTE.
 Calculate delays in Single mode...
-Start delay calculation (fullDC) (1 T). (MEM=974.5)
+Start delay calculation (fullDC) (1 T). (MEM=971.57)
 Total number of fetched objects 2227
-End delay calculation. (MEM=1047.87 CPU=0:00:01.3 REAL=0:00:02.0)
-End delay calculation (fullDC). (MEM=1047.87 CPU=0:00:01.5 REAL=0:00:02.0)
+End delay calculation. (MEM=1044.94 CPU=0:00:01.2 REAL=0:00:04.0)
+End delay calculation (fullDC). (MEM=1044.94 CPU=0:00:01.4 REAL=0:00:04.0)
 
 Active setup views:
  MyAnView
@@ -940,9 +940,9 @@ PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
 Using capacitance table file ...
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 971.477M)
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 968.797M)
 [NR-eGR] Started earlyGlobalRoute kernel
-[NR-eGR] Initial Peak syMemory usage = 971.5 MB
+[NR-eGR] Initial Peak syMemory usage = 968.8 MB
 [NR-eGR] honorMsvRouteConstraint: false
 [NR-eGR] honorClockSpecNDR      : 0
 [NR-eGR] minRouteLayer          : 2
@@ -991,7 +991,7 @@ PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 971
 [NR-eGR] 
 [NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
 [NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
-[NR-eGR] End Peak syMemory usage = 971.5 MB
+[NR-eGR] End Peak syMemory usage = 968.8 MB
 [NR-eGR] Early Global Router Kernel+IO runtime : 0.06 seconds
 [hotspot] +------------+---------------+---------------+
 [hotspot] |            |   max hotspot | total hotspot |
@@ -1009,13 +1009,13 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #################################################################################
 AAE_INFO: 1 threads acquired from CTE.
 Calculate delays in Single mode...
-Start delay calculation (fullDC) (1 T). (MEM=973.242)
+Start delay calculation (fullDC) (1 T). (MEM=968.805)
 Total number of fetched objects 2227
-End delay calculation. (MEM=1048.61 CPU=0:00:01.3 REAL=0:00:02.0)
-End delay calculation (fullDC). (MEM=1048.61 CPU=0:00:01.5 REAL=0:00:02.0)
-*** Done Building Timing Graph (cpu=0:00:01.8 real=0:00:03.0 totSessionCpu=0:01:36 mem=1048.6M)
+End delay calculation. (MEM=1045.18 CPU=0:00:01.2 REAL=0:00:02.0)
+End delay calculation (fullDC). (MEM=1045.18 CPU=0:00:01.4 REAL=0:00:02.0)
+*** Done Building Timing Graph (cpu=0:00:01.7 real=0:00:02.0 totSessionCpu=0:01:28 mem=1045.2M)
 Reported timing to dir ./timingReports
-**optDesign ... cpu = 0:00:47, real = 0:01:14, mem = 754.9M, totSessionCpu=0:01:36 **
+**optDesign ... cpu = 0:00:46, real = 0:01:46, mem = 788.7M, totSessionCpu=0:01:28 **
 
 ------------------------------------------------------------
      optDesign Final Summary                             
@@ -1047,7 +1047,7 @@ Setup views included:
 Density: 57.587%
 Routing Overflow: 0.00% H and 0.00% V
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:47, real = 0:01:15, mem = 756.2M, totSessionCpu=0:01:36 **
+**optDesign ... cpu = 0:00:47, real = 0:01:48, mem = 790.0M, totSessionCpu=0:01:28 **
 *** Finished optDesign ***
 Info: Destroy the CCOpt slew target map.
 <CMD> optDesign -postCTS -hold
@@ -1097,7 +1097,7 @@ Type 'man IMPOPT-665' for more detail.
 Type 'man IMPOPT-665' for more detail.
 **WARN: (EMS-27):	Message (IMPOPT-665) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 675.5M, totSessionCpu=0:01:37 **
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 709.4M, totSessionCpu=0:01:29 **
 *** optDesign -postCTS ***
 DRC Margin: user margin 0.0
 Hold Target Slack: user slack 0
@@ -1105,9 +1105,9 @@ Setup Target Slack: user slack 0;
 setUsefulSkewMode -ecoRoute false
 Start to check current routing status for nets...
 All nets are already routed correctly.
-End to check current routing status for nets (mem=916.4M)
+End to check current routing status for nets (mem=916.1M)
 GigaOpt Hold Optimizer is used
-Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:01:37 mem=916.4M ***
+Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:01:29 mem=916.1M ***
 *info: Run optDesign holdfix with 1 thread.
 **INFO: Starting Blocking QThread with 1 CPU
    ____________________________________________________________________
@@ -1126,18 +1126,18 @@ Start delay calculation (fullDC) (1 T). (MEM=0)
 Total number of fetched objects 2227
 End delay calculation. (MEM=0 CPU=0:00:01.2 REAL=0:00:03.0)
 End delay calculation (fullDC). (MEM=0 CPU=0:00:01.2 REAL=0:00:03.0)
-*** Done Building Timing Graph (cpu=0:00:01.4 real=0:00:03.0 totSessionCpu=0:00:01.6 mem=0.0M)
+*** Done Building Timing Graph (cpu=0:00:01.4 real=0:00:05.0 totSessionCpu=0:00:01.6 mem=0.0M)
 
 Active hold views:
  MyAnView
   Dominating endpoints: 0
   Dominating TNS: -0.000
 
-Done building cte hold timing graph (fixHold) cpu=0:00:01.6 real=0:00:04.0 totSessionCpu=0:00:01.6 mem=0.0M ***
-Done building hold timer [1 node(s), 0 edge(s), 1 view(s)] (fixHold) cpu=0:00:01.8 real=0:00:04.0 totSessionCpu=0:00:01.8 mem=0.0M ***
+Done building cte hold timing graph (fixHold) cpu=0:00:01.6 real=0:00:05.0 totSessionCpu=0:00:01.6 mem=0.0M ***
+Done building hold timer [1 node(s), 0 edge(s), 1 view(s)] (fixHold) cpu=0:00:01.8 real=0:00:05.0 totSessionCpu=0:00:01.8 mem=0.0M ***
 
 _______________________________________________________________________
-Done building cte setup timing graph (fixHold) cpu=0:00:02.8 real=0:00:07.0 totSessionCpu=0:01:40 mem=1150.5M ***
+Done building cte setup timing graph (fixHold) cpu=0:00:02.8 real=0:00:10.0 totSessionCpu=0:01:32 mem=1147.1M ***
 Restoring autoHoldViews:  MyAnView
 
 ------------------------------------------------------------
@@ -1184,7 +1184,7 @@ Routing Overflow: 0.00% H and 0.00% V
 
 *Info: minBufDelay = 21.9 ps, libStdDelay = 10.1 ps, minBufSize = 3192000 (3.0)
 *Info: worst delay setup view: MyAnView
-**optDesign ... cpu = 0:00:04, real = 0:00:10, mem = 755.5M, totSessionCpu=0:01:41 **
+**optDesign ... cpu = 0:00:04, real = 0:00:15, mem = 789.3M, totSessionCpu=0:01:33 **
 Info: 1 clock net  excluded from IPO operation.
 *** Hold timing is met. Hold fixing is not needed 
 
@@ -1194,7 +1194,7 @@ Active setup views:
   Dominating TNS: -0.000
 
 [NR-eGR] Started earlyGlobalRoute kernel
-[NR-eGR] Initial Peak syMemory usage = 992.3 MB
+[NR-eGR] Initial Peak syMemory usage = 988.8 MB
 [NR-eGR] honorMsvRouteConstraint: false
 [NR-eGR] honorClockSpecNDR      : 0
 [NR-eGR] minRouteLayer          : 2
@@ -1243,8 +1243,8 @@ Active setup views:
 [NR-eGR] 
 [NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
 [NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
-[NR-eGR] End Peak syMemory usage = 992.3 MB
-[NR-eGR] Early Global Router Kernel+IO runtime : 0.05 seconds
+[NR-eGR] End Peak syMemory usage = 988.8 MB
+[NR-eGR] Early Global Router Kernel+IO runtime : 0.07 seconds
 [hotspot] +------------+---------------+---------------+
 [hotspot] |            |   max hotspot | total hotspot |
 [hotspot] +------------+---------------+---------------+
@@ -1252,7 +1252,7 @@ Active setup views:
 [hotspot] +------------+---------------+---------------+
 Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
 Reported timing to dir ./timingReports
-**optDesign ... cpu = 0:00:04, real = 0:00:11, mem = 755.9M, totSessionCpu=0:01:41 **
+**optDesign ... cpu = 0:00:04, real = 0:00:15, mem = 789.8M, totSessionCpu=0:01:33 **
 **INFO: Starting Blocking QThread with 1 CPU
    ____________________________________________________________________
 __/ message from Blocking QThread
@@ -1268,9 +1268,9 @@ AAE_INFO: 1 threads acquired from CTE.
 Calculate delays in Single mode...
 Start delay calculation (fullDC) (1 T). (MEM=0)
 Total number of fetched objects 2227
-End delay calculation. (MEM=0 CPU=0:00:01.2 REAL=0:00:02.0)
-End delay calculation (fullDC). (MEM=0 CPU=0:00:01.2 REAL=0:00:03.0)
-*** Done Building Timing Graph (cpu=0:00:01.4 real=0:00:03.0 totSessionCpu=0:00:02.6 mem=0.0M)
+End delay calculation. (MEM=0 CPU=0:00:01.2 REAL=0:00:04.0)
+End delay calculation (fullDC). (MEM=0 CPU=0:00:01.3 REAL=0:00:04.0)
+*** Done Building Timing Graph (cpu=0:00:01.4 real=0:00:04.0 totSessionCpu=0:00:02.6 mem=0.0M)
 
 _______________________________________________________________________
 
@@ -1315,7 +1315,7 @@ Hold  views included:
 Density: 57.587%
 Routing Overflow: 0.00% H and 0.00% V
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:06, real = 0:00:16, mem = 755.9M, totSessionCpu=0:01:43 **
+**optDesign ... cpu = 0:00:06, real = 0:00:23, mem = 789.8M, totSessionCpu=0:01:35 **
 *** Finished optDesign ***
 Info: Destroy the CCOpt slew target map.
 <CMD> getFillerMode -quiet
@@ -1339,28 +1339,28 @@ For 3814 new insts, *** Applied 2 GNC rules (cpu = 0:00:00.0)
 <CMD> setNanoRouteMode -quiet -routeWithTimingDriven false
 <CMD> setNanoRouteMode -quiet -routeWithSiDriven false
 <CMD> routeDesign -globalDetail
-#% Begin routeDesign (date=11/17 18:12:58, mem=756.6M)
-#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 756.64 (MB), peak = 772.52 (MB)
+#% Begin routeDesign (date=11/18 19:13:49, mem=790.4M)
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 790.43 (MB), peak = 806.27 (MB)
 #WARNING (NRIG-96) Selected single pass global detail route "-globalDetail". Clock eco and post optimizations will not be run. See "man NRIG-96" for more details.
 #**INFO: setDesignMode -flowEffort standard
 #**INFO: mulit-cut via swapping is disabled by user.
 #**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
 #**INFO: auto set of routeReserveSpaceForMultiCut to true
 #**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
-Begin checking placement ... (start mem=992.3M, init mem=992.3M)
+Begin checking placement ... (start mem=988.8M, init mem=988.8M)
 *info: Placed = 5569          
 *info: Unplaced = 0           
 Placement Density:100.00%(6167/6167)
 Placement Density (including fixed std cells):100.00%(6167/6167)
-Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=992.3M)
+Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=988.8M)
 #**INFO: honoring user setting for routeWithTimingDriven set to false
 #**INFO: honoring user setting for routeWithSiDriven set to false
 **WARN: (IMPCK-8086):	The command changeUseClockNetStatus is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
 
 changeUseClockNetStatus Option :  -noFixedNetWires 
 *** Changed status on (0) nets in Clock.
-*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=992.3M) ***
-% Begin globalDetailRoute (date=11/17 18:12:58, mem=756.9M)
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=988.8M) ***
+% Begin globalDetailRoute (date=11/18 19:13:49, mem=790.7M)
 
 globalDetailRoute
 
@@ -1368,7 +1368,7 @@ globalDetailRoute
 #setNanoRouteMode -routeReserveSpaceForMultiCut true
 #setNanoRouteMode -routeWithSiDriven false
 #setNanoRouteMode -routeWithTimingDriven false
-#Start globalDetailRoute on Sun Nov 17 18:12:58 2019
+#Start globalDetailRoute on Mon Nov 18 19:13:49 2019
 #
 #WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN[11] of net DIN[11] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
 #WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN[10] of net DIN[10] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
@@ -1393,7 +1393,7 @@ globalDetailRoute
 #WARNING (EMS-27) Message (NRIG-39) has exceeded the current message display limit of 20.
 #To increase the message display limit, refer to the product command reference manual.
 #NanoRoute Version 17.11-s080_1 NR170721-2155/17_11-UB
-#Start routing data preparation on Sun Nov 17 18:12:58 2019
+#Start routing data preparation on Mon Nov 18 19:13:50 2019
 #
 #WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.0700.
 #WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.0700.
@@ -1450,27 +1450,27 @@ globalDetailRoute
 #Auto generating G-grids with size=15 tracks, using layer metal3's pitch = 0.1400.
 #Using automatically generated G-grids.
 #Done routing data preparation.
-#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 692.21 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 725.96 (MB), peak = 806.27 (MB)
 #Merging special wires...
 #
-#Finished routing data preparation on Sun Nov 17 18:13:00 2019
+#Finished routing data preparation on Mon Nov 18 19:13:52 2019
 #
 #Cpu time = 00:00:01
-#Elapsed time = 00:00:01
-#Increased memory = 8.57 (MB)
-#Total memory = 692.55 (MB)
-#Peak memory = 772.52 (MB)
+#Elapsed time = 00:00:02
+#Increased memory = 8.59 (MB)
+#Total memory = 726.29 (MB)
+#Peak memory = 806.27 (MB)
 #
 #
-#Start global routing on Sun Nov 17 18:13:00 2019
+#Start global routing on Mon Nov 18 19:13:52 2019
 #
 #Number of eco nets is 0
 #
-#Start global routing data preparation on Sun Nov 17 18:13:00 2019
+#Start global routing data preparation on Mon Nov 18 19:13:52 2019
 #
-#Start routing resource analysis on Sun Nov 17 18:13:00 2019
+#Start routing resource analysis on Mon Nov 18 19:13:52 2019
 #
-#Routing resource analysis is done on Sun Nov 17 18:13:00 2019
+#Routing resource analysis is done on Mon Nov 18 19:13:52 2019
 #
 #  Resource Analysis:
 #
@@ -1493,17 +1493,17 @@ globalDetailRoute
 #
 #
 #
-#Global routing data preparation is done on Sun Nov 17 18:13:00 2019
+#Global routing data preparation is done on Mon Nov 18 19:13:52 2019
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 693.05 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 726.79 (MB), peak = 806.27 (MB)
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 693.08 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 726.81 (MB), peak = 806.27 (MB)
 #
 #start global routing iteration 1...
-#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 701.42 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 735.18 (MB), peak = 806.27 (MB)
 #
 #start global routing iteration 2...
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 702.15 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 736.35 (MB), peak = 806.27 (MB)
 #
 #
 #Total number of trivial nets (e.g. < 2 pins) = 37 (skipped).
@@ -1588,15 +1588,15 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #
 #Global routing statistics:
 #Cpu time = 00:00:01
-#Elapsed time = 00:00:01
-#Increased memory = 10.59 (MB)
-#Total memory = 703.18 (MB)
-#Peak memory = 772.52 (MB)
+#Elapsed time = 00:00:02
+#Increased memory = 10.64 (MB)
+#Total memory = 736.97 (MB)
+#Peak memory = 806.27 (MB)
 #
-#Finished global routing on Sun Nov 17 18:13:01 2019
+#Finished global routing on Mon Nov 18 19:13:53 2019
 #
 #
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 700.28 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 734.07 (MB), peak = 806.27 (MB)
 #Start Track Assignment.
 #Done with 2274 horizontal wires in 1 hboxes and 2620 vertical wires in 1 hboxes.
 #Done with 445 horizontal wires in 1 hboxes and 717 vertical wires in 1 hboxes.
@@ -1640,14 +1640,14 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #-----------------------
 #                  9855 
 #
-#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 704.66 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:02, memory = 738.02 (MB), peak = 806.27 (MB)
 #
 #Routing data preparation, pin analysis, global routing and track assignment statistics:
 #Cpu time = 00:00:02
-#Elapsed time = 00:00:04
-#Increased memory = 20.77 (MB)
-#Total memory = 704.74 (MB)
-#Peak memory = 772.52 (MB)
+#Elapsed time = 00:00:05
+#Increased memory = 20.50 (MB)
+#Total memory = 738.08 (MB)
+#Peak memory = 806.27 (MB)
 #
 #Start Detail Routing..
 #start initial detail routing ...
@@ -1658,10 +1658,10 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #	metal1        0        0
 #	metal2        1        1
 #	Totals        1        1
-#cpu time = 00:00:11, elapsed time = 00:00:22, memory = 729.05 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:11, elapsed time = 00:00:28, memory = 762.93 (MB), peak = 806.27 (MB)
 #start 1st optimization iteration ...
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 729.25 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 762.95 (MB), peak = 806.27 (MB)
 #Complete Detail Routing.
 #Total wire length = 16384 um.
 #Total half perimeter of net bounding box = 16782 um.
@@ -1687,22 +1687,22 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #
 #Total number of DRC violations = 0
 #Cpu time = 00:00:11
-#Elapsed time = 00:00:22
-#Increased memory = 0.23 (MB)
-#Total memory = 704.97 (MB)
-#Peak memory = 772.52 (MB)
+#Elapsed time = 00:00:29
+#Increased memory = 0.62 (MB)
+#Total memory = 738.70 (MB)
+#Peak memory = 806.27 (MB)
 #
 #Start Post Route wire spreading..
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:01, elapsed time = 00:00:04, memory = 730.36 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:02, memory = 757.06 (MB), peak = 806.27 (MB)
 #CELL_VIEW IIR_filter,init has no DRC violation.
 #Total number of DRC violations = 0
 #
 #Start data preparation for wire spreading...
 #
-#Data preparation is done on Sun Nov 17 18:13:30 2019
+#Data preparation is done on Mon Nov 18 19:14:26 2019
 #
 #
 #Start Post Route Wire Spread.
@@ -1734,11 +1734,11 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #
 #Start DRC checking..
 #   number of violations = 0
-#cpu time = 00:00:01, elapsed time = 00:00:03, memory = 729.92 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:01, elapsed time = 00:00:04, memory = 760.55 (MB), peak = 806.27 (MB)
 #CELL_VIEW IIR_filter,init has no DRC violation.
 #Total number of DRC violations = 0
 #   number of violations = 0
-#cpu time = 00:00:02, elapsed time = 00:00:04, memory = 706.84 (MB), peak = 772.52 (MB)
+#cpu time = 00:00:02, elapsed time = 00:00:05, memory = 740.57 (MB), peak = 806.27 (MB)
 #CELL_VIEW IIR_filter,init has no DRC violation.
 #Total number of DRC violations = 0
 #Post Route wire spread is done.
@@ -1765,33 +1765,33 @@ Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalize
 #                 10551 
 #
 #detailRoute Statistics:
-#Cpu time = 00:00:14
-#Elapsed time = 00:00:31
-#Increased memory = -0.02 (MB)
-#Total memory = 704.72 (MB)
-#Peak memory = 772.52 (MB)
+#Cpu time = 00:00:15
+#Elapsed time = 00:00:35
+#Increased memory = 0.36 (MB)
+#Total memory = 738.45 (MB)
+#Peak memory = 806.27 (MB)
 #
 #globalDetailRoute statistics:
-#Cpu time = 00:00:16
-#Elapsed time = 00:00:36
-#Increased memory = -60.03 (MB)
-#Total memory = 696.90 (MB)
-#Peak memory = 772.52 (MB)
+#Cpu time = 00:00:17
+#Elapsed time = 00:00:41
+#Increased memory = -60.12 (MB)
+#Total memory = 730.61 (MB)
+#Peak memory = 806.27 (MB)
 #Number of warnings = 57
 #Total number of warnings = 58
 #Number of fails = 0
 #Total number of fails = 0
-#Complete globalDetailRoute on Sun Nov 17 18:13:34 2019
+#Complete globalDetailRoute on Mon Nov 18 19:14:31 2019
 #
-% End globalDetailRoute (date=11/17 18:13:34, total cpu=0:00:16.4, real=0:00:36.0, peak res=756.9M, current mem=696.9M)
-#routeDesign: cpu time = 00:00:17, elapsed time = 00:00:36, memory = 685.62 (MB), peak = 772.52 (MB)
+% End globalDetailRoute (date=11/18 19:14:31, total cpu=0:00:16.7, real=0:00:42.0, peak res=790.7M, current mem=730.6M)
+#routeDesign: cpu time = 00:00:17, elapsed time = 00:00:42, memory = 719.32 (MB), peak = 806.27 (MB)
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
 WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
 *** Message Summary: 1 warning(s), 0 error(s)
 
-#% End routeDesign (date=11/17 18:13:34, total cpu=0:00:16.6, real=0:00:36.0, peak res=756.9M, current mem=685.6M)
+#% End routeDesign (date=11/18 19:14:31, total cpu=0:00:16.8, real=0:00:42.0, peak res=790.7M, current mem=719.3M)
 <CMD> setAnalysisMode -analysisType onChipVariation
 <CMD> setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 <CMD> optDesign -postRoute
@@ -1846,18 +1846,18 @@ Type 'man IMPOPT-665' for more detail.
 Type 'man IMPOPT-665' for more detail.
 **WARN: (EMS-27):	Message (IMPOPT-665) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 703.3M, totSessionCpu=0:02:00 **
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 737.0M, totSessionCpu=0:01:53 **
 #Created 135 library cell signatures
 #Created 2189 NETS and 0 SPECIALNETS signatures
 #Created 5569 instance signatures
-#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 703.30 (MB), peak = 772.52 (MB)
-#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 703.31 (MB), peak = 772.52 (MB)
-Begin checking placement ... (start mem=960.4M, init mem=960.4M)
+#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 737.00 (MB), peak = 806.27 (MB)
+#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 737.00 (MB), peak = 806.27 (MB)
+Begin checking placement ... (start mem=958.1M, init mem=958.1M)
 *info: Placed = 5569          
 *info: Unplaced = 0           
 Placement Density:100.00%(6167/6167)
 Placement Density (including fixed std cells):100.00%(6167/6167)
-Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=960.4M)
+Finished checkPlace (cpu: total=0:00:00.1, vio checks=0:00:00.0; mem=958.1M)
  Initial DC engine is -> aae
  
  AAE-Opt:: Current number of nets in RC Memory -> 100 K
@@ -1882,7 +1882,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_9keQgW.rcdb.d  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_GXAgJZ.rcdb.d  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -1893,24 +1893,24 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 954.4M)
-Extracted 10.0113% (CPU Time= 0:00:00.1  MEM= 1015.7M)
-Extracted 20.0107% (CPU Time= 0:00:00.1  MEM= 1015.7M)
-Extracted 30.0101% (CPU Time= 0:00:00.1  MEM= 1015.7M)
-Extracted 40.0095% (CPU Time= 0:00:00.1  MEM= 1015.7M)
-Extracted 50.0089% (CPU Time= 0:00:00.1  MEM= 1015.7M)
-Extracted 60.0083% (CPU Time= 0:00:00.2  MEM= 1015.7M)
-Extracted 70.0077% (CPU Time= 0:00:00.2  MEM= 1015.7M)
-Extracted 80.0071% (CPU Time= 0:00:00.2  MEM= 1015.7M)
-Extracted 90.0065% (CPU Time= 0:00:00.3  MEM= 1015.7M)
-Extracted 100% (CPU Time= 0:00:00.3  MEM= 1015.7M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 952.1M)
+Extracted 10.0113% (CPU Time= 0:00:00.1  MEM= 1013.4M)
+Extracted 20.0107% (CPU Time= 0:00:00.1  MEM= 1013.4M)
+Extracted 30.0101% (CPU Time= 0:00:00.1  MEM= 1013.4M)
+Extracted 40.0095% (CPU Time= 0:00:00.1  MEM= 1013.4M)
+Extracted 50.0089% (CPU Time= 0:00:00.2  MEM= 1013.4M)
+Extracted 60.0083% (CPU Time= 0:00:00.2  MEM= 1013.4M)
+Extracted 70.0077% (CPU Time= 0:00:00.2  MEM= 1013.4M)
+Extracted 80.0071% (CPU Time= 0:00:00.2  MEM= 1013.4M)
+Extracted 90.0065% (CPU Time= 0:00:00.3  MEM= 1013.4M)
+Extracted 100% (CPU Time= 0:00:00.3  MEM= 1013.4M)
 Number of Extracted Resistors     : 27430
 Number of Extracted Ground Cap.   : 29554
 Number of Extracted Coupling Cap. : 37524
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 991.7M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 995.688M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 989.4M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 993.383M)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 Unfixed 0 ViaPillar Nets
@@ -1930,10 +1930,10 @@ Calculate late delays in OCV mode...
 Calculate early delays in OCV mode...
 Start delay calculation (fullDC) (1 T). (MEM=0)
 Total number of fetched objects 2227
-End delay calculation. (MEM=0 CPU=0:00:01.2 REAL=0:00:03.0)
-End delay calculation (fullDC). (MEM=0 CPU=0:00:01.2 REAL=0:00:04.0)
-*** Done Building Timing Graph (cpu=0:00:01.4 real=0:00:04.0 totSessionCpu=0:00:03.6 mem=0.0M)
-Done building cte hold timing graph (HoldAware) cpu=0:00:01.6 real=0:00:05.0 totSessionCpu=0:00:03.6 mem=0.0M ***
+End delay calculation. (MEM=0 CPU=0:00:01.1 REAL=0:00:03.0)
+End delay calculation (fullDC). (MEM=0 CPU=0:00:01.2 REAL=0:00:03.0)
+*** Done Building Timing Graph (cpu=0:00:01.3 real=0:00:04.0 totSessionCpu=0:00:03.5 mem=0.0M)
+Done building cte hold timing graph (HoldAware) cpu=0:00:01.5 real=0:00:05.0 totSessionCpu=0:00:03.5 mem=0.0M ***
 
 _______________________________________________________________________
 Starting SI iteration 1 using Infinite Timing Windows
@@ -1950,28 +1950,28 @@ End IPO call back ...
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=993.688)
+Start delay calculation (fullDC) (1 T). (MEM=991.383)
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1067.07 CPU=0:00:02.0 REAL=0:00:07.0)
-End delay calculation (fullDC). (MEM=1067.07 CPU=0:00:02.2 REAL=0:00:08.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1067.1M)
+End delay calculation. (MEM=1064.76 CPU=0:00:01.8 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1064.76 CPU=0:00:02.1 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1064.8M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1067.1M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1064.8M)
 
 Executing IPO callback for view pruning ..
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1075.11)
+Start delay calculation (fullDC) (1 T). (MEM=1072.81)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1043.11 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1043.11 CPU=0:00:00.1 REAL=0:00:00.0)
-*** Done Building Timing Graph (cpu=0:00:03.2 real=0:00:10.0 totSessionCpu=0:02:05 mem=1043.1M)
+End delay calculation. (MEM=1040.8 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1040.8 CPU=0:00:00.1 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:03.0 real=0:00:08.0 totSessionCpu=0:01:58 mem=1040.8M)
 
 ------------------------------------------------------------
      Initial SI Timing Summary                             
@@ -2004,10 +2004,10 @@ Density: 57.587%
        (100.000% with Fillers)
 Total number of glitch violations: 0
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:05, real = 0:00:19, mem = 727.0M, totSessionCpu=0:02:06 **
+**optDesign ... cpu = 0:00:05, real = 0:00:15, mem = 764.2M, totSessionCpu=0:01:58 **
 Setting latch borrow mode to budget during optimization.
 Glitch fixing enabled
-**INFO: Start fixing DRV (Mem = 1021.60M) ...
+**INFO: Start fixing DRV (Mem = 1021.34M) ...
 Begin: GigaOpt DRV Optimization
 Glitch fixing enabled
 Info: 1 clock net  excluded from IPO operation.
@@ -2018,22 +2018,22 @@ DRV pessimism of 5.00% is used for tran, 5.00% for cap, 5.00% for fanout, on top
 | nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0| 100.00|          |         |
-|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0| 100.00| 0:00:00.0|  1258.7M|
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|     0|     0|     7.33|     0.00|       0|       0|       0| 100.00| 0:00:00.0|  1254.8M|
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 **** Begin NDR-Layer Usage Statistics ****
 0 Ndr or Layer constraints added by optimization 
 **** End NDR-Layer Usage Statistics ****
 
-*** Finish DRV Fixing (cpu=0:00:00.2 real=0:00:00.0 mem=1258.7M) ***
+*** Finish DRV Fixing (cpu=0:00:00.1 real=0:00:00.0 mem=1254.8M) ***
 
 drv optimizer changes nothing and skips refinePlace
 End: GigaOpt DRV Optimization
-**optDesign ... cpu = 0:00:08, real = 0:00:25, mem = 816.4M, totSessionCpu=0:02:09 **
+**optDesign ... cpu = 0:00:08, real = 0:00:23, mem = 853.6M, totSessionCpu=0:02:01 **
 *info:
-**INFO: Completed fixing DRV (CPU Time = 0:00:03, Mem = 1119.51M).
+**INFO: Completed fixing DRV (CPU Time = 0:00:03, Mem = 1115.68M).
 
 ------------------------------------------------------------
-     SI Timing Summary (cpu=0.05min real=0.08min mem=1119.5M)                             
+     SI Timing Summary (cpu=0.05min real=0.12min mem=1115.7M)                             
 ------------------------------------------------------------
 
 Setup views included:
@@ -2063,16 +2063,16 @@ Density: 57.587%
        (100.000% with Fillers)
 Total number of glitch violations: 0
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:08, real = 0:00:25, mem = 816.0M, totSessionCpu=0:02:09 **
+**optDesign ... cpu = 0:00:08, real = 0:00:23, mem = 853.1M, totSessionCpu=0:02:01 **
 *** Timing Is met
 *** Check timing (0:00:00.0)
 *** Setup timing is met (target slack 0ns)
 Running postRoute recovery in preEcoRoute mode
-**optDesign ... cpu = 0:00:08, real = 0:00:25, mem = 815.2M, totSessionCpu=0:02:09 **
+**optDesign ... cpu = 0:00:08, real = 0:00:23, mem = 852.5M, totSessionCpu=0:02:01 **
 Checking DRV degradation...
 **INFO: Skipping DRV recovery as drv did not degrade beyond margin
-*** Finish postRoute recovery in preEcoRoute mode (cpu=0:00:00, real=0:00:00, mem=1052.74M, totSessionCpu=0:02:09).
-**optDesign ... cpu = 0:00:08, real = 0:00:25, mem = 815.2M, totSessionCpu=0:02:09 **
+*** Finish postRoute recovery in preEcoRoute mode (cpu=0:00:00, real=0:00:01, mem=1048.90M, totSessionCpu=0:02:01).
+**optDesign ... cpu = 0:00:08, real = 0:00:24, mem = 852.5M, totSessionCpu=0:02:01 **
 
 Default Rule : ""
 Non Default Rules :
@@ -2128,12 +2128,12 @@ Density: 57.587%
        (100.000% with Fillers)
 Total number of glitch violations: 0
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:09, real = 0:00:26, mem = 737.2M, totSessionCpu=0:02:09 **
-*** Starting refinePlace (0:02:09 mem=979.3M) ***
+**optDesign ... cpu = 0:00:09, real = 0:00:25, mem = 774.4M, totSessionCpu=0:02:02 **
+*** Starting refinePlace (0:02:02 mem=980.2M) ***
 **ERROR: (IMPSP-2002):	Density too high (100.0%), stopping detail placement.
 Type 'man IMPSP-2002' for more detail.
-Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 979.3MB
-*** Finished refinePlace (0:02:09 mem=979.3M) ***
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 980.2MB
+*** Finished refinePlace (0:02:02 mem=980.2M) ***
 **ERROR: (IMPSP-9022):	Command 'refinePlace' completed with some error(s).
 -routeWithEco false                       # bool, default=false
 -routeWithEco true                        # bool, default=false, user setting
@@ -2146,7 +2146,7 @@ globalDetailRoute
 #setNanoRouteMode -routeWithEco true
 #setNanoRouteMode -routeWithSiDriven false
 #setNanoRouteMode -routeWithTimingDriven false
-#Start globalDetailRoute on Sun Nov 17 18:14:02 2019
+#Start globalDetailRoute on Mon Nov 18 19:15:00 2019
 #
 #WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN[11] of net DIN[11] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
 #WARNING (NRIG-39) NanoRoute cannot route to pin PIN/DIN[10] of net DIN[10] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
@@ -2173,7 +2173,7 @@ globalDetailRoute
 #NanoRoute Version 17.11-s080_1 NR170721-2155/17_11-UB
 #Loading the last recorded routing design signature
 #No placement changes detected since last routing
-#Start routing data preparation on Sun Nov 17 18:14:03 2019
+#Start routing data preparation on Mon Nov 18 19:15:00 2019
 #
 #Minimum voltage of a net in the design = 0.000.
 #Maximum voltage of a net in the design = 1.100.
@@ -2194,36 +2194,36 @@ globalDetailRoute
 #Auto generating G-grids with size=15 tracks, using layer metal3's pitch = 0.1400.
 #Using automatically generated G-grids.
 #Done routing data preparation.
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 740.91 (MB), peak = 816.55 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 776.48 (MB), peak = 853.72 (MB)
 #Merging special wires...
 #Found 0 nets for post-route si or timing fixing.
 #
-#Finished routing data preparation on Sun Nov 17 18:14:03 2019
+#Finished routing data preparation on Mon Nov 18 19:15:01 2019
 #
 #Cpu time = 00:00:00
 #Elapsed time = 00:00:00
 #Increased memory = 4.05 (MB)
-#Total memory = 740.91 (MB)
-#Peak memory = 816.55 (MB)
+#Total memory = 776.48 (MB)
+#Peak memory = 853.72 (MB)
 #
 #
-#Start global routing on Sun Nov 17 18:14:03 2019
+#Start global routing on Mon Nov 18 19:15:01 2019
 #
 #WARNING (NRGR-22) Design is already detail routed.
 #Routing data preparation, pin analysis, global routing and track assignment statistics:
 #Cpu time = 00:00:00
-#Elapsed time = 00:00:00
+#Elapsed time = 00:00:01
 #Increased memory = 4.06 (MB)
-#Total memory = 740.91 (MB)
-#Peak memory = 816.55 (MB)
+#Total memory = 776.49 (MB)
+#Peak memory = 853.72 (MB)
 #
 #Start Detail Routing..
 #start initial detail routing ...
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 743.04 (MB), peak = 816.55 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 778.61 (MB), peak = 853.72 (MB)
 #start 1st optimization iteration ...
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 743.04 (MB), peak = 816.55 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 778.61 (MB), peak = 853.72 (MB)
 #Complete Detail Routing.
 #Total wire length = 16765 um.
 #Total half perimeter of net bounding box = 16782 um.
@@ -2249,16 +2249,16 @@ globalDetailRoute
 #
 #Total number of DRC violations = 0
 #Cpu time = 00:00:00
-#Elapsed time = 00:00:00
+#Elapsed time = 00:00:01
 #Increased memory = 0.00 (MB)
-#Total memory = 740.91 (MB)
-#Peak memory = 816.55 (MB)
+#Total memory = 776.49 (MB)
+#Peak memory = 853.72 (MB)
 #
 #Start Post Route wire spreading..
 #
 #Start data preparation for wire spreading...
 #
-#Data preparation is done on Sun Nov 17 18:14:03 2019
+#Data preparation is done on Mon Nov 18 19:15:02 2019
 #
 #
 #Start Post Route Wire Spread.
@@ -2288,7 +2288,7 @@ globalDetailRoute
 #                 10551 
 #
 #   number of violations = 0
-#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 748.29 (MB), peak = 816.55 (MB)
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 783.30 (MB), peak = 853.72 (MB)
 #CELL_VIEW IIR_filter,init has no DRC violation.
 #Total number of DRC violations = 0
 #Post Route wire spread is done.
@@ -2316,30 +2316,30 @@ globalDetailRoute
 #
 #detailRoute Statistics:
 #Cpu time = 00:00:01
-#Elapsed time = 00:00:01
-#Increased memory = 0.29 (MB)
-#Total memory = 741.21 (MB)
-#Peak memory = 816.55 (MB)
+#Elapsed time = 00:00:02
+#Increased memory = 0.26 (MB)
+#Total memory = 776.75 (MB)
+#Peak memory = 853.72 (MB)
 #Updating routing design signature
 #Created 135 library cell signatures
 #Created 2189 NETS and 0 SPECIALNETS signatures
 #Created 5569 instance signatures
-#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 741.22 (MB), peak = 816.55 (MB)
-#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 741.27 (MB), peak = 816.55 (MB)
+#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 776.77 (MB), peak = 853.72 (MB)
+#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 776.81 (MB), peak = 853.72 (MB)
 #
 #globalDetailRoute statistics:
 #Cpu time = 00:00:01
-#Elapsed time = 00:00:01
-#Increased memory = 1.02 (MB)
-#Total memory = 738.30 (MB)
-#Peak memory = 816.55 (MB)
+#Elapsed time = 00:00:04
+#Increased memory = -0.66 (MB)
+#Total memory = 773.86 (MB)
+#Peak memory = 853.72 (MB)
 #Number of warnings = 22
 #Total number of warnings = 80
 #Number of fails = 0
 #Total number of fails = 0
-#Complete globalDetailRoute on Sun Nov 17 18:14:04 2019
+#Complete globalDetailRoute on Mon Nov 18 19:15:04 2019
 #
-**optDesign ... cpu = 0:00:10, real = 0:00:28, mem = 738.3M, totSessionCpu=0:02:11 **
+**optDesign ... cpu = 0:00:10, real = 0:00:30, mem = 773.9M, totSessionCpu=0:02:03 **
 -routeWithEco false                       # bool, default=false
 -routeSelectedNetOnly false               # bool, default=false
 -routeWithTimingDriven false              # bool, default=false, user setting
@@ -2351,7 +2351,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_9keQgW.rcdb.d -maxResLength 200  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_GXAgJZ.rcdb.d -maxResLength 200  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -2362,25 +2362,25 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 981.1M)
-Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1050.4M)
-Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1050.4M)
-Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1050.4M)
-Extracted 40.0092% (CPU Time= 0:00:00.1  MEM= 1050.4M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1050.4M)
-Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1050.4M)
-Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1050.4M)
-Extracted 80.0069% (CPU Time= 0:00:00.2  MEM= 1050.4M)
-Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1050.4M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 1050.4M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 981.9M)
+Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1051.2M)
+Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1051.2M)
+Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1051.2M)
+Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1051.2M)
+Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1051.2M)
+Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1051.2M)
+Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1051.2M)
+Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1051.2M)
+Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1051.2M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 1051.2M)
 Number of Extracted Resistors     : 27910
 Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1026.4M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:01.0  MEM: 1030.352M)
-**optDesign ... cpu = 0:00:11, real = 0:00:29, mem = 702.9M, totSessionCpu=0:02:11 **
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1019.2M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 1031.203M)
+**optDesign ... cpu = 0:00:11, real = 0:00:32, mem = 738.5M, totSessionCpu=0:02:04 **
 Starting SI iteration 1 using Infinite Timing Windows
 Begin IPO call back ...
 End IPO call back ...
@@ -2395,30 +2395,30 @@ End IPO call back ...
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=972.875)
+Start delay calculation (fullDC) (1 T). (MEM=974.477)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 AAE_INFO: 1 threads acquired from CTE.
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1055.79 CPU=0:00:01.9 REAL=0:00:03.0)
-End delay calculation (fullDC). (MEM=1055.79 CPU=0:00:02.2 REAL=0:00:04.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1055.8M)
+End delay calculation. (MEM=1057.39 CPU=0:00:01.8 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1057.39 CPU=0:00:02.1 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1057.4M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1055.8M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1057.4M)
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1063.84)
+Start delay calculation (fullDC) (1 T). (MEM=1065.44)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1031.84 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1031.84 CPU=0:00:00.1 REAL=0:00:01.0)
-*** Done Building Timing Graph (cpu=0:00:03.6 real=0:00:08.0 totSessionCpu=0:02:15 mem=1031.8M)
-**optDesign ... cpu = 0:00:14, real = 0:00:37, mem = 742.1M, totSessionCpu=0:02:15 **
+End delay calculation. (MEM=1033.44 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1033.44 CPU=0:00:00.1 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:03.4 real=0:00:09.0 totSessionCpu=0:02:07 mem=1033.4M)
+**optDesign ... cpu = 0:00:14, real = 0:00:41, mem = 778.4M, totSessionCpu=0:02:07 **
 Executing marking Critical Nets1
 Footprint XOR2_X1 has at least 2 pins...
 Footprint XNOR2_X1 has at least 3 pins...
@@ -2426,16 +2426,16 @@ Footprint TLAT_X1 has at least 4 pins...
 Footprint SDFF_X1 has at least 5 pins...
 *** Number of Vt Cells Partition = 1
 Running postRoute recovery in postEcoRoute mode
-**optDesign ... cpu = 0:00:14, real = 0:00:37, mem = 742.1M, totSessionCpu=0:02:15 **
+**optDesign ... cpu = 0:00:14, real = 0:00:41, mem = 778.4M, totSessionCpu=0:02:07 **
 Checking setup slack degradation ...
 Checking DRV degradation...
 **INFO: Skipping DRV recovery as drv did not degrade beyond margin
-*** Finish postRoute recovery in postEcoRoute mode (cpu=0:00:00, real=0:00:00, mem=967.06M, totSessionCpu=0:02:15).
-**optDesign ... cpu = 0:00:15, real = 0:00:37, mem = 742.2M, totSessionCpu=0:02:15 **
+*** Finish postRoute recovery in postEcoRoute mode (cpu=0:00:00, real=0:00:00, mem=976.20M, totSessionCpu=0:02:07).
+**optDesign ... cpu = 0:00:14, real = 0:00:41, mem = 778.5M, totSessionCpu=0:02:07 **
 
 Latch borrow mode reset to max_borrow
 Reported timing to dir ./timingReports
-**optDesign ... cpu = 0:00:15, real = 0:00:38, mem = 742.2M, totSessionCpu=0:02:15 **
+**optDesign ... cpu = 0:00:14, real = 0:00:41, mem = 778.5M, totSessionCpu=0:02:08 **
 
 ------------------------------------------------------------
      optDesign Final SI Timing Summary                             
@@ -2468,7 +2468,7 @@ Density: 57.587%
        (100.000% with Fillers)
 Total number of glitch violations: 0
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:15, real = 0:00:39, mem = 742.3M, totSessionCpu=0:02:16 **
+**optDesign ... cpu = 0:00:15, real = 0:00:43, mem = 780.5M, totSessionCpu=0:02:08 **
  ReSet Options after AAE Based Opt flow 
 Opt: RC extraction mode changed to 'detail'
 *** Finished optDesign ***
@@ -2521,18 +2521,18 @@ Type 'man IMPOPT-665' for more detail.
 Type 'man IMPOPT-665' for more detail.
 **WARN: (EMS-27):	Message (IMPOPT-665) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
-**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 743.4M, totSessionCpu=0:02:16 **
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 781.7M, totSessionCpu=0:02:09 **
 #Created 135 library cell signatures
 #Created 2189 NETS and 0 SPECIALNETS signatures
 #Created 5569 instance signatures
-#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 743.45 (MB), peak = 816.55 (MB)
-#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 743.59 (MB), peak = 816.55 (MB)
-Begin checking placement ... (start mem=983.1M, init mem=983.1M)
+#Build design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 781.74 (MB), peak = 853.72 (MB)
+#Save design signature : cpu time = 00:00:00, elapsed time = 00:00:00, memory = 781.89 (MB), peak = 853.72 (MB)
+Begin checking placement ... (start mem=986.2M, init mem=986.2M)
 *info: Placed = 5569          
 *info: Unplaced = 0           
 Placement Density:100.00%(6167/6167)
 Placement Density (including fixed std cells):100.00%(6167/6167)
-Finished checkPlace (cpu: total=0:00:00.1, vio checks=0:00:00.0; mem=983.1M)
+Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=986.2M)
  Initial DC engine is -> aae
  
  AAE-Opt:: Current number of nets in RC Memory -> 100 K
@@ -2555,7 +2555,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_9keQgW.rcdb.d -maxResLength 200  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_GXAgJZ.rcdb.d -maxResLength 200  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -2566,24 +2566,24 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 975.1M)
-Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1044.4M)
-Extracted 20.0104% (CPU Time= 0:00:00.2  MEM= 1044.4M)
-Extracted 30.0098% (CPU Time= 0:00:00.2  MEM= 1044.4M)
-Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1044.4M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1044.4M)
-Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1044.4M)
-Extracted 70.0075% (CPU Time= 0:00:00.3  MEM= 1044.4M)
-Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1044.4M)
-Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1044.4M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 1044.4M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 978.2M)
+Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1045.7M)
+Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1045.7M)
+Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1045.7M)
+Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1045.7M)
+Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1045.7M)
+Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1045.7M)
+Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1045.7M)
+Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1045.7M)
+Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1045.7M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 1045.7M)
 Number of Extracted Resistors     : 27910
 Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1020.3M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:04.0  MEM: 1020.336M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1021.7M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:02.0  MEM: 1025.719M)
 Unfixed 0 ViaPillar Nets
 **ERROR: (IMPOPT-310):	Design density (100.00%) exceeds/equals limit (95.00%).
 Unfixed 0 ViaPillar Nets
@@ -2591,12 +2591,12 @@ Unfixed 0 ViaPillar Nets
 GigaOpt Hold Optimizer is used
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:02:17 mem=998.1M ***
+Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:02:10 mem=1003.5M ***
 *info: Run optDesign holdfix with 1 thread.
 **INFO: Starting Blocking QThread with 1 CPU
    ____________________________________________________________________
 __/ message from Blocking QThread
-**WARN: (PRL-280):	The elapsed time (11 sec) of the threaded job 1 is more than twice the CPU time (4 sec).  This indicates that enough physical memory is not available and the system may be swapping. It is recommended that you reduce the number of threads or jobs being run on this machine, or execute this job on a machine with a larger physical memory.
+**WARN: (PRL-280):	The elapsed time (12 sec) of the threaded job 1 is more than twice the CPU time (3 sec).  This indicates that enough physical memory is not available and the system may be swapping. It is recommended that you reduce the number of threads or jobs being run on this machine, or execute this job on a machine with a larger physical memory.
 Starting SI iteration 1 using Infinite Timing Windows
 Begin IPO call back ...
 End IPO call back ...
@@ -2614,8 +2614,8 @@ Calculate early delays in OCV mode...
 Start delay calculation (fullDC) (1 T). (MEM=0)
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=0 CPU=0:00:02.0 REAL=0:00:06.0)
-End delay calculation (fullDC). (MEM=0 CPU=0:00:02.3 REAL=0:00:07.0)
+End delay calculation. (MEM=0 CPU=0:00:01.9 REAL=0:00:07.0)
+End delay calculation (fullDC). (MEM=0 CPU=0:00:02.2 REAL=0:00:08.0)
 Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 0.0M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
 Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 0.0M)
@@ -2631,11 +2631,11 @@ Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 13.
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
 End delay calculation. (MEM=0 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=0 CPU=0:00:00.1 REAL=0:00:00.0)
-*** Done Building Timing Graph (cpu=0:00:03.4 real=0:00:10.0 totSessionCpu=0:00:06.6 mem=0.0M)
-Done building cte hold timing graph (fixHold) cpu=0:00:03.6 real=0:00:11.0 totSessionCpu=0:00:06.6 mem=0.0M ***
-Done building hold timer [1 node(s), 0 edge(s), 1 view(s)] (fixHold) cpu=0:00:03.7 real=0:00:11.0 totSessionCpu=0:00:06.7 mem=0.0M ***
-Timing Data dump into file /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/coe_eosdata_FDEFUl/MyAnView.twf, for view: MyAnView 
+End delay calculation (fullDC). (MEM=0 CPU=0:00:00.1 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:03.3 real=0:00:11.0 totSessionCpu=0:00:06.5 mem=0.0M)
+Done building cte hold timing graph (fixHold) cpu=0:00:03.5 real=0:00:12.0 totSessionCpu=0:00:06.5 mem=0.0M ***
+Done building hold timer [1 node(s), 0 edge(s), 1 view(s)] (fixHold) cpu=0:00:03.7 real=0:00:12.0 totSessionCpu=0:00:06.7 mem=0.0M ***
+Timing Data dump into file /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/coe_eosdata_YJH6Hi/MyAnView.twf, for view: MyAnView 
 	 Dumping view 0 MyAnView 
 
 _______________________________________________________________________
@@ -2653,31 +2653,31 @@ End IPO call back ...
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1217.75)
+Start delay calculation (fullDC) (1 T). (MEM=1194.68)
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1307.14 CPU=0:00:02.0 REAL=0:00:06.0)
-End delay calculation (fullDC). (MEM=1307.14 CPU=0:00:02.3 REAL=0:00:07.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1307.1M)
+End delay calculation. (MEM=1293.61 CPU=0:00:01.9 REAL=0:00:06.0)
+End delay calculation (fullDC). (MEM=1293.61 CPU=0:00:02.2 REAL=0:00:07.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1293.6M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1307.1M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:01.0, MEM = 1293.6M)
 
 Executing IPO callback for view pruning ..
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1315.19)
+Start delay calculation (fullDC) (1 T). (MEM=1301.66)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1283.18 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1283.18 CPU=0:00:00.1 REAL=0:00:00.0)
-*** Done Building Timing Graph (cpu=0:00:03.5 real=0:00:12.0 totSessionCpu=0:02:25 mem=1283.2M)
-Done building cte setup timing graph (fixHold) cpu=0:00:08.3 real=0:00:27.0 totSessionCpu=0:02:25 mem=1283.2M ***
+End delay calculation. (MEM=1269.65 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1269.65 CPU=0:00:00.1 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:03.3 real=0:00:11.0 totSessionCpu=0:02:18 mem=1269.7M)
+Done building cte setup timing graph (fixHold) cpu=0:00:08.2 real=0:00:28.0 totSessionCpu=0:02:18 mem=1269.7M ***
 Setting latch borrow mode to budget during optimization.
-Loading timing data from /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/coe_eosdata_FDEFUl/MyAnView.twf 
+Loading timing data from /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/coe_eosdata_YJH6Hi/MyAnView.twf 
 	 Loading view 0 MyAnView 
 
 ------------------------------------------------------------
@@ -2724,15 +2724,16 @@ Density: 57.587%
 
 *Info: minBufDelay = 21.9 ps, libStdDelay = 10.1 ps, minBufSize = 3192000 (3.0)
 *Info: worst delay setup view: MyAnView
-**optDesign ... cpu = 0:00:10, real = 0:00:34, mem = 825.3M, totSessionCpu=0:02:26 **
+**optDesign ... cpu = 0:00:10, real = 0:00:35, mem = 861.3M, totSessionCpu=0:02:19 **
 Info: 1 clock net  excluded from IPO operation.
 *** Hold timing is met. Hold fixing is not needed 
 Latch borrow mode reset to max_borrow
 Reported timing to dir ./timingReports
-**optDesign ... cpu = 0:00:10, real = 0:00:34, mem = 825.3M, totSessionCpu=0:02:26 **
+**optDesign ... cpu = 0:00:10, real = 0:00:35, mem = 861.3M, totSessionCpu=0:02:19 **
 **INFO: Starting Blocking QThread with 1 CPU
    ____________________________________________________________________
 __/ message from Blocking QThread
+**WARN: (PRL-280):	The elapsed time (11 sec) of the threaded job 1 is more than twice the CPU time (3 sec).  This indicates that enough physical memory is not available and the system may be swapping. It is recommended that you reduce the number of threads or jobs being run on this machine, or execute this job on a machine with a larger physical memory.
 Starting SI iteration 1 using Infinite Timing Windows
 Begin IPO call back ...
 End IPO call back ...
@@ -2750,8 +2751,8 @@ Calculate early delays in OCV mode...
 Start delay calculation (fullDC) (1 T). (MEM=0)
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=0 CPU=0:00:01.8 REAL=0:00:03.0)
-End delay calculation (fullDC). (MEM=0 CPU=0:00:02.1 REAL=0:00:03.0)
+End delay calculation. (MEM=0 CPU=0:00:01.8 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=0 CPU=0:00:02.1 REAL=0:00:06.0)
 Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 0.0M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
 Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 0.0M)
@@ -2766,7 +2767,7 @@ Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
 End delay calculation. (MEM=0 CPU=0:00:00.0 REAL=0:00:00.0)
 End delay calculation (fullDC). (MEM=0 CPU=0:00:00.1 REAL=0:00:00.0)
-*** Done Building Timing Graph (cpu=0:00:03.3 real=0:00:05.0 totSessionCpu=0:00:09.5 mem=0.0M)
+*** Done Building Timing Graph (cpu=0:00:03.2 real=0:00:10.0 totSessionCpu=0:00:09.4 mem=0.0M)
 
 _______________________________________________________________________
 
@@ -2812,7 +2813,7 @@ Density: 57.587%
        (100.000% with Fillers)
 Total number of glitch violations: 0
 ------------------------------------------------------------
-**optDesign ... cpu = 0:00:14, real = 0:00:42, mem = 824.2M, totSessionCpu=0:02:30 **
+**optDesign ... cpu = 0:00:14, real = 0:00:49, mem = 861.3M, totSessionCpu=0:02:23 **
  ReSet Options after AAE Based Opt flow 
 *** Finished optDesign ***
 Info: Destroy the CCOpt slew target map.
@@ -2820,39 +2821,39 @@ Info: Destroy the CCOpt slew target map.
 The in-memory database contained RC information but was not saved. To save 
 the RC information, use saveDesign's -rc option. Note: Saving RC information can be quite large, 
 so it should only be saved when it is really desired.
-#% Begin save design ... (date=11/17 18:15:00, mem=844.8M)
-% Begin Save netlist data ... (date=11/17 18:15:00, mem=824.2M)
+#% Begin save design ... (date=11/18 19:16:08, mem=860.7M)
+% Begin Save netlist data ... (date=11/18 19:16:09, mem=861.4M)
 Writing Binary DB to IIR_filter.enc.dat/IIR_filter.v.bin in single-threaded mode...
-% End Save netlist data ... (date=11/17 18:15:01, total cpu=0:00:00.1, real=0:00:00.0, peak res=824.3M, current mem=824.3M)
-% Begin Save AAE data ... (date=11/17 18:15:01, mem=824.3M)
+% End Save netlist data ... (date=11/18 19:16:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=861.5M, current mem=861.5M)
+% Begin Save AAE data ... (date=11/18 19:16:09, mem=861.5M)
 Saving AAE Data ...
-% End Save AAE data ... (date=11/17 18:15:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=824.4M, current mem=824.4M)
-% Begin Save clock tree data ... (date=11/17 18:15:01, mem=824.6M)
-% End Save clock tree data ... (date=11/17 18:15:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=824.6M, current mem=824.6M)
+% End Save AAE data ... (date=11/18 19:16:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=861.5M, current mem=861.5M)
+% Begin Save clock tree data ... (date=11/18 19:16:09, mem=861.7M)
+% End Save clock tree data ... (date=11/18 19:16:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=861.7M, current mem=861.7M)
 Saving preference file IIR_filter.enc.dat/gui.pref.tcl ...
 Saving mode setting ...
 Saving global file ...
-% Begin Save floorplan data ... (date=11/17 18:15:02, mem=825.1M)
+% Begin Save floorplan data ... (date=11/18 19:16:09, mem=862.1M)
 Saving floorplan file ...
-% End Save floorplan data ... (date=11/17 18:15:02, total cpu=0:00:00.1, real=0:00:00.0, peak res=825.1M, current mem=825.1M)
+% End Save floorplan data ... (date=11/18 19:16:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=862.1M, current mem=862.1M)
 Saving Drc markers ...
 ... No Drc file written since there is no markers found.
-% Begin Save placement data ... (date=11/17 18:15:02, mem=825.1M)
+% Begin Save placement data ... (date=11/18 19:16:10, mem=862.1M)
 ** Saving stdCellPlacement_binary (version# 1) ...
-% End Save placement data ... (date=11/17 18:15:02, total cpu=0:00:00.0, real=0:00:00.0, peak res=825.2M, current mem=825.2M)
-% Begin Save routing data ... (date=11/17 18:15:02, mem=825.2M)
+% End Save placement data ... (date=11/18 19:16:10, total cpu=0:00:00.0, real=0:00:00.0, peak res=862.2M, current mem=862.2M)
+% Begin Save routing data ... (date=11/18 19:16:10, mem=862.2M)
 Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=1083.7M) ***
-% End Save routing data ... (date=11/17 18:15:03, total cpu=0:00:00.1, real=0:00:01.0, peak res=826.2M, current mem=826.2M)
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1079.7M) ***
+% End Save routing data ... (date=11/18 19:16:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=863.2M, current mem=863.2M)
 Saving property file IIR_filter.enc.dat/IIR_filter.prop
-*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1083.7M) ***
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1079.7M) ***
 #Saving pin access info...
 #
-% Begin Save power constraints data ... (date=11/17 18:15:03, mem=826.4M)
-% End Save power constraints data ... (date=11/17 18:15:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=826.5M, current mem=826.5M)
+% Begin Save power constraints data ... (date=11/18 19:16:10, mem=863.4M)
+% End Save power constraints data ... (date=11/18 19:16:10, total cpu=0:00:00.0, real=0:00:01.0, peak res=863.4M, current mem=863.4M)
 my_rc
 Generated self-contained design IIR_filter.enc.dat
-#% End save design ... (date=11/17 18:15:05, total cpu=0:00:01.0, real=0:00:05.0, peak res=844.8M, current mem=744.0M)
+#% End save design ... (date=11/18 19:16:12, total cpu=0:00:00.8, real=0:00:04.0, peak res=863.4M, current mem=781.1M)
 *** Message Summary: 0 warning(s), 0 error(s)
 
 <CMD> reset_parasitics
@@ -2864,7 +2865,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_ijMZen.rcdb.d -maxResLength 200  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_7gfsgO.rcdb.d -maxResLength 200  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -2875,43 +2876,43 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1021.8M)
-Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1086.2M)
-Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1086.2M)
-Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1086.2M)
-Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1086.2M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1086.2M)
-Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1086.2M)
-Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1086.2M)
-Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1086.2M)
-Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1086.2M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 1086.2M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1016.0M)
+Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1080.3M)
+Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1080.3M)
+Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1080.3M)
+Extracted 40.0092% (CPU Time= 0:00:00.1  MEM= 1080.3M)
+Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1080.3M)
+Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1080.3M)
+Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1080.3M)
+Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1080.3M)
+Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1080.3M)
+Extracted 100% (CPU Time= 0:00:00.3  MEM= 1080.3M)
 Number of Extracted Resistors     : 27910
 Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1054.1M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 1058.148M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1048.3M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 1052.266M)
 <CMD> rcOut -setload IIR_filter.setload -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 1035.9M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 1030.1M)
 <CMD> rcOut -setres IIR_filter.setres -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
-RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 1035.9M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.0  MEM= 1030.1M)
 <CMD> rcOut -spf IIR_filter.spf -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Printing *|NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 1035.9M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.3  MEM= 1030.1M)
 <CMD> rcOut -spef IIR_filter.spef -rc_corner my_rc
 RC Out has the following PVT Info:
    RC:my_rc, Operating temperature 25 C
 Dumping Spef file.....
 Printing D_NET...
-RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 1035.9M)
+RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 1030.1M)
 <CMD> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
 <CMD> timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix IIR_filter_postRoute -outDir timingReports
  Reset EOS DB
@@ -2923,7 +2924,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_ijMZen.rcdb.d -maxResLength 200  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_7gfsgO.rcdb.d -maxResLength 200  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -2934,24 +2935,24 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1000.7M)
-Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1040.7M)
-Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1040.7M)
-Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1040.7M)
-Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1040.7M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1040.7M)
-Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1040.7M)
-Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1040.7M)
-Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1040.7M)
-Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1040.7M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 1040.7M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 989.3M)
+Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1031.0M)
+Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1031.0M)
+Extracted 30.0098% (CPU Time= 0:00:00.2  MEM= 1031.0M)
+Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1031.0M)
+Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1031.0M)
+Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1031.0M)
+Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1031.0M)
+Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1031.0M)
+Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1031.0M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 1031.0M)
 Number of Extracted Resistors     : 27910
 Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1024.7M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:03.0  MEM: 1024.672M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1015.0M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 1019.016M)
 Starting SI iteration 1 using Infinite Timing Windows
 Begin IPO call back ...
 End IPO call back ...
@@ -2966,28 +2967,28 @@ End IPO call back ...
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1022.67)
+Start delay calculation (fullDC) (1 T). (MEM=1017.02)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 AAE_INFO: 1 threads acquired from CTE.
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1096.05 CPU=0:00:01.9 REAL=0:00:05.0)
-End delay calculation (fullDC). (MEM=1096.05 CPU=0:00:02.2 REAL=0:00:07.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1096.1M)
+End delay calculation. (MEM=1090.39 CPU=0:00:01.8 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1090.39 CPU=0:00:02.1 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1090.4M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1096.1M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1090.4M)
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
 Calculate early delays in OCV mode...
 Calculate late delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1104.1)
+Start delay calculation (fullDC) (1 T). (MEM=1098.44)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1072.09 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1072.09 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation. (MEM=1066.44 CPU=0:00:00.0 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=1066.44 CPU=0:00:00.1 REAL=0:00:01.0)
 
 ------------------------------------------------------------
           timeDesign Summary                             
@@ -3021,9 +3022,9 @@ Density: 57.587%
 Total number of glitch violations: 0
 ------------------------------------------------------------
 Reported timing to dir timingReports
-Total CPU time: 4.7 sec
-Total Real time: 13.0 sec
-Total Memory Usage: 998.859375 Mbytes
+Total CPU time: 4.59 sec
+Total Real time: 15.0 sec
+Total Memory Usage: 989.203125 Mbytes
 Reset AAE Options
 <CMD> redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
 <CMD> timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix IIR_filter_postRoute -outDir timingReports
@@ -3036,7 +3037,7 @@ PostRoute (effortLevel low) RC Extraction called for design IIR_filter.
 RC Extraction called in multi-corner(1) mode.
 Process corner(s) are loaded.
  Corner: my_rc
-extractDetailRC Option : -outfile /tmp/innovus_temp_29820_localhost.localdomain_isa22_eSB0wk/IIR_filter_29820_ijMZen.rcdb.d -maxResLength 200  -extended
+extractDetailRC Option : -outfile /tmp/innovus_temp_15273_localhost.localdomain_isa22_Qj2usO/IIR_filter_15273_7gfsgO.rcdb.d -maxResLength 200  -extended
 RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
       RC Corner Indexes            0   
 Capacitance Scaling Factor   : 1.00000 
@@ -3047,24 +3048,24 @@ Clock Res. Scaling Factor    : 1.00000
 Shrink Factor                : 1.00000
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1004.9M)
-Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1070.6M)
-Extracted 20.0104% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 30.0098% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1070.6M)
-Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1070.6M)
-Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1070.6M)
-Extracted 100% (CPU Time= 0:00:00.4  MEM= 1070.6M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 995.2M)
+Extracted 10.011% (CPU Time= 0:00:00.1  MEM= 1066.5M)
+Extracted 20.0104% (CPU Time= 0:00:00.1  MEM= 1066.5M)
+Extracted 30.0098% (CPU Time= 0:00:00.1  MEM= 1066.5M)
+Extracted 40.0092% (CPU Time= 0:00:00.2  MEM= 1066.5M)
+Extracted 50.0087% (CPU Time= 0:00:00.2  MEM= 1066.5M)
+Extracted 60.0081% (CPU Time= 0:00:00.2  MEM= 1066.5M)
+Extracted 70.0075% (CPU Time= 0:00:00.2  MEM= 1066.5M)
+Extracted 80.0069% (CPU Time= 0:00:00.3  MEM= 1066.5M)
+Extracted 90.0063% (CPU Time= 0:00:00.3  MEM= 1066.5M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 1066.5M)
 Number of Extracted Resistors     : 27910
 Number of Extracted Ground Cap.   : 30034
 Number of Extracted Coupling Cap. : 38316
 Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
  Corner: my_rc
-Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1054.6M)
-PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:03.0  MEM: 1058.633M)
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1050.5M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:03.0  MEM: 1054.508M)
 Starting SI iteration 1 using Infinite Timing Windows
 #################################################################################
 # Design Stage: PostRoute
@@ -3077,29 +3078,29 @@ Starting SI iteration 1 using Infinite Timing Windows
 AAE_INFO: 1 threads acquired from CTE.
 Calculate late delays in OCV mode...
 Calculate early delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1004.17)
+Start delay calculation (fullDC) (1 T). (MEM=1002.29)
 Initializing multi-corner capacitance tables ... 
 Initializing multi-corner resistance tables ...
 AAE_INFO: 1 threads acquired from CTE.
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1087.09 CPU=0:00:01.9 REAL=0:00:03.0)
-End delay calculation (fullDC). (MEM=1087.09 CPU=0:00:02.2 REAL=0:00:04.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1087.1M)
+End delay calculation. (MEM=1085.21 CPU=0:00:01.8 REAL=0:00:06.0)
+End delay calculation (fullDC). (MEM=1085.21 CPU=0:00:02.1 REAL=0:00:07.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1085.2M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1087.1M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1085.2M)
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
 Calculate late delays in OCV mode...
 Calculate early delays in OCV mode...
-Start delay calculation (fullDC) (1 T). (MEM=1095.13)
+Start delay calculation (fullDC) (1 T). (MEM=1093.26)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 13. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1063.13 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1063.13 CPU=0:00:00.1 REAL=0:00:00.0)
-*** Done Building Timing Graph (cpu=0:00:02.8 real=0:00:07.0 totSessionCpu=0:02:41 mem=1063.1M)
+End delay calculation. (MEM=1061.25 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1061.25 CPU=0:00:00.1 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:02.8 real=0:00:09.0 totSessionCpu=0:02:33 mem=1061.3M)
 
 ------------------------------------------------------------
           timeDesign Summary                             
@@ -3121,15 +3122,15 @@ Density: 57.587%
        (100.000% with Fillers)
 ------------------------------------------------------------
 Reported timing to dir timingReports
-Total CPU time: 3.89 sec
-Total Real time: 11.0 sec
-Total Memory Usage: 966.367188 Mbytes
+Total CPU time: 3.81 sec
+Total Real time: 13.0 sec
+Total Memory Usage: 966.757812 Mbytes
 Reset AAE Options
 <CMD> verifyConnectivity -type all -error 1000 -warning 50
 VERIFY_CONNECTIVITY use new engine.
 
 ******** Start: VERIFY CONNECTIVITY ********
-Start Time: Sun Nov 17 18:15:34 2019
+Start Time: Mon Nov 18 19:16:44 2019
 
 Design Name: IIR_filter
 Database Units: 2000
@@ -3141,7 +3142,7 @@ Begin Summary
   Found no problems or warnings.
 End Summary
 
-End Time: Sun Nov 17 18:15:36 2019
+End Time: Mon Nov 18 19:16:46 2019
 Time Elapsed: 0:00:02.0
 
 ******** End: VERIFY CONNECTIVITY ********
@@ -3150,7 +3151,7 @@ Time Elapsed: 0:00:02.0
 
 <CMD> setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
 <CMD> verifyGeometry
- *** Starting Verify Geometry (MEM: 966.4) ***
+ *** Starting Verify Geometry (MEM: 966.8) ***
 
 **WARN: (IMPVFG-257):	verifyGeometry command is replaced by verify_drc command. It still works in this release but will be removed in future release. Please update your script to use the new command.
   VERIFY GEOMETRY ...... Starting Verification
@@ -3171,7 +3172,7 @@ End Summary
   Verification Complete : 0 Viols.  0 Wrngs.
 
 **********End: VERIFY GEOMETRY**********
- *** verify geometry (CPU: 0:00:01.3  MEM: 125.5M)
+ *** verify geometry (CPU: 0:00:01.2  MEM: 122.5M)
 
 <CMD> setVerifyGeometryMode -area { 0 0 0 0 }
 <CMD> reportGateCount -level 5 -limit 100 -outfile IIR_filter.gateCount
@@ -3193,25 +3194,25 @@ Starting SI iteration 1 using Infinite Timing Windows
 # Signoff Settings: SI On 
 #################################################################################
 AAE_INFO: 1 threads acquired from CTE.
-Start delay calculation (fullDC) (1 T). (MEM=1089.86)
+Start delay calculation (fullDC) (1 T). (MEM=1087.25)
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  100.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1129.93 CPU=0:00:01.9 REAL=0:00:06.0)
-End delay calculation (fullDC). (MEM=1129.93 CPU=0:00:02.1 REAL=0:00:07.0)
-Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1129.9M)
+End delay calculation. (MEM=1127.32 CPU=0:00:01.8 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1127.32 CPU=0:00:02.1 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1127.3M)
 Add other clocks and setupCteToAAEClockMapping during iter 1
-Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1129.9M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1127.3M)
 Starting SI iteration 2
 AAE_INFO: 1 threads acquired from CTE.
-Start delay calculation (fullDC) (1 T). (MEM=1129.93)
+Start delay calculation (fullDC) (1 T). (MEM=1127.32)
 Glitch Analysis: View MyAnView -- Total Number of Nets Skipped = 0. 
 Glitch Analysis: View MyAnView -- Total Number of Nets Analyzed = 2227. 
 Total number of fetched objects 2227
 AAE_INFO-618: Total number of nets in the design is 2189,  0.0 percent of the nets selected for SI analysis
-End delay calculation. (MEM=1097.93 CPU=0:00:00.0 REAL=0:00:00.0)
-End delay calculation (fullDC). (MEM=1097.93 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation. (MEM=1095.32 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1095.32 CPU=0:00:00.1 REAL=0:00:00.0)
 
-*** Memory Usage v#1 (Current mem = 1105.867M, initial mem = 179.684M) ***
-*** Message Summary: 171 warning(s), 4 error(s)
+*** Memory Usage v#1 (Current mem = 1103.258M, initial mem = 179.684M) ***
+*** Message Summary: 172 warning(s), 4 error(s)
 
---- Ending "Innovus" (totcpu=0:02:53, real=0:10:15, mem=1105.9M) ---
+--- Ending "Innovus" (totcpu=0:02:39, real=0:08:48, mem=1103.3M) ---
