@@ -2,4 +2,4 @@ source variables.scr
 read_verilog -netlist ../netlist/IIR_filter.v
 read_saif -input ../saif/IIR_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
 create_clock -name MY_CLK CLK
-report_power > $out_dir/report_power_final.txt
+report_power > $out_dir/report_power_final$ext.txt

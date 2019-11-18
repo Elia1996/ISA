@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Nov 16 20:10:39 2019
+#@ # Date:   Mon Nov 18 11:58:26 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6653,13 +6653,13 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_p
 #@ # period of clock
 #@ # max clk = 3.9ns
 #@ # we set period equal to 4*Tclkmin
-#@ variable period 11.40
-#@ variable ext _period_x4
+#@ variable period 11.4
+#@ variable ext _11d4
 #@ # -- End source variables.scr
 
 #@ read_verilog -netlist ../netlist/IIR_filter.v
 #@ read_saif -input ../saif/IIR_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
 #@ create_clock -name MY_CLK CLK
-#@ report_power > $out_dir/report_power_final.txt
+#@ report_power > $out_dir/report_power_final$ext.txt
 #@ # -- End source /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_power.scr
 

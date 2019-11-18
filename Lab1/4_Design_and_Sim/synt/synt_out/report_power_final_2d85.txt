@@ -7,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : IIR_filter
 Version: O-2018.06-SP4
-Date   : Sat Nov 16 20:10:44 2019
+Date   : Mon Nov 18 11:51:23 2019
 ****************************************
 
 
@@ -33,12 +33,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  = 152.4189 uW   (53%)
-  Net Switching Power  = 136.5843 uW   (47%)
+  Cell Internal Power  =   1.0139 mW   (51%)
+  Net Switching Power  = 976.2443 uW   (49%)
                          ---------
-Total Dynamic Power    = 289.0032 uW  (100%)
+Total Dynamic Power    =   1.9902 mW  (100%)
 
-Cell Leakage Power     =  75.7747 uW
+Cell Leakage Power     =  92.0924 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -48,9 +48,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          29.2971            7.0780        4.1127e+03           40.4878  (  11.10%)
+register         154.3885           32.0063        4.1493e+03          190.5441  (   9.15%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational    123.1218          129.5064        7.1662e+04          324.2896  (  88.90%)
+combinational    859.5193          944.2373        8.7943e+04        1.8917e+03  (  90.85%)
 --------------------------------------------------------------------------------------------------
-Total            152.4189 uW       136.5844 uW     7.5775e+04 nW       364.7774 uW
+Total          1.0139e+03 uW       976.2436 uW     9.2092e+04 nW     2.0822e+03 uW
 1
