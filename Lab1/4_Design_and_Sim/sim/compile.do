@@ -10,5 +10,6 @@ add wave sim:/IIR_tb/UUT/filter/reg_ctrl_1/data_out
 add wave sim:/IIR_tb/UUT/filter/reg_ctrl_2/data_in
 add wave sim:/IIR_tb/UUT/filter/reg_ctrl_2/data_out
 add wave sim:/IIR_tb/UUT/filter/reg_in/data_out
+add wave sim:/IIR_tb/TB_IN/sendsim
 radix -decimal
-run 1000ns
+run -all

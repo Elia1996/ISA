@@ -15,11 +15,11 @@ entity IIR_tb_out is
     VOUT   : in std_logic;
     DOUT   : in std_logic_vector(Nb-1 downto 0);
   	VIN: in std_logic;
-  	DIN: in std_logic_vector(Nb-1 downto 0));
-    
+  	DIN: in std_logic_vector(Nb-1 downto 0)); 
 end IIR_tb_out;
 
 architecture beh of IIR_tb_out is
+signal count : integer :=0;
 
 begin  -- beh
 
@@ -32,7 +32,7 @@ begin  -- beh
     variable flag : boolean := false;
 
   begin
-     
+
     if (flag=false) then
 		-- scrivo la prima linea del file csv
 		write(line_csv_out, string'("#VIN,DIN,VOUT,DOUT,DOUT_correct,Error"));
@@ -55,6 +55,7 @@ begin  -- beh
 			write(line_csv_out, string'(","));
       	
 		if (vout = '1') then	
+			count <= count+1;
 		    -- i simply write output of filter in txt file
 			write(line_out, conv_integer(signed(dout)));
 		 

@@ -30,7 +30,12 @@
 # Top level modules:
 # 	IIR_tb
 # vsim -L /software/dk/nangate45/verilog/msim6.2g work.IIR_tb 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
+# File in use by: isa22  Hostname: localhost.localdomain  ProcessID: 11383
+#           Attempting to use alternate file "./wlftWmPQVk".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftWmPQVk instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftWmPQVk instead.
+# Design is being optimized...
 # //  ModelSim SE 6.2g Feb 21 2007 Linux 3.10.0-957.5.1.el7.x86_64
 # //
 # //  Copyright 1991-2007 Mentor Graphics Corporation
@@ -188,7 +193,12 @@
 #         Region: /IIR_tb/UUT/filter_add_1_root_add_111_U1_11
 # Loading work.iir_tb_out(beh)
 # vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftype /IIR_tb/UUT=../netlist/IIR_filter.sdf work.IIR_tb 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
+# File in use by: isa22  Hostname: localhost.localdomain  ProcessID: 11383
+#           Attempting to use alternate file "./wlftPjd97D".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftPjd97D instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftPjd97D instead.
+# Design is being optimized due to module recompilation...
 # Loading work.IIR_tb(fast)
 # Loading work.IIR_filter(fast)
 # Loading /software/dk/nangate45/verilog/msim6.2g.BUF_X1(fast)
