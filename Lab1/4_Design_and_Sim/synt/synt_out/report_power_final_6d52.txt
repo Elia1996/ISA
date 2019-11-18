@@ -1,15 +1,13 @@
 Information: Updating design information... (UID-85)
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: There is no defined clock in the design. (PWR-80)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : IIR_filter_optimized
 Version: O-2018.06-SP4
-Date   : Mon Nov 18 12:58:42 2019
+Date   : Mon Nov 18 18:17:52 2019
 ****************************************
 
 
@@ -35,14 +33,13 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  = 111.6115 uW   (61%)
-  Net Switching Power  =  71.0813 uW   (39%)
+  Cell Internal Power  = 637.1804 uW   (56%)
+  Net Switching Power  = 499.4528 uW   (44%)
                          ---------
-Total Dynamic Power    = 182.6928 uW  (100%)
+Total Dynamic Power    =   1.1366 mW  (100%)
 
-Cell Leakage Power     = 154.8047 uW
+Cell Leakage Power     = 157.2783 uW
 
-Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
 
                  Internal         Switching           Leakage            Total
 Power Group      Power            Power               Power              Power   (   %    )  Attrs
@@ -51,9 +48,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
-sequential        77.4109            2.5764        1.6550e+04           96.5378  (  28.60%)
-combinational     34.2006           68.5047        1.3825e+05          240.9600  (  71.40%)
+register         211.6231           47.2640        1.7088e+04          275.9751  (  21.33%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    425.5569          452.1894        1.4019e+05        1.0179e+03  (  78.67%)
 --------------------------------------------------------------------------------------------------
-Total            111.6115 uW        71.0811 uW     1.5480e+05 nW       337.4979 uW
+Total            637.1801 uW       499.4534 uW     1.5728e+05 nW     1.2939e+03 uW
 1

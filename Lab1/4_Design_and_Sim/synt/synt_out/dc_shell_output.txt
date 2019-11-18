@@ -191,18 +191,12 @@ Current design is now '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR
 Loaded 1 design.
 Current design is 'IIR_filter_optimized'.
 IIR_filter_optimized
-read saif -input ../saif/iir_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
-Error: wrong # args: should be "read channelId ?numChars?" or "read ?-nonewline? channelId"
-	Use error_info for more info. (CMD-013)
-create clock -name MY_CLK CLK
-Error: ambiguous command 'create' matched 35 commands:
-	(create_block_abstraction, create_bsd_patterns, create_bus ...) (CMD-006)
+read_saif -input ../saif/IIR_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
+Warning: There are 33 objects not found during annotation. (PWR-452)
+1
+create_clock -name MY_CLK CLK
+1
 report_power > $out_dir/report_power_final$ext.txt
-dc_shell> 
-Received Signal 1 from: PID=17247 (UID=1024)
+quit
 
-Received Signal 15 from: PID=17247 (UID=1024)
-
-Received Signal 15 from: PID=17247 (UID=1024)
-
-Received Signal 15 from: PID=17247 (UID=1024)
+Thank you...

@@ -7,3 +7,4 @@ add wave *
 add wave /IIR_tb/TB_IN/end_sim_i
 radix -decimal
 run -all
+quit

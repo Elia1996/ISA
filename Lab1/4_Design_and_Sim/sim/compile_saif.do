@@ -7,5 +7,5 @@ vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftype /IIR_tb/UUT=../netlist/
 vcd file ../vcd/IIR_filter_optimized.vcd
 vcd add /IIR_tb/UUT/*
 add wave *
-run 1000ns
+run -all
 quit

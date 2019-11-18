@@ -27,7 +27,7 @@ begin  -- beh
     end if;
     wait for Ts/2;
 	if END_SIM = '1' then
-	      wait;
+		wait;
 	end if;
   end process;
 
