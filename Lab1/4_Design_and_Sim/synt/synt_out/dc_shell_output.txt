@@ -71,9 +71,9 @@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 set_load $OLOAD [all_outputs]
 1
 # compilo
-compile -exact_map > $out_dir/compile.txt
-report_timing > $out_dir/report_timing_optimized.txt
-report_area > $out_dir/report_area_optimized.txt
+compile -exact_map > $out_dir/compile$ext.txt
+report_timing > $out_dir/report_timing$ext.txt
+report_area > $out_dir/report_area$ext.txt
 # salvo la sintesi corrente
 write_partition -type post -destination synt_db
 Information: Use of command 'write_partition' is not recommended. This command will be obsolete in a future release. (INFO-103)
@@ -153,3 +153,56 @@ write_sdc ../netlist/$top_entity.sdc
 quit
 
 Thank you...
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+source variables.scr
+read_verilog -netlist ../netlist/IIR_filter_optimized.v
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Loading verilog file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.v'
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.v
+Verilog netlist reader completed successfully.
+Current design is now '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.db:IIR_filter_optimized'
+Loaded 1 design.
+Current design is 'IIR_filter_optimized'.
+IIR_filter_optimized
+read saif -input ../saif/iir_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
+Error: wrong # args: should be "read channelId ?numChars?" or "read ?-nonewline? channelId"
+	Use error_info for more info. (CMD-013)
+create clock -name MY_CLK CLK
+Error: ambiguous command 'create' matched 35 commands:
+	(create_block_abstraction, create_bsd_patterns, create_bus ...) (CMD-006)
+report_power > $out_dir/report_power_final$ext.txt
+dc_shell> 
+Received Signal 1 from: PID=17247 (UID=1024)
+
+Received Signal 15 from: PID=17247 (UID=1024)
+
+Received Signal 15 from: PID=17247 (UID=1024)
+
+Received Signal 15 from: PID=17247 (UID=1024)

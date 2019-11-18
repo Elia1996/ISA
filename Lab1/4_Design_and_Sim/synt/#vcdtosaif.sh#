@@ -1,4 +1,0 @@
-#!/bin/bash
-vcd2saif -input ../vcd/IIR_filtercase 
-	 _optimized.vcd -output ../saif/iir_filter_optimized.saif
-

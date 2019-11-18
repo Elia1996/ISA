@@ -5,6 +5,6 @@ variable top_entity "IIR_filter_optimized"
 # output directory of syntesys file
 variable out_dir "./synt_out"
 # period of clock (Tmax=1.63ns)
-variable period 1.63
+variable period 6.52
 # estensione file
-variable ext _ciao
+variable ext _6d52

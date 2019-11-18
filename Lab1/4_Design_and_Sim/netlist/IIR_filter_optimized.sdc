@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Fri Nov 15 21:50:18 2019
+# Created by write_sdc on Mon Nov 18 12:58:23 2019
 
 ###################################################################
 set sdc_version 2.1
@@ -19,7 +19,7 @@ set_load -pin_load 3.40189 [get_ports {DOUT[2]}]
 set_load -pin_load 3.40189 [get_ports {DOUT[1]}]
 set_load -pin_load 3.40189 [get_ports {DOUT[0]}]
 set_load -pin_load 3.40189 [get_ports VOUT]
-create_clock [get_ports CLK]  -name MY_CLK  -period 2.9  -waveform {0 1.45}
+create_clock [get_ports CLK]  -name MY_CLK  -period 6.52  -waveform {0 3.26}
 set_clock_uncertainty 0.07  [get_clocks MY_CLK]
 set_input_delay -clock MY_CLK  -max 0.5  [get_ports {DIN[11]}]
 set_input_delay -clock MY_CLK  -max 0.5  [get_ports {DIN[10]}]
