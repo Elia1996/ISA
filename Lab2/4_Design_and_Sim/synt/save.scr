@@ -7,6 +7,7 @@ source variables.scr
 read_file -format ddc {~/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc}
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
+
 # per esportare la netlist in verilog dobbiamo cambiare i
 # nomi secondo le regole del verilog
 change_names -hierarchy -rules verilog

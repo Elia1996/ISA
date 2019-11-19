@@ -27,6 +27,11 @@ set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 #  di un buffer
 set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
 set_load $OLOAD [all_outputs]
+
+#set implementation of Mutiplier as CSA adder
+ungroup -all -flatten
+set implementation DW02_mult/csa [find cell *mult*]
+
 # compilo
 compile -exact_map > $out_dir/compile$ext.txt
 
