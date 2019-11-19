@@ -1,4 +1,4 @@
 #!/bin/bash
-rm -r work
+rm -rf work
 source /software/scripts/init_msim6.2g
 vlib work
