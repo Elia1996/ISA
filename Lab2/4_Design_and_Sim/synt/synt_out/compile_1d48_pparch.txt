@@ -1,0 +1,187 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fpmul_pipeline'
+Information: The register 'I3/SIG_out_round_reg[2]' will be removed. (OPT-1207)
+Information: The register 'I3/SIG_out_round_reg[1]' will be removed. (OPT-1207)
+Information: The register 'I3/SIG_out_round_reg[0]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_reg[1]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_reg[0]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'fpmul_pipeline_DW01_add_0'
+  Processing 'fpmul_pipeline_DW01_add_1'
+  Processing 'fpmul_pipeline_DW01_inc_0'
+  Mapping 'fpmul_pipeline_DW02_mult_0'
+  Processing 'fpmul_pipeline_DW01_add_2'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13    4669.9      0.30       8.4       0.0                          
+    0:00:13    4669.9      0.30       8.4       0.0                          
+    0:00:13    4669.9      0.30       8.4       0.0                          
+    0:00:13    4669.9      0.30       8.4       0.0                          
+    0:00:13    4669.9      0.30       8.4       0.0                          
+    0:00:14    3987.1      0.32       8.1       0.0                          
+    0:00:15    3987.3      0.30       7.8       0.0                          
+    0:00:15    3988.4      0.30       7.5       0.0                          
+    0:00:15    3990.8      0.29       7.4       0.0                          
+    0:00:15    3991.9      0.29       7.4       0.0                          
+    0:00:15    3992.7      0.28       7.3       0.0                          
+    0:00:15    3994.8      0.28       7.0       0.0                          
+    0:00:16    3997.4      0.28       7.0       0.0                          
+    0:00:16    3997.7      0.27       6.8       0.0                          
+    0:00:16    3997.4      0.27       6.4       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    3999.3      0.26       6.3       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:16    3999.3      0.26       6.3       0.0                          
+    0:00:16    4000.4      0.24       6.0       0.0 I2/SIG_in_reg[18]/D      
+    0:00:16    4003.0      0.23       5.7       0.0 I3/SIG_out_round_reg[26]/D
+    0:00:17    4006.2      0.23       5.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:17    4008.9      0.21       5.2       0.0 I3/SIG_out_round_reg[26]/D
+    0:00:17    4016.6      0.20       5.0       0.0 I3/SIG_out_round_reg[26]/D
+    0:00:18    4021.9      0.20       5.0       0.0 I2/SIG_in_reg[18]/D      
+    0:00:18    4026.2      0.20       4.9       0.0 I3/SIG_out_round_reg[26]/D
+    0:00:18    4029.4      0.20       4.5       0.0 I3/SIG_out_round_reg[26]/D
+    0:00:19    4029.6      0.19       4.4       0.0                          
+    0:00:19    4029.6      0.19       4.4       0.0                          
+    0:00:19    4044.5      0.19       4.3       0.0                          
+    0:00:19    4056.8      0.18       4.3       0.0                          
+    0:00:20    4061.0      0.18       4.1       0.0                          
+    0:00:20    4062.4      0.17       4.0       0.0                          
+    0:00:20    4061.3      0.17       3.9       0.0                          
+    0:00:21    4066.6      0.16       3.7       0.0                          
+    0:00:21    4070.6      0.16       3.6       0.0                          
+    0:00:21    4074.1      0.15       3.5       0.0                          
+    0:00:21    4074.3      0.15       3.4       0.0                          
+    0:00:21    4075.9      0.15       3.4       0.0                          
+    0:00:22    4077.8      0.14       3.3       0.0                          
+    0:00:22    4079.1      0.14       3.2       0.0                          
+    0:00:22    4082.0      0.14       3.2       0.0                          
+    0:00:22    4071.7      0.14       3.1       0.0                          
+    0:00:23    4072.7      0.13       3.1       0.0                          
+    0:00:23    4074.1      0.13       3.0       0.0                          
+    0:00:23    4073.3      0.13       3.0       0.0                          
+    0:00:23    4071.1      0.13       2.9       0.0                          
+    0:00:23    4071.1      0.13       2.9       0.0                          
+    0:00:23    4071.4      0.13       2.9       0.0                          
+    0:00:24    4071.9      0.13       2.8       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:24    4071.9      0.13       2.8       0.0                          
+    0:00:24    4071.9      0.13       2.8       0.0                          
+    0:00:24    4054.9      0.13       2.8       0.0                          
+    0:00:24    4045.3      0.13       2.9       0.0                          
+    0:00:24    4044.3      0.13       2.9       0.0                          
+    0:00:24    4044.3      0.13       2.9       0.0                          
+    0:00:24    4044.3      0.13       2.9       0.0                          
+    0:00:24    4044.3      0.13       2.9       0.0                          
+    0:00:24    4044.3      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:24    4036.5      0.13       2.9       0.0                          
+    0:00:25    4037.9      0.12       2.8       0.0 I2/SIG_in_reg[18]/D      
+    0:00:25    4047.2      0.12       2.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:25    4049.3      0.12       2.6       0.0 I2/SIG_in_reg[18]/D      
+    0:00:25    4050.1      0.12       2.6       0.0 I2/SIG_in_reg[18]/D      
+    0:00:26    4051.4      0.12       2.6       0.0 I2/SIG_in_reg[25]/D      
+    0:00:26    4065.8      0.11       2.6       0.0 I2/SIG_in_reg[18]/D      
+    0:00:26    4066.6      0.11       2.5       0.0 I2/SIG_in_reg[25]/D      
+    0:00:26    4071.4      0.11       2.5       0.0 I2/SIG_in_reg[23]/D      
+    0:00:26    4074.9      0.11       2.5       0.0 I2/SIG_in_reg[25]/D      
+    0:00:27    4075.1      0.11       2.4       0.0 I2/SIG_in_reg[25]/D      
+    0:00:27    4078.6      0.11       2.4       0.0 I2/SIG_in_reg[26]/D      
+    0:00:27    4078.8      0.11       2.4       0.0 I2/SIG_in_reg[25]/D      
+    0:00:27    4077.0      0.10       2.3       0.0 I2/SIG_in_reg[26]/D      
+    0:00:27    4078.3      0.10       2.3       0.0 I2/SIG_in_reg[26]/D      
+    0:00:28    4087.9      0.10       2.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:28    4087.9      0.10       2.2       0.0 I2/SIG_in_reg[26]/D      
+    0:00:28    4094.0      0.10       2.3       0.0 I2/SIG_in_reg[26]/D      
+    0:00:28    4095.3      0.10       2.3       0.0 I2/SIG_in_reg[26]/D      
+    0:00:29    4106.5      0.10       2.3       0.0                          
+    0:00:29    4101.2      0.10       2.3       0.0                          
+    0:00:29    4098.0      0.10       2.3       0.0                          
+    0:00:29    4098.8      0.10       2.3       0.0                          
+    0:00:30    4101.7      0.09       2.2       0.0                          
+    0:00:30    4105.4      0.09       2.1       0.0                          
+    0:00:30    4109.2      0.09       2.1       0.0 I2/SIG_in_reg[18]/D      
+    0:00:30    4109.7      0.09       2.1       0.0 I2/SIG_in_reg[18]/D      
+    0:00:30    4114.5      0.09       2.1       0.0 I2/SIG_in_reg[21]/D      
+    0:00:31    4116.6      0.09       2.0       0.0 I2/SIG_in_reg[18]/D      
+    0:00:31    4121.9      0.09       2.0       0.0 I2/SIG_in_reg[18]/D      
+    0:00:31    4123.3      0.09       1.9       0.0 I2/SIG_in_reg[18]/D      
+    0:00:31    4127.0      0.09       1.9       0.0 I2/SIG_in_reg[18]/D      
+    0:00:32    4129.1      0.08       1.9       0.0 I2/SIG_in_reg[18]/D      
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1

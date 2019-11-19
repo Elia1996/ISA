@@ -1,0 +1,12 @@
+# file da sintetizzare
+variable filetosynt "../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/fpmul_pipeline.vhd"
+# top entity
+variable top_entity "fpmul_pipeline"
+# output directory of syntesys file
+variable out_dir "./synt_out"
+# period of clock
+# max clk = 3.9ns
+# we set period equal to 4*Tclkmin
+variable period 1.65
+variable ext _1d65
+variable aarch noarch

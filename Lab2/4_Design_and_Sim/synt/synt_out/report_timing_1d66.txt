@@ -1,0 +1,74 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fpmul_pipeline
+Version: O-2018.06-SP4
+Date   : Tue Nov 19 18:01:49 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/B_SIG_reg[3]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: I2/SIG_in_reg[16]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpmul_pipeline     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/B_SIG_reg[3]/CK (DFF_X2)                             0.00       0.00 r
+  I1/B_SIG_reg[3]/Q (DFF_X2)                              0.14       0.14 r
+  I2/mult_134/b[3] (fpmul_pipeline_DW_mult_uns_1)         0.00       0.14 r
+  I2/mult_134/U2918/ZN (NOR2_X1)                          0.04       0.18 f
+  I2/mult_134/U2899/ZN (NOR2_X1)                          0.06       0.23 r
+  I2/mult_134/U2644/ZN (NAND2_X1)                         0.03       0.27 f
+  I2/mult_134/U2359/ZN (OAI21_X1)                         0.07       0.33 r
+  I2/mult_134/U1854/ZN (INV_X1)                           0.04       0.37 f
+  I2/mult_134/U1712/ZN (OAI21_X1)                         0.06       0.43 r
+  I2/mult_134/U2568/ZN (XNOR2_X1)                         0.08       0.52 r
+  I2/mult_134/U3023/ZN (OAI21_X1)                         0.04       0.56 f
+  I2/mult_134/U2366/Z (XOR2_X1)                           0.07       0.63 f
+  I2/mult_134/U592/S (FA_X1)                              0.13       0.76 f
+  I2/mult_134/U590/CO (FA_X1)                             0.10       0.87 f
+  I2/mult_134/U582/S (FA_X1)                              0.13       1.00 r
+  I2/mult_134/U581/S (FA_X1)                              0.12       1.12 f
+  I2/mult_134/U1788/ZN (NOR2_X2)                          0.06       1.17 r
+  I2/mult_134/U2713/ZN (OAI21_X1)                         0.04       1.21 f
+  I2/mult_134/U1838/ZN (AOI21_X1)                         0.07       1.28 r
+  I2/mult_134/U2847/ZN (OAI21_X1)                         0.04       1.32 f
+  I2/mult_134/U1750/ZN (AOI21_X2)                         0.06       1.38 r
+  I2/mult_134/U3141/ZN (OAI21_X1)                         0.04       1.42 f
+  I2/mult_134/U3117/ZN (AOI21_X1)                         0.04       1.46 r
+  I2/mult_134/U3115/ZN (OAI21_X1)                         0.03       1.49 f
+  I2/mult_134/U2877/ZN (XNOR2_X1)                         0.05       1.54 f
+  I2/mult_134/product[36] (fpmul_pipeline_DW_mult_uns_1)
+                                                          0.00       1.54 f
+  I2/SIG_in_reg[16]/D (DFF_X1)                            0.01       1.55 f
+  data arrival time                                                  1.55
+
+  clock MY_CLK (rise edge)                                1.66       1.66
+  clock network delay (ideal)                             0.00       1.66
+  clock uncertainty                                      -0.07       1.59
+  I2/SIG_in_reg[16]/CK (DFF_X1)                           0.00       1.59 r
+  library setup time                                     -0.04       1.55
+  data required time                                                 1.55
+  --------------------------------------------------------------------------
+  data required time                                                 1.55
+  data arrival time                                                 -1.55
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

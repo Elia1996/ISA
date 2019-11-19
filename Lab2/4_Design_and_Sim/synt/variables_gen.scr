@@ -9,3 +9,4 @@ variable out_dir "./synt_out"
 # we set period equal to 4*Tclkmin
 variable period PERIOD
 variable ext EXTENSION
+variable aarch ARCH
