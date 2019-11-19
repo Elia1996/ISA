@@ -74,6 +74,16 @@ ARCHITECTURE pipeline OF fpmul_pipeline IS
 
 
    -- Component Declarations
+
+
+	COMPONENT : register_nbit IS
+	GENERIC(	N 					: NATURAL:=8);
+	PORT(	data_in 	: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+		EN, CLK, RST_n  : IN STD_LOGIC;
+		data_out 	: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+		data_out_n	: OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0));
+	END COMPONENT;
+
    COMPONENT FPmul_stage1
    PORT (
       FP_A            : IN     std_logic_vector (31 DOWNTO 0);
@@ -158,6 +168,18 @@ ARCHITECTURE pipeline OF fpmul_pipeline IS
 BEGIN
 
    -- Instance port mappings.
+
+
+        REG_A: register_nbit
+	GENERIC MAP (N := 32)
+	PORT MAP (data_in => FP_A,
+		EN => '1',
+		CLK => clk,
+		RST_n => '0'
+		data_out => s_FP_A,
+		data_out_n => open);
+
+
    I1 : FPmul_stage1
       PORT MAP (
          FP_A            => FP_A,
