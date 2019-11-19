@@ -64,16 +64,6 @@ for n=1:(length(xq))
    yy(n+4)=myfi(yy(n+4),12);
 end
 
-
-% yy=fi(yy*2^(new_width-12),1,12,11,'RoundingMethod','Floor','OverflowAction','Wrap');
-
-% % xx = [zeros(1,4) xq]/2^11;
-% % yy = zeros(1,length(xq)+4);
-% % for n=1:(length(xq))
-% %    x_sum = sum(xx(n:n+4).*flip(B));
-% %    yy(n+4) = sum(yy(n:n+1).*flip(A)) + x_sum;
-% % end
-
 figure
 plot(1:1:length(xq),yy(5:end)*2^11,'g*')
 hold on
@@ -82,20 +72,28 @@ hold on
 legend('NEW MODEL','REFERENCE MODEL (C)')
 xlabel("N-th sample");
 ylabel("y[N]");
-title("Comparisons among reference, no optimized and optimized models");
+title("Comparison between C-reference and DF1-optimized models");
+xlim([0 202])
 
 figure
 plot(1:1:length(xq),yq-yy(5:end).*2^11,'*')
+ll=sum(yq-yy(5:end).*2^11)/length(xq);
+line([0 202], [ll ll], 'color','r');
 xlabel("N-th sample");
-ylabel("y_{REFERENCE}[N] - y_{OPTIMIZED}[N]");
-title("Differences between reference and optimized models");
+ylabel("y_{C-REFERENCE}[N] - y_{DF1-OPTIMIZED}[N]");
+title("Differences between C-reference and DF1-optimized model");
+xlim([0 202])
+ylim([-3.5 3.5])
 
 figure
 plot(1:1:length(xq),yq_butter-yy(5:end).*2^11,'*')
+ll=sum(yq_butter-yy(5:end).*2^11)/length(xq);
+line([1 length(xq)], [ll ll]);
 xlabel("N-th sample");
-ylabel("y_{FILTER}[N] - y_{OPTIMIZED}[N]");
-title("Differences between matlab filter-function and optimized model");
-
+ylabel("y_{FILTER}[N] - y_{DF1-OPTIMIZED}[N]");
+title("Differences between matlab filter-function and DF1-optimized model");
+xlim([0 202])
+ylim([-3.5 3.5])
 
 fp=fopen('resultsMATLAB_DF1.txt', 'w');
 fprintf(fp, '%d\n', yy(5:end)*2^11);
