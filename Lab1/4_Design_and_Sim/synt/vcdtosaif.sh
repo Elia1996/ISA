@@ -1,3 +1,4 @@
 #!/bin/bash
-vcd2saif -input ../vcd/IIR_filter.vcd -output ../saif/iir_filter.saif
+source /software/scripts/init_synopsys_64.18
+vcd2saif -input ../vcd/IIR_filter_optimized.vcd -output ../saif/IIR_filter_optimized.saif
 

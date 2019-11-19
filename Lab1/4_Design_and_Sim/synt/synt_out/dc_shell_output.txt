@@ -71,9 +71,9 @@ set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A]
 set_load $OLOAD [all_outputs]
 1
 # compilo
-compile -exact_map > $out_dir/compile.txt
-report_timing > $out_dir/report_timing_optimized.txt
-report_area > $out_dir/report_area_optimized.txt
+compile -exact_map > $out_dir/compile$ext.txt
+report_timing > $out_dir/report_timing$ext.txt
+report_area > $out_dir/report_area$ext.txt
 # salvo la sintesi corrente
 write_partition -type post -destination synt_db
 Information: Use of command 'write_partition' is not recommended. This command will be obsolete in a future release. (INFO-103)
@@ -110,42 +110,35 @@ source variables.scr
 # script per salvare la simulazione in modo da effettuare
 # poi il calcolo della potenza con la switching activity
 # carico l'ultima sintesi
-read_file -format ddc {/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc}
+read_file -format ddc {/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter.ddc}
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
 Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
 Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
   Loading link library 'NangateOpenCellLibrary'
   Loading link library 'gtech'
-Reading ddc file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc'.
-Information: Checking out the license 'DesignWare'. (SEC-104)
-Loaded 36 designs.
-Current design is 'IIR_filter_optimized'.
-IIR_filter_optimized register_nbit_N12_0 register_nbit_N12_8 register_nbit_N12_7 register_nbit_N12_6 register_nbit_N12_5 register_nbit_N17_0 register_nbit_N17_7 register_nbit_N17_6 register_nbit_N17_5 register_nbit_N17_4 register_nbit_N17_3 register_nbit_N12_4 register_nbit_N12_3 register_nbit_N12_2 register_nbit_N17_2 register_nbit_N17_1 register_nbit_N12_1 register_nbit_N1_0 register_nbit_N1_3 register_nbit_N1_2 register_nbit_N1_1 IIR_filter_gen_optimized_DW_mult_tc_0 IIR_filter_gen_optimized_DW_mult_tc_1 IIR_filter_gen_optimized_DW01_add_1 IIR_filter_gen_optimized_DW01_add_0 IIR_filter_gen_optimized_DW01_add_5 IIR_filter_gen_optimized_DW01_add_4 IIR_filter_gen_optimized_DW01_add_3 IIR_filter_gen_optimized_DW01_add_2 IIR_filter_gen_optimized_DW_mult_tc_2 IIR_filter_gen_optimized_DW_mult_tc_3 IIR_filter_gen_optimized_DW_mult_tc_4 IIR_filter_gen_optimized_DW_mult_tc_5 IIR_filter_gen_optimized_DW_mult_tc_6 IIR_filter_gen_optimized
+Error: Cannot read file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter.ddc'. (UID-58)
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
-Information: Updating graph... (UID-83)
-Warning: Design 'IIR_filter_optimized' inherited license information from design 'IIR_filter_gen_optimized_DW_mult_tc_0'. (DDB-74)
-Information: Added key list 'DesignWare' to design 'IIR_filter_optimized'. (DDB-72)
-1
+Error: Current design is not defined. (UID-4)
+0
 # per esportare la netlist in verilog dobbiamo cambiare i
 # nomi secondo le regole del verilog
 change_names -hierarchy -rules verilog
-Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
-1
+Error: Current design is not defined. (UID-4)
+0
 # creiamo il file di ritardi della netlist
 write_sdf ../netlist/$top_entity.sdf
-Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.sdf'. (WT-3)
-Information: Updating design information... (UID-85)
-1
+Error: Current design is not defined. (UID-4)
+0
 # scriviamo la netlist
 write -f verilog -hierarchy -output ../netlist/$top_entity.v
-Writing verilog file '/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/netlist/IIR_filter_optimized.v'.
-1
+Error: No files or designs were specified. (UID-22)
+0
 # salviamo i limiti
 write_sdc ../netlist/$top_entity.sdc
-1
+Error: Current design is not defined. (UID-4)
+0
 # usciamo da synopsys
 # questo dev'essere fatto ogni volta perchè se non si esce
 # le nuove simulazioni vengono fatte anche in base a quelle vecchie

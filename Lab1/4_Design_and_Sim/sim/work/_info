@@ -3,13 +3,13 @@ m255
 cModel Technology
 d/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/sim
 T_opt
-V;fUHRe5C0nZIOl:Qz?::61
+VLbIjT1;K`I<PnPe1F?2MR0
 06 6 4 ./work IIR_tb fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../netlist/IIR_filter_optimized.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /IIR_tb/UUT=../innovus/IIR_filter_optimized.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
-w1574162393
+w1574185555
 DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
 DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
@@ -29,7 +29,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work clk_gen lKk0OVG2Lg8n7K0PBj]Ka2
 l19
 L13
-VYZ[@=J:KK9n8oU7DJ5WL_1
+VF`aVoPd9>bKHhUgada6D<3
 OE;C;6.2g;35
 31
 M3 ieee std_logic_1164
@@ -38,12 +38,12 @@ M1 ieee std_logic_unsigned
 o-93 -work ./work
 tExplicit 1
 vIIR_filter_optimized
-IJ31T0iT4He3OYeTF2Jzkk1
+I7oD_n10^olIn3<;3XH9SN0
 V>NARJNX6^T?`M8`6EdUNz1
-w1574163980
-8../netlist/IIR_filter_optimized.v
-F../netlist/IIR_filter_optimized.v
-L0 8
+w1574187099
+8../innovus/IIR_filter_optimized.v
+F../innovus/IIR_filter_optimized.v
+L0 15
 V>NARJNX6^T?`M8`6EdUNz1
 OE;L;6.2g;35
 r1
@@ -53,7 +53,7 @@ n@i@i@r_filter_optimized
 vIIR_tb
 Iejo1Z?9egfaDaBN6kj0G23
 VeF>1f;3VOAD2W7@8aEoRo2
-w1574162393
+w1574177510
 8../tb/IIR_tb.v
 F../tb/IIR_tb.v
 L0 3
@@ -64,7 +64,7 @@ r1
 o-work ./work
 n@i@i@r_tb
 Eiir_tb_in
-w1574162393
+w1574183521
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP work type_for_iir_optimized_pkg 36nm^Y:Y2d?0m6]VmbKC^3
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
@@ -105,7 +105,7 @@ M1 ieee numeric_std
 o-93 -work ./work
 tExplicit 1
 Eiir_tb_out
-w1574162393
+w1574183521
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP work type_for_iir_optimized_pkg 36nm^Y:Y2d?0m6]VmbKC^3
 DP std textio K]Z^fghZ6B=BjnK5NomDT3
@@ -148,7 +148,7 @@ tExplicit 1
 Ptype_for_iir_optimized_pkg
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-w1574162393
+w1574183521
 8../src/IIR_package_optimized.vhd
 F../src/IIR_package_optimized.vhd
 l0
