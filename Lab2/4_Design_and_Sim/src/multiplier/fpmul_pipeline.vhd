@@ -47,6 +47,8 @@ ARCHITECTURE pipeline OF fpmul_pipeline IS
    -- Architecture declarations
 
    -- Internal signal declarations
+   SIGNAL s_FP_A          : std_logic_vector(31 DOWNTO 0);
+   SIGNAL s_FP_B          : std_logic_vector(31 DOWNTO 0);
    SIGNAL A_EXP           : std_logic_vector(7 DOWNTO 0);
    SIGNAL A_SIG           : std_logic_vector(31 DOWNTO 0);
    SIGNAL B_EXP           : std_logic_vector(7 DOWNTO 0);
@@ -76,7 +78,7 @@ ARCHITECTURE pipeline OF fpmul_pipeline IS
    -- Component Declarations
 
 
-	COMPONENT : register_nbit IS
+	COMPONENT  register_nbit
 	GENERIC(	N 					: NATURAL:=8);
 	PORT(	data_in 	: IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
 		EN, CLK, RST_n  : IN STD_LOGIC;
@@ -170,20 +172,30 @@ BEGIN
    -- Instance port mappings.
 
 
-        REG_A: register_nbit
-	GENERIC MAP (N := 32)
-	PORT MAP (data_in => FP_A,
-		EN => '1',
-		CLK => clk,
-		RST_n => '0'
-		data_out => s_FP_A,
-		data_out_n => open);
+    REG_A: register_nbit
+		GENERIC MAP (N => 32)
+		PORT MAP (data_in => FP_A,
+			EN => '1',
+			CLK => clk,
+			RST_n => '1',
+			data_out => s_FP_A,
+			data_out_n => open
+		);
 
+    REG_B: register_nbit
+		GENERIC MAP (N => 32)
+		PORT MAP (data_in => FP_B,
+			EN => '1',
+			CLK => clk,
+			RST_n => '1',
+			data_out => s_FP_B,
+			data_out_n => open
+		);
 
    I1 : FPmul_stage1
       PORT MAP (
-         FP_A            => FP_A,
-         FP_B            => FP_B,
+         FP_A            => s_FP_A,
+         FP_B            => s_FP_B,
          clk             => clk,
          A_EXP           => A_EXP,
          A_SIG           => A_SIG,

@@ -21,7 +21,7 @@ end mul_pipe_tb_in;
 architecture beh of mul_pipe_tb_in is
 
   constant tco : time := 1 ns;
-	constant N_reg_pipe : integer := 4;
+	constant N_reg_pipe : integer := 5;
 	signal START_READ_CORRECT: std_logic_vector(0 to N_reg_pipe-1);
 	signal s_START_READ_CORRECT: std_logic;
   signal sEndSim : std_logic;
@@ -84,6 +84,6 @@ begin
   end process;
 
   END_SIM <= END_SIM_i(N_reg_pipe); 
- start_read <= START_READ_CORRECT(3); 
+ start_read <= START_READ_CORRECT(N_reg_pipe-1); 
 
 end beh;

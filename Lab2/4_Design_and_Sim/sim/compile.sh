@@ -13,4 +13,4 @@ source /software/scripts/init_msim6.2g
 rm -rf work
 vlib work
 
-vsim -do $1
+vsim -c -do $1
