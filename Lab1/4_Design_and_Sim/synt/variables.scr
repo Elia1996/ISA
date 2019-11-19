@@ -7,5 +7,6 @@ variable out_dir "./synt_out"
 # period of clock
 # max clk = 3.9ns
 # we set period equal to 4*Tclkmin
-variable period 0
+# Tmin=1.21
+variable period 1.21
 variable ext _11d4

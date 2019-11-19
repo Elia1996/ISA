@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov 19 15:34:09 2019
+#@ # Date:   Tue Nov 19 16:47:38 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6653,7 +6653,7 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt.sc
 #@ # period of clock
 #@ # max clk = 3.9ns
 #@ # we set period equal to 4*Tclkmin
-#@ variable period 0
+#@ variable period 1.21
 #@ variable ext _11d4
 #@ # -- End source variables.scr
 

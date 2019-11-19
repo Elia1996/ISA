@@ -1,5 +1,4 @@
 Information: Updating design information... (UID-85)
-Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
  
 ****************************************
 Report : timing
@@ -8,15 +7,15 @@ Report : timing
         -max_paths 1
 Design : IIR_filter_optimized
 Version: O-2018.06-SP4
-Date   : Tue Nov 19 15:36:20 2019
+Date   : Tue Nov 19 16:49:05 2019
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: filter/Reg_x_delay_1/data_out_reg[11]
+  Startpoint: filter/Reg_x_delay_2/data_out_reg[6]
               (rising edge-triggered flip-flop clocked by MY_CLK)
-  Endpoint: filter/Reg_m2/data_out_reg[14]
+  Endpoint: filter/Reg_m3/data_out_reg[16]
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -30,46 +29,46 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  filter/Reg_x_delay_1/data_out_reg[11]/CK (DFF_X1)       0.00       0.00 r
-  filter/Reg_x_delay_1/data_out_reg[11]/QN (DFF_X1)       0.07       0.07 r
-  filter/Reg_x_delay_1/U7/ZN (INV_X2)                     0.04       0.11 f
-  filter/Reg_x_delay_1/data_out[11] (register_nbit_N12_8)
-                                                          0.00       0.11 f
-  filter/mult_120/a[11] (IIR_filter_gen_optimized_DW_mult_tc_10)
-                                                          0.00       0.11 f
-  filter/mult_120/U1170/ZN (XNOR2_X1)                     0.07       0.18 f
-  filter/mult_120/U1004/ZN (OAI22_X1)                     0.07       0.25 r
-  filter/mult_120/U1025/ZN (INV_X1)                       0.03       0.28 f
-  filter/mult_120/U732/ZN (NAND2_X1)                      0.03       0.32 r
-  filter/mult_120/U735/ZN (NAND3_X1)                      0.04       0.35 f
-  filter/mult_120/U288/CO (FA_X1)                         0.09       0.44 f
-  filter/mult_120/U280/S (FA_X1)                          0.14       0.58 r
-  filter/mult_120/U279/S (FA_X1)                          0.11       0.70 f
-  filter/mult_120/U786/ZN (NOR2_X1)                       0.05       0.75 r
-  filter/mult_120/U999/ZN (OAI21_X1)                      0.04       0.78 f
-  filter/mult_120/U1045/ZN (AOI21_X1)                     0.05       0.83 r
-  filter/mult_120/U757/ZN (OAI21_X1)                      0.06       0.89 f
-  filter/mult_120/U1185/ZN (AOI21_X1)                     0.05       0.94 r
-  filter/mult_120/U716/ZN (XNOR2_X1)                      0.06       1.00 r
-  filter/mult_120/product[25] (IIR_filter_gen_optimized_DW_mult_tc_10)
-                                                          0.00       1.00 r
-  filter/Reg_m2/data_in[14] (register_nbit_N17_7)         0.00       1.00 r
-  filter/Reg_m2/U35/ZN (AOI22_X1)                         0.04       1.04 f
-  filter/Reg_m2/U36/ZN (INV_X1)                           0.03       1.07 r
-  filter/Reg_m2/data_out_reg[14]/D (DFF_X1)               0.01       1.07 r
-  data arrival time                                                  1.07
+  filter/Reg_x_delay_2/data_out_reg[6]/CK (DFF_X1)        0.00       0.00 r
+  filter/Reg_x_delay_2/data_out_reg[6]/QN (DFF_X1)        0.07       0.07 f
+  filter/Reg_x_delay_2/U6/ZN (INV_X2)                     0.06       0.13 r
+  filter/Reg_x_delay_2/data_out[6] (register_nbit_N12_7)
+                                                          0.00       0.13 r
+  filter/mult_123/a[6] (IIR_filter_gen_optimized_DW_mult_tc_9)
+                                                          0.00       0.13 r
+  filter/mult_123/U1089/ZN (XNOR2_X1)                     0.08       0.21 r
+  filter/mult_123/U805/ZN (OAI22_X1)                      0.04       0.25 f
+  filter/mult_123/U225/CO (FA_X1)                         0.10       0.35 f
+  filter/mult_123/U219/CO (FA_X1)                         0.09       0.44 f
+  filter/mult_123/U213/S (FA_X1)                          0.13       0.57 r
+  filter/mult_123/U212/S (FA_X1)                          0.12       0.69 f
+  filter/mult_123/U1081/ZN (NAND2_X1)                     0.04       0.73 r
+  filter/mult_123/U1024/ZN (OAI21_X1)                     0.04       0.77 f
+  filter/mult_123/U1040/ZN (AOI21_X1)                     0.04       0.81 r
+  filter/mult_123/U1127/ZN (OAI21_X1)                     0.03       0.84 f
+  filter/mult_123/U733/ZN (AOI21_X1)                      0.06       0.90 r
+  filter/mult_123/U1171/ZN (OAI21_X1)                     0.04       0.94 f
+  filter/mult_123/U1169/ZN (AOI21_X1)                     0.05       0.98 r
+  filter/mult_123/U897/ZN (XNOR2_X1)                      0.06       1.04 r
+  filter/mult_123/product[27] (IIR_filter_gen_optimized_DW_mult_tc_9)
+                                                          0.00       1.04 r
+  filter/Reg_m3/data_in[16] (register_nbit_N17_6)         0.00       1.04 r
+  filter/Reg_m3/U6/ZN (AOI22_X1)                          0.03       1.07 f
+  filter/Reg_m3/U41/ZN (INV_X1)                           0.03       1.10 r
+  filter/Reg_m3/data_out_reg[16]/D (DFF_X1)               0.01       1.11 r
+  data arrival time                                                  1.11
 
-  clock MY_CLK (rise edge)                                0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                      -0.07      -0.07
-  filter/Reg_m2/data_out_reg[14]/CK (DFF_X1)              0.00      -0.07 r
-  library setup time                                     -0.03      -0.10
-  data required time                                                -0.10
+  clock MY_CLK (rise edge)                                1.21       1.21
+  clock network delay (ideal)                             0.00       1.21
+  clock uncertainty                                      -0.07       1.14
+  filter/Reg_m3/data_out_reg[16]/CK (DFF_X1)              0.00       1.14 r
+  library setup time                                     -0.03       1.11
+  data required time                                                 1.11
   --------------------------------------------------------------------------
-  data required time                                                -0.10
-  data arrival time                                                 -1.07
+  data required time                                                 1.11
+  data arrival time                                                 -1.11
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -1.18
+  slack (MET)                                                        0.00
 
 
 1
