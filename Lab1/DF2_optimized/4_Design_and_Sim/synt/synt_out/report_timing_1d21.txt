@@ -1,0 +1,72 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_filter_optimized
+Version: O-2018.06-SP4
+Date   : Tue Nov 19 17:19:12 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: filter/Reg_s_A1_0/data_out_reg[3]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: filter/Reg_m_B1/data_out_reg[8]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_filter_optimized
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  filter/Reg_s_A1_0/data_out_reg[3]/CK (DFF_X1)           0.00       0.00 r
+  filter/Reg_s_A1_0/data_out_reg[3]/Q (DFF_X1)            0.09       0.09 r
+  filter/Reg_s_A1_0/data_out[3] (register_nbit_N13_0)     0.00       0.09 r
+  filter/mult_161/a[3] (IIR_filter_gen_optimized_DW_mult_tc_12)
+                                                          0.00       0.09 r
+  filter/mult_161/U929/Z (BUF_X2)                         0.07       0.16 r
+  filter/mult_161/U943/ZN (XNOR2_X1)                      0.07       0.23 r
+  filter/mult_161/U857/ZN (OAI22_X1)                      0.03       0.27 f
+  filter/mult_161/U261/CO (FA_X1)                         0.09       0.36 f
+  filter/mult_161/U252/CO (FA_X1)                         0.10       0.46 f
+  filter/mult_161/U245/S (FA_X1)                          0.13       0.60 r
+  filter/mult_161/U244/S (FA_X1)                          0.12       0.71 f
+  filter/mult_161/U741/ZN (NOR2_X1)                       0.04       0.76 r
+  filter/mult_161/U1132/ZN (OAI21_X1)                     0.03       0.79 f
+  filter/mult_161/U1160/ZN (AOI21_X1)                     0.05       0.84 r
+  filter/mult_161/U740/ZN (OAI21_X1)                      0.05       0.89 f
+  filter/mult_161/U1213/ZN (INV_X1)                       0.04       0.93 r
+  filter/mult_161/U1197/ZN (OAI21_X1)                     0.03       0.96 f
+  filter/mult_161/U1080/ZN (XNOR2_X1)                     0.06       1.02 f
+  filter/mult_161/product[19] (IIR_filter_gen_optimized_DW_mult_tc_12)
+                                                          0.00       1.02 f
+  filter/Reg_m_B1/data_in[8] (register_nbit_N17_5)        0.00       1.02 f
+  filter/Reg_m_B1/U29/ZN (AOI22_X1)                       0.05       1.07 r
+  filter/Reg_m_B1/U30/ZN (INV_X1)                         0.02       1.10 f
+  filter/Reg_m_B1/data_out_reg[8]/D (DFF_X1)              0.01       1.10 f
+  data arrival time                                                  1.10
+
+  clock MY_CLK (rise edge)                                1.21       1.21
+  clock network delay (ideal)                             0.00       1.21
+  clock uncertainty                                      -0.07       1.14
+  filter/Reg_m_B1/data_out_reg[8]/CK (DFF_X1)             0.00       1.14 r
+  library setup time                                     -0.04       1.10
+  data required time                                                 1.10
+  --------------------------------------------------------------------------
+  data required time                                                 1.10
+  data arrival time                                                 -1.10
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+1

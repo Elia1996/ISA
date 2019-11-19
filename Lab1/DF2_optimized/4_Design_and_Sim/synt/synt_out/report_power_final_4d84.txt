@@ -1,0 +1,56 @@
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : IIR_filter_optimized
+Version: O-2018.06-SP4
+Date   : Tue Nov 19 17:26:15 2019
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+IIR_filter_optimized   5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 649.8809 uW   (56%)
+  Net Switching Power  = 510.1797 uW   (44%)
+                         ---------
+Total Dynamic Power    =   1.1601 mW  (100%)
+
+Cell Leakage Power     = 157.3912 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register         212.6890           48.2109        1.7083e+04          277.9828  (  21.10%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    437.1923          461.9671        1.4031e+05        1.0395e+03  (  78.90%)
+--------------------------------------------------------------------------------------------------
+Total            649.8812 uW       510.1781 uW     1.5739e+05 nW     1.3174e+03 uW
+1
