@@ -24,6 +24,9 @@ ENTITY FPmul_stage2 IS
       isINF_stage1    : IN     std_logic;
       isNaN_stage1    : IN     std_logic;
       isZ_tab_stage1  : IN     std_logic;
+
+	-- ADD REGISTER TO ALL OUTPUT!!
+
       EXP_in          : OUT    std_logic_vector (7 DOWNTO 0);
       EXP_neg_stage2  : OUT    std_logic;
       EXP_pos_stage2  : OUT    std_logic;
@@ -80,6 +83,8 @@ BEGIN
    -- HDL Embedded Text Block 2 inv
    -- eb5 5
    EXP_in_int <= (NOT dout1(7)) & dout1(6 DOWNTO 0);
+	-- ADD REGISTER HERE !!!!
+	
 
    -- HDL Embedded Text Block 3 latch
    -- eb2 2

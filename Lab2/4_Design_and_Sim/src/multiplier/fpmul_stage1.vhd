@@ -172,7 +172,8 @@ BEGIN
 
 
    -- ModuleWare code(v1.1) for instance 'I3' of 'xor'
-   SIGN_out_int <= A_SIGN XOR B_SIGN;
+   SIGN_out_int <= A_SIGN XOR B_SIGN; --ADD REGISTER HERE!!!!
+   -- ADH
 
    -- Instance port mappings.
    I0 : UnpackFP
