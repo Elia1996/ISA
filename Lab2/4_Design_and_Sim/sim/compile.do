@@ -11,7 +11,7 @@ vcom -93 -work ./work ../tb/*.vhd
 vlog -93 -work ./work ../tb/*.v
 vsim -t 1ns -novopt work.mul_pipe_tb
 add wave *
-radix -decimal
+radix -hexadecimal
 run 1000
 
 

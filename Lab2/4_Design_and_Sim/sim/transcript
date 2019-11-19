@@ -68,6 +68,8 @@
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
 # -- Loading package textio
 # -- Loading package std_logic_textio
 # -- Compiling entity mul_pipe_tb_in
@@ -82,11 +84,217 @@
 # vsim -t 1ns -novopt work.mul_pipe_tb 
 # Refreshing ./work.mul_pipe_tb
 # Loading work.mul_pipe_tb
-# ** Error: (vsim-3033) ../tb/mul_pipe_tb.v(16): Instantiation of 'clk_gen' failed. The design unit was not found.
-#         Region: /mul_pipe_tb
-#         Searched libraries:
-#             ./work
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./compile.do PAUSED at line 12
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Refreshing ./work.mul_pipe_tb_in(beh)
+# Loading work.mul_pipe_tb_in(beh)
+# Refreshing ./work.mul_pipe_tb_out(beh)
+# Loading work.mul_pipe_tb_out(beh)
+# Refreshing ./work.fpmul_pipeline(pipeline)
+# Loading work.fpmul_pipeline(pipeline)
+# Refreshing ./work.fpmul_stage1(struct)
+# Loading work.fpmul_stage1(struct)
+# Refreshing ./work.unpackfp(unpackfp)
+# Loading work.unpackfp(unpackfp)
+# Refreshing ./work.fpmul_stage2(struct)
+# Loading work.fpmul_stage2(struct)
+# Refreshing ./work.fpmul_stage3(struct)
+# Loading work.fpmul_stage3(struct)
+# Refreshing ./work.fpnormalize(fpnormalize)
+# Loading work.fpnormalize(fpnormalize)
+# Refreshing ./work.fpround(fpround)
+# Loading work.fpround(fpround)
+# Refreshing ./work.fpmul_stage4(struct)
+# Loading work.fpmul_stage4(struct)
+# Refreshing ./work.packfp(packfp)
+# Loading work.packfp(packfp)
+# hexadecimal
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /mul_pipe_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /mul_pipe_tb/TB_OUT
+# ** Fatal: (vsim-3551) TEXTIO : Read past end of file "../sim_out/fp_prod.hex".
+#    Time: 125 ns  Iteration: 2  Process: /mul_pipe_tb/TB_OUT/line__24 File: ../tb/mul_pipe_tb_out.vhd
+# Fatal error in Process line__24 at ../tb/mul_pipe_tb_out.vhd line 58
+# 
+do compile.do
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity fpnormalize
+# -- Compiling architecture fpnormalize of fpnormalize
+# -- Compiling entity fpround
+# -- Compiling architecture fpround of fpround
+# -- Compiling entity packfp
+# -- Compiling architecture packfp of packfp
+# -- Compiling entity unpackfp
+# -- Compiling architecture unpackfp of unpackfp
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage1
+# -- Compiling architecture struct of fpmul_stage1
+# -- Loading entity unpackfp
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage2
+# -- Compiling architecture struct of fpmul_stage2
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage3
+# -- Compiling architecture struct of fpmul_stage3
+# -- Loading package std_logic_unsigned
+# -- Loading entity fpnormalize
+# -- Loading entity fpround
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_stage4
+# -- Compiling architecture struct of fpmul_stage4
+# -- Loading package std_logic_unsigned
+# -- Loading entity fpnormalize
+# -- Loading entity packfp
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity fpmul_pipeline
+# -- Compiling architecture pipeline of fpmul_pipeline
+# -- Loading entity fpmul_stage1
+# -- Loading entity fpmul_stage2
+# -- Loading entity fpmul_stage3
+# -- Loading entity fpmul_stage4
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity clk_gen
+# -- Compiling architecture beh of clk_gen
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Compiling entity mul_pipe_tb_in
+# -- Compiling architecture beh of mul_pipe_tb_in
+# -- Compiling entity mul_pipe_tb_out
+# -- Compiling architecture beh of mul_pipe_tb_out
+# Model Technology ModelSim SE vlog 6.2g Compiler 2007.02 Feb 21 2007
+# -- Compiling module mul_pipe_tb
+# 
+# Top level modules:
+# 	mul_pipe_tb
+# vsim -t 1ns -novopt work.mul_pipe_tb 
+# Refreshing ./work.mul_pipe_tb
+# Loading work.mul_pipe_tb
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Refreshing ./work.clk_gen(beh)
+# Loading work.clk_gen(beh)
+# Loading /software/mentor/modelsim_6.2g/linux/../std.textio(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_textio(body)
+# Refreshing ./work.mul_pipe_tb_in(beh)
+# Loading work.mul_pipe_tb_in(beh)
+# Refreshing ./work.mul_pipe_tb_out(beh)
+# Loading work.mul_pipe_tb_out(beh)
+# Refreshing ./work.fpmul_pipeline(pipeline)
+# Loading work.fpmul_pipeline(pipeline)
+# Refreshing ./work.fpmul_stage1(struct)
+# Loading work.fpmul_stage1(struct)
+# Refreshing ./work.unpackfp(unpackfp)
+# Loading work.unpackfp(unpackfp)
+# Refreshing ./work.fpmul_stage2(struct)
+# Loading work.fpmul_stage2(struct)
+# Refreshing ./work.fpmul_stage3(struct)
+# Loading work.fpmul_stage3(struct)
+# Refreshing ./work.fpnormalize(fpnormalize)
+# Loading work.fpnormalize(fpnormalize)
+# Refreshing ./work.fpround(fpround)
+# Loading work.fpround(fpround)
+# Refreshing ./work.fpmul_stage4(struct)
+# Loading work.fpmul_stage4(struct)
+# Refreshing ./work.packfp(packfp)
+# Loading work.packfp(packfp)
+# hexadecimal
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i3/i11
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /mul_pipe_tb/TB_OUT
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 2  Instance: /mul_pipe_tb/TB_OUT
+# ** Fatal: (vsim-3551) TEXTIO : Read past end of file "../sim_out/fp_prod.hex".
+#    Time: 125 ns  Iteration: 2  Process: /mul_pipe_tb/TB_OUT/line__24 File: ../tb/mul_pipe_tb_out.vhd
+# Fatal error in Process line__24 at ../tb/mul_pipe_tb_out.vhd line 58
+# 

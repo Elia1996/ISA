@@ -3,7 +3,11 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all; 
 use ieee.std_logic_textio.all;
+<<<<<<< HEAD:Lab2/4_Design_and_Sim/tb/mul_pipe_tb_out.vhd.bak
 --use work.type_for_IIR_pkg.all;
+=======
+use work.type_for_IIR_optimized_pkg.all;
+>>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/tb/IIR_tb_out.vhd
 
 library std;
 use std.textio.all;
@@ -22,18 +26,32 @@ architecture beh of mul_pipe_tb_out is
 begin  -- beh
 
   process (CLK, RST_n)
+<<<<<<< HEAD:Lab2/4_Design_and_Sim/tb/mul_pipe_tb_out.vhd.bak
     file res_fp : text open WRITE_MODE is "../sim_out/fp_results_v.txt";
 	file res_csv_fp : text open WRITE_MODE is "../sim_out/fp_results_v.csv";
 	file res_correct : text open READ_MODE is "../sim_out/fp_prod.hex";
     variable line_out, line_csv_out, line_dout_correct : line;
     variable hex_correct : std_logic_vector(32-1 downto 0);
+=======
+        file res_fp : text open WRITE_MODE is "../sim_out/results_v.txt";
+	file res_csv_fp : text open WRITE_MODE is "../sim_out/results_v.csv";
+	file res_correct : text open READ_MODE is "../sim_out/results_m.txt";
+	file res_c	 : text open READ_MODE is "../sim_out/results_c.txt";
+    variable line_out, line_csv_out, line_dout_correct, line_dout_c : line;
+    variable int_from_m : integer;
+    variable int_from_c : integer;
+>>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/tb/IIR_tb_out.vhd
     variable flag : boolean := false;
 
   begin
      
     if (flag=false) then
 		-- scrivo la prima linea del file csv
+<<<<<<< HEAD:Lab2/4_Design_and_Sim/tb/mul_pipe_tb_out.vhd.bak
 		write(line_csv_out, string'("#A,B,Z,Z_correct,Error"));
+=======
+		write(line_csv_out, string'("#VIN,DIN,VOUT,DOUT,DOUT_correct,DOUT_c,Error"));
+>>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/tb/IIR_tb_out.vhd
 		writeline(res_csv_fp, line_csv_out);
     end if;
 
@@ -56,6 +74,7 @@ begin  -- beh
 		 
 		    -- i read correct value from file by teacher
 			readline(res_correct, line_dout_correct);
+<<<<<<< HEAD:Lab2/4_Design_and_Sim/tb/mul_pipe_tb_out.vhd.bak
 			hread(line_dout_correct, hex_correct);
 			
 			hwrite(line_csv_out, z);
@@ -64,6 +83,22 @@ begin  -- beh
 			write(line_csv_out, string'(","));
 			
 			if (hex_correct = z) then
+=======
+			read(line_dout_correct, int_from_m);
+		
+		    -- i read correct value from file creataed by c code
+			readline(res_c, line_dout_c);
+			read(line_dout_c, int_from_c);
+
+			write(line_csv_out, conv_integer(signed(dout)));
+			write(line_csv_out, string'(","));
+			write(line_csv_out, int_from_m);
+			write(line_csv_out, string'(","));
+			write(line_csv_out, int_from_c);
+			write(line_csv_out, string'(","));
+			
+			if (int_from_m = conv_integer(signed(dout))) then
+>>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/tb/IIR_tb_out.vhd
 				write(line_csv_out,string'("ok,"));
 			else 
 				write(line_csv_out,string'("error,"));

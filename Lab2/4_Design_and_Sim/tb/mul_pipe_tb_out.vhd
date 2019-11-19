@@ -60,7 +60,7 @@ begin  -- beh
 			
 			hwrite(line_csv_out, z);
 			write(line_csv_out, string'(","));
-			write(line_csv_out, hex_correct);
+			hwrite(line_csv_out, hex_correct);
 			write(line_csv_out, string'(","));
 			
 			if (hex_correct = z) then

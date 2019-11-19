@@ -1,5 +1,13 @@
 source variables.scr
+<<<<<<< HEAD:Lab2/4_Design_and_Sim/synt/final_power.scr
 read_verilog -netlist ../netlist/IIR_filter.v
 read_saif -input ../saif/iir_filter.saif -instance IIR_tb/UUT -unit ns -scale 1
 create_clock -name MY_CLK CLK
 report_power > $out_dir/report_power_final.txt
+=======
+read_verilog -netlist ../netlist/IIR_filter_optimized.v
+read_saif -input ../saif/IIR_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
+create_clock -name MY_CLK CLK
+report_power > $out_dir/report_power_final$ext.txt
+quit
+>>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/synt/final_power.scr

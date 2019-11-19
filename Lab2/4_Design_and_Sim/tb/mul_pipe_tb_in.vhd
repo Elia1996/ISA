@@ -27,7 +27,7 @@ architecture beh of mul_pipe_tb_in is
 begin  
 
   process (CLK, RST_n)
-    file fp_in : text open READ_MODE is "../sim_in/fp_square_samples.hex";
+    file fp_in : text open READ_MODE is "../sim_in/fp_samples.hex";
     variable line_in : line;
     variable a_var, b_var: std_logic_vector(32-1 downto 0);
 	 variable space: character;
