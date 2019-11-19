@@ -3,7 +3,7 @@ source variables.scr
 
 # -f indica il formato dei file
 # -lib indica dove mettere i file su cui lavora sysnopsys
-analyze -f vhdl -lib WORK { ../src/IIR_package_optimized.vhd ../src/IIR_filter_optimized.vhd ../src/IIR_filter_gen_optimized.vhd ../src/register_nbit.vhd}
+analyze -f vhdl -lib WORK {../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_pipeline.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/register_nbit.vhd } 
 # preserviamo i nomi delle netlist della rete
 set power_preserve_rtl_hier_names true
 # elaborazione dei file, viene data la top entity
@@ -33,14 +33,6 @@ compile -exact_map > $out_dir/compile$ext.txt
 report_timing > $out_dir/report_timing$ext.txt
 
 report_area > $out_dir/report_area$ext.txt
-<<<<<<< HEAD:Lab2/4_Design_and_Sim/synt/synt.scr
-
-# salvo la sintesi corrente
-write_partition -type post -destination synt_db
-
-quit
-=======
->>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/synt/synt.scr
 
 # salvo la sintesi corrente
 write_partition -type post -destination synt_db

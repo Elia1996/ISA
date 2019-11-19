@@ -3,12 +3,8 @@ source variables.scr
 # poi il calcolo della potenza con la switching activity
 
 # carico l'ultima sintesi
-<<<<<<< HEAD:Lab2/4_Design_and_Sim/synt/save.scr
-read_file -format ddc {/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc}
-=======
-read_file -format ddc {/home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/synt_db/db/post_compile/IIR_filter_optimized.ddc}
->>>>>>> d3febbe8d07f15a3990db78292583672d73a935c:Lab1/4_Design_and_Sim/synt/save.scr
 
+read_file -format ddc {~/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc}
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
 # per esportare la netlist in verilog dobbiamo cambiare i
