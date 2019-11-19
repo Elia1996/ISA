@@ -10,8 +10,10 @@ vcom -93 -work ./work ../src/multiplier/fpmul_pipeline.vhd
 vcom -93 -work ./work ../tb/*.vhd
 vlog -93 -work ./work ../tb/*.v
 vsim -t 1ns -novopt work.mul_pipe_tb
-add wave *
-radix -hexadecimal
-run 1000
+add wave -radix hexadecimal *
+add wave -radix binary sim:/mul_pipe_tb/TB_IN/start_read 
+add wave -radix binary sim:/mul_pipe_tb/TB_IN/start_read_correct
+
+run -all
 
 

@@ -8,6 +8,7 @@ module mul_pipe_tb ();
    wire [31:0] A_s;
    wire [31:0] B_s;
    wire [31:0] Z_s;
+   wire start_read_s;
    wire END_SIM_s;
    // port map
    clk_gen CG(
@@ -20,11 +21,13 @@ module mul_pipe_tb ();
 	     .RST_n(RST_n_s),
 		 .A(A_s),
 		 .B(B_s),
+		 .start_read(start_read_s),
 		 .END_SIM(END_SIM_s));
 
    mul_pipe_tb_out TB_OUT( 
 		 .CLK(CLK_s),
 	     .RST_n(RST_n_s),
+		 .start_read(start_read_s),
 	     .Z(Z_s),
          .A(A_s),
          .B(B_s));

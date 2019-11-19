@@ -12,6 +12,7 @@ entity mul_pipe_tb_out is
   port (
     CLK   	: in std_logic;
     RST_n 	: in std_logic;
+	start_read: in std_logic;
     Z   	: in std_logic_vector(32-1 downto 0);
   	A,B		: in std_logic_vector(32-1 downto 0));
     
@@ -52,24 +53,29 @@ begin  -- beh
       	
 		
 		    -- i simply write output of filter in txt file
-			write(line_out, Z);
+			hwrite(line_out, Z);
 		 
-		    -- i read correct value from file by teacher
-			readline(res_correct, line_dout_correct);
-			hread(line_dout_correct, hex_correct);
-			
-			hwrite(line_csv_out, z);
-			write(line_csv_out, string'(","));
-			hwrite(line_csv_out, hex_correct);
-			write(line_csv_out, string'(","));
-			
-			if (hex_correct = z) then
-				write(line_csv_out,string'("ok,"));
-			else 
-				write(line_csv_out,string'("error,"));
-			end if;
+			if (start_read = '1') then
+				-- i read correct value from file by teacher
+				readline(res_correct, line_dout_correct);
+				hread(line_dout_correct, hex_correct);
+						
 
-			write(line_csv_out,string'(" , , ,"));
+				hwrite(line_csv_out, z);
+				write(line_csv_out, string'(","));
+				hwrite(line_csv_out, hex_correct);
+				write(line_csv_out, string'(","));
+			
+				if (hex_correct = z) then
+					write(line_csv_out,string'("ok,"));
+				else 
+					write(line_csv_out,string'("error,"));
+				end if;
+
+			else
+				
+				write(line_csv_out, string'(" , , ,"));
+			end if;
 		
 		writeline(res_fp, line_out);
 		writeline(res_csv_fp, line_csv_out);
