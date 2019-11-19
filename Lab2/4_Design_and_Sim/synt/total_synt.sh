@@ -1,17 +1,19 @@
 #!/bin/bash
 
+source $BASHLIB
+
 dir=$(pwd)
-# tclk minimo 
-tmin=3.9
-# tclk minimo * 4 
-tmax=15
+t=$1
+ext=$2
+arch=$3
 
 # sintesi dell'architettura col clock massimo per torvare l'area 
-/home/isa22/script/lib/sepf.sh -f $dir/variables_gen.scr -d $dir/variables.scr -p PERIOD,EXTENSION -n $tmin,_period  
+sepf -f $dir/variables_gen.scr -d $dir/variables.scr -p PERIOD,EXTENSION,ARCH -n $t,$ext,$arch 
+if [[ $arch = "noarch" ]]; then
+	cat $dir/synt_gen.scr | sed 's/COMMENT/#/g'  > $dir/synt.scr
+else
+	cat $dir/synt_gen.scr | sed 's/COMMENT//g'  > $dir/synt.scr
+fi
 echo "Creation of variables.scr with tclk min"
 ./synt_save.sh
 
-# sintesi dell'architettura col clock massimo*4 per trovare l'area e la potenza
-/home/isa22/script/lib/sepf.sh -f $dir/variables_gen.scr -d $dir/variables.scr -p PERIOD,EXTENSION -n $tmax,_period_x4  
-echo "Creation of variables.scr with tclk min*4"
-./synt_save.sh

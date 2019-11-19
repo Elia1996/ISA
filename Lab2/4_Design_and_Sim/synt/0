@@ -30,7 +30,7 @@ set_load $OLOAD [all_outputs]
 
 #set implementation of Mutiplier as CSA adder
 ungroup -all -flatten
-set_implementation DW02_mult/$aarch [find cell *mult*]
+COMMENTset_implementation DW02_mult/$aarch [find cell *mult*]
 
 # compilo
 compile -exact_map > $out_dir/compile$ext.txt
