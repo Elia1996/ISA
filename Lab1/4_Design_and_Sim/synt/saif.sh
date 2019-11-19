@@ -2,8 +2,7 @@
 
 source $BASHLIB
 
-tmin=2.85
-tmax=11.40
+
 
 t=$1
 t_ext="_$(echo $t | tr "." "d")"

@@ -4,7 +4,7 @@ variable filetosynt "../src/IIR_package_optimized.vhd ../scr/IIR_filter_optimize
 variable top_entity "IIR_filter_optimized"
 # output directory of syntesys file
 variable out_dir "./synt_out"
-# period of clock (Tmax=1.63ns)
-variable period 6.52
+# period of clock (Tmin=1.21ns)
+variable period 4.84
 # estensione file
-variable ext _6d52
+variable ext _4d84

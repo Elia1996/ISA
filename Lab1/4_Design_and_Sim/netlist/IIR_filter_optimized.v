@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : O-2018.06-SP4
-// Date      : Mon Nov 18 18:17:37 2019
+// Date      : Tue Nov 19 17:25:49 2019
 /////////////////////////////////////////////////////////////
 
 
@@ -198,8 +198,8 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
          filter_add_124_n9, filter_add_124_n8, filter_add_124_n7,
          filter_add_124_n6, filter_add_124_n5, filter_add_124_n4,
          filter_add_124_n3, filter_add_124_n2, filter_add_124_n1,
-         filter_add_99_n2, filter_add_1_root_add_0_root_add_219_n1,
-         filter_add_2_root_add_0_root_add_219_n1,
+         filter_add_99_n2, filter_add_1_root_add_0_root_add_219_n2,
+         filter_add_2_root_add_0_root_add_219_n2,
          filter_add_0_root_add_0_root_add_219_n2, filter_mult_203_n820,
          filter_mult_203_n819, filter_mult_203_n818, filter_mult_203_n817,
          filter_mult_203_n816, filter_mult_203_n815, filter_mult_203_n814,
@@ -1481,69 +1481,69 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         filter_data_in[10]) );
   DFF_X1 filter_Reg_in_data_out_reg_11_ ( .D(filter_Reg_in_n1), .CK(CLK), .Q(
         filter_data_in[11]) );
-  AOI22_X1 filter_Reg_s_A1_0_U31 ( .A1(filter_s_A1[4]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[4]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n21) );
-  INV_X1 filter_Reg_s_A1_0_U30 ( .A(filter_Reg_s_A1_0_n21), .ZN(
-        filter_Reg_s_A1_0_n9) );
-  AOI22_X1 filter_Reg_s_A1_0_U29 ( .A1(filter_s_A1[2]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[2]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n19) );
-  INV_X1 filter_Reg_s_A1_0_U28 ( .A(filter_Reg_s_A1_0_n19), .ZN(
-        filter_Reg_s_A1_0_n11) );
-  AOI22_X1 filter_Reg_s_A1_0_U27 ( .A1(filter_s_A1[1]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[1]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n18) );
-  INV_X1 filter_Reg_s_A1_0_U26 ( .A(filter_Reg_s_A1_0_n18), .ZN(
-        filter_Reg_s_A1_0_n12) );
-  AOI22_X1 filter_Reg_s_A1_0_U25 ( .A1(filter_s_A1[0]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[0]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n15) );
-  INV_X1 filter_Reg_s_A1_0_U24 ( .A(filter_Reg_s_A1_0_n15), .ZN(
-        filter_Reg_s_A1_0_n13) );
-  AOI22_X1 filter_Reg_s_A1_0_U23 ( .A1(filter_s_A1[3]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[3]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n20) );
-  INV_X1 filter_Reg_s_A1_0_U22 ( .A(filter_Reg_s_A1_0_n20), .ZN(
-        filter_Reg_s_A1_0_n10) );
-  INV_X1 filter_Reg_s_A1_0_U21 ( .A(RST_n), .ZN(filter_Reg_s_A1_0_n14) );
-  NOR2_X2 filter_Reg_s_A1_0_U20 ( .A1(filter_REG_CTRL_1_OUT), .A2(
-        filter_Reg_s_A1_0_n14), .ZN(filter_Reg_s_A1_0_n17) );
-  AOI22_X1 filter_Reg_s_A1_0_U19 ( .A1(filter_s_A1[12]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[12]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n29) );
-  INV_X1 filter_Reg_s_A1_0_U18 ( .A(filter_Reg_s_A1_0_n29), .ZN(
-        filter_Reg_s_A1_0_n1) );
-  AOI22_X1 filter_Reg_s_A1_0_U17 ( .A1(filter_s_A1[10]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[10]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n27) );
-  INV_X1 filter_Reg_s_A1_0_U15 ( .A(filter_Reg_s_A1_0_n27), .ZN(
-        filter_Reg_s_A1_0_n3) );
-  AOI22_X1 filter_Reg_s_A1_0_U14 ( .A1(filter_s_A1[9]), .A2(
-        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[9]), .B2(
-        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n26) );
-  INV_X1 filter_Reg_s_A1_0_U13 ( .A(filter_Reg_s_A1_0_n26), .ZN(
-        filter_Reg_s_A1_0_n4) );
-  AOI22_X1 filter_Reg_s_A1_0_U12 ( .A1(filter_s_A1[8]), .A2(
+  AOI22_X1 filter_Reg_s_A1_0_U31 ( .A1(filter_s_A1[8]), .A2(
         filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[8]), .B2(
         filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n25) );
-  INV_X1 filter_Reg_s_A1_0_U11 ( .A(filter_Reg_s_A1_0_n25), .ZN(
+  INV_X1 filter_Reg_s_A1_0_U30 ( .A(filter_Reg_s_A1_0_n25), .ZN(
         filter_Reg_s_A1_0_n5) );
-  AOI22_X1 filter_Reg_s_A1_0_U10 ( .A1(filter_s_A1[6]), .A2(
+  AOI22_X1 filter_Reg_s_A1_0_U29 ( .A1(filter_s_A1[6]), .A2(
         filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[6]), .B2(
         filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n23) );
-  INV_X1 filter_Reg_s_A1_0_U9 ( .A(filter_Reg_s_A1_0_n23), .ZN(
+  INV_X1 filter_Reg_s_A1_0_U28 ( .A(filter_Reg_s_A1_0_n23), .ZN(
         filter_Reg_s_A1_0_n7) );
-  AOI22_X1 filter_Reg_s_A1_0_U8 ( .A1(filter_s_A1[7]), .A2(
+  AOI22_X1 filter_Reg_s_A1_0_U27 ( .A1(filter_s_A1[4]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[4]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n21) );
+  INV_X1 filter_Reg_s_A1_0_U26 ( .A(filter_Reg_s_A1_0_n21), .ZN(
+        filter_Reg_s_A1_0_n9) );
+  AOI22_X1 filter_Reg_s_A1_0_U25 ( .A1(filter_s_A1[2]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[2]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n19) );
+  INV_X1 filter_Reg_s_A1_0_U24 ( .A(filter_Reg_s_A1_0_n19), .ZN(
+        filter_Reg_s_A1_0_n11) );
+  AOI22_X1 filter_Reg_s_A1_0_U23 ( .A1(filter_s_A1[1]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[1]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n18) );
+  INV_X1 filter_Reg_s_A1_0_U22 ( .A(filter_Reg_s_A1_0_n18), .ZN(
+        filter_Reg_s_A1_0_n12) );
+  AOI22_X1 filter_Reg_s_A1_0_U21 ( .A1(filter_s_A1[0]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[0]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n15) );
+  INV_X1 filter_Reg_s_A1_0_U20 ( .A(filter_Reg_s_A1_0_n15), .ZN(
+        filter_Reg_s_A1_0_n13) );
+  AOI22_X1 filter_Reg_s_A1_0_U19 ( .A1(filter_s_A1[7]), .A2(
         filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[7]), .B2(
         filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n24) );
-  INV_X1 filter_Reg_s_A1_0_U7 ( .A(filter_Reg_s_A1_0_n24), .ZN(
+  INV_X1 filter_Reg_s_A1_0_U18 ( .A(filter_Reg_s_A1_0_n24), .ZN(
         filter_Reg_s_A1_0_n6) );
-  AOI22_X1 filter_Reg_s_A1_0_U6 ( .A1(filter_s_A1[5]), .A2(
+  AOI22_X1 filter_Reg_s_A1_0_U17 ( .A1(filter_s_A1[5]), .A2(
         filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[5]), .B2(
         filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n22) );
-  INV_X1 filter_Reg_s_A1_0_U5 ( .A(filter_Reg_s_A1_0_n22), .ZN(
+  INV_X1 filter_Reg_s_A1_0_U15 ( .A(filter_Reg_s_A1_0_n22), .ZN(
         filter_Reg_s_A1_0_n8) );
+  AOI22_X1 filter_Reg_s_A1_0_U14 ( .A1(filter_s_A1[3]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[3]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n20) );
+  INV_X1 filter_Reg_s_A1_0_U13 ( .A(filter_Reg_s_A1_0_n20), .ZN(
+        filter_Reg_s_A1_0_n10) );
+  INV_X1 filter_Reg_s_A1_0_U12 ( .A(RST_n), .ZN(filter_Reg_s_A1_0_n14) );
+  NOR2_X2 filter_Reg_s_A1_0_U11 ( .A1(filter_REG_CTRL_1_OUT), .A2(
+        filter_Reg_s_A1_0_n14), .ZN(filter_Reg_s_A1_0_n17) );
+  AOI22_X1 filter_Reg_s_A1_0_U10 ( .A1(filter_s_A1[12]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[12]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n29) );
+  INV_X1 filter_Reg_s_A1_0_U9 ( .A(filter_Reg_s_A1_0_n29), .ZN(
+        filter_Reg_s_A1_0_n1) );
+  AOI22_X1 filter_Reg_s_A1_0_U8 ( .A1(filter_s_A1[10]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[10]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n27) );
+  INV_X1 filter_Reg_s_A1_0_U7 ( .A(filter_Reg_s_A1_0_n27), .ZN(
+        filter_Reg_s_A1_0_n3) );
+  AOI22_X1 filter_Reg_s_A1_0_U6 ( .A1(filter_s_A1[9]), .A2(
+        filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[9]), .B2(
+        filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n26) );
+  INV_X1 filter_Reg_s_A1_0_U5 ( .A(filter_Reg_s_A1_0_n26), .ZN(
+        filter_Reg_s_A1_0_n4) );
   AOI22_X1 filter_Reg_s_A1_0_U4 ( .A1(filter_s_A1[11]), .A2(
         filter_Reg_s_A1_0_n16), .B1(filter_s_A1_reg[11]), .B2(
         filter_Reg_s_A1_0_n17), .ZN(filter_Reg_s_A1_0_n28) );
@@ -1752,70 +1752,74 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_s_A1_2_data_out_reg_12_ ( .D(filter_Reg_s_A1_2_n1), .CK(
         CLK), .Q(filter_s_A1_reg_delay2[12]) );
   INV_X1 filter_Reg_m_A1_U39 ( .A(RST_n), .ZN(filter_Reg_m_A1_n18) );
-  AOI22_X1 filter_Reg_m_A1_U38 ( .A1(filter_m_A1_tmp[15]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[4]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n25) );
-  INV_X1 filter_Reg_m_A1_U37 ( .A(filter_Reg_m_A1_n25), .ZN(
-        filter_Reg_m_A1_n13) );
-  AOI22_X1 filter_Reg_m_A1_U36 ( .A1(filter_m_A1_tmp[14]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[3]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n24) );
-  INV_X1 filter_Reg_m_A1_U35 ( .A(filter_Reg_m_A1_n24), .ZN(
-        filter_Reg_m_A1_n14) );
-  AOI22_X1 filter_Reg_m_A1_U34 ( .A1(filter_m_A1_tmp[13]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[2]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n23) );
-  INV_X1 filter_Reg_m_A1_U33 ( .A(filter_Reg_m_A1_n23), .ZN(
-        filter_Reg_m_A1_n15) );
-  AOI22_X1 filter_Reg_m_A1_U32 ( .A1(filter_m_A1_tmp[12]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[1]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n22) );
-  INV_X1 filter_Reg_m_A1_U31 ( .A(filter_Reg_m_A1_n22), .ZN(
-        filter_Reg_m_A1_n16) );
-  AOI22_X1 filter_Reg_m_A1_U30 ( .A1(filter_m_A1_tmp[11]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[0]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n19) );
-  INV_X1 filter_Reg_m_A1_U29 ( .A(filter_Reg_m_A1_n19), .ZN(
-        filter_Reg_m_A1_n17) );
-  AOI22_X1 filter_Reg_m_A1_U28 ( .A1(filter_m_A1_tmp[26]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[15]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n36) );
-  INV_X1 filter_Reg_m_A1_U27 ( .A(filter_Reg_m_A1_n36), .ZN(filter_Reg_m_A1_n2) );
-  AOI22_X1 filter_Reg_m_A1_U26 ( .A1(filter_m_A1_tmp[25]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[14]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n35) );
-  INV_X1 filter_Reg_m_A1_U25 ( .A(filter_Reg_m_A1_n35), .ZN(filter_Reg_m_A1_n3) );
-  AOI22_X1 filter_Reg_m_A1_U24 ( .A1(filter_m_A1_tmp[24]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[13]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n34) );
-  INV_X1 filter_Reg_m_A1_U23 ( .A(filter_Reg_m_A1_n34), .ZN(filter_Reg_m_A1_n4) );
-  AOI22_X1 filter_Reg_m_A1_U22 ( .A1(filter_m_A1_tmp[23]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[12]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n33) );
-  INV_X1 filter_Reg_m_A1_U21 ( .A(filter_Reg_m_A1_n33), .ZN(filter_Reg_m_A1_n5) );
-  AOI22_X1 filter_Reg_m_A1_U19 ( .A1(filter_m_A1_tmp[22]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[11]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n32) );
-  INV_X1 filter_Reg_m_A1_U18 ( .A(filter_Reg_m_A1_n32), .ZN(filter_Reg_m_A1_n6) );
-  AOI22_X1 filter_Reg_m_A1_U17 ( .A1(filter_m_A1_tmp[21]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[10]), .B2(
-        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n31) );
-  INV_X1 filter_Reg_m_A1_U16 ( .A(filter_Reg_m_A1_n31), .ZN(filter_Reg_m_A1_n7) );
-  AOI22_X1 filter_Reg_m_A1_U15 ( .A1(filter_m_A1_tmp[20]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[9]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n30) );
-  INV_X1 filter_Reg_m_A1_U14 ( .A(filter_Reg_m_A1_n30), .ZN(filter_Reg_m_A1_n8) );
-  AOI22_X1 filter_Reg_m_A1_U13 ( .A1(filter_m_A1_tmp[19]), .A2(
-        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[8]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n29) );
-  INV_X1 filter_Reg_m_A1_U12 ( .A(filter_Reg_m_A1_n29), .ZN(filter_Reg_m_A1_n9) );
-  AOI22_X1 filter_Reg_m_A1_U11 ( .A1(filter_m_A1_tmp[18]), .A2(
+  AOI22_X1 filter_Reg_m_A1_U38 ( .A1(filter_m_A1_tmp[18]), .A2(
         filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[7]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n28) );
-  INV_X1 filter_Reg_m_A1_U10 ( .A(filter_Reg_m_A1_n28), .ZN(
+  INV_X1 filter_Reg_m_A1_U37 ( .A(filter_Reg_m_A1_n28), .ZN(
         filter_Reg_m_A1_n10) );
-  AOI22_X1 filter_Reg_m_A1_U9 ( .A1(filter_m_A1_tmp[17]), .A2(
+  AOI22_X1 filter_Reg_m_A1_U36 ( .A1(filter_m_A1_tmp[17]), .A2(
         filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[6]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n27) );
-  INV_X1 filter_Reg_m_A1_U8 ( .A(filter_Reg_m_A1_n27), .ZN(filter_Reg_m_A1_n11) );
-  AOI22_X1 filter_Reg_m_A1_U7 ( .A1(filter_m_A1_tmp[16]), .A2(
+  INV_X1 filter_Reg_m_A1_U35 ( .A(filter_Reg_m_A1_n27), .ZN(
+        filter_Reg_m_A1_n11) );
+  AOI22_X1 filter_Reg_m_A1_U34 ( .A1(filter_m_A1_tmp[16]), .A2(
         filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[5]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n26) );
-  INV_X1 filter_Reg_m_A1_U6 ( .A(filter_Reg_m_A1_n26), .ZN(filter_Reg_m_A1_n12) );
-  AOI22_X1 filter_Reg_m_A1_U5 ( .A1(filter_m_A1_tmp[27]), .A2(
+  INV_X1 filter_Reg_m_A1_U33 ( .A(filter_Reg_m_A1_n26), .ZN(
+        filter_Reg_m_A1_n12) );
+  AOI22_X1 filter_Reg_m_A1_U32 ( .A1(filter_m_A1_tmp[15]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[4]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n25) );
+  INV_X1 filter_Reg_m_A1_U31 ( .A(filter_Reg_m_A1_n25), .ZN(
+        filter_Reg_m_A1_n13) );
+  AOI22_X1 filter_Reg_m_A1_U30 ( .A1(filter_m_A1_tmp[14]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[3]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n24) );
+  INV_X1 filter_Reg_m_A1_U29 ( .A(filter_Reg_m_A1_n24), .ZN(
+        filter_Reg_m_A1_n14) );
+  AOI22_X1 filter_Reg_m_A1_U28 ( .A1(filter_m_A1_tmp[13]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[2]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n23) );
+  INV_X1 filter_Reg_m_A1_U27 ( .A(filter_Reg_m_A1_n23), .ZN(
+        filter_Reg_m_A1_n15) );
+  AOI22_X1 filter_Reg_m_A1_U26 ( .A1(filter_m_A1_tmp[12]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[1]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n22) );
+  INV_X1 filter_Reg_m_A1_U25 ( .A(filter_Reg_m_A1_n22), .ZN(
+        filter_Reg_m_A1_n16) );
+  AOI22_X1 filter_Reg_m_A1_U24 ( .A1(filter_m_A1_tmp[11]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[0]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n19) );
+  INV_X1 filter_Reg_m_A1_U23 ( .A(filter_Reg_m_A1_n19), .ZN(
+        filter_Reg_m_A1_n17) );
+  AOI22_X1 filter_Reg_m_A1_U22 ( .A1(filter_m_A1_tmp[27]), .A2(
         filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[16]), .B2(
         filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n37) );
-  INV_X1 filter_Reg_m_A1_U4 ( .A(filter_Reg_m_A1_n37), .ZN(filter_Reg_m_A1_n1)
+  INV_X1 filter_Reg_m_A1_U21 ( .A(filter_Reg_m_A1_n37), .ZN(filter_Reg_m_A1_n1) );
+  AOI22_X1 filter_Reg_m_A1_U19 ( .A1(filter_m_A1_tmp[26]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[15]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n36) );
+  INV_X1 filter_Reg_m_A1_U18 ( .A(filter_Reg_m_A1_n36), .ZN(filter_Reg_m_A1_n2) );
+  AOI22_X1 filter_Reg_m_A1_U17 ( .A1(filter_m_A1_tmp[25]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[14]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n35) );
+  INV_X1 filter_Reg_m_A1_U16 ( .A(filter_Reg_m_A1_n35), .ZN(filter_Reg_m_A1_n3) );
+  AOI22_X1 filter_Reg_m_A1_U15 ( .A1(filter_m_A1_tmp[24]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[13]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n34) );
+  INV_X1 filter_Reg_m_A1_U14 ( .A(filter_Reg_m_A1_n34), .ZN(filter_Reg_m_A1_n4) );
+  AOI22_X1 filter_Reg_m_A1_U13 ( .A1(filter_m_A1_tmp[23]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[12]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n33) );
+  INV_X1 filter_Reg_m_A1_U12 ( .A(filter_Reg_m_A1_n33), .ZN(filter_Reg_m_A1_n5) );
+  AOI22_X1 filter_Reg_m_A1_U11 ( .A1(filter_m_A1_tmp[22]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[11]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n32) );
+  INV_X1 filter_Reg_m_A1_U10 ( .A(filter_Reg_m_A1_n32), .ZN(filter_Reg_m_A1_n6) );
+  AOI22_X1 filter_Reg_m_A1_U9 ( .A1(filter_m_A1_tmp[21]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[10]), .B2(
+        filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n31) );
+  INV_X1 filter_Reg_m_A1_U8 ( .A(filter_Reg_m_A1_n31), .ZN(filter_Reg_m_A1_n7)
+         );
+  AOI22_X1 filter_Reg_m_A1_U7 ( .A1(filter_m_A1_tmp[20]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[9]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n30) );
+  INV_X1 filter_Reg_m_A1_U6 ( .A(filter_Reg_m_A1_n30), .ZN(filter_Reg_m_A1_n8)
+         );
+  AOI22_X1 filter_Reg_m_A1_U5 ( .A1(filter_m_A1_tmp[19]), .A2(
+        filter_Reg_m_A1_n20), .B1(filter_m_A1_reg[8]), .B2(filter_Reg_m_A1_n21), .ZN(filter_Reg_m_A1_n29) );
+  INV_X1 filter_Reg_m_A1_U4 ( .A(filter_Reg_m_A1_n29), .ZN(filter_Reg_m_A1_n9)
          );
   NOR2_X2 filter_Reg_m_A1_U3 ( .A1(filter_REG_CTRL_1_OUT), .A2(
         filter_Reg_m_A1_n18), .ZN(filter_Reg_m_A1_n21) );
@@ -1856,70 +1860,74 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_m_A1_data_out_reg_16_ ( .D(filter_Reg_m_A1_n1), .CK(CLK), 
         .Q(filter_m_A1_reg[16]) );
   INV_X1 filter_Reg_m_A2_U39 ( .A(RST_n), .ZN(filter_Reg_m_A2_n18) );
-  AOI22_X1 filter_Reg_m_A2_U38 ( .A1(filter_m_A2_tmp[15]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[4]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n50) );
-  INV_X1 filter_Reg_m_A2_U37 ( .A(filter_Reg_m_A2_n50), .ZN(
-        filter_Reg_m_A2_n13) );
-  AOI22_X1 filter_Reg_m_A2_U36 ( .A1(filter_m_A2_tmp[14]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[3]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n51) );
-  INV_X1 filter_Reg_m_A2_U35 ( .A(filter_Reg_m_A2_n51), .ZN(
-        filter_Reg_m_A2_n14) );
-  AOI22_X1 filter_Reg_m_A2_U34 ( .A1(filter_m_A2_tmp[13]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[2]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n52) );
-  INV_X1 filter_Reg_m_A2_U33 ( .A(filter_Reg_m_A2_n52), .ZN(
-        filter_Reg_m_A2_n15) );
-  AOI22_X1 filter_Reg_m_A2_U32 ( .A1(filter_m_A2_tmp[12]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[1]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n53) );
-  INV_X1 filter_Reg_m_A2_U31 ( .A(filter_Reg_m_A2_n53), .ZN(
-        filter_Reg_m_A2_n16) );
-  AOI22_X1 filter_Reg_m_A2_U30 ( .A1(filter_m_A2_tmp[11]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[0]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n56) );
-  INV_X1 filter_Reg_m_A2_U29 ( .A(filter_Reg_m_A2_n56), .ZN(
-        filter_Reg_m_A2_n17) );
-  AOI22_X1 filter_Reg_m_A2_U28 ( .A1(filter_m_A2_tmp[26]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[15]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n39) );
-  INV_X1 filter_Reg_m_A2_U27 ( .A(filter_Reg_m_A2_n39), .ZN(filter_Reg_m_A2_n2) );
-  AOI22_X1 filter_Reg_m_A2_U26 ( .A1(filter_m_A2_tmp[25]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[14]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n40) );
-  INV_X1 filter_Reg_m_A2_U25 ( .A(filter_Reg_m_A2_n40), .ZN(filter_Reg_m_A2_n3) );
-  AOI22_X1 filter_Reg_m_A2_U24 ( .A1(filter_m_A2_tmp[24]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[13]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n41) );
-  INV_X1 filter_Reg_m_A2_U23 ( .A(filter_Reg_m_A2_n41), .ZN(filter_Reg_m_A2_n4) );
-  AOI22_X1 filter_Reg_m_A2_U22 ( .A1(filter_m_A2_tmp[23]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[12]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n42) );
-  INV_X1 filter_Reg_m_A2_U21 ( .A(filter_Reg_m_A2_n42), .ZN(filter_Reg_m_A2_n5) );
-  AOI22_X1 filter_Reg_m_A2_U19 ( .A1(filter_m_A2_tmp[22]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[11]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n43) );
-  INV_X1 filter_Reg_m_A2_U18 ( .A(filter_Reg_m_A2_n43), .ZN(filter_Reg_m_A2_n6) );
-  AOI22_X1 filter_Reg_m_A2_U17 ( .A1(filter_m_A2_tmp[21]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[10]), .B2(
-        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n44) );
-  INV_X1 filter_Reg_m_A2_U16 ( .A(filter_Reg_m_A2_n44), .ZN(filter_Reg_m_A2_n7) );
-  AOI22_X1 filter_Reg_m_A2_U15 ( .A1(filter_m_A2_tmp[20]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[9]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n45) );
-  INV_X1 filter_Reg_m_A2_U14 ( .A(filter_Reg_m_A2_n45), .ZN(filter_Reg_m_A2_n8) );
-  AOI22_X1 filter_Reg_m_A2_U13 ( .A1(filter_m_A2_tmp[19]), .A2(
-        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[8]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n46) );
-  INV_X1 filter_Reg_m_A2_U12 ( .A(filter_Reg_m_A2_n46), .ZN(filter_Reg_m_A2_n9) );
-  AOI22_X1 filter_Reg_m_A2_U11 ( .A1(filter_m_A2_tmp[18]), .A2(
+  AOI22_X1 filter_Reg_m_A2_U38 ( .A1(filter_m_A2_tmp[18]), .A2(
         filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[7]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n47) );
-  INV_X1 filter_Reg_m_A2_U10 ( .A(filter_Reg_m_A2_n47), .ZN(
+  INV_X1 filter_Reg_m_A2_U37 ( .A(filter_Reg_m_A2_n47), .ZN(
         filter_Reg_m_A2_n10) );
-  AOI22_X1 filter_Reg_m_A2_U9 ( .A1(filter_m_A2_tmp[17]), .A2(
+  AOI22_X1 filter_Reg_m_A2_U36 ( .A1(filter_m_A2_tmp[17]), .A2(
         filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[6]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n48) );
-  INV_X1 filter_Reg_m_A2_U8 ( .A(filter_Reg_m_A2_n48), .ZN(filter_Reg_m_A2_n11) );
-  AOI22_X1 filter_Reg_m_A2_U7 ( .A1(filter_m_A2_tmp[16]), .A2(
+  INV_X1 filter_Reg_m_A2_U35 ( .A(filter_Reg_m_A2_n48), .ZN(
+        filter_Reg_m_A2_n11) );
+  AOI22_X1 filter_Reg_m_A2_U34 ( .A1(filter_m_A2_tmp[16]), .A2(
         filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[5]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n49) );
-  INV_X1 filter_Reg_m_A2_U6 ( .A(filter_Reg_m_A2_n49), .ZN(filter_Reg_m_A2_n12) );
-  AOI22_X1 filter_Reg_m_A2_U5 ( .A1(filter_m_A2_tmp[27]), .A2(
+  INV_X1 filter_Reg_m_A2_U33 ( .A(filter_Reg_m_A2_n49), .ZN(
+        filter_Reg_m_A2_n12) );
+  AOI22_X1 filter_Reg_m_A2_U32 ( .A1(filter_m_A2_tmp[15]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[4]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n50) );
+  INV_X1 filter_Reg_m_A2_U31 ( .A(filter_Reg_m_A2_n50), .ZN(
+        filter_Reg_m_A2_n13) );
+  AOI22_X1 filter_Reg_m_A2_U30 ( .A1(filter_m_A2_tmp[14]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[3]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n51) );
+  INV_X1 filter_Reg_m_A2_U29 ( .A(filter_Reg_m_A2_n51), .ZN(
+        filter_Reg_m_A2_n14) );
+  AOI22_X1 filter_Reg_m_A2_U28 ( .A1(filter_m_A2_tmp[13]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[2]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n52) );
+  INV_X1 filter_Reg_m_A2_U27 ( .A(filter_Reg_m_A2_n52), .ZN(
+        filter_Reg_m_A2_n15) );
+  AOI22_X1 filter_Reg_m_A2_U26 ( .A1(filter_m_A2_tmp[12]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[1]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n53) );
+  INV_X1 filter_Reg_m_A2_U25 ( .A(filter_Reg_m_A2_n53), .ZN(
+        filter_Reg_m_A2_n16) );
+  AOI22_X1 filter_Reg_m_A2_U24 ( .A1(filter_m_A2_tmp[11]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[0]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n56) );
+  INV_X1 filter_Reg_m_A2_U23 ( .A(filter_Reg_m_A2_n56), .ZN(
+        filter_Reg_m_A2_n17) );
+  AOI22_X1 filter_Reg_m_A2_U22 ( .A1(filter_m_A2_tmp[27]), .A2(
         filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[16]), .B2(
         filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n38) );
-  INV_X1 filter_Reg_m_A2_U4 ( .A(filter_Reg_m_A2_n38), .ZN(filter_Reg_m_A2_n1)
+  INV_X1 filter_Reg_m_A2_U21 ( .A(filter_Reg_m_A2_n38), .ZN(filter_Reg_m_A2_n1) );
+  AOI22_X1 filter_Reg_m_A2_U19 ( .A1(filter_m_A2_tmp[26]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[15]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n39) );
+  INV_X1 filter_Reg_m_A2_U18 ( .A(filter_Reg_m_A2_n39), .ZN(filter_Reg_m_A2_n2) );
+  AOI22_X1 filter_Reg_m_A2_U17 ( .A1(filter_m_A2_tmp[25]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[14]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n40) );
+  INV_X1 filter_Reg_m_A2_U16 ( .A(filter_Reg_m_A2_n40), .ZN(filter_Reg_m_A2_n3) );
+  AOI22_X1 filter_Reg_m_A2_U15 ( .A1(filter_m_A2_tmp[24]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[13]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n41) );
+  INV_X1 filter_Reg_m_A2_U14 ( .A(filter_Reg_m_A2_n41), .ZN(filter_Reg_m_A2_n4) );
+  AOI22_X1 filter_Reg_m_A2_U13 ( .A1(filter_m_A2_tmp[23]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[12]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n42) );
+  INV_X1 filter_Reg_m_A2_U12 ( .A(filter_Reg_m_A2_n42), .ZN(filter_Reg_m_A2_n5) );
+  AOI22_X1 filter_Reg_m_A2_U11 ( .A1(filter_m_A2_tmp[22]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[11]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n43) );
+  INV_X1 filter_Reg_m_A2_U10 ( .A(filter_Reg_m_A2_n43), .ZN(filter_Reg_m_A2_n6) );
+  AOI22_X1 filter_Reg_m_A2_U9 ( .A1(filter_m_A2_tmp[21]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[10]), .B2(
+        filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n44) );
+  INV_X1 filter_Reg_m_A2_U8 ( .A(filter_Reg_m_A2_n44), .ZN(filter_Reg_m_A2_n7)
+         );
+  AOI22_X1 filter_Reg_m_A2_U7 ( .A1(filter_m_A2_tmp[20]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[9]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n45) );
+  INV_X1 filter_Reg_m_A2_U6 ( .A(filter_Reg_m_A2_n45), .ZN(filter_Reg_m_A2_n8)
+         );
+  AOI22_X1 filter_Reg_m_A2_U5 ( .A1(filter_m_A2_tmp[19]), .A2(
+        filter_Reg_m_A2_n55), .B1(filter_m_A2_reg[8]), .B2(filter_Reg_m_A2_n54), .ZN(filter_Reg_m_A2_n46) );
+  INV_X1 filter_Reg_m_A2_U4 ( .A(filter_Reg_m_A2_n46), .ZN(filter_Reg_m_A2_n9)
          );
   NOR2_X2 filter_Reg_m_A2_U3 ( .A1(filter_REG_CTRL_1_OUT), .A2(
         filter_Reg_m_A2_n18), .ZN(filter_Reg_m_A2_n54) );
@@ -1960,65 +1968,71 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_m_A2_data_out_reg_16_ ( .D(filter_Reg_m_A2_n1), .CK(CLK), 
         .Q(filter_m_A2_reg[16]) );
   INV_X1 filter_Reg_m_B0_U39 ( .A(RST_n), .ZN(filter_Reg_m_B0_n18) );
-  AOI22_X1 filter_Reg_m_B0_U38 ( .A1(filter_m_B0_tmp[15]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U38 ( .A1(filter_m_B0_tmp[18]), .A2(
+        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[7]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n47) );
+  INV_X1 filter_Reg_m_B0_U37 ( .A(filter_Reg_m_B0_n47), .ZN(
+        filter_Reg_m_B0_n10) );
+  AOI22_X1 filter_Reg_m_B0_U36 ( .A1(filter_m_B0_tmp[17]), .A2(
+        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[6]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n48) );
+  INV_X1 filter_Reg_m_B0_U35 ( .A(filter_Reg_m_B0_n48), .ZN(
+        filter_Reg_m_B0_n11) );
+  AOI22_X1 filter_Reg_m_B0_U34 ( .A1(filter_m_B0_tmp[16]), .A2(
+        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[5]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n49) );
+  INV_X1 filter_Reg_m_B0_U33 ( .A(filter_Reg_m_B0_n49), .ZN(
+        filter_Reg_m_B0_n12) );
+  AOI22_X1 filter_Reg_m_B0_U32 ( .A1(filter_m_B0_tmp[15]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[4]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n50) );
-  INV_X1 filter_Reg_m_B0_U37 ( .A(filter_Reg_m_B0_n50), .ZN(
+  INV_X1 filter_Reg_m_B0_U31 ( .A(filter_Reg_m_B0_n50), .ZN(
         filter_Reg_m_B0_n13) );
-  AOI22_X1 filter_Reg_m_B0_U36 ( .A1(filter_m_B0_tmp[14]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U30 ( .A1(filter_m_B0_tmp[14]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[3]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n51) );
-  INV_X1 filter_Reg_m_B0_U35 ( .A(filter_Reg_m_B0_n51), .ZN(
+  INV_X1 filter_Reg_m_B0_U29 ( .A(filter_Reg_m_B0_n51), .ZN(
         filter_Reg_m_B0_n14) );
-  AOI22_X1 filter_Reg_m_B0_U34 ( .A1(filter_m_B0_tmp[13]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U28 ( .A1(filter_m_B0_tmp[13]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[2]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n52) );
-  INV_X1 filter_Reg_m_B0_U33 ( .A(filter_Reg_m_B0_n52), .ZN(
+  INV_X1 filter_Reg_m_B0_U27 ( .A(filter_Reg_m_B0_n52), .ZN(
         filter_Reg_m_B0_n15) );
-  AOI22_X1 filter_Reg_m_B0_U32 ( .A1(filter_m_B0_tmp[12]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U26 ( .A1(filter_m_B0_tmp[12]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[1]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n53) );
-  INV_X1 filter_Reg_m_B0_U31 ( .A(filter_Reg_m_B0_n53), .ZN(
+  INV_X1 filter_Reg_m_B0_U25 ( .A(filter_Reg_m_B0_n53), .ZN(
         filter_Reg_m_B0_n16) );
-  AOI22_X1 filter_Reg_m_B0_U30 ( .A1(filter_m_B0_tmp[11]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U24 ( .A1(filter_m_B0_tmp[11]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[0]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n56) );
-  INV_X1 filter_Reg_m_B0_U29 ( .A(filter_Reg_m_B0_n56), .ZN(
+  INV_X1 filter_Reg_m_B0_U23 ( .A(filter_Reg_m_B0_n56), .ZN(
         filter_Reg_m_B0_n17) );
-  AOI22_X1 filter_Reg_m_B0_U28 ( .A1(filter_m_B0_tmp[26]), .A2(
+  AOI22_X1 filter_Reg_m_B0_U22 ( .A1(filter_m_B0_tmp[26]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[15]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n39) );
-  INV_X1 filter_Reg_m_B0_U27 ( .A(filter_Reg_m_B0_n39), .ZN(filter_Reg_m_B0_n2) );
-  AOI22_X1 filter_Reg_m_B0_U26 ( .A1(filter_m_B0_tmp[25]), .A2(
+  INV_X1 filter_Reg_m_B0_U19 ( .A(filter_Reg_m_B0_n39), .ZN(filter_Reg_m_B0_n2) );
+  AOI22_X1 filter_Reg_m_B0_U18 ( .A1(filter_m_B0_tmp[25]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[14]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n40) );
-  INV_X1 filter_Reg_m_B0_U25 ( .A(filter_Reg_m_B0_n40), .ZN(filter_Reg_m_B0_n3) );
-  AOI22_X1 filter_Reg_m_B0_U24 ( .A1(filter_m_B0_tmp[24]), .A2(
+  INV_X1 filter_Reg_m_B0_U17 ( .A(filter_Reg_m_B0_n40), .ZN(filter_Reg_m_B0_n3) );
+  AOI22_X1 filter_Reg_m_B0_U16 ( .A1(filter_m_B0_tmp[24]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[13]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n41) );
-  INV_X1 filter_Reg_m_B0_U23 ( .A(filter_Reg_m_B0_n41), .ZN(filter_Reg_m_B0_n4) );
-  AOI22_X1 filter_Reg_m_B0_U22 ( .A1(filter_m_B0_tmp[23]), .A2(
+  INV_X1 filter_Reg_m_B0_U15 ( .A(filter_Reg_m_B0_n41), .ZN(filter_Reg_m_B0_n4) );
+  AOI22_X1 filter_Reg_m_B0_U14 ( .A1(filter_m_B0_tmp[23]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[12]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n42) );
-  INV_X1 filter_Reg_m_B0_U19 ( .A(filter_Reg_m_B0_n42), .ZN(filter_Reg_m_B0_n5) );
-  AOI22_X1 filter_Reg_m_B0_U18 ( .A1(filter_m_B0_tmp[22]), .A2(
+  INV_X1 filter_Reg_m_B0_U13 ( .A(filter_Reg_m_B0_n42), .ZN(filter_Reg_m_B0_n5) );
+  AOI22_X1 filter_Reg_m_B0_U12 ( .A1(filter_m_B0_tmp[22]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[11]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n43) );
-  INV_X1 filter_Reg_m_B0_U17 ( .A(filter_Reg_m_B0_n43), .ZN(filter_Reg_m_B0_n6) );
-  AOI22_X1 filter_Reg_m_B0_U16 ( .A1(filter_m_B0_tmp[21]), .A2(
+  INV_X1 filter_Reg_m_B0_U11 ( .A(filter_Reg_m_B0_n43), .ZN(filter_Reg_m_B0_n6) );
+  AOI22_X1 filter_Reg_m_B0_U10 ( .A1(filter_m_B0_tmp[21]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[10]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n44) );
-  INV_X1 filter_Reg_m_B0_U15 ( .A(filter_Reg_m_B0_n44), .ZN(filter_Reg_m_B0_n7) );
-  AOI22_X1 filter_Reg_m_B0_U14 ( .A1(filter_m_B0_tmp[20]), .A2(
+  INV_X1 filter_Reg_m_B0_U9 ( .A(filter_Reg_m_B0_n44), .ZN(filter_Reg_m_B0_n7)
+         );
+  AOI22_X1 filter_Reg_m_B0_U8 ( .A1(filter_m_B0_tmp[20]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[9]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n45) );
-  INV_X1 filter_Reg_m_B0_U13 ( .A(filter_Reg_m_B0_n45), .ZN(filter_Reg_m_B0_n8) );
-  AOI22_X1 filter_Reg_m_B0_U12 ( .A1(filter_m_B0_tmp[19]), .A2(
+  INV_X1 filter_Reg_m_B0_U7 ( .A(filter_Reg_m_B0_n45), .ZN(filter_Reg_m_B0_n8)
+         );
+  AOI22_X1 filter_Reg_m_B0_U6 ( .A1(filter_m_B0_tmp[19]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[8]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n46) );
-  INV_X1 filter_Reg_m_B0_U11 ( .A(filter_Reg_m_B0_n46), .ZN(filter_Reg_m_B0_n9) );
-  AOI22_X1 filter_Reg_m_B0_U10 ( .A1(filter_m_B0_tmp[18]), .A2(
-        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[7]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n47) );
-  INV_X1 filter_Reg_m_B0_U9 ( .A(filter_Reg_m_B0_n47), .ZN(filter_Reg_m_B0_n10) );
-  AOI22_X1 filter_Reg_m_B0_U8 ( .A1(filter_m_B0_tmp[17]), .A2(
-        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[6]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n48) );
-  INV_X1 filter_Reg_m_B0_U7 ( .A(filter_Reg_m_B0_n48), .ZN(filter_Reg_m_B0_n11) );
-  AOI22_X1 filter_Reg_m_B0_U6 ( .A1(filter_m_B0_tmp[16]), .A2(
-        filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[5]), .B2(filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n49) );
-  INV_X1 filter_Reg_m_B0_U5 ( .A(filter_Reg_m_B0_n49), .ZN(filter_Reg_m_B0_n12) );
+  INV_X1 filter_Reg_m_B0_U5 ( .A(filter_Reg_m_B0_n46), .ZN(filter_Reg_m_B0_n9)
+         );
   AOI22_X1 filter_Reg_m_B0_U4 ( .A1(filter_m_B0_tmp[27]), .A2(
         filter_Reg_m_B0_n55), .B1(filter_m_B0_reg[16]), .B2(
         filter_Reg_m_B0_n54), .ZN(filter_Reg_m_B0_n38) );
@@ -2063,65 +2077,71 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_m_B0_data_out_reg_16_ ( .D(filter_Reg_m_B0_n1), .CK(CLK), 
         .Q(filter_m_B0_reg[16]) );
   INV_X1 filter_Reg_m_B1_U39 ( .A(RST_n), .ZN(filter_Reg_m_B1_n18) );
-  AOI22_X1 filter_Reg_m_B1_U38 ( .A1(filter_m_B1_tmp[15]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U38 ( .A1(filter_m_B1_tmp[18]), .A2(
+        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[7]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n47) );
+  INV_X1 filter_Reg_m_B1_U37 ( .A(filter_Reg_m_B1_n47), .ZN(
+        filter_Reg_m_B1_n10) );
+  AOI22_X1 filter_Reg_m_B1_U36 ( .A1(filter_m_B1_tmp[17]), .A2(
+        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[6]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n48) );
+  INV_X1 filter_Reg_m_B1_U35 ( .A(filter_Reg_m_B1_n48), .ZN(
+        filter_Reg_m_B1_n11) );
+  AOI22_X1 filter_Reg_m_B1_U34 ( .A1(filter_m_B1_tmp[16]), .A2(
+        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[5]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n49) );
+  INV_X1 filter_Reg_m_B1_U33 ( .A(filter_Reg_m_B1_n49), .ZN(
+        filter_Reg_m_B1_n12) );
+  AOI22_X1 filter_Reg_m_B1_U32 ( .A1(filter_m_B1_tmp[15]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[4]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n50) );
-  INV_X1 filter_Reg_m_B1_U37 ( .A(filter_Reg_m_B1_n50), .ZN(
+  INV_X1 filter_Reg_m_B1_U31 ( .A(filter_Reg_m_B1_n50), .ZN(
         filter_Reg_m_B1_n13) );
-  AOI22_X1 filter_Reg_m_B1_U36 ( .A1(filter_m_B1_tmp[14]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U30 ( .A1(filter_m_B1_tmp[14]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[3]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n51) );
-  INV_X1 filter_Reg_m_B1_U35 ( .A(filter_Reg_m_B1_n51), .ZN(
+  INV_X1 filter_Reg_m_B1_U29 ( .A(filter_Reg_m_B1_n51), .ZN(
         filter_Reg_m_B1_n14) );
-  AOI22_X1 filter_Reg_m_B1_U34 ( .A1(filter_m_B1_tmp[13]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U28 ( .A1(filter_m_B1_tmp[13]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[2]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n52) );
-  INV_X1 filter_Reg_m_B1_U33 ( .A(filter_Reg_m_B1_n52), .ZN(
+  INV_X1 filter_Reg_m_B1_U27 ( .A(filter_Reg_m_B1_n52), .ZN(
         filter_Reg_m_B1_n15) );
-  AOI22_X1 filter_Reg_m_B1_U32 ( .A1(filter_m_B1_tmp[12]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U26 ( .A1(filter_m_B1_tmp[12]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[1]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n53) );
-  INV_X1 filter_Reg_m_B1_U31 ( .A(filter_Reg_m_B1_n53), .ZN(
+  INV_X1 filter_Reg_m_B1_U25 ( .A(filter_Reg_m_B1_n53), .ZN(
         filter_Reg_m_B1_n16) );
-  AOI22_X1 filter_Reg_m_B1_U30 ( .A1(filter_m_B1_tmp[11]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U24 ( .A1(filter_m_B1_tmp[11]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[0]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n56) );
-  INV_X1 filter_Reg_m_B1_U29 ( .A(filter_Reg_m_B1_n56), .ZN(
+  INV_X1 filter_Reg_m_B1_U23 ( .A(filter_Reg_m_B1_n56), .ZN(
         filter_Reg_m_B1_n17) );
-  AOI22_X1 filter_Reg_m_B1_U28 ( .A1(filter_m_B1_tmp[26]), .A2(
+  AOI22_X1 filter_Reg_m_B1_U22 ( .A1(filter_m_B1_tmp[26]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[15]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n39) );
-  INV_X1 filter_Reg_m_B1_U27 ( .A(filter_Reg_m_B1_n39), .ZN(filter_Reg_m_B1_n2) );
-  AOI22_X1 filter_Reg_m_B1_U26 ( .A1(filter_m_B1_tmp[25]), .A2(
+  INV_X1 filter_Reg_m_B1_U19 ( .A(filter_Reg_m_B1_n39), .ZN(filter_Reg_m_B1_n2) );
+  AOI22_X1 filter_Reg_m_B1_U18 ( .A1(filter_m_B1_tmp[25]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[14]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n40) );
-  INV_X1 filter_Reg_m_B1_U25 ( .A(filter_Reg_m_B1_n40), .ZN(filter_Reg_m_B1_n3) );
-  AOI22_X1 filter_Reg_m_B1_U24 ( .A1(filter_m_B1_tmp[24]), .A2(
+  INV_X1 filter_Reg_m_B1_U17 ( .A(filter_Reg_m_B1_n40), .ZN(filter_Reg_m_B1_n3) );
+  AOI22_X1 filter_Reg_m_B1_U16 ( .A1(filter_m_B1_tmp[24]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[13]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n41) );
-  INV_X1 filter_Reg_m_B1_U23 ( .A(filter_Reg_m_B1_n41), .ZN(filter_Reg_m_B1_n4) );
-  AOI22_X1 filter_Reg_m_B1_U22 ( .A1(filter_m_B1_tmp[23]), .A2(
+  INV_X1 filter_Reg_m_B1_U15 ( .A(filter_Reg_m_B1_n41), .ZN(filter_Reg_m_B1_n4) );
+  AOI22_X1 filter_Reg_m_B1_U14 ( .A1(filter_m_B1_tmp[23]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[12]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n42) );
-  INV_X1 filter_Reg_m_B1_U19 ( .A(filter_Reg_m_B1_n42), .ZN(filter_Reg_m_B1_n5) );
-  AOI22_X1 filter_Reg_m_B1_U18 ( .A1(filter_m_B1_tmp[22]), .A2(
+  INV_X1 filter_Reg_m_B1_U13 ( .A(filter_Reg_m_B1_n42), .ZN(filter_Reg_m_B1_n5) );
+  AOI22_X1 filter_Reg_m_B1_U12 ( .A1(filter_m_B1_tmp[22]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[11]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n43) );
-  INV_X1 filter_Reg_m_B1_U17 ( .A(filter_Reg_m_B1_n43), .ZN(filter_Reg_m_B1_n6) );
-  AOI22_X1 filter_Reg_m_B1_U16 ( .A1(filter_m_B1_tmp[21]), .A2(
+  INV_X1 filter_Reg_m_B1_U11 ( .A(filter_Reg_m_B1_n43), .ZN(filter_Reg_m_B1_n6) );
+  AOI22_X1 filter_Reg_m_B1_U10 ( .A1(filter_m_B1_tmp[21]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[10]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n44) );
-  INV_X1 filter_Reg_m_B1_U15 ( .A(filter_Reg_m_B1_n44), .ZN(filter_Reg_m_B1_n7) );
-  AOI22_X1 filter_Reg_m_B1_U14 ( .A1(filter_m_B1_tmp[20]), .A2(
+  INV_X1 filter_Reg_m_B1_U9 ( .A(filter_Reg_m_B1_n44), .ZN(filter_Reg_m_B1_n7)
+         );
+  AOI22_X1 filter_Reg_m_B1_U8 ( .A1(filter_m_B1_tmp[20]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[9]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n45) );
-  INV_X1 filter_Reg_m_B1_U13 ( .A(filter_Reg_m_B1_n45), .ZN(filter_Reg_m_B1_n8) );
-  AOI22_X1 filter_Reg_m_B1_U12 ( .A1(filter_m_B1_tmp[19]), .A2(
+  INV_X1 filter_Reg_m_B1_U7 ( .A(filter_Reg_m_B1_n45), .ZN(filter_Reg_m_B1_n8)
+         );
+  AOI22_X1 filter_Reg_m_B1_U6 ( .A1(filter_m_B1_tmp[19]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[8]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n46) );
-  INV_X1 filter_Reg_m_B1_U11 ( .A(filter_Reg_m_B1_n46), .ZN(filter_Reg_m_B1_n9) );
-  AOI22_X1 filter_Reg_m_B1_U10 ( .A1(filter_m_B1_tmp[18]), .A2(
-        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[7]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n47) );
-  INV_X1 filter_Reg_m_B1_U9 ( .A(filter_Reg_m_B1_n47), .ZN(filter_Reg_m_B1_n10) );
-  AOI22_X1 filter_Reg_m_B1_U8 ( .A1(filter_m_B1_tmp[17]), .A2(
-        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[6]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n48) );
-  INV_X1 filter_Reg_m_B1_U7 ( .A(filter_Reg_m_B1_n48), .ZN(filter_Reg_m_B1_n11) );
-  AOI22_X1 filter_Reg_m_B1_U6 ( .A1(filter_m_B1_tmp[16]), .A2(
-        filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[5]), .B2(filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n49) );
-  INV_X1 filter_Reg_m_B1_U5 ( .A(filter_Reg_m_B1_n49), .ZN(filter_Reg_m_B1_n12) );
+  INV_X1 filter_Reg_m_B1_U5 ( .A(filter_Reg_m_B1_n46), .ZN(filter_Reg_m_B1_n9)
+         );
   AOI22_X1 filter_Reg_m_B1_U4 ( .A1(filter_m_B1_tmp[27]), .A2(
         filter_Reg_m_B1_n55), .B1(filter_m_B1_reg[16]), .B2(
         filter_Reg_m_B1_n54), .ZN(filter_Reg_m_B1_n38) );
@@ -2166,65 +2186,71 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_m_B1_data_out_reg_16_ ( .D(filter_Reg_m_B1_n1), .CK(CLK), 
         .Q(filter_m_B1_reg[16]) );
   INV_X1 filter_Reg_m_B2_U39 ( .A(RST_n), .ZN(filter_Reg_m_B2_n18) );
-  AOI22_X1 filter_Reg_m_B2_U38 ( .A1(filter_m_B2_tmp[15]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U38 ( .A1(filter_m_B2_tmp[18]), .A2(
+        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[7]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n47) );
+  INV_X1 filter_Reg_m_B2_U37 ( .A(filter_Reg_m_B2_n47), .ZN(
+        filter_Reg_m_B2_n10) );
+  AOI22_X1 filter_Reg_m_B2_U36 ( .A1(filter_m_B2_tmp[17]), .A2(
+        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[6]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n48) );
+  INV_X1 filter_Reg_m_B2_U35 ( .A(filter_Reg_m_B2_n48), .ZN(
+        filter_Reg_m_B2_n11) );
+  AOI22_X1 filter_Reg_m_B2_U34 ( .A1(filter_m_B2_tmp[16]), .A2(
+        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[5]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n49) );
+  INV_X1 filter_Reg_m_B2_U33 ( .A(filter_Reg_m_B2_n49), .ZN(
+        filter_Reg_m_B2_n12) );
+  AOI22_X1 filter_Reg_m_B2_U32 ( .A1(filter_m_B2_tmp[15]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[4]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n50) );
-  INV_X1 filter_Reg_m_B2_U37 ( .A(filter_Reg_m_B2_n50), .ZN(
+  INV_X1 filter_Reg_m_B2_U31 ( .A(filter_Reg_m_B2_n50), .ZN(
         filter_Reg_m_B2_n13) );
-  AOI22_X1 filter_Reg_m_B2_U36 ( .A1(filter_m_B2_tmp[14]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U30 ( .A1(filter_m_B2_tmp[14]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[3]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n51) );
-  INV_X1 filter_Reg_m_B2_U35 ( .A(filter_Reg_m_B2_n51), .ZN(
+  INV_X1 filter_Reg_m_B2_U29 ( .A(filter_Reg_m_B2_n51), .ZN(
         filter_Reg_m_B2_n14) );
-  AOI22_X1 filter_Reg_m_B2_U34 ( .A1(filter_m_B2_tmp[13]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U28 ( .A1(filter_m_B2_tmp[13]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[2]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n52) );
-  INV_X1 filter_Reg_m_B2_U33 ( .A(filter_Reg_m_B2_n52), .ZN(
+  INV_X1 filter_Reg_m_B2_U27 ( .A(filter_Reg_m_B2_n52), .ZN(
         filter_Reg_m_B2_n15) );
-  AOI22_X1 filter_Reg_m_B2_U32 ( .A1(filter_m_B2_tmp[12]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U26 ( .A1(filter_m_B2_tmp[12]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[1]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n53) );
-  INV_X1 filter_Reg_m_B2_U31 ( .A(filter_Reg_m_B2_n53), .ZN(
+  INV_X1 filter_Reg_m_B2_U25 ( .A(filter_Reg_m_B2_n53), .ZN(
         filter_Reg_m_B2_n16) );
-  AOI22_X1 filter_Reg_m_B2_U30 ( .A1(filter_m_B2_tmp[11]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U24 ( .A1(filter_m_B2_tmp[11]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[0]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n56) );
-  INV_X1 filter_Reg_m_B2_U29 ( .A(filter_Reg_m_B2_n56), .ZN(
+  INV_X1 filter_Reg_m_B2_U23 ( .A(filter_Reg_m_B2_n56), .ZN(
         filter_Reg_m_B2_n17) );
-  AOI22_X1 filter_Reg_m_B2_U28 ( .A1(filter_m_B2_tmp[26]), .A2(
+  AOI22_X1 filter_Reg_m_B2_U22 ( .A1(filter_m_B2_tmp[26]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[15]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n39) );
-  INV_X1 filter_Reg_m_B2_U27 ( .A(filter_Reg_m_B2_n39), .ZN(filter_Reg_m_B2_n2) );
-  AOI22_X1 filter_Reg_m_B2_U26 ( .A1(filter_m_B2_tmp[25]), .A2(
+  INV_X1 filter_Reg_m_B2_U19 ( .A(filter_Reg_m_B2_n39), .ZN(filter_Reg_m_B2_n2) );
+  AOI22_X1 filter_Reg_m_B2_U18 ( .A1(filter_m_B2_tmp[25]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[14]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n40) );
-  INV_X1 filter_Reg_m_B2_U25 ( .A(filter_Reg_m_B2_n40), .ZN(filter_Reg_m_B2_n3) );
-  AOI22_X1 filter_Reg_m_B2_U24 ( .A1(filter_m_B2_tmp[24]), .A2(
+  INV_X1 filter_Reg_m_B2_U17 ( .A(filter_Reg_m_B2_n40), .ZN(filter_Reg_m_B2_n3) );
+  AOI22_X1 filter_Reg_m_B2_U16 ( .A1(filter_m_B2_tmp[24]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[13]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n41) );
-  INV_X1 filter_Reg_m_B2_U23 ( .A(filter_Reg_m_B2_n41), .ZN(filter_Reg_m_B2_n4) );
-  AOI22_X1 filter_Reg_m_B2_U22 ( .A1(filter_m_B2_tmp[23]), .A2(
+  INV_X1 filter_Reg_m_B2_U15 ( .A(filter_Reg_m_B2_n41), .ZN(filter_Reg_m_B2_n4) );
+  AOI22_X1 filter_Reg_m_B2_U14 ( .A1(filter_m_B2_tmp[23]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[12]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n42) );
-  INV_X1 filter_Reg_m_B2_U19 ( .A(filter_Reg_m_B2_n42), .ZN(filter_Reg_m_B2_n5) );
-  AOI22_X1 filter_Reg_m_B2_U18 ( .A1(filter_m_B2_tmp[22]), .A2(
+  INV_X1 filter_Reg_m_B2_U13 ( .A(filter_Reg_m_B2_n42), .ZN(filter_Reg_m_B2_n5) );
+  AOI22_X1 filter_Reg_m_B2_U12 ( .A1(filter_m_B2_tmp[22]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[11]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n43) );
-  INV_X1 filter_Reg_m_B2_U17 ( .A(filter_Reg_m_B2_n43), .ZN(filter_Reg_m_B2_n6) );
-  AOI22_X1 filter_Reg_m_B2_U16 ( .A1(filter_m_B2_tmp[21]), .A2(
+  INV_X1 filter_Reg_m_B2_U11 ( .A(filter_Reg_m_B2_n43), .ZN(filter_Reg_m_B2_n6) );
+  AOI22_X1 filter_Reg_m_B2_U10 ( .A1(filter_m_B2_tmp[21]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[10]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n44) );
-  INV_X1 filter_Reg_m_B2_U15 ( .A(filter_Reg_m_B2_n44), .ZN(filter_Reg_m_B2_n7) );
-  AOI22_X1 filter_Reg_m_B2_U14 ( .A1(filter_m_B2_tmp[20]), .A2(
+  INV_X1 filter_Reg_m_B2_U9 ( .A(filter_Reg_m_B2_n44), .ZN(filter_Reg_m_B2_n7)
+         );
+  AOI22_X1 filter_Reg_m_B2_U8 ( .A1(filter_m_B2_tmp[20]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[9]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n45) );
-  INV_X1 filter_Reg_m_B2_U13 ( .A(filter_Reg_m_B2_n45), .ZN(filter_Reg_m_B2_n8) );
-  AOI22_X1 filter_Reg_m_B2_U12 ( .A1(filter_m_B2_tmp[19]), .A2(
+  INV_X1 filter_Reg_m_B2_U7 ( .A(filter_Reg_m_B2_n45), .ZN(filter_Reg_m_B2_n8)
+         );
+  AOI22_X1 filter_Reg_m_B2_U6 ( .A1(filter_m_B2_tmp[19]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[8]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n46) );
-  INV_X1 filter_Reg_m_B2_U11 ( .A(filter_Reg_m_B2_n46), .ZN(filter_Reg_m_B2_n9) );
-  AOI22_X1 filter_Reg_m_B2_U10 ( .A1(filter_m_B2_tmp[18]), .A2(
-        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[7]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n47) );
-  INV_X1 filter_Reg_m_B2_U9 ( .A(filter_Reg_m_B2_n47), .ZN(filter_Reg_m_B2_n10) );
-  AOI22_X1 filter_Reg_m_B2_U8 ( .A1(filter_m_B2_tmp[17]), .A2(
-        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[6]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n48) );
-  INV_X1 filter_Reg_m_B2_U7 ( .A(filter_Reg_m_B2_n48), .ZN(filter_Reg_m_B2_n11) );
-  AOI22_X1 filter_Reg_m_B2_U6 ( .A1(filter_m_B2_tmp[16]), .A2(
-        filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[5]), .B2(filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n49) );
-  INV_X1 filter_Reg_m_B2_U5 ( .A(filter_Reg_m_B2_n49), .ZN(filter_Reg_m_B2_n12) );
+  INV_X1 filter_Reg_m_B2_U5 ( .A(filter_Reg_m_B2_n46), .ZN(filter_Reg_m_B2_n9)
+         );
   AOI22_X1 filter_Reg_m_B2_U4 ( .A1(filter_m_B2_tmp[27]), .A2(
         filter_Reg_m_B2_n55), .B1(filter_m_B2_reg[16]), .B2(
         filter_Reg_m_B2_n54), .ZN(filter_Reg_m_B2_n38) );
@@ -2269,65 +2295,71 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   DFF_X1 filter_Reg_m_B2_data_out_reg_16_ ( .D(filter_Reg_m_B2_n1), .CK(CLK), 
         .Q(filter_m_B2_reg[16]) );
   INV_X1 filter_Reg_m_B3_U39 ( .A(RST_n), .ZN(filter_Reg_m_B3_n18) );
-  AOI22_X1 filter_Reg_m_B3_U38 ( .A1(filter_m_B3_tmp[15]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U38 ( .A1(filter_m_B3_tmp[18]), .A2(
+        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[7]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n47) );
+  INV_X1 filter_Reg_m_B3_U37 ( .A(filter_Reg_m_B3_n47), .ZN(
+        filter_Reg_m_B3_n10) );
+  AOI22_X1 filter_Reg_m_B3_U36 ( .A1(filter_m_B3_tmp[17]), .A2(
+        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[6]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n48) );
+  INV_X1 filter_Reg_m_B3_U35 ( .A(filter_Reg_m_B3_n48), .ZN(
+        filter_Reg_m_B3_n11) );
+  AOI22_X1 filter_Reg_m_B3_U34 ( .A1(filter_m_B3_tmp[16]), .A2(
+        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[5]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n49) );
+  INV_X1 filter_Reg_m_B3_U33 ( .A(filter_Reg_m_B3_n49), .ZN(
+        filter_Reg_m_B3_n12) );
+  AOI22_X1 filter_Reg_m_B3_U32 ( .A1(filter_m_B3_tmp[15]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[4]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n50) );
-  INV_X1 filter_Reg_m_B3_U37 ( .A(filter_Reg_m_B3_n50), .ZN(
+  INV_X1 filter_Reg_m_B3_U31 ( .A(filter_Reg_m_B3_n50), .ZN(
         filter_Reg_m_B3_n13) );
-  AOI22_X1 filter_Reg_m_B3_U36 ( .A1(filter_m_B3_tmp[14]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U30 ( .A1(filter_m_B3_tmp[14]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[3]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n51) );
-  INV_X1 filter_Reg_m_B3_U35 ( .A(filter_Reg_m_B3_n51), .ZN(
+  INV_X1 filter_Reg_m_B3_U29 ( .A(filter_Reg_m_B3_n51), .ZN(
         filter_Reg_m_B3_n14) );
-  AOI22_X1 filter_Reg_m_B3_U34 ( .A1(filter_m_B3_tmp[13]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U28 ( .A1(filter_m_B3_tmp[13]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[2]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n52) );
-  INV_X1 filter_Reg_m_B3_U33 ( .A(filter_Reg_m_B3_n52), .ZN(
+  INV_X1 filter_Reg_m_B3_U27 ( .A(filter_Reg_m_B3_n52), .ZN(
         filter_Reg_m_B3_n15) );
-  AOI22_X1 filter_Reg_m_B3_U32 ( .A1(filter_m_B3_tmp[12]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U26 ( .A1(filter_m_B3_tmp[12]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[1]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n53) );
-  INV_X1 filter_Reg_m_B3_U31 ( .A(filter_Reg_m_B3_n53), .ZN(
+  INV_X1 filter_Reg_m_B3_U25 ( .A(filter_Reg_m_B3_n53), .ZN(
         filter_Reg_m_B3_n16) );
-  AOI22_X1 filter_Reg_m_B3_U30 ( .A1(filter_m_B3_tmp[11]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U24 ( .A1(filter_m_B3_tmp[11]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[0]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n56) );
-  INV_X1 filter_Reg_m_B3_U29 ( .A(filter_Reg_m_B3_n56), .ZN(
+  INV_X1 filter_Reg_m_B3_U23 ( .A(filter_Reg_m_B3_n56), .ZN(
         filter_Reg_m_B3_n17) );
-  AOI22_X1 filter_Reg_m_B3_U28 ( .A1(filter_m_B3_tmp[26]), .A2(
+  AOI22_X1 filter_Reg_m_B3_U22 ( .A1(filter_m_B3_tmp[26]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[15]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n39) );
-  INV_X1 filter_Reg_m_B3_U27 ( .A(filter_Reg_m_B3_n39), .ZN(filter_Reg_m_B3_n2) );
-  AOI22_X1 filter_Reg_m_B3_U26 ( .A1(filter_m_B3_tmp[25]), .A2(
+  INV_X1 filter_Reg_m_B3_U19 ( .A(filter_Reg_m_B3_n39), .ZN(filter_Reg_m_B3_n2) );
+  AOI22_X1 filter_Reg_m_B3_U18 ( .A1(filter_m_B3_tmp[25]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[14]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n40) );
-  INV_X1 filter_Reg_m_B3_U25 ( .A(filter_Reg_m_B3_n40), .ZN(filter_Reg_m_B3_n3) );
-  AOI22_X1 filter_Reg_m_B3_U24 ( .A1(filter_m_B3_tmp[24]), .A2(
+  INV_X1 filter_Reg_m_B3_U17 ( .A(filter_Reg_m_B3_n40), .ZN(filter_Reg_m_B3_n3) );
+  AOI22_X1 filter_Reg_m_B3_U16 ( .A1(filter_m_B3_tmp[24]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[13]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n41) );
-  INV_X1 filter_Reg_m_B3_U23 ( .A(filter_Reg_m_B3_n41), .ZN(filter_Reg_m_B3_n4) );
-  AOI22_X1 filter_Reg_m_B3_U22 ( .A1(filter_m_B3_tmp[23]), .A2(
+  INV_X1 filter_Reg_m_B3_U15 ( .A(filter_Reg_m_B3_n41), .ZN(filter_Reg_m_B3_n4) );
+  AOI22_X1 filter_Reg_m_B3_U14 ( .A1(filter_m_B3_tmp[23]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[12]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n42) );
-  INV_X1 filter_Reg_m_B3_U19 ( .A(filter_Reg_m_B3_n42), .ZN(filter_Reg_m_B3_n5) );
-  AOI22_X1 filter_Reg_m_B3_U18 ( .A1(filter_m_B3_tmp[22]), .A2(
+  INV_X1 filter_Reg_m_B3_U13 ( .A(filter_Reg_m_B3_n42), .ZN(filter_Reg_m_B3_n5) );
+  AOI22_X1 filter_Reg_m_B3_U12 ( .A1(filter_m_B3_tmp[22]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[11]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n43) );
-  INV_X1 filter_Reg_m_B3_U17 ( .A(filter_Reg_m_B3_n43), .ZN(filter_Reg_m_B3_n6) );
-  AOI22_X1 filter_Reg_m_B3_U16 ( .A1(filter_m_B3_tmp[21]), .A2(
+  INV_X1 filter_Reg_m_B3_U11 ( .A(filter_Reg_m_B3_n43), .ZN(filter_Reg_m_B3_n6) );
+  AOI22_X1 filter_Reg_m_B3_U10 ( .A1(filter_m_B3_tmp[21]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[10]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n44) );
-  INV_X1 filter_Reg_m_B3_U15 ( .A(filter_Reg_m_B3_n44), .ZN(filter_Reg_m_B3_n7) );
-  AOI22_X1 filter_Reg_m_B3_U14 ( .A1(filter_m_B3_tmp[20]), .A2(
+  INV_X1 filter_Reg_m_B3_U9 ( .A(filter_Reg_m_B3_n44), .ZN(filter_Reg_m_B3_n7)
+         );
+  AOI22_X1 filter_Reg_m_B3_U8 ( .A1(filter_m_B3_tmp[20]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[9]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n45) );
-  INV_X1 filter_Reg_m_B3_U13 ( .A(filter_Reg_m_B3_n45), .ZN(filter_Reg_m_B3_n8) );
-  AOI22_X1 filter_Reg_m_B3_U12 ( .A1(filter_m_B3_tmp[19]), .A2(
+  INV_X1 filter_Reg_m_B3_U7 ( .A(filter_Reg_m_B3_n45), .ZN(filter_Reg_m_B3_n8)
+         );
+  AOI22_X1 filter_Reg_m_B3_U6 ( .A1(filter_m_B3_tmp[19]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[8]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n46) );
-  INV_X1 filter_Reg_m_B3_U11 ( .A(filter_Reg_m_B3_n46), .ZN(filter_Reg_m_B3_n9) );
-  AOI22_X1 filter_Reg_m_B3_U10 ( .A1(filter_m_B3_tmp[18]), .A2(
-        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[7]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n47) );
-  INV_X1 filter_Reg_m_B3_U9 ( .A(filter_Reg_m_B3_n47), .ZN(filter_Reg_m_B3_n10) );
-  AOI22_X1 filter_Reg_m_B3_U8 ( .A1(filter_m_B3_tmp[17]), .A2(
-        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[6]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n48) );
-  INV_X1 filter_Reg_m_B3_U7 ( .A(filter_Reg_m_B3_n48), .ZN(filter_Reg_m_B3_n11) );
-  AOI22_X1 filter_Reg_m_B3_U6 ( .A1(filter_m_B3_tmp[16]), .A2(
-        filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[5]), .B2(filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n49) );
-  INV_X1 filter_Reg_m_B3_U5 ( .A(filter_Reg_m_B3_n49), .ZN(filter_Reg_m_B3_n12) );
+  INV_X1 filter_Reg_m_B3_U5 ( .A(filter_Reg_m_B3_n46), .ZN(filter_Reg_m_B3_n9)
+         );
   AOI22_X1 filter_Reg_m_B3_U4 ( .A1(filter_m_B3_tmp[27]), .A2(
         filter_Reg_m_B3_n55), .B1(filter_m_B3_reg[16]), .B2(
         filter_Reg_m_B3_n54), .ZN(filter_Reg_m_B3_n38) );
@@ -2491,65 +2523,71 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         filter_Reg_s_A1_reg_delay3_n1), .CK(CLK), .Q(
         filter_s_A1_reg_delay3[12]) );
   INV_X1 filter_Reg_m_B4_U39 ( .A(RST_n), .ZN(filter_Reg_m_B4_n18) );
-  AOI22_X1 filter_Reg_m_B4_U38 ( .A1(filter_m_B4_tmp[15]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U38 ( .A1(filter_m_B4_tmp[18]), .A2(
+        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[7]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n47) );
+  INV_X1 filter_Reg_m_B4_U37 ( .A(filter_Reg_m_B4_n47), .ZN(
+        filter_Reg_m_B4_n10) );
+  AOI22_X1 filter_Reg_m_B4_U36 ( .A1(filter_m_B4_tmp[17]), .A2(
+        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[6]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n48) );
+  INV_X1 filter_Reg_m_B4_U35 ( .A(filter_Reg_m_B4_n48), .ZN(
+        filter_Reg_m_B4_n11) );
+  AOI22_X1 filter_Reg_m_B4_U34 ( .A1(filter_m_B4_tmp[16]), .A2(
+        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[5]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n49) );
+  INV_X1 filter_Reg_m_B4_U33 ( .A(filter_Reg_m_B4_n49), .ZN(
+        filter_Reg_m_B4_n12) );
+  AOI22_X1 filter_Reg_m_B4_U32 ( .A1(filter_m_B4_tmp[15]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[4]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n50) );
-  INV_X1 filter_Reg_m_B4_U37 ( .A(filter_Reg_m_B4_n50), .ZN(
+  INV_X1 filter_Reg_m_B4_U31 ( .A(filter_Reg_m_B4_n50), .ZN(
         filter_Reg_m_B4_n13) );
-  AOI22_X1 filter_Reg_m_B4_U36 ( .A1(filter_m_B4_tmp[14]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U30 ( .A1(filter_m_B4_tmp[14]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[3]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n51) );
-  INV_X1 filter_Reg_m_B4_U35 ( .A(filter_Reg_m_B4_n51), .ZN(
+  INV_X1 filter_Reg_m_B4_U29 ( .A(filter_Reg_m_B4_n51), .ZN(
         filter_Reg_m_B4_n14) );
-  AOI22_X1 filter_Reg_m_B4_U34 ( .A1(filter_m_B4_tmp[13]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U28 ( .A1(filter_m_B4_tmp[13]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[2]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n52) );
-  INV_X1 filter_Reg_m_B4_U33 ( .A(filter_Reg_m_B4_n52), .ZN(
+  INV_X1 filter_Reg_m_B4_U27 ( .A(filter_Reg_m_B4_n52), .ZN(
         filter_Reg_m_B4_n15) );
-  AOI22_X1 filter_Reg_m_B4_U32 ( .A1(filter_m_B4_tmp[12]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U26 ( .A1(filter_m_B4_tmp[12]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[1]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n53) );
-  INV_X1 filter_Reg_m_B4_U31 ( .A(filter_Reg_m_B4_n53), .ZN(
+  INV_X1 filter_Reg_m_B4_U25 ( .A(filter_Reg_m_B4_n53), .ZN(
         filter_Reg_m_B4_n16) );
-  AOI22_X1 filter_Reg_m_B4_U30 ( .A1(filter_m_B4_tmp[11]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U24 ( .A1(filter_m_B4_tmp[11]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[0]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n56) );
-  INV_X1 filter_Reg_m_B4_U29 ( .A(filter_Reg_m_B4_n56), .ZN(
+  INV_X1 filter_Reg_m_B4_U23 ( .A(filter_Reg_m_B4_n56), .ZN(
         filter_Reg_m_B4_n17) );
-  AOI22_X1 filter_Reg_m_B4_U28 ( .A1(filter_m_B4_tmp[26]), .A2(
+  AOI22_X1 filter_Reg_m_B4_U22 ( .A1(filter_m_B4_tmp[26]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[15]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n39) );
-  INV_X1 filter_Reg_m_B4_U27 ( .A(filter_Reg_m_B4_n39), .ZN(filter_Reg_m_B4_n2) );
-  AOI22_X1 filter_Reg_m_B4_U26 ( .A1(filter_m_B4_tmp[25]), .A2(
+  INV_X1 filter_Reg_m_B4_U19 ( .A(filter_Reg_m_B4_n39), .ZN(filter_Reg_m_B4_n2) );
+  AOI22_X1 filter_Reg_m_B4_U18 ( .A1(filter_m_B4_tmp[25]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[14]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n40) );
-  INV_X1 filter_Reg_m_B4_U25 ( .A(filter_Reg_m_B4_n40), .ZN(filter_Reg_m_B4_n3) );
-  AOI22_X1 filter_Reg_m_B4_U24 ( .A1(filter_m_B4_tmp[24]), .A2(
+  INV_X1 filter_Reg_m_B4_U17 ( .A(filter_Reg_m_B4_n40), .ZN(filter_Reg_m_B4_n3) );
+  AOI22_X1 filter_Reg_m_B4_U16 ( .A1(filter_m_B4_tmp[24]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[13]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n41) );
-  INV_X1 filter_Reg_m_B4_U23 ( .A(filter_Reg_m_B4_n41), .ZN(filter_Reg_m_B4_n4) );
-  AOI22_X1 filter_Reg_m_B4_U22 ( .A1(filter_m_B4_tmp[23]), .A2(
+  INV_X1 filter_Reg_m_B4_U15 ( .A(filter_Reg_m_B4_n41), .ZN(filter_Reg_m_B4_n4) );
+  AOI22_X1 filter_Reg_m_B4_U14 ( .A1(filter_m_B4_tmp[23]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[12]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n42) );
-  INV_X1 filter_Reg_m_B4_U19 ( .A(filter_Reg_m_B4_n42), .ZN(filter_Reg_m_B4_n5) );
-  AOI22_X1 filter_Reg_m_B4_U18 ( .A1(filter_m_B4_tmp[22]), .A2(
+  INV_X1 filter_Reg_m_B4_U13 ( .A(filter_Reg_m_B4_n42), .ZN(filter_Reg_m_B4_n5) );
+  AOI22_X1 filter_Reg_m_B4_U12 ( .A1(filter_m_B4_tmp[22]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[11]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n43) );
-  INV_X1 filter_Reg_m_B4_U17 ( .A(filter_Reg_m_B4_n43), .ZN(filter_Reg_m_B4_n6) );
-  AOI22_X1 filter_Reg_m_B4_U16 ( .A1(filter_m_B4_tmp[21]), .A2(
+  INV_X1 filter_Reg_m_B4_U11 ( .A(filter_Reg_m_B4_n43), .ZN(filter_Reg_m_B4_n6) );
+  AOI22_X1 filter_Reg_m_B4_U10 ( .A1(filter_m_B4_tmp[21]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[10]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n44) );
-  INV_X1 filter_Reg_m_B4_U15 ( .A(filter_Reg_m_B4_n44), .ZN(filter_Reg_m_B4_n7) );
-  AOI22_X1 filter_Reg_m_B4_U14 ( .A1(filter_m_B4_tmp[20]), .A2(
+  INV_X1 filter_Reg_m_B4_U9 ( .A(filter_Reg_m_B4_n44), .ZN(filter_Reg_m_B4_n7)
+         );
+  AOI22_X1 filter_Reg_m_B4_U8 ( .A1(filter_m_B4_tmp[20]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[9]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n45) );
-  INV_X1 filter_Reg_m_B4_U13 ( .A(filter_Reg_m_B4_n45), .ZN(filter_Reg_m_B4_n8) );
-  AOI22_X1 filter_Reg_m_B4_U12 ( .A1(filter_m_B4_tmp[19]), .A2(
+  INV_X1 filter_Reg_m_B4_U7 ( .A(filter_Reg_m_B4_n45), .ZN(filter_Reg_m_B4_n8)
+         );
+  AOI22_X1 filter_Reg_m_B4_U6 ( .A1(filter_m_B4_tmp[19]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[8]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n46) );
-  INV_X1 filter_Reg_m_B4_U11 ( .A(filter_Reg_m_B4_n46), .ZN(filter_Reg_m_B4_n9) );
-  AOI22_X1 filter_Reg_m_B4_U10 ( .A1(filter_m_B4_tmp[18]), .A2(
-        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[7]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n47) );
-  INV_X1 filter_Reg_m_B4_U9 ( .A(filter_Reg_m_B4_n47), .ZN(filter_Reg_m_B4_n10) );
-  AOI22_X1 filter_Reg_m_B4_U8 ( .A1(filter_m_B4_tmp[17]), .A2(
-        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[6]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n48) );
-  INV_X1 filter_Reg_m_B4_U7 ( .A(filter_Reg_m_B4_n48), .ZN(filter_Reg_m_B4_n11) );
-  AOI22_X1 filter_Reg_m_B4_U6 ( .A1(filter_m_B4_tmp[16]), .A2(
-        filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[5]), .B2(filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n49) );
-  INV_X1 filter_Reg_m_B4_U5 ( .A(filter_Reg_m_B4_n49), .ZN(filter_Reg_m_B4_n12) );
+  INV_X1 filter_Reg_m_B4_U5 ( .A(filter_Reg_m_B4_n46), .ZN(filter_Reg_m_B4_n9)
+         );
   AOI22_X1 filter_Reg_m_B4_U4 ( .A1(filter_m_B4_tmp[27]), .A2(
         filter_Reg_m_B4_n55), .B1(filter_m_B4_reg[16]), .B2(
         filter_Reg_m_B4_n54), .ZN(filter_Reg_m_B4_n38) );
@@ -2593,84 +2631,80 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         .Q(filter_m_B4_reg[15]) );
   DFF_X1 filter_Reg_m_B4_data_out_reg_16_ ( .D(filter_Reg_m_B4_n1), .CK(CLK), 
         .Q(filter_m_B4_reg[16]) );
-  AOI22_X1 filter_Reg_s_B1_U39 ( .A1(filter_s_B1[10]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[10]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n44)
+  AOI22_X1 filter_Reg_s_B1_U39 ( .A1(filter_s_B1[14]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[14]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n40)
          );
-  INV_X1 filter_Reg_s_B1_U38 ( .A(filter_Reg_s_B1_n44), .ZN(filter_Reg_s_B1_n7) );
-  AOI22_X1 filter_Reg_s_B1_U37 ( .A1(filter_s_B1[9]), .A2(filter_Reg_s_B1_n55), 
+  INV_X1 filter_Reg_s_B1_U38 ( .A(filter_Reg_s_B1_n40), .ZN(filter_Reg_s_B1_n3) );
+  AOI22_X1 filter_Reg_s_B1_U37 ( .A1(filter_s_B1[13]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[13]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n41)
+         );
+  INV_X1 filter_Reg_s_B1_U36 ( .A(filter_Reg_s_B1_n41), .ZN(filter_Reg_s_B1_n4) );
+  AOI22_X1 filter_Reg_s_B1_U35 ( .A1(filter_s_B1[12]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[12]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n42)
+         );
+  INV_X1 filter_Reg_s_B1_U34 ( .A(filter_Reg_s_B1_n42), .ZN(filter_Reg_s_B1_n5) );
+  AOI22_X1 filter_Reg_s_B1_U33 ( .A1(filter_s_B1[11]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[11]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n43)
+         );
+  INV_X1 filter_Reg_s_B1_U32 ( .A(filter_Reg_s_B1_n43), .ZN(filter_Reg_s_B1_n6) );
+  AOI22_X1 filter_Reg_s_B1_U31 ( .A1(filter_s_B1[10]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[10]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n44)
+         );
+  INV_X1 filter_Reg_s_B1_U30 ( .A(filter_Reg_s_B1_n44), .ZN(filter_Reg_s_B1_n7) );
+  AOI22_X1 filter_Reg_s_B1_U29 ( .A1(filter_s_B1[9]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[9]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n45) );
-  INV_X1 filter_Reg_s_B1_U36 ( .A(filter_Reg_s_B1_n45), .ZN(filter_Reg_s_B1_n8) );
-  AOI22_X1 filter_Reg_s_B1_U35 ( .A1(filter_s_B1[8]), .A2(filter_Reg_s_B1_n55), 
+  INV_X1 filter_Reg_s_B1_U28 ( .A(filter_Reg_s_B1_n45), .ZN(filter_Reg_s_B1_n8) );
+  AOI22_X1 filter_Reg_s_B1_U27 ( .A1(filter_s_B1[8]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[8]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n46) );
-  INV_X1 filter_Reg_s_B1_U34 ( .A(filter_Reg_s_B1_n46), .ZN(filter_Reg_s_B1_n9) );
-  AOI22_X1 filter_Reg_s_B1_U33 ( .A1(filter_s_B1[7]), .A2(filter_Reg_s_B1_n55), 
+  INV_X1 filter_Reg_s_B1_U26 ( .A(filter_Reg_s_B1_n46), .ZN(filter_Reg_s_B1_n9) );
+  AOI22_X1 filter_Reg_s_B1_U25 ( .A1(filter_s_B1[7]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[7]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n47) );
-  INV_X1 filter_Reg_s_B1_U32 ( .A(filter_Reg_s_B1_n47), .ZN(
+  INV_X1 filter_Reg_s_B1_U24 ( .A(filter_Reg_s_B1_n47), .ZN(
         filter_Reg_s_B1_n10) );
-  AOI22_X1 filter_Reg_s_B1_U31 ( .A1(filter_s_B1[6]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U23 ( .A1(filter_s_B1[6]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[6]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n48) );
-  INV_X1 filter_Reg_s_B1_U30 ( .A(filter_Reg_s_B1_n48), .ZN(
+  INV_X1 filter_Reg_s_B1_U22 ( .A(filter_Reg_s_B1_n48), .ZN(
         filter_Reg_s_B1_n11) );
-  AOI22_X1 filter_Reg_s_B1_U29 ( .A1(filter_s_B1[5]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U21 ( .A1(filter_s_B1[5]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[5]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n49) );
-  INV_X1 filter_Reg_s_B1_U28 ( .A(filter_Reg_s_B1_n49), .ZN(
+  INV_X1 filter_Reg_s_B1_U19 ( .A(filter_Reg_s_B1_n49), .ZN(
         filter_Reg_s_B1_n12) );
-  AOI22_X1 filter_Reg_s_B1_U27 ( .A1(filter_s_B1[4]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U18 ( .A1(filter_s_B1[4]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[4]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n50) );
-  INV_X1 filter_Reg_s_B1_U26 ( .A(filter_Reg_s_B1_n50), .ZN(
+  INV_X1 filter_Reg_s_B1_U17 ( .A(filter_Reg_s_B1_n50), .ZN(
         filter_Reg_s_B1_n13) );
-  AOI22_X1 filter_Reg_s_B1_U25 ( .A1(filter_s_B1[3]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U16 ( .A1(filter_s_B1[3]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[3]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n51) );
-  INV_X1 filter_Reg_s_B1_U24 ( .A(filter_Reg_s_B1_n51), .ZN(
+  INV_X1 filter_Reg_s_B1_U15 ( .A(filter_Reg_s_B1_n51), .ZN(
         filter_Reg_s_B1_n14) );
-  AOI22_X1 filter_Reg_s_B1_U23 ( .A1(filter_s_B1[2]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U14 ( .A1(filter_s_B1[2]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[2]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n52) );
-  INV_X1 filter_Reg_s_B1_U22 ( .A(filter_Reg_s_B1_n52), .ZN(
+  INV_X1 filter_Reg_s_B1_U13 ( .A(filter_Reg_s_B1_n52), .ZN(
         filter_Reg_s_B1_n15) );
-  AOI22_X1 filter_Reg_s_B1_U21 ( .A1(filter_s_B1[1]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U12 ( .A1(filter_s_B1[1]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[1]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n53) );
-  INV_X1 filter_Reg_s_B1_U19 ( .A(filter_Reg_s_B1_n53), .ZN(
+  INV_X1 filter_Reg_s_B1_U11 ( .A(filter_Reg_s_B1_n53), .ZN(
         filter_Reg_s_B1_n16) );
-  AOI22_X1 filter_Reg_s_B1_U18 ( .A1(filter_s_B1[0]), .A2(filter_Reg_s_B1_n55), 
+  AOI22_X1 filter_Reg_s_B1_U10 ( .A1(filter_s_B1[0]), .A2(filter_Reg_s_B1_n55), 
         .B1(filter_s_B1_reg[0]), .B2(filter_Reg_s_B1_n54), .ZN(
         filter_Reg_s_B1_n56) );
-  INV_X1 filter_Reg_s_B1_U17 ( .A(filter_Reg_s_B1_n56), .ZN(
-        filter_Reg_s_B1_n17) );
-  INV_X1 filter_Reg_s_B1_U16 ( .A(RST_n), .ZN(filter_Reg_s_B1_n18) );
-  NOR2_X2 filter_Reg_s_B1_U15 ( .A1(filter_REG_CTRL_2_OUT), .A2(
+  INV_X1 filter_Reg_s_B1_U9 ( .A(filter_Reg_s_B1_n56), .ZN(filter_Reg_s_B1_n17) );
+  INV_X1 filter_Reg_s_B1_U8 ( .A(RST_n), .ZN(filter_Reg_s_B1_n18) );
+  NOR2_X2 filter_Reg_s_B1_U7 ( .A1(filter_REG_CTRL_2_OUT), .A2(
         filter_Reg_s_B1_n18), .ZN(filter_Reg_s_B1_n54) );
-  AOI22_X1 filter_Reg_s_B1_U14 ( .A1(filter_s_B1[16]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[16]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n38)
+  AOI22_X1 filter_Reg_s_B1_U6 ( .A1(filter_s_B1[16]), .A2(filter_Reg_s_B1_n55), 
+        .B1(filter_s_B1_reg[16]), .B2(filter_Reg_s_B1_n54), .ZN(
+        filter_Reg_s_B1_n38) );
+  INV_X1 filter_Reg_s_B1_U5 ( .A(filter_Reg_s_B1_n38), .ZN(filter_Reg_s_B1_n1)
          );
-  INV_X1 filter_Reg_s_B1_U13 ( .A(filter_Reg_s_B1_n38), .ZN(filter_Reg_s_B1_n1) );
-  AOI22_X1 filter_Reg_s_B1_U12 ( .A1(filter_s_B1[15]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[15]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n39)
-         );
-  INV_X1 filter_Reg_s_B1_U11 ( .A(filter_Reg_s_B1_n39), .ZN(filter_Reg_s_B1_n2) );
-  AOI22_X1 filter_Reg_s_B1_U10 ( .A1(filter_s_B1[14]), .A2(filter_Reg_s_B1_n55), .B1(filter_s_B1_reg[14]), .B2(filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n40)
-         );
-  INV_X1 filter_Reg_s_B1_U9 ( .A(filter_Reg_s_B1_n40), .ZN(filter_Reg_s_B1_n3)
-         );
-  AOI22_X1 filter_Reg_s_B1_U8 ( .A1(filter_s_B1[13]), .A2(filter_Reg_s_B1_n55), 
-        .B1(filter_s_B1_reg[13]), .B2(filter_Reg_s_B1_n54), .ZN(
-        filter_Reg_s_B1_n41) );
-  INV_X1 filter_Reg_s_B1_U7 ( .A(filter_Reg_s_B1_n41), .ZN(filter_Reg_s_B1_n4)
-         );
-  AOI22_X1 filter_Reg_s_B1_U6 ( .A1(filter_s_B1[12]), .A2(filter_Reg_s_B1_n55), 
-        .B1(filter_s_B1_reg[12]), .B2(filter_Reg_s_B1_n54), .ZN(
-        filter_Reg_s_B1_n42) );
-  INV_X1 filter_Reg_s_B1_U5 ( .A(filter_Reg_s_B1_n42), .ZN(filter_Reg_s_B1_n5)
-         );
-  AOI22_X1 filter_Reg_s_B1_U4 ( .A1(filter_s_B1[11]), .A2(filter_Reg_s_B1_n55), 
-        .B1(filter_s_B1_reg[11]), .B2(filter_Reg_s_B1_n54), .ZN(
-        filter_Reg_s_B1_n43) );
-  INV_X1 filter_Reg_s_B1_U3 ( .A(filter_Reg_s_B1_n43), .ZN(filter_Reg_s_B1_n6)
+  AOI22_X1 filter_Reg_s_B1_U4 ( .A1(filter_s_B1[15]), .A2(filter_Reg_s_B1_n55), 
+        .B1(filter_s_B1_reg[15]), .B2(filter_Reg_s_B1_n54), .ZN(
+        filter_Reg_s_B1_n39) );
+  INV_X1 filter_Reg_s_B1_U3 ( .A(filter_Reg_s_B1_n39), .ZN(filter_Reg_s_B1_n2)
          );
   NOR2_X2 filter_Reg_s_B1_U20 ( .A1(filter_Reg_s_B1_n18), .A2(
         filter_Reg_s_B1_n54), .ZN(filter_Reg_s_B1_n55) );
@@ -2708,54 +2742,55 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         .Q(filter_s_B1_reg[15]) );
   DFF_X1 filter_Reg_s_B1_data_out_reg_16_ ( .D(filter_Reg_s_B1_n1), .CK(CLK), 
         .Q(filter_s_B1_reg[16]) );
-  AOI22_X1 filter_Reg_out_U29 ( .A1(filter_s_B0[6]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[1]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n38) );
-  INV_X1 filter_Reg_out_U28 ( .A(filter_Reg_out_n38), .ZN(filter_Reg_out_n11)
-         );
-  AOI22_X1 filter_Reg_out_U27 ( .A1(filter_s_B0[5]), .A2(filter_Reg_out_n40), 
+  AOI22_X1 filter_Reg_out_U29 ( .A1(filter_s_B0[5]), .A2(filter_Reg_out_n40), 
         .B1(DOUT[0]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n41) );
-  INV_X1 filter_Reg_out_U26 ( .A(filter_Reg_out_n41), .ZN(filter_Reg_out_n12)
+  INV_X1 filter_Reg_out_U28 ( .A(filter_Reg_out_n41), .ZN(filter_Reg_out_n12)
          );
-  INV_X1 filter_Reg_out_U25 ( .A(RST_n), .ZN(filter_Reg_out_n13) );
-  AOI22_X1 filter_Reg_out_U24 ( .A1(filter_s_B0[11]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[6]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n33) );
-  INV_X1 filter_Reg_out_U23 ( .A(filter_Reg_out_n33), .ZN(filter_Reg_out_n6)
-         );
-  AOI22_X1 filter_Reg_out_U22 ( .A1(filter_s_B0[10]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[5]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n34) );
-  INV_X1 filter_Reg_out_U21 ( .A(filter_Reg_out_n34), .ZN(filter_Reg_out_n7)
-         );
-  AOI22_X1 filter_Reg_out_U20 ( .A1(filter_s_B0[9]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[4]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n35) );
-  INV_X1 filter_Reg_out_U19 ( .A(filter_Reg_out_n35), .ZN(filter_Reg_out_n8)
-         );
-  AOI22_X1 filter_Reg_out_U18 ( .A1(filter_s_B0[8]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[3]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n36) );
-  INV_X1 filter_Reg_out_U17 ( .A(filter_Reg_out_n36), .ZN(filter_Reg_out_n9)
-         );
-  AOI22_X1 filter_Reg_out_U16 ( .A1(filter_s_B0[7]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[2]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n37) );
-  INV_X1 filter_Reg_out_U15 ( .A(filter_Reg_out_n37), .ZN(filter_Reg_out_n10)
-         );
-  NOR2_X2 filter_Reg_out_U14 ( .A1(filter_REG_CTRL_3_OUT), .A2(
-        filter_Reg_out_n13), .ZN(filter_Reg_out_n39) );
-  AOI22_X1 filter_Reg_out_U13 ( .A1(filter_s_B0[16]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[11]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n28) );
-  INV_X1 filter_Reg_out_U12 ( .A(filter_Reg_out_n28), .ZN(filter_Reg_out_n1)
-         );
-  AOI22_X1 filter_Reg_out_U11 ( .A1(filter_s_B0[15]), .A2(filter_Reg_out_n40), 
-        .B1(DOUT[10]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n29) );
-  INV_X1 filter_Reg_out_U10 ( .A(filter_Reg_out_n29), .ZN(filter_Reg_out_n2)
-         );
-  AOI22_X1 filter_Reg_out_U9 ( .A1(filter_s_B0[14]), .A2(filter_Reg_out_n40), 
+  INV_X1 filter_Reg_out_U27 ( .A(RST_n), .ZN(filter_Reg_out_n13) );
+  AOI22_X1 filter_Reg_out_U26 ( .A1(filter_s_B0[14]), .A2(filter_Reg_out_n40), 
         .B1(DOUT[9]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n30) );
-  INV_X1 filter_Reg_out_U8 ( .A(filter_Reg_out_n30), .ZN(filter_Reg_out_n3) );
-  AOI22_X1 filter_Reg_out_U7 ( .A1(filter_s_B0[13]), .A2(filter_Reg_out_n40), 
+  INV_X1 filter_Reg_out_U25 ( .A(filter_Reg_out_n30), .ZN(filter_Reg_out_n3)
+         );
+  AOI22_X1 filter_Reg_out_U24 ( .A1(filter_s_B0[13]), .A2(filter_Reg_out_n40), 
         .B1(DOUT[8]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n31) );
-  INV_X1 filter_Reg_out_U6 ( .A(filter_Reg_out_n31), .ZN(filter_Reg_out_n4) );
-  AOI22_X1 filter_Reg_out_U5 ( .A1(filter_s_B0[12]), .A2(filter_Reg_out_n40), 
+  INV_X1 filter_Reg_out_U23 ( .A(filter_Reg_out_n31), .ZN(filter_Reg_out_n4)
+         );
+  AOI22_X1 filter_Reg_out_U22 ( .A1(filter_s_B0[12]), .A2(filter_Reg_out_n40), 
         .B1(DOUT[7]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n32) );
-  INV_X1 filter_Reg_out_U4 ( .A(filter_Reg_out_n32), .ZN(filter_Reg_out_n5) );
+  INV_X1 filter_Reg_out_U21 ( .A(filter_Reg_out_n32), .ZN(filter_Reg_out_n5)
+         );
+  AOI22_X1 filter_Reg_out_U20 ( .A1(filter_s_B0[11]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[6]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n33) );
+  INV_X1 filter_Reg_out_U19 ( .A(filter_Reg_out_n33), .ZN(filter_Reg_out_n6)
+         );
+  AOI22_X1 filter_Reg_out_U18 ( .A1(filter_s_B0[10]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[5]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n34) );
+  INV_X1 filter_Reg_out_U17 ( .A(filter_Reg_out_n34), .ZN(filter_Reg_out_n7)
+         );
+  AOI22_X1 filter_Reg_out_U16 ( .A1(filter_s_B0[9]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[4]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n35) );
+  INV_X1 filter_Reg_out_U15 ( .A(filter_Reg_out_n35), .ZN(filter_Reg_out_n8)
+         );
+  AOI22_X1 filter_Reg_out_U14 ( .A1(filter_s_B0[8]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[3]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n36) );
+  INV_X1 filter_Reg_out_U13 ( .A(filter_Reg_out_n36), .ZN(filter_Reg_out_n9)
+         );
+  AOI22_X1 filter_Reg_out_U12 ( .A1(filter_s_B0[7]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[2]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n37) );
+  INV_X1 filter_Reg_out_U11 ( .A(filter_Reg_out_n37), .ZN(filter_Reg_out_n10)
+         );
+  AOI22_X1 filter_Reg_out_U10 ( .A1(filter_s_B0[6]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[1]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n38) );
+  INV_X1 filter_Reg_out_U9 ( .A(filter_Reg_out_n38), .ZN(filter_Reg_out_n11)
+         );
+  NOR2_X2 filter_Reg_out_U8 ( .A1(filter_REG_CTRL_3_OUT), .A2(
+        filter_Reg_out_n13), .ZN(filter_Reg_out_n39) );
+  AOI22_X1 filter_Reg_out_U7 ( .A1(filter_s_B0[16]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[11]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n28) );
+  INV_X1 filter_Reg_out_U6 ( .A(filter_Reg_out_n28), .ZN(filter_Reg_out_n1) );
+  AOI22_X1 filter_Reg_out_U5 ( .A1(filter_s_B0[15]), .A2(filter_Reg_out_n40), 
+        .B1(DOUT[10]), .B2(filter_Reg_out_n39), .ZN(filter_Reg_out_n29) );
+  INV_X1 filter_Reg_out_U4 ( .A(filter_Reg_out_n29), .ZN(filter_Reg_out_n2) );
   NOR2_X1 filter_Reg_out_U3 ( .A1(filter_Reg_out_n13), .A2(filter_Reg_out_n39), 
         .ZN(filter_Reg_out_n40) );
   DFF_X1 filter_Reg_out_data_out_reg_0_ ( .D(filter_Reg_out_n12), .CK(CLK), 
@@ -2829,8 +2864,8 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   OAI21_X1 filter_add_228_U7 ( .B1(filter_add_228_n7), .B2(filter_add_228_n1), 
         .A(filter_add_228_n8), .ZN(filter_add_228_carry[5]) );
   INV_X1 filter_add_228_U6 ( .A(filter_m_B0_reg[2]), .ZN(filter_add_228_n4) );
-  INV_X1 filter_add_228_U5 ( .A(filter_add_228_n11), .ZN(filter_add_228_n5) );
-  INV_X1 filter_add_228_U4 ( .A(filter_m_B0_reg[4]), .ZN(filter_add_228_n1) );
+  INV_X1 filter_add_228_U5 ( .A(filter_m_B0_reg[4]), .ZN(filter_add_228_n1) );
+  INV_X1 filter_add_228_U4 ( .A(filter_add_228_n11), .ZN(filter_add_228_n5) );
   INV_X1 filter_add_228_U3 ( .A(filter_add_228_n10), .ZN(filter_add_228_n3) );
   INV_X1 filter_add_228_U2 ( .A(filter_add_228_n13), .ZN(filter_add_228_n6) );
   INV_X1 filter_add_228_U1 ( .A(filter_add_228_n7), .ZN(filter_add_228_n2) );
@@ -2877,9 +2912,9 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   OAI21_X1 filter_add_124_U7 ( .B1(filter_add_124_n7), .B2(filter_add_124_n5), 
         .A(filter_add_124_n8), .ZN(filter_add_124_carry[5]) );
   INV_X1 filter_add_124_U6 ( .A(filter_m_A1_reg[2]), .ZN(filter_add_124_n6) );
-  INV_X1 filter_add_124_U5 ( .A(filter_add_124_n10), .ZN(filter_add_124_n2) );
+  INV_X1 filter_add_124_U5 ( .A(filter_m_A1_reg[4]), .ZN(filter_add_124_n5) );
   INV_X1 filter_add_124_U4 ( .A(filter_add_124_n11), .ZN(filter_add_124_n3) );
-  INV_X1 filter_add_124_U3 ( .A(filter_m_A1_reg[4]), .ZN(filter_add_124_n5) );
+  INV_X1 filter_add_124_U3 ( .A(filter_add_124_n10), .ZN(filter_add_124_n2) );
   INV_X1 filter_add_124_U2 ( .A(filter_add_124_n13), .ZN(filter_add_124_n4) );
   INV_X1 filter_add_124_U1 ( .A(filter_add_124_n7), .ZN(filter_add_124_n1) );
   FA_X1 filter_add_124_U1_5 ( .A(filter_m_A1_reg[5]), .B(filter_m_A2_reg[5]), 
@@ -2948,13 +2983,13 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         filter_s_A1[11]) );
   FA_X1 filter_add_99_U1_12 ( .A(filter_data_in[11]), .B(filter_s_A2_16_), 
         .CI(filter_add_99_carry[12]), .S(filter_s_A1[12]) );
-  XOR2_X1 filter_add_1_root_add_0_root_add_219_U2 ( .A(filter_m_B2_reg[0]), 
-        .B(filter_m_B4_reg[0]), .Z(filter_s_B3_0_) );
-  AND2_X1 filter_add_1_root_add_0_root_add_219_U1 ( .A1(filter_m_B2_reg[0]), 
-        .A2(filter_m_B4_reg[0]), .ZN(filter_add_1_root_add_0_root_add_219_n1)
+  AND2_X1 filter_add_1_root_add_0_root_add_219_U2 ( .A1(filter_m_B2_reg[0]), 
+        .A2(filter_m_B4_reg[0]), .ZN(filter_add_1_root_add_0_root_add_219_n2)
          );
+  XOR2_X1 filter_add_1_root_add_0_root_add_219_U1 ( .A(filter_m_B2_reg[0]), 
+        .B(filter_m_B4_reg[0]), .Z(filter_s_B3_0_) );
   FA_X1 filter_add_1_root_add_0_root_add_219_U1_1 ( .A(filter_m_B4_reg[1]), 
-        .B(filter_m_B2_reg[1]), .CI(filter_add_1_root_add_0_root_add_219_n1), 
+        .B(filter_m_B2_reg[1]), .CI(filter_add_1_root_add_0_root_add_219_n2), 
         .CO(filter_add_1_root_add_0_root_add_219_carry[2]), .S(filter_s_B3_1_)
          );
   FA_X1 filter_add_1_root_add_0_root_add_219_U1_2 ( .A(filter_m_B4_reg[2]), 
@@ -3023,13 +3058,13 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
         .B(filter_m_B2_reg[16]), .CI(
         filter_add_1_root_add_0_root_add_219_carry[16]), .S(filter_s_B3_16_)
          );
-  XOR2_X1 filter_add_2_root_add_0_root_add_219_U2 ( .A(filter_m_B1_reg[0]), 
-        .B(filter_m_B3_reg[0]), .Z(filter_s_B2_0_) );
-  AND2_X1 filter_add_2_root_add_0_root_add_219_U1 ( .A1(filter_m_B1_reg[0]), 
-        .A2(filter_m_B3_reg[0]), .ZN(filter_add_2_root_add_0_root_add_219_n1)
+  AND2_X1 filter_add_2_root_add_0_root_add_219_U2 ( .A1(filter_m_B1_reg[0]), 
+        .A2(filter_m_B3_reg[0]), .ZN(filter_add_2_root_add_0_root_add_219_n2)
          );
+  XOR2_X1 filter_add_2_root_add_0_root_add_219_U1 ( .A(filter_m_B1_reg[0]), 
+        .B(filter_m_B3_reg[0]), .Z(filter_s_B2_0_) );
   FA_X1 filter_add_2_root_add_0_root_add_219_U1_1 ( .A(filter_m_B3_reg[1]), 
-        .B(filter_m_B1_reg[1]), .CI(filter_add_2_root_add_0_root_add_219_n1), 
+        .B(filter_m_B1_reg[1]), .CI(filter_add_2_root_add_0_root_add_219_n2), 
         .CO(filter_add_2_root_add_0_root_add_219_carry[2]), .S(filter_s_B2_1_)
          );
   FA_X1 filter_add_2_root_add_0_root_add_219_U1_2 ( .A(filter_m_B3_reg[2]), 
@@ -3850,68 +3885,68 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_203_U524 ( .A(filter_s_A1_reg_delay3[8]), .B(
         filter_s_A1_reg_delay3[7]), .ZN(filter_mult_203_n670) );
   INV_X1 filter_mult_203_U523 ( .A(1'b1), .ZN(filter_mult_203_n658) );
-  INV_X1 filter_mult_203_U522 ( .A(filter_s_A1_reg_delay3[0]), .ZN(
-        filter_mult_203_n657) );
-  INV_X1 filter_mult_203_U521 ( .A(filter_s_A1_reg_delay3[3]), .ZN(
-        filter_mult_203_n652) );
-  INV_X1 filter_mult_203_U520 ( .A(filter_s_A1_reg_delay3[11]), .ZN(
+  INV_X1 filter_mult_203_U522 ( .A(filter_s_A1_reg_delay3[11]), .ZN(
         filter_mult_203_n630) );
-  INV_X1 filter_mult_203_U519 ( .A(filter_s_A1_reg_delay3[9]), .ZN(
+  INV_X1 filter_mult_203_U521 ( .A(filter_s_A1_reg_delay3[9]), .ZN(
         filter_mult_203_n636) );
-  INV_X1 filter_mult_203_U518 ( .A(filter_s_A1_reg_delay3[7]), .ZN(
-        filter_mult_203_n641) );
-  INV_X1 filter_mult_203_U517 ( .A(filter_s_A1_reg_delay3[5]), .ZN(
-        filter_mult_203_n646) );
-  INV_X1 filter_mult_203_U516 ( .A(filter_s_A1_reg_delay3[1]), .ZN(
+  INV_X1 filter_mult_203_U520 ( .A(filter_s_A1_reg_delay3[0]), .ZN(
+        filter_mult_203_n657) );
+  INV_X1 filter_mult_203_U519 ( .A(filter_s_A1_reg_delay3[3]), .ZN(
+        filter_mult_203_n652) );
+  INV_X1 filter_mult_203_U518 ( .A(filter_s_A1_reg_delay3[1]), .ZN(
         filter_mult_203_n656) );
-  INV_X1 filter_mult_203_U515 ( .A(filter_mult_203_n261), .ZN(
+  INV_X1 filter_mult_203_U517 ( .A(filter_mult_203_n261), .ZN(
         filter_mult_203_n648) );
+  INV_X1 filter_mult_203_U516 ( .A(filter_s_A1_reg_delay3[7]), .ZN(
+        filter_mult_203_n641) );
+  INV_X1 filter_mult_203_U515 ( .A(filter_s_A1_reg_delay3[5]), .ZN(
+        filter_mult_203_n646) );
   INV_X1 filter_mult_203_U514 ( .A(filter_mult_203_n780), .ZN(
         filter_mult_203_n634) );
-  INV_X1 filter_mult_203_U513 ( .A(filter_mult_203_n672), .ZN(
-        filter_mult_203_n628) );
-  INV_X1 filter_mult_203_U512 ( .A(filter_mult_203_n673), .ZN(
-        filter_mult_203_n629) );
-  INV_X1 filter_mult_203_U511 ( .A(filter_mult_203_n724), .ZN(
-        filter_mult_203_n650) );
-  INV_X1 filter_mult_203_U510 ( .A(filter_mult_203_n743), .ZN(
-        filter_mult_203_n645) );
-  INV_X1 filter_mult_203_U509 ( .A(filter_mult_203_n118), .ZN(
-        filter_mult_203_n644) );
-  INV_X1 filter_mult_203_U508 ( .A(filter_mult_203_n763), .ZN(
+  INV_X1 filter_mult_203_U513 ( .A(filter_mult_203_n763), .ZN(
         filter_mult_203_n640) );
-  INV_X1 filter_mult_203_U507 ( .A(filter_mult_203_n706), .ZN(
-        filter_mult_203_n654) );
-  INV_X1 filter_mult_203_U506 ( .A(filter_mult_203_n140), .ZN(
-        filter_mult_203_n649) );
-  INV_X1 filter_mult_203_U505 ( .A(filter_mult_203_n86), .ZN(
+  INV_X1 filter_mult_203_U512 ( .A(filter_mult_203_n86), .ZN(
         filter_mult_203_n635) );
-  INV_X1 filter_mult_203_U504 ( .A(filter_mult_203_n708), .ZN(
-        filter_mult_203_n651) );
-  INV_X1 filter_mult_203_U503 ( .A(filter_mult_203_n689), .ZN(
-        filter_mult_203_n655) );
-  INV_X1 filter_mult_203_U502 ( .A(filter_mult_203_n685), .ZN(
-        filter_mult_203_n653) );
-  INV_X1 filter_mult_203_U501 ( .A(filter_mult_203_n667), .ZN(
+  INV_X1 filter_mult_203_U511 ( .A(filter_mult_203_n672), .ZN(
+        filter_mult_203_n628) );
+  INV_X1 filter_mult_203_U510 ( .A(filter_mult_203_n673), .ZN(
+        filter_mult_203_n629) );
+  INV_X1 filter_mult_203_U509 ( .A(filter_mult_203_n724), .ZN(
+        filter_mult_203_n650) );
+  INV_X1 filter_mult_203_U508 ( .A(filter_mult_203_n743), .ZN(
+        filter_mult_203_n645) );
+  INV_X1 filter_mult_203_U507 ( .A(filter_mult_203_n118), .ZN(
+        filter_mult_203_n644) );
+  INV_X1 filter_mult_203_U506 ( .A(filter_mult_203_n706), .ZN(
+        filter_mult_203_n654) );
+  INV_X1 filter_mult_203_U505 ( .A(filter_mult_203_n140), .ZN(
+        filter_mult_203_n649) );
+  INV_X1 filter_mult_203_U504 ( .A(filter_mult_203_n667), .ZN(
         filter_mult_203_n627) );
-  INV_X1 filter_mult_203_U500 ( .A(filter_mult_203_n663), .ZN(
+  INV_X1 filter_mult_203_U503 ( .A(filter_mult_203_n663), .ZN(
         filter_mult_203_n632) );
+  INV_X1 filter_mult_203_U502 ( .A(filter_mult_203_n708), .ZN(
+        filter_mult_203_n651) );
+  INV_X1 filter_mult_203_U501 ( .A(filter_mult_203_n689), .ZN(
+        filter_mult_203_n655) );
+  INV_X1 filter_mult_203_U500 ( .A(filter_mult_203_n685), .ZN(
+        filter_mult_203_n653) );
   INV_X1 filter_mult_203_U499 ( .A(filter_mult_203_n255), .ZN(
         filter_mult_203_n643) );
   INV_X1 filter_mult_203_U498 ( .A(filter_mult_203_n258), .ZN(
         filter_mult_203_n647) );
   INV_X1 filter_mult_203_U497 ( .A(filter_mult_203_n100), .ZN(
         filter_mult_203_n639) );
-  INV_X1 filter_mult_203_U496 ( .A(filter_mult_203_n674), .ZN(
-        filter_mult_203_n631) );
-  INV_X1 filter_mult_203_U495 ( .A(filter_mult_203_n676), .ZN(
+  INV_X1 filter_mult_203_U496 ( .A(filter_mult_203_n676), .ZN(
         filter_mult_203_n637) );
-  INV_X1 filter_mult_203_U494 ( .A(filter_mult_203_n675), .ZN(
+  INV_X1 filter_mult_203_U495 ( .A(filter_mult_203_n675), .ZN(
         filter_mult_203_n633) );
-  INV_X1 filter_mult_203_U493 ( .A(filter_mult_203_n678), .ZN(
+  INV_X1 filter_mult_203_U494 ( .A(filter_mult_203_n678), .ZN(
         filter_mult_203_n642) );
-  INV_X1 filter_mult_203_U492 ( .A(filter_mult_203_n677), .ZN(
+  INV_X1 filter_mult_203_U493 ( .A(filter_mult_203_n677), .ZN(
         filter_mult_203_n638) );
+  INV_X1 filter_mult_203_U492 ( .A(filter_mult_203_n674), .ZN(
+        filter_mult_203_n631) );
   XOR2_X2 filter_mult_203_U491 ( .A(filter_s_A1_reg_delay3[2]), .B(
         filter_mult_203_n656), .Z(filter_mult_203_n685) );
   HA_X1 filter_mult_203_U169 ( .A(filter_mult_203_n387), .B(
@@ -4909,70 +4944,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_129_U526 ( .A(filter_s_A1_reg_delay2[8]), .B(
         filter_s_A1_reg_delay2[7]), .ZN(filter_mult_129_n672) );
   INV_X1 filter_mult_129_U525 ( .A(1'b1), .ZN(filter_mult_129_n660) );
-  INV_X1 filter_mult_129_U524 ( .A(filter_s_A1_reg_delay2[0]), .ZN(
-        filter_mult_129_n659) );
-  INV_X1 filter_mult_129_U523 ( .A(filter_s_A1_reg_delay2[11]), .ZN(
+  INV_X1 filter_mult_129_U524 ( .A(filter_s_A1_reg_delay2[11]), .ZN(
         filter_mult_129_n632) );
-  INV_X1 filter_mult_129_U522 ( .A(filter_s_A1_reg_delay2[3]), .ZN(
-        filter_mult_129_n654) );
-  INV_X1 filter_mult_129_U521 ( .A(filter_s_A1_reg_delay2[9]), .ZN(
-        filter_mult_129_n638) );
-  INV_X1 filter_mult_129_U520 ( .A(filter_s_A1_reg_delay2[7]), .ZN(
-        filter_mult_129_n643) );
-  INV_X1 filter_mult_129_U519 ( .A(filter_s_A1_reg_delay2[5]), .ZN(
-        filter_mult_129_n648) );
-  INV_X1 filter_mult_129_U518 ( .A(filter_s_A1_reg_delay2[1]), .ZN(
+  INV_X1 filter_mult_129_U523 ( .A(filter_s_A1_reg_delay2[0]), .ZN(
+        filter_mult_129_n659) );
+  INV_X1 filter_mult_129_U522 ( .A(filter_s_A1_reg_delay2[1]), .ZN(
         filter_mult_129_n658) );
-  INV_X1 filter_mult_129_U517 ( .A(filter_mult_129_n261), .ZN(
+  INV_X1 filter_mult_129_U521 ( .A(filter_mult_129_n261), .ZN(
         filter_mult_129_n650) );
+  INV_X1 filter_mult_129_U520 ( .A(filter_s_A1_reg_delay2[3]), .ZN(
+        filter_mult_129_n654) );
+  INV_X1 filter_mult_129_U519 ( .A(filter_s_A1_reg_delay2[9]), .ZN(
+        filter_mult_129_n638) );
+  INV_X1 filter_mult_129_U518 ( .A(filter_s_A1_reg_delay2[7]), .ZN(
+        filter_mult_129_n643) );
+  INV_X1 filter_mult_129_U517 ( .A(filter_s_A1_reg_delay2[5]), .ZN(
+        filter_mult_129_n648) );
   INV_X1 filter_mult_129_U516 ( .A(filter_mult_129_n782), .ZN(
         filter_mult_129_n636) );
-  INV_X1 filter_mult_129_U515 ( .A(filter_mult_129_n674), .ZN(
-        filter_mult_129_n630) );
-  INV_X1 filter_mult_129_U514 ( .A(filter_mult_129_n675), .ZN(
-        filter_mult_129_n631) );
-  INV_X1 filter_mult_129_U513 ( .A(filter_mult_129_n726), .ZN(
-        filter_mult_129_n652) );
-  INV_X1 filter_mult_129_U512 ( .A(filter_mult_129_n745), .ZN(
-        filter_mult_129_n647) );
-  INV_X1 filter_mult_129_U511 ( .A(filter_mult_129_n118), .ZN(
-        filter_mult_129_n646) );
-  INV_X1 filter_mult_129_U510 ( .A(filter_mult_129_n765), .ZN(
+  INV_X1 filter_mult_129_U515 ( .A(filter_mult_129_n765), .ZN(
         filter_mult_129_n642) );
-  INV_X1 filter_mult_129_U509 ( .A(filter_mult_129_n708), .ZN(
-        filter_mult_129_n656) );
-  INV_X1 filter_mult_129_U508 ( .A(filter_mult_129_n140), .ZN(
-        filter_mult_129_n651) );
-  INV_X1 filter_mult_129_U507 ( .A(filter_mult_129_n86), .ZN(
+  INV_X1 filter_mult_129_U514 ( .A(filter_mult_129_n86), .ZN(
         filter_mult_129_n637) );
-  BUF_X1 filter_mult_129_U506 ( .A(filter_n4), .Z(filter_mult_129_n627) );
-  BUF_X1 filter_mult_129_U505 ( .A(filter_n4), .Z(filter_mult_129_n628) );
-  INV_X1 filter_mult_129_U504 ( .A(filter_mult_129_n710), .ZN(
-        filter_mult_129_n653) );
-  INV_X1 filter_mult_129_U503 ( .A(filter_mult_129_n691), .ZN(
-        filter_mult_129_n657) );
-  INV_X1 filter_mult_129_U502 ( .A(filter_mult_129_n687), .ZN(
-        filter_mult_129_n655) );
-  INV_X1 filter_mult_129_U501 ( .A(filter_mult_129_n669), .ZN(
+  INV_X1 filter_mult_129_U513 ( .A(filter_mult_129_n674), .ZN(
+        filter_mult_129_n630) );
+  INV_X1 filter_mult_129_U512 ( .A(filter_mult_129_n675), .ZN(
+        filter_mult_129_n631) );
+  INV_X1 filter_mult_129_U511 ( .A(filter_mult_129_n726), .ZN(
+        filter_mult_129_n652) );
+  BUF_X1 filter_mult_129_U510 ( .A(filter_n4), .Z(filter_mult_129_n628) );
+  INV_X1 filter_mult_129_U509 ( .A(filter_mult_129_n745), .ZN(
+        filter_mult_129_n647) );
+  INV_X1 filter_mult_129_U508 ( .A(filter_mult_129_n118), .ZN(
+        filter_mult_129_n646) );
+  INV_X1 filter_mult_129_U507 ( .A(filter_mult_129_n708), .ZN(
+        filter_mult_129_n656) );
+  INV_X1 filter_mult_129_U506 ( .A(filter_mult_129_n140), .ZN(
+        filter_mult_129_n651) );
+  BUF_X1 filter_mult_129_U505 ( .A(filter_n4), .Z(filter_mult_129_n627) );
+  INV_X1 filter_mult_129_U504 ( .A(filter_mult_129_n669), .ZN(
         filter_mult_129_n629) );
-  INV_X1 filter_mult_129_U500 ( .A(filter_mult_129_n665), .ZN(
+  INV_X1 filter_mult_129_U503 ( .A(filter_mult_129_n665), .ZN(
         filter_mult_129_n634) );
+  INV_X1 filter_mult_129_U502 ( .A(filter_mult_129_n710), .ZN(
+        filter_mult_129_n653) );
+  INV_X1 filter_mult_129_U501 ( .A(filter_mult_129_n691), .ZN(
+        filter_mult_129_n657) );
+  INV_X1 filter_mult_129_U500 ( .A(filter_mult_129_n687), .ZN(
+        filter_mult_129_n655) );
   INV_X1 filter_mult_129_U499 ( .A(filter_mult_129_n255), .ZN(
         filter_mult_129_n645) );
   INV_X1 filter_mult_129_U498 ( .A(filter_mult_129_n258), .ZN(
         filter_mult_129_n649) );
   INV_X1 filter_mult_129_U497 ( .A(filter_mult_129_n100), .ZN(
         filter_mult_129_n641) );
-  INV_X1 filter_mult_129_U496 ( .A(filter_mult_129_n680), .ZN(
-        filter_mult_129_n644) );
-  INV_X1 filter_mult_129_U495 ( .A(filter_mult_129_n679), .ZN(
-        filter_mult_129_n640) );
-  INV_X1 filter_mult_129_U494 ( .A(filter_mult_129_n676), .ZN(
-        filter_mult_129_n633) );
-  INV_X1 filter_mult_129_U493 ( .A(filter_mult_129_n678), .ZN(
+  INV_X1 filter_mult_129_U496 ( .A(filter_mult_129_n678), .ZN(
         filter_mult_129_n639) );
-  INV_X1 filter_mult_129_U492 ( .A(filter_mult_129_n677), .ZN(
+  INV_X1 filter_mult_129_U495 ( .A(filter_mult_129_n677), .ZN(
         filter_mult_129_n635) );
+  INV_X1 filter_mult_129_U494 ( .A(filter_mult_129_n680), .ZN(
+        filter_mult_129_n644) );
+  INV_X1 filter_mult_129_U493 ( .A(filter_mult_129_n679), .ZN(
+        filter_mult_129_n640) );
+  INV_X1 filter_mult_129_U492 ( .A(filter_mult_129_n676), .ZN(
+        filter_mult_129_n633) );
   XOR2_X2 filter_mult_129_U491 ( .A(filter_s_A1_reg_delay2[2]), .B(
         filter_mult_129_n658), .Z(filter_mult_129_n687) );
   HA_X1 filter_mult_129_U169 ( .A(filter_mult_129_n387), .B(
@@ -5970,70 +6005,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_185_U526 ( .A(filter_s_A1_reg_delay2[8]), .B(
         filter_s_A1_reg_delay2[7]), .ZN(filter_mult_185_n672) );
   INV_X1 filter_mult_185_U525 ( .A(1'b1), .ZN(filter_mult_185_n660) );
-  INV_X1 filter_mult_185_U524 ( .A(filter_s_A1_reg_delay2[0]), .ZN(
-        filter_mult_185_n659) );
-  INV_X1 filter_mult_185_U523 ( .A(filter_s_A1_reg_delay2[11]), .ZN(
+  INV_X1 filter_mult_185_U524 ( .A(filter_s_A1_reg_delay2[11]), .ZN(
         filter_mult_185_n632) );
-  INV_X1 filter_mult_185_U522 ( .A(filter_s_A1_reg_delay2[3]), .ZN(
-        filter_mult_185_n654) );
-  INV_X1 filter_mult_185_U521 ( .A(filter_s_A1_reg_delay2[9]), .ZN(
-        filter_mult_185_n638) );
-  INV_X1 filter_mult_185_U520 ( .A(filter_s_A1_reg_delay2[7]), .ZN(
-        filter_mult_185_n643) );
-  INV_X1 filter_mult_185_U519 ( .A(filter_s_A1_reg_delay2[5]), .ZN(
-        filter_mult_185_n648) );
-  INV_X1 filter_mult_185_U518 ( .A(filter_s_A1_reg_delay2[1]), .ZN(
+  INV_X1 filter_mult_185_U523 ( .A(filter_s_A1_reg_delay2[0]), .ZN(
+        filter_mult_185_n659) );
+  INV_X1 filter_mult_185_U522 ( .A(filter_s_A1_reg_delay2[1]), .ZN(
         filter_mult_185_n658) );
-  INV_X1 filter_mult_185_U517 ( .A(filter_mult_185_n261), .ZN(
+  INV_X1 filter_mult_185_U521 ( .A(filter_mult_185_n261), .ZN(
         filter_mult_185_n650) );
+  INV_X1 filter_mult_185_U520 ( .A(filter_s_A1_reg_delay2[3]), .ZN(
+        filter_mult_185_n654) );
+  INV_X1 filter_mult_185_U519 ( .A(filter_s_A1_reg_delay2[9]), .ZN(
+        filter_mult_185_n638) );
+  INV_X1 filter_mult_185_U518 ( .A(filter_s_A1_reg_delay2[7]), .ZN(
+        filter_mult_185_n643) );
+  INV_X1 filter_mult_185_U517 ( .A(filter_s_A1_reg_delay2[5]), .ZN(
+        filter_mult_185_n648) );
   INV_X1 filter_mult_185_U516 ( .A(filter_mult_185_n782), .ZN(
         filter_mult_185_n636) );
-  INV_X1 filter_mult_185_U515 ( .A(filter_mult_185_n674), .ZN(
-        filter_mult_185_n630) );
-  INV_X1 filter_mult_185_U514 ( .A(filter_mult_185_n675), .ZN(
-        filter_mult_185_n631) );
-  INV_X1 filter_mult_185_U513 ( .A(filter_mult_185_n726), .ZN(
-        filter_mult_185_n652) );
-  INV_X1 filter_mult_185_U512 ( .A(filter_mult_185_n745), .ZN(
-        filter_mult_185_n647) );
-  INV_X1 filter_mult_185_U511 ( .A(filter_mult_185_n118), .ZN(
-        filter_mult_185_n646) );
-  INV_X1 filter_mult_185_U510 ( .A(filter_mult_185_n765), .ZN(
+  INV_X1 filter_mult_185_U515 ( .A(filter_mult_185_n765), .ZN(
         filter_mult_185_n642) );
-  INV_X1 filter_mult_185_U509 ( .A(filter_mult_185_n708), .ZN(
-        filter_mult_185_n656) );
-  INV_X1 filter_mult_185_U508 ( .A(filter_mult_185_n140), .ZN(
-        filter_mult_185_n651) );
-  INV_X1 filter_mult_185_U507 ( .A(filter_mult_185_n86), .ZN(
+  INV_X1 filter_mult_185_U514 ( .A(filter_mult_185_n86), .ZN(
         filter_mult_185_n637) );
-  BUF_X1 filter_mult_185_U506 ( .A(filter_n4), .Z(filter_mult_185_n627) );
-  BUF_X1 filter_mult_185_U505 ( .A(filter_n4), .Z(filter_mult_185_n628) );
-  INV_X1 filter_mult_185_U504 ( .A(filter_mult_185_n710), .ZN(
-        filter_mult_185_n653) );
-  INV_X1 filter_mult_185_U503 ( .A(filter_mult_185_n687), .ZN(
-        filter_mult_185_n655) );
-  INV_X1 filter_mult_185_U502 ( .A(filter_mult_185_n691), .ZN(
-        filter_mult_185_n657) );
-  INV_X1 filter_mult_185_U501 ( .A(filter_mult_185_n669), .ZN(
+  INV_X1 filter_mult_185_U513 ( .A(filter_mult_185_n674), .ZN(
+        filter_mult_185_n630) );
+  INV_X1 filter_mult_185_U512 ( .A(filter_mult_185_n675), .ZN(
+        filter_mult_185_n631) );
+  INV_X1 filter_mult_185_U511 ( .A(filter_mult_185_n726), .ZN(
+        filter_mult_185_n652) );
+  BUF_X1 filter_mult_185_U510 ( .A(filter_n4), .Z(filter_mult_185_n628) );
+  INV_X1 filter_mult_185_U509 ( .A(filter_mult_185_n745), .ZN(
+        filter_mult_185_n647) );
+  INV_X1 filter_mult_185_U508 ( .A(filter_mult_185_n118), .ZN(
+        filter_mult_185_n646) );
+  INV_X1 filter_mult_185_U507 ( .A(filter_mult_185_n708), .ZN(
+        filter_mult_185_n656) );
+  INV_X1 filter_mult_185_U506 ( .A(filter_mult_185_n140), .ZN(
+        filter_mult_185_n651) );
+  BUF_X1 filter_mult_185_U505 ( .A(filter_n4), .Z(filter_mult_185_n627) );
+  INV_X1 filter_mult_185_U504 ( .A(filter_mult_185_n669), .ZN(
         filter_mult_185_n629) );
-  INV_X1 filter_mult_185_U500 ( .A(filter_mult_185_n665), .ZN(
+  INV_X1 filter_mult_185_U503 ( .A(filter_mult_185_n665), .ZN(
         filter_mult_185_n634) );
+  INV_X1 filter_mult_185_U502 ( .A(filter_mult_185_n710), .ZN(
+        filter_mult_185_n653) );
+  INV_X1 filter_mult_185_U501 ( .A(filter_mult_185_n687), .ZN(
+        filter_mult_185_n655) );
+  INV_X1 filter_mult_185_U500 ( .A(filter_mult_185_n691), .ZN(
+        filter_mult_185_n657) );
   INV_X1 filter_mult_185_U499 ( .A(filter_mult_185_n255), .ZN(
         filter_mult_185_n645) );
   INV_X1 filter_mult_185_U498 ( .A(filter_mult_185_n258), .ZN(
         filter_mult_185_n649) );
   INV_X1 filter_mult_185_U497 ( .A(filter_mult_185_n100), .ZN(
         filter_mult_185_n641) );
-  INV_X1 filter_mult_185_U496 ( .A(filter_mult_185_n680), .ZN(
-        filter_mult_185_n644) );
-  INV_X1 filter_mult_185_U495 ( .A(filter_mult_185_n679), .ZN(
-        filter_mult_185_n640) );
-  INV_X1 filter_mult_185_U494 ( .A(filter_mult_185_n676), .ZN(
-        filter_mult_185_n633) );
-  INV_X1 filter_mult_185_U493 ( .A(filter_mult_185_n678), .ZN(
+  INV_X1 filter_mult_185_U496 ( .A(filter_mult_185_n678), .ZN(
         filter_mult_185_n639) );
-  INV_X1 filter_mult_185_U492 ( .A(filter_mult_185_n677), .ZN(
+  INV_X1 filter_mult_185_U495 ( .A(filter_mult_185_n677), .ZN(
         filter_mult_185_n635) );
+  INV_X1 filter_mult_185_U494 ( .A(filter_mult_185_n680), .ZN(
+        filter_mult_185_n644) );
+  INV_X1 filter_mult_185_U493 ( .A(filter_mult_185_n679), .ZN(
+        filter_mult_185_n640) );
+  INV_X1 filter_mult_185_U492 ( .A(filter_mult_185_n676), .ZN(
+        filter_mult_185_n633) );
   XOR2_X2 filter_mult_185_U491 ( .A(filter_s_A1_reg_delay2[2]), .B(
         filter_mult_185_n658), .Z(filter_mult_185_n687) );
   HA_X1 filter_mult_185_U169 ( .A(filter_mult_185_n387), .B(
@@ -7031,70 +7066,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_126_U526 ( .A(filter_s_A1_reg_delay1[8]), .B(
         filter_s_A1_reg_delay1[7]), .ZN(filter_mult_126_n672) );
   INV_X1 filter_mult_126_U525 ( .A(1'b1), .ZN(filter_mult_126_n660) );
-  INV_X1 filter_mult_126_U524 ( .A(filter_s_A1_reg_delay1[0]), .ZN(
-        filter_mult_126_n659) );
-  INV_X1 filter_mult_126_U523 ( .A(filter_s_A1_reg_delay1[11]), .ZN(
+  INV_X1 filter_mult_126_U524 ( .A(filter_s_A1_reg_delay1[11]), .ZN(
         filter_mult_126_n632) );
-  INV_X1 filter_mult_126_U522 ( .A(filter_s_A1_reg_delay1[3]), .ZN(
-        filter_mult_126_n654) );
-  INV_X1 filter_mult_126_U521 ( .A(filter_s_A1_reg_delay1[9]), .ZN(
-        filter_mult_126_n638) );
-  INV_X1 filter_mult_126_U520 ( .A(filter_s_A1_reg_delay1[7]), .ZN(
-        filter_mult_126_n643) );
-  INV_X1 filter_mult_126_U519 ( .A(filter_s_A1_reg_delay1[5]), .ZN(
-        filter_mult_126_n648) );
-  INV_X1 filter_mult_126_U518 ( .A(filter_s_A1_reg_delay1[1]), .ZN(
+  INV_X1 filter_mult_126_U523 ( .A(filter_s_A1_reg_delay1[0]), .ZN(
+        filter_mult_126_n659) );
+  INV_X1 filter_mult_126_U522 ( .A(filter_s_A1_reg_delay1[1]), .ZN(
         filter_mult_126_n658) );
-  INV_X1 filter_mult_126_U517 ( .A(filter_mult_126_n261), .ZN(
+  INV_X1 filter_mult_126_U521 ( .A(filter_mult_126_n261), .ZN(
         filter_mult_126_n650) );
+  INV_X1 filter_mult_126_U520 ( .A(filter_s_A1_reg_delay1[3]), .ZN(
+        filter_mult_126_n654) );
+  INV_X1 filter_mult_126_U519 ( .A(filter_s_A1_reg_delay1[9]), .ZN(
+        filter_mult_126_n638) );
+  INV_X1 filter_mult_126_U518 ( .A(filter_s_A1_reg_delay1[7]), .ZN(
+        filter_mult_126_n643) );
+  INV_X1 filter_mult_126_U517 ( .A(filter_s_A1_reg_delay1[5]), .ZN(
+        filter_mult_126_n648) );
   INV_X1 filter_mult_126_U516 ( .A(filter_mult_126_n782), .ZN(
         filter_mult_126_n636) );
-  INV_X1 filter_mult_126_U515 ( .A(filter_mult_126_n674), .ZN(
-        filter_mult_126_n630) );
-  INV_X1 filter_mult_126_U514 ( .A(filter_mult_126_n675), .ZN(
-        filter_mult_126_n631) );
-  INV_X1 filter_mult_126_U513 ( .A(filter_mult_126_n726), .ZN(
-        filter_mult_126_n652) );
-  INV_X1 filter_mult_126_U512 ( .A(filter_mult_126_n745), .ZN(
-        filter_mult_126_n647) );
-  INV_X1 filter_mult_126_U511 ( .A(filter_mult_126_n118), .ZN(
-        filter_mult_126_n646) );
-  INV_X1 filter_mult_126_U510 ( .A(filter_mult_126_n765), .ZN(
+  INV_X1 filter_mult_126_U515 ( .A(filter_mult_126_n765), .ZN(
         filter_mult_126_n642) );
-  INV_X1 filter_mult_126_U509 ( .A(filter_mult_126_n708), .ZN(
-        filter_mult_126_n656) );
-  INV_X1 filter_mult_126_U508 ( .A(filter_mult_126_n140), .ZN(
-        filter_mult_126_n651) );
-  INV_X1 filter_mult_126_U507 ( .A(filter_mult_126_n86), .ZN(
+  INV_X1 filter_mult_126_U514 ( .A(filter_mult_126_n86), .ZN(
         filter_mult_126_n637) );
-  BUF_X1 filter_mult_126_U506 ( .A(filter_n5), .Z(filter_mult_126_n627) );
-  BUF_X1 filter_mult_126_U505 ( .A(filter_n5), .Z(filter_mult_126_n628) );
-  INV_X1 filter_mult_126_U504 ( .A(filter_mult_126_n710), .ZN(
-        filter_mult_126_n653) );
-  INV_X1 filter_mult_126_U503 ( .A(filter_mult_126_n691), .ZN(
-        filter_mult_126_n657) );
-  INV_X1 filter_mult_126_U502 ( .A(filter_mult_126_n687), .ZN(
-        filter_mult_126_n655) );
-  INV_X1 filter_mult_126_U501 ( .A(filter_mult_126_n669), .ZN(
+  INV_X1 filter_mult_126_U513 ( .A(filter_mult_126_n674), .ZN(
+        filter_mult_126_n630) );
+  INV_X1 filter_mult_126_U512 ( .A(filter_mult_126_n675), .ZN(
+        filter_mult_126_n631) );
+  INV_X1 filter_mult_126_U511 ( .A(filter_mult_126_n726), .ZN(
+        filter_mult_126_n652) );
+  BUF_X1 filter_mult_126_U510 ( .A(filter_n5), .Z(filter_mult_126_n628) );
+  INV_X1 filter_mult_126_U509 ( .A(filter_mult_126_n745), .ZN(
+        filter_mult_126_n647) );
+  INV_X1 filter_mult_126_U508 ( .A(filter_mult_126_n118), .ZN(
+        filter_mult_126_n646) );
+  INV_X1 filter_mult_126_U507 ( .A(filter_mult_126_n708), .ZN(
+        filter_mult_126_n656) );
+  INV_X1 filter_mult_126_U506 ( .A(filter_mult_126_n140), .ZN(
+        filter_mult_126_n651) );
+  BUF_X1 filter_mult_126_U505 ( .A(filter_n5), .Z(filter_mult_126_n627) );
+  INV_X1 filter_mult_126_U504 ( .A(filter_mult_126_n669), .ZN(
         filter_mult_126_n629) );
-  INV_X1 filter_mult_126_U500 ( .A(filter_mult_126_n665), .ZN(
+  INV_X1 filter_mult_126_U503 ( .A(filter_mult_126_n665), .ZN(
         filter_mult_126_n634) );
+  INV_X1 filter_mult_126_U502 ( .A(filter_mult_126_n710), .ZN(
+        filter_mult_126_n653) );
+  INV_X1 filter_mult_126_U501 ( .A(filter_mult_126_n691), .ZN(
+        filter_mult_126_n657) );
+  INV_X1 filter_mult_126_U500 ( .A(filter_mult_126_n687), .ZN(
+        filter_mult_126_n655) );
   INV_X1 filter_mult_126_U499 ( .A(filter_mult_126_n255), .ZN(
         filter_mult_126_n645) );
   INV_X1 filter_mult_126_U498 ( .A(filter_mult_126_n258), .ZN(
         filter_mult_126_n649) );
   INV_X1 filter_mult_126_U497 ( .A(filter_mult_126_n100), .ZN(
         filter_mult_126_n641) );
-  INV_X1 filter_mult_126_U496 ( .A(filter_mult_126_n680), .ZN(
-        filter_mult_126_n644) );
-  INV_X1 filter_mult_126_U495 ( .A(filter_mult_126_n679), .ZN(
-        filter_mult_126_n640) );
-  INV_X1 filter_mult_126_U494 ( .A(filter_mult_126_n676), .ZN(
-        filter_mult_126_n633) );
-  INV_X1 filter_mult_126_U493 ( .A(filter_mult_126_n678), .ZN(
+  INV_X1 filter_mult_126_U496 ( .A(filter_mult_126_n678), .ZN(
         filter_mult_126_n639) );
-  INV_X1 filter_mult_126_U492 ( .A(filter_mult_126_n677), .ZN(
+  INV_X1 filter_mult_126_U495 ( .A(filter_mult_126_n677), .ZN(
         filter_mult_126_n635) );
+  INV_X1 filter_mult_126_U494 ( .A(filter_mult_126_n680), .ZN(
+        filter_mult_126_n644) );
+  INV_X1 filter_mult_126_U493 ( .A(filter_mult_126_n679), .ZN(
+        filter_mult_126_n640) );
+  INV_X1 filter_mult_126_U492 ( .A(filter_mult_126_n676), .ZN(
+        filter_mult_126_n633) );
   XOR2_X2 filter_mult_126_U491 ( .A(filter_s_A1_reg_delay1[2]), .B(
         filter_mult_126_n658), .Z(filter_mult_126_n687) );
   HA_X1 filter_mult_126_U169 ( .A(filter_mult_126_n387), .B(
@@ -8092,70 +8127,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_174_U526 ( .A(filter_s_A1_reg_delay1[8]), .B(
         filter_s_A1_reg_delay1[7]), .ZN(filter_mult_174_n672) );
   INV_X1 filter_mult_174_U525 ( .A(1'b0), .ZN(filter_mult_174_n660) );
-  INV_X1 filter_mult_174_U524 ( .A(filter_s_A1_reg_delay1[0]), .ZN(
-        filter_mult_174_n659) );
-  INV_X1 filter_mult_174_U523 ( .A(filter_s_A1_reg_delay1[11]), .ZN(
+  INV_X1 filter_mult_174_U524 ( .A(filter_s_A1_reg_delay1[11]), .ZN(
         filter_mult_174_n632) );
-  INV_X1 filter_mult_174_U522 ( .A(filter_s_A1_reg_delay1[3]), .ZN(
-        filter_mult_174_n654) );
-  INV_X1 filter_mult_174_U521 ( .A(filter_s_A1_reg_delay1[9]), .ZN(
-        filter_mult_174_n638) );
-  INV_X1 filter_mult_174_U520 ( .A(filter_s_A1_reg_delay1[7]), .ZN(
-        filter_mult_174_n643) );
-  INV_X1 filter_mult_174_U519 ( .A(filter_s_A1_reg_delay1[5]), .ZN(
-        filter_mult_174_n648) );
-  INV_X1 filter_mult_174_U518 ( .A(filter_mult_174_n261), .ZN(
+  INV_X1 filter_mult_174_U523 ( .A(filter_s_A1_reg_delay1[0]), .ZN(
+        filter_mult_174_n659) );
+  INV_X1 filter_mult_174_U522 ( .A(filter_mult_174_n261), .ZN(
         filter_mult_174_n650) );
-  INV_X1 filter_mult_174_U517 ( .A(filter_s_A1_reg_delay1[1]), .ZN(
+  INV_X1 filter_mult_174_U521 ( .A(filter_s_A1_reg_delay1[1]), .ZN(
         filter_mult_174_n658) );
+  INV_X1 filter_mult_174_U520 ( .A(filter_s_A1_reg_delay1[3]), .ZN(
+        filter_mult_174_n654) );
+  INV_X1 filter_mult_174_U519 ( .A(filter_s_A1_reg_delay1[9]), .ZN(
+        filter_mult_174_n638) );
+  INV_X1 filter_mult_174_U518 ( .A(filter_s_A1_reg_delay1[7]), .ZN(
+        filter_mult_174_n643) );
+  INV_X1 filter_mult_174_U517 ( .A(filter_s_A1_reg_delay1[5]), .ZN(
+        filter_mult_174_n648) );
   INV_X1 filter_mult_174_U516 ( .A(filter_mult_174_n691), .ZN(
         filter_mult_174_n657) );
   INV_X1 filter_mult_174_U515 ( .A(filter_mult_174_n782), .ZN(
         filter_mult_174_n636) );
-  INV_X1 filter_mult_174_U514 ( .A(filter_mult_174_n674), .ZN(
-        filter_mult_174_n630) );
-  INV_X1 filter_mult_174_U513 ( .A(filter_mult_174_n675), .ZN(
-        filter_mult_174_n631) );
-  INV_X1 filter_mult_174_U512 ( .A(filter_mult_174_n726), .ZN(
-        filter_mult_174_n652) );
-  BUF_X1 filter_mult_174_U511 ( .A(filter_n5), .Z(filter_mult_174_n628) );
-  INV_X1 filter_mult_174_U510 ( .A(filter_mult_174_n745), .ZN(
-        filter_mult_174_n647) );
-  INV_X1 filter_mult_174_U509 ( .A(filter_mult_174_n118), .ZN(
-        filter_mult_174_n646) );
-  INV_X1 filter_mult_174_U508 ( .A(filter_mult_174_n765), .ZN(
+  INV_X1 filter_mult_174_U514 ( .A(filter_mult_174_n765), .ZN(
         filter_mult_174_n642) );
-  INV_X1 filter_mult_174_U507 ( .A(filter_mult_174_n708), .ZN(
-        filter_mult_174_n656) );
-  INV_X1 filter_mult_174_U506 ( .A(filter_mult_174_n140), .ZN(
-        filter_mult_174_n651) );
-  INV_X1 filter_mult_174_U505 ( .A(filter_mult_174_n86), .ZN(
+  INV_X1 filter_mult_174_U513 ( .A(filter_mult_174_n86), .ZN(
         filter_mult_174_n637) );
+  INV_X1 filter_mult_174_U512 ( .A(filter_mult_174_n674), .ZN(
+        filter_mult_174_n630) );
+  INV_X1 filter_mult_174_U511 ( .A(filter_mult_174_n675), .ZN(
+        filter_mult_174_n631) );
+  INV_X1 filter_mult_174_U510 ( .A(filter_mult_174_n726), .ZN(
+        filter_mult_174_n652) );
+  BUF_X1 filter_mult_174_U509 ( .A(filter_n5), .Z(filter_mult_174_n628) );
+  INV_X1 filter_mult_174_U508 ( .A(filter_mult_174_n745), .ZN(
+        filter_mult_174_n647) );
+  INV_X1 filter_mult_174_U507 ( .A(filter_mult_174_n118), .ZN(
+        filter_mult_174_n646) );
+  INV_X1 filter_mult_174_U506 ( .A(filter_mult_174_n708), .ZN(
+        filter_mult_174_n656) );
+  INV_X1 filter_mult_174_U505 ( .A(filter_mult_174_n140), .ZN(
+        filter_mult_174_n651) );
   BUF_X1 filter_mult_174_U504 ( .A(filter_n5), .Z(filter_mult_174_n627) );
   INV_X1 filter_mult_174_U503 ( .A(filter_mult_174_n687), .ZN(
         filter_mult_174_n655) );
   INV_X1 filter_mult_174_U502 ( .A(filter_mult_174_n669), .ZN(
         filter_mult_174_n629) );
-  INV_X1 filter_mult_174_U501 ( .A(filter_mult_174_n710), .ZN(
-        filter_mult_174_n653) );
-  INV_X1 filter_mult_174_U500 ( .A(filter_mult_174_n665), .ZN(
+  INV_X1 filter_mult_174_U501 ( .A(filter_mult_174_n665), .ZN(
         filter_mult_174_n634) );
+  INV_X1 filter_mult_174_U500 ( .A(filter_mult_174_n710), .ZN(
+        filter_mult_174_n653) );
   INV_X1 filter_mult_174_U499 ( .A(filter_mult_174_n255), .ZN(
         filter_mult_174_n645) );
   INV_X1 filter_mult_174_U498 ( .A(filter_mult_174_n258), .ZN(
         filter_mult_174_n649) );
   INV_X1 filter_mult_174_U497 ( .A(filter_mult_174_n100), .ZN(
         filter_mult_174_n641) );
-  INV_X1 filter_mult_174_U496 ( .A(filter_mult_174_n680), .ZN(
-        filter_mult_174_n644) );
-  INV_X1 filter_mult_174_U495 ( .A(filter_mult_174_n679), .ZN(
-        filter_mult_174_n640) );
-  INV_X1 filter_mult_174_U494 ( .A(filter_mult_174_n676), .ZN(
-        filter_mult_174_n633) );
-  INV_X1 filter_mult_174_U493 ( .A(filter_mult_174_n678), .ZN(
+  INV_X1 filter_mult_174_U496 ( .A(filter_mult_174_n678), .ZN(
         filter_mult_174_n639) );
-  INV_X1 filter_mult_174_U492 ( .A(filter_mult_174_n677), .ZN(
+  INV_X1 filter_mult_174_U495 ( .A(filter_mult_174_n677), .ZN(
         filter_mult_174_n635) );
+  INV_X1 filter_mult_174_U494 ( .A(filter_mult_174_n680), .ZN(
+        filter_mult_174_n644) );
+  INV_X1 filter_mult_174_U493 ( .A(filter_mult_174_n679), .ZN(
+        filter_mult_174_n640) );
+  INV_X1 filter_mult_174_U492 ( .A(filter_mult_174_n676), .ZN(
+        filter_mult_174_n633) );
   XOR2_X2 filter_mult_174_U491 ( .A(filter_s_A1_reg_delay1[2]), .B(
         filter_mult_174_n658), .Z(filter_mult_174_n687) );
   HA_X1 filter_mult_174_U169 ( .A(filter_mult_174_n387), .B(
@@ -9149,70 +9184,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_150_U526 ( .A(filter_s_A1_reg[8]), .B(
         filter_s_A1_reg[7]), .ZN(filter_mult_150_n672) );
   INV_X1 filter_mult_150_U525 ( .A(1'b0), .ZN(filter_mult_150_n660) );
-  INV_X1 filter_mult_150_U524 ( .A(filter_s_A1_reg[0]), .ZN(
-        filter_mult_150_n659) );
-  INV_X1 filter_mult_150_U523 ( .A(filter_s_A1_reg[11]), .ZN(
+  INV_X1 filter_mult_150_U524 ( .A(filter_s_A1_reg[11]), .ZN(
         filter_mult_150_n632) );
-  INV_X1 filter_mult_150_U522 ( .A(filter_s_A1_reg[3]), .ZN(
-        filter_mult_150_n654) );
-  INV_X1 filter_mult_150_U521 ( .A(filter_s_A1_reg[9]), .ZN(
-        filter_mult_150_n638) );
-  INV_X1 filter_mult_150_U520 ( .A(filter_s_A1_reg[7]), .ZN(
-        filter_mult_150_n643) );
-  INV_X1 filter_mult_150_U519 ( .A(filter_s_A1_reg[5]), .ZN(
-        filter_mult_150_n648) );
-  INV_X1 filter_mult_150_U518 ( .A(filter_s_A1_reg[1]), .ZN(
+  INV_X1 filter_mult_150_U523 ( .A(filter_s_A1_reg[0]), .ZN(
+        filter_mult_150_n659) );
+  INV_X1 filter_mult_150_U522 ( .A(filter_s_A1_reg[1]), .ZN(
         filter_mult_150_n658) );
-  INV_X1 filter_mult_150_U517 ( .A(filter_mult_150_n261), .ZN(
+  INV_X1 filter_mult_150_U521 ( .A(filter_mult_150_n261), .ZN(
         filter_mult_150_n650) );
+  INV_X1 filter_mult_150_U520 ( .A(filter_s_A1_reg[3]), .ZN(
+        filter_mult_150_n654) );
+  INV_X1 filter_mult_150_U519 ( .A(filter_s_A1_reg[9]), .ZN(
+        filter_mult_150_n638) );
+  INV_X1 filter_mult_150_U518 ( .A(filter_s_A1_reg[7]), .ZN(
+        filter_mult_150_n643) );
+  INV_X1 filter_mult_150_U517 ( .A(filter_s_A1_reg[5]), .ZN(
+        filter_mult_150_n648) );
   INV_X1 filter_mult_150_U516 ( .A(filter_mult_150_n782), .ZN(
         filter_mult_150_n636) );
-  INV_X1 filter_mult_150_U515 ( .A(filter_mult_150_n674), .ZN(
-        filter_mult_150_n630) );
-  INV_X1 filter_mult_150_U514 ( .A(filter_mult_150_n675), .ZN(
-        filter_mult_150_n631) );
-  INV_X1 filter_mult_150_U513 ( .A(filter_mult_150_n726), .ZN(
-        filter_mult_150_n652) );
-  BUF_X1 filter_mult_150_U512 ( .A(filter_n6), .Z(filter_mult_150_n628) );
-  INV_X1 filter_mult_150_U511 ( .A(filter_mult_150_n745), .ZN(
-        filter_mult_150_n647) );
-  INV_X1 filter_mult_150_U510 ( .A(filter_mult_150_n118), .ZN(
-        filter_mult_150_n646) );
-  INV_X1 filter_mult_150_U509 ( .A(filter_mult_150_n765), .ZN(
+  INV_X1 filter_mult_150_U515 ( .A(filter_mult_150_n765), .ZN(
         filter_mult_150_n642) );
-  INV_X1 filter_mult_150_U508 ( .A(filter_mult_150_n708), .ZN(
-        filter_mult_150_n656) );
-  INV_X1 filter_mult_150_U507 ( .A(filter_mult_150_n140), .ZN(
-        filter_mult_150_n651) );
-  INV_X1 filter_mult_150_U506 ( .A(filter_mult_150_n86), .ZN(
+  INV_X1 filter_mult_150_U514 ( .A(filter_mult_150_n86), .ZN(
         filter_mult_150_n637) );
+  INV_X1 filter_mult_150_U513 ( .A(filter_mult_150_n674), .ZN(
+        filter_mult_150_n630) );
+  INV_X1 filter_mult_150_U512 ( .A(filter_mult_150_n675), .ZN(
+        filter_mult_150_n631) );
+  INV_X1 filter_mult_150_U511 ( .A(filter_mult_150_n726), .ZN(
+        filter_mult_150_n652) );
+  BUF_X1 filter_mult_150_U510 ( .A(filter_n6), .Z(filter_mult_150_n628) );
+  INV_X1 filter_mult_150_U509 ( .A(filter_mult_150_n745), .ZN(
+        filter_mult_150_n647) );
+  INV_X1 filter_mult_150_U508 ( .A(filter_mult_150_n118), .ZN(
+        filter_mult_150_n646) );
+  INV_X1 filter_mult_150_U507 ( .A(filter_mult_150_n708), .ZN(
+        filter_mult_150_n656) );
+  INV_X1 filter_mult_150_U506 ( .A(filter_mult_150_n140), .ZN(
+        filter_mult_150_n651) );
   BUF_X1 filter_mult_150_U505 ( .A(filter_n6), .Z(filter_mult_150_n627) );
   INV_X1 filter_mult_150_U504 ( .A(filter_mult_150_n687), .ZN(
         filter_mult_150_n655) );
   INV_X1 filter_mult_150_U503 ( .A(filter_mult_150_n669), .ZN(
         filter_mult_150_n629) );
-  INV_X1 filter_mult_150_U502 ( .A(filter_mult_150_n710), .ZN(
-        filter_mult_150_n653) );
-  INV_X1 filter_mult_150_U501 ( .A(filter_mult_150_n691), .ZN(
-        filter_mult_150_n657) );
-  INV_X1 filter_mult_150_U500 ( .A(filter_mult_150_n665), .ZN(
+  INV_X1 filter_mult_150_U502 ( .A(filter_mult_150_n665), .ZN(
         filter_mult_150_n634) );
+  INV_X1 filter_mult_150_U501 ( .A(filter_mult_150_n710), .ZN(
+        filter_mult_150_n653) );
+  INV_X1 filter_mult_150_U500 ( .A(filter_mult_150_n691), .ZN(
+        filter_mult_150_n657) );
   INV_X1 filter_mult_150_U499 ( .A(filter_mult_150_n255), .ZN(
         filter_mult_150_n645) );
   INV_X1 filter_mult_150_U498 ( .A(filter_mult_150_n258), .ZN(
         filter_mult_150_n649) );
   INV_X1 filter_mult_150_U497 ( .A(filter_mult_150_n100), .ZN(
         filter_mult_150_n641) );
-  INV_X1 filter_mult_150_U496 ( .A(filter_mult_150_n680), .ZN(
-        filter_mult_150_n644) );
-  INV_X1 filter_mult_150_U495 ( .A(filter_mult_150_n679), .ZN(
-        filter_mult_150_n640) );
-  INV_X1 filter_mult_150_U494 ( .A(filter_mult_150_n676), .ZN(
-        filter_mult_150_n633) );
-  INV_X1 filter_mult_150_U493 ( .A(filter_mult_150_n678), .ZN(
+  INV_X1 filter_mult_150_U496 ( .A(filter_mult_150_n678), .ZN(
         filter_mult_150_n639) );
-  INV_X1 filter_mult_150_U492 ( .A(filter_mult_150_n677), .ZN(
+  INV_X1 filter_mult_150_U495 ( .A(filter_mult_150_n677), .ZN(
         filter_mult_150_n635) );
+  INV_X1 filter_mult_150_U494 ( .A(filter_mult_150_n680), .ZN(
+        filter_mult_150_n644) );
+  INV_X1 filter_mult_150_U493 ( .A(filter_mult_150_n679), .ZN(
+        filter_mult_150_n640) );
+  INV_X1 filter_mult_150_U492 ( .A(filter_mult_150_n676), .ZN(
+        filter_mult_150_n633) );
   XOR2_X2 filter_mult_150_U491 ( .A(filter_s_A1_reg[2]), .B(
         filter_mult_150_n658), .Z(filter_mult_150_n687) );
   HA_X1 filter_mult_150_U169 ( .A(filter_mult_150_n387), .B(
@@ -10206,70 +10241,70 @@ module IIR_filter_optimized ( DIN, CLK, RST_n, VIN, DOUT, VOUT );
   XNOR2_X2 filter_mult_161_U526 ( .A(filter_s_A1_reg[8]), .B(
         filter_s_A1_reg[7]), .ZN(filter_mult_161_n672) );
   INV_X1 filter_mult_161_U525 ( .A(1'b1), .ZN(filter_mult_161_n660) );
-  INV_X1 filter_mult_161_U524 ( .A(filter_s_A1_reg[0]), .ZN(
-        filter_mult_161_n659) );
-  INV_X1 filter_mult_161_U523 ( .A(filter_s_A1_reg[11]), .ZN(
+  INV_X1 filter_mult_161_U524 ( .A(filter_s_A1_reg[11]), .ZN(
         filter_mult_161_n632) );
-  INV_X1 filter_mult_161_U522 ( .A(filter_s_A1_reg[3]), .ZN(
-        filter_mult_161_n654) );
-  INV_X1 filter_mult_161_U521 ( .A(filter_s_A1_reg[9]), .ZN(
-        filter_mult_161_n638) );
-  INV_X1 filter_mult_161_U520 ( .A(filter_s_A1_reg[7]), .ZN(
-        filter_mult_161_n643) );
-  INV_X1 filter_mult_161_U519 ( .A(filter_s_A1_reg[5]), .ZN(
-        filter_mult_161_n648) );
-  INV_X1 filter_mult_161_U518 ( .A(filter_s_A1_reg[1]), .ZN(
+  INV_X1 filter_mult_161_U523 ( .A(filter_s_A1_reg[0]), .ZN(
+        filter_mult_161_n659) );
+  INV_X1 filter_mult_161_U522 ( .A(filter_s_A1_reg[1]), .ZN(
         filter_mult_161_n658) );
-  INV_X1 filter_mult_161_U517 ( .A(filter_mult_161_n261), .ZN(
+  INV_X1 filter_mult_161_U521 ( .A(filter_mult_161_n261), .ZN(
         filter_mult_161_n650) );
+  INV_X1 filter_mult_161_U520 ( .A(filter_s_A1_reg[3]), .ZN(
+        filter_mult_161_n654) );
+  INV_X1 filter_mult_161_U519 ( .A(filter_s_A1_reg[9]), .ZN(
+        filter_mult_161_n638) );
+  INV_X1 filter_mult_161_U518 ( .A(filter_s_A1_reg[7]), .ZN(
+        filter_mult_161_n643) );
+  INV_X1 filter_mult_161_U517 ( .A(filter_s_A1_reg[5]), .ZN(
+        filter_mult_161_n648) );
   INV_X1 filter_mult_161_U516 ( .A(filter_mult_161_n782), .ZN(
         filter_mult_161_n636) );
-  INV_X1 filter_mult_161_U515 ( .A(filter_mult_161_n674), .ZN(
-        filter_mult_161_n630) );
-  INV_X1 filter_mult_161_U514 ( .A(filter_mult_161_n675), .ZN(
-        filter_mult_161_n631) );
-  INV_X1 filter_mult_161_U513 ( .A(filter_mult_161_n726), .ZN(
-        filter_mult_161_n652) );
-  INV_X1 filter_mult_161_U512 ( .A(filter_mult_161_n745), .ZN(
-        filter_mult_161_n647) );
-  INV_X1 filter_mult_161_U511 ( .A(filter_mult_161_n118), .ZN(
-        filter_mult_161_n646) );
-  INV_X1 filter_mult_161_U510 ( .A(filter_mult_161_n765), .ZN(
+  INV_X1 filter_mult_161_U515 ( .A(filter_mult_161_n765), .ZN(
         filter_mult_161_n642) );
-  INV_X1 filter_mult_161_U509 ( .A(filter_mult_161_n708), .ZN(
-        filter_mult_161_n656) );
-  INV_X1 filter_mult_161_U508 ( .A(filter_mult_161_n140), .ZN(
-        filter_mult_161_n651) );
-  INV_X1 filter_mult_161_U507 ( .A(filter_mult_161_n86), .ZN(
+  INV_X1 filter_mult_161_U514 ( .A(filter_mult_161_n86), .ZN(
         filter_mult_161_n637) );
-  BUF_X1 filter_mult_161_U506 ( .A(filter_n6), .Z(filter_mult_161_n627) );
-  BUF_X1 filter_mult_161_U505 ( .A(filter_n6), .Z(filter_mult_161_n628) );
-  INV_X1 filter_mult_161_U504 ( .A(filter_mult_161_n710), .ZN(
-        filter_mult_161_n653) );
-  INV_X1 filter_mult_161_U503 ( .A(filter_mult_161_n691), .ZN(
-        filter_mult_161_n657) );
-  INV_X1 filter_mult_161_U502 ( .A(filter_mult_161_n687), .ZN(
-        filter_mult_161_n655) );
-  INV_X1 filter_mult_161_U501 ( .A(filter_mult_161_n669), .ZN(
+  INV_X1 filter_mult_161_U513 ( .A(filter_mult_161_n674), .ZN(
+        filter_mult_161_n630) );
+  INV_X1 filter_mult_161_U512 ( .A(filter_mult_161_n675), .ZN(
+        filter_mult_161_n631) );
+  INV_X1 filter_mult_161_U511 ( .A(filter_mult_161_n726), .ZN(
+        filter_mult_161_n652) );
+  BUF_X1 filter_mult_161_U510 ( .A(filter_n6), .Z(filter_mult_161_n628) );
+  INV_X1 filter_mult_161_U509 ( .A(filter_mult_161_n745), .ZN(
+        filter_mult_161_n647) );
+  INV_X1 filter_mult_161_U508 ( .A(filter_mult_161_n118), .ZN(
+        filter_mult_161_n646) );
+  INV_X1 filter_mult_161_U507 ( .A(filter_mult_161_n708), .ZN(
+        filter_mult_161_n656) );
+  INV_X1 filter_mult_161_U506 ( .A(filter_mult_161_n140), .ZN(
+        filter_mult_161_n651) );
+  BUF_X1 filter_mult_161_U505 ( .A(filter_n6), .Z(filter_mult_161_n627) );
+  INV_X1 filter_mult_161_U504 ( .A(filter_mult_161_n669), .ZN(
         filter_mult_161_n629) );
-  INV_X1 filter_mult_161_U500 ( .A(filter_mult_161_n665), .ZN(
+  INV_X1 filter_mult_161_U503 ( .A(filter_mult_161_n665), .ZN(
         filter_mult_161_n634) );
+  INV_X1 filter_mult_161_U502 ( .A(filter_mult_161_n710), .ZN(
+        filter_mult_161_n653) );
+  INV_X1 filter_mult_161_U501 ( .A(filter_mult_161_n691), .ZN(
+        filter_mult_161_n657) );
+  INV_X1 filter_mult_161_U500 ( .A(filter_mult_161_n687), .ZN(
+        filter_mult_161_n655) );
   INV_X1 filter_mult_161_U499 ( .A(filter_mult_161_n255), .ZN(
         filter_mult_161_n645) );
   INV_X1 filter_mult_161_U498 ( .A(filter_mult_161_n258), .ZN(
         filter_mult_161_n649) );
   INV_X1 filter_mult_161_U497 ( .A(filter_mult_161_n100), .ZN(
         filter_mult_161_n641) );
-  INV_X1 filter_mult_161_U496 ( .A(filter_mult_161_n680), .ZN(
-        filter_mult_161_n644) );
-  INV_X1 filter_mult_161_U495 ( .A(filter_mult_161_n679), .ZN(
-        filter_mult_161_n640) );
-  INV_X1 filter_mult_161_U494 ( .A(filter_mult_161_n676), .ZN(
-        filter_mult_161_n633) );
-  INV_X1 filter_mult_161_U493 ( .A(filter_mult_161_n678), .ZN(
+  INV_X1 filter_mult_161_U496 ( .A(filter_mult_161_n678), .ZN(
         filter_mult_161_n639) );
-  INV_X1 filter_mult_161_U492 ( .A(filter_mult_161_n677), .ZN(
+  INV_X1 filter_mult_161_U495 ( .A(filter_mult_161_n677), .ZN(
         filter_mult_161_n635) );
+  INV_X1 filter_mult_161_U494 ( .A(filter_mult_161_n680), .ZN(
+        filter_mult_161_n644) );
+  INV_X1 filter_mult_161_U493 ( .A(filter_mult_161_n679), .ZN(
+        filter_mult_161_n640) );
+  INV_X1 filter_mult_161_U492 ( .A(filter_mult_161_n676), .ZN(
+        filter_mult_161_n633) );
   XOR2_X2 filter_mult_161_U491 ( .A(filter_s_A1_reg[2]), .B(
         filter_mult_161_n658), .Z(filter_mult_161_n687) );
   HA_X1 filter_mult_161_U169 ( .A(filter_mult_161_n387), .B(

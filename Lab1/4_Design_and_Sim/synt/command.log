@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Mon Nov 18 18:17:45 2019
+#@ # Date:   Tue Nov 19 17:26:05 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6650,10 +6650,10 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab1/4_Design_and_Sim/synt/final_p
 #@ variable top_entity "IIR_filter_optimized"
 #@ # output directory of syntesys file
 #@ variable out_dir "./synt_out"
-#@ # period of clock (Tmax=1.63ns)
-#@ variable period 6.52
+#@ # period of clock (Tmin=1.21ns)
+#@ variable period 4.84
 #@ # estensione file
-#@ variable ext _6d52
+#@ variable ext _4d84
 #@ # -- End source variables.scr
 
 #@ read_verilog -netlist ../netlist/IIR_filter_optimized.v

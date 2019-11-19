@@ -192,7 +192,7 @@ Loaded 1 design.
 Current design is 'IIR_filter_optimized'.
 IIR_filter_optimized
 read_saif -input ../saif/IIR_filter_optimized.saif -instance IIR_tb/UUT -unit ns -scale 1
-Warning: There are 33 objects not found during annotation. (PWR-452)
+Warning: There are 35 objects not found during annotation. (PWR-452)
 1
 create_clock -name MY_CLK CLK
 1
@@ -200,5 +200,3 @@ report_power > $out_dir/report_power_final$ext.txt
 quit
 
 Thank you...
-
-Received Signal 15 from: PID=9024 (UID=1024)
