@@ -11,7 +11,7 @@ elaborate $top_entity -arch pipeline -lib WORK > $out_dir/elaborate.txt
 
 ###  Applico le limitazioni 
 # creo il clock di sistema, in ns
-create_clock -name MY_CLK -period $period CLK
+create_clock -name MY_CLK -period $period clk
 # poichè il clock è un segnale particolare
 # setto la proprietà don't touch
 # ciò è fatto perchè col comando ungroup vengono modificate tutte
@@ -35,6 +35,7 @@ set implementation DW02_mult/csa [find cell *mult*]
 # compilo
 compile -exact_map > $out_dir/compile$ext.txt
 
+report_resources > $out_dir/report_resources$ext.txt
 report_timing > $out_dir/report_timing$ext.txt
 
 report_area > $out_dir/report_area$ext.txt

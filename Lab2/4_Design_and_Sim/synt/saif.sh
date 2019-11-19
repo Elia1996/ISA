@@ -3,6 +3,7 @@ source $BASHLIB
 
 t=$1
 t_ext="_$(echo $t | tr "." "d")"
+echo $t_ext
 
 # esecuzione della sintesi
 ./total_synt.sh $t $t_ext
