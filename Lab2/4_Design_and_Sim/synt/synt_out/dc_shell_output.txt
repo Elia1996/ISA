@@ -112,3 +112,70 @@ Writing ddc file '/home/lp19.17/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/d
 quit
 
 Thank you...
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+source variables.scr
+# script per salvare la simulazione in modo da effettuare
+# poi il calcolo della potenza con la switching activity
+# carico l'ultima sintesi
+read_file -format ddc {~/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc}
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Reading ddc file '/home/lp19.17/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc'.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Loaded 4 designs.
+Current design is 'fpmul_pipeline'.
+fpmul_pipeline fpmul_pipeline_DW01_inc_0 fpmul_pipeline_DW01_add_2 fpmul_pipeline_DW02_mult_1
+# metto tutti i blocchi allo stesso livello di gerarchia
+ungroup -all -flatten
+Information: Updating graph... (UID-83)
+Warning: Design 'fpmul_pipeline' inherited license information from design 'fpmul_pipeline_DW02_mult_1'. (DDB-74)
+Information: Added key list 'DesignWare' to design 'fpmul_pipeline'. (DDB-72)
+1
+# per esportare la netlist in verilog dobbiamo cambiare i
+# nomi secondo le regole del verilog
+change_names -hierarchy -rules verilog
+1
+# creiamo il file di ritardi della netlist
+write_sdf ../netlist/$top_entity.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/lp19.17/Desktop/ISA/Lab2/4_Design_and_Sim/netlist/fpmul_pipeline.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+# scriviamo la netlist
+write -f verilog -hierarchy -output ../netlist/$top_entity.v
+Writing verilog file '/home/lp19.17/Desktop/ISA/Lab2/4_Design_and_Sim/netlist/fpmul_pipeline.v'.
+1
+# salviamo i limiti
+write_sdc ../netlist/$top_entity.sdc
+1
+# usciamo da synopsys
+# questo dev'essere fatto ogni volta perchè se non si esce
+# le nuove simulazioni vengono fatte anche in base a quelle vecchie
+# e non sono più riproducibili.
+quit
+
+Thank you...
