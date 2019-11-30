@@ -7,6 +7,6 @@ variable out_dir "./synt_out"
 # period of clock
 # max clk = 3.9ns
 # we set period equal to 4*Tclkmin
-variable period 1.43
-variable ext _1d43_pparch
+variable period 1.58000
+variable ext _1d58000_pparch
 variable aarch pparch
