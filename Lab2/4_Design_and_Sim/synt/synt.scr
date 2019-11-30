@@ -20,7 +20,7 @@ set_dont_touch_network MY_CLK
 # setto l'incertezza del clock
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 # setto in ritardo di tutti gli ingressi, che si suppone uguale
-set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] clk]
 # setto il ritardo di tutte le uscite
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 # setto il carico di ciascun uscita che si suppone uguale a quello 
