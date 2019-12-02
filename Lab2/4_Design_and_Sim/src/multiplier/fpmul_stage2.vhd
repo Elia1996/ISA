@@ -68,6 +68,17 @@ ARCHITECTURE struct OF FPmul_stage2 IS
    SIGNAL dout        : std_logic;
    SIGNAL dout1       : std_logic_vector(7 DOWNTO 0);
    SIGNAL prod        : std_logic_vector(63 DOWNTO 0);
+	
+   -- Pipe signal declarations
+   SIGNAL EXP_in_pp  : std_logic_vector(7 DOWNTO 0);
+   SIGNAL EXP_neg_stage2_pp : std_logic;
+   SIGNAL EXP_pos_stage2_pp : std_logic;
+   SIGNAL SIG_in_pp  : std_logic_vector(27 DOWNTO 0);
+   SIGNAL SIGN_out_stage2_pp 	: std_logic;
+   SIGNAL isINF_stage2_pp 	: std_logic;
+   SIGNAL isNaN_stage2_pp 	: std_logic;
+   SIGNAL isZ_tab_stage2_pp 	: std_logic;
+         
 
 
 
@@ -87,10 +98,20 @@ BEGIN
    PROCESS(clk)
    BEGIN
       IF RISING_EDGE(clk) THEN
-         EXP_in <= EXP_in_int;
-         SIG_in <= SIG_in_int;
-         EXP_pos_stage2 <= EXP_pos_int;
-         EXP_neg_stage2 <= EXP_neg_int;
+         EXP_in <= EXP_in_pp;
+         SIG_in <= SIG_in_pp;
+         EXP_pos_stage2 <= EXP_pos_stage2_pp;
+         EXP_neg_stage2 <= EXP_neg_stage2_pp;
+      END IF;
+   END PROCESS;
+
+   PROCESS(clk) -- registro di pipe
+   BEGIN
+      IF RISING_EDGE(clk) THEN
+         EXP_in_pp <= EXP_in_int;
+         SIG_in_pp <= SIG_in_int;
+         EXP_pos_stage2_pp <= EXP_pos_int;
+         EXP_neg_stage2_pp <= EXP_neg_int;
       END IF;
    END PROCESS;
 
@@ -99,10 +120,20 @@ BEGIN
    PROCESS(clk)
    BEGIN
       IF RISING_EDGE(clk) THEN
-         isINF_stage2 <= isINF_stage1;
-         isNaN_stage2 <= isNaN_stage1;
-         isZ_tab_stage2 <= isZ_tab_stage1;
-         SIGN_out_stage2 <= SIGN_out_stage1;
+         isINF_stage2 <= isINF_stage2_pp;
+         isNaN_stage2 <= isNaN_stage2_pp;
+         isZ_tab_stage2 <= isZ_tab_stage2_pp;
+         SIGN_out_stage2 <= SIGN_out_stage2_pp;
+      END IF;
+   END PROCESS;
+
+   PROCESS(clk) -- registro pipe
+   BEGIN
+      IF RISING_EDGE(clk) THEN
+         isINF_stage2_pp <= isINF_stage1;
+         isNaN_stage2_pp <= isNaN_stage1;
+         isZ_tab_stage2_pp <= isZ_tab_stage1;
+         SIGN_out_stage2_pp <= SIGN_out_stage1;
       END IF;
    END PROCESS;
 
@@ -111,7 +142,7 @@ BEGIN
    EXP_pos_int <= A_EXP(7) AND B_EXP(7);
 --   EXP_neg_int <= NOT(A_EXP(7) OR B_EXP(7));
    EXP_neg_int <= '1' WHEN ( (A_EXP(7)='0' AND NOT (A_EXP=X"7F")) AND (B_EXP(7)='0' AND NOT (B_EXP=X"7F")) ) ELSE '0';
-
+---------------------------------------------------------=127-------
 
    -- ModuleWare code(v1.1) for instance 'I4' of 'add'
    I4combo: PROCESS (A_EXP, B_EXP, dout)

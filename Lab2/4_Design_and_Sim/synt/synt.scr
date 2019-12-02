@@ -20,7 +20,7 @@ set_dont_touch_network MY_CLK
 # setto l'incertezza del clock
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 # setto in ritardo di tutti gli ingressi, che si suppone uguale
-set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] clk]
 # setto il ritardo di tutte le uscite
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 # setto il carico di ciascun uscita che si suppone uguale a quello 
@@ -30,10 +30,13 @@ set_load $OLOAD [all_outputs]
 
 #set implementation of Mutiplier as CSA adder
 ungroup -all -flatten
-set implementation DW02_mult/csa [find cell *mult*]
+set_implementation DW02_mult/csa [find cell *mult*]
 
 # compilo
 compile -exact_map > $out_dir/compile$ext.txt
+
+# retiming dei registri con compile_ultra
+optimize_registers
 
 report_resources > $out_dir/report_resources$ext.txt
 report_timing > $out_dir/report_timing$ext.txt

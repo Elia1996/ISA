@@ -7,15 +7,15 @@ Report : timing
         -max_paths 1
 Design : fpmul_pipeline
 Version: O-2018.06-SP4
-Date   : Tue Nov 19 16:23:37 2019
+Date   : Sat Nov 30 21:31:19 2019
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: I1/B_SIG_reg[9]
+  Startpoint: I2/mult_165/MY_CLK_r_REG231_S1
               (rising edge-triggered flip-flop clocked by MY_CLK)
-  Endpoint: I2/SIG_in_reg[20]
+  Endpoint: MY_CLK_r_REG159_S2
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -28,42 +28,41 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  I1/B_SIG_reg[9]/CK (DFF_X2)                             0.00       0.00 r
-  I1/B_SIG_reg[9]/Q (DFF_X2)                              0.14       0.14 r
-  I2/mult_134/b[9] (fpmul_pipeline_DW_mult_uns_1)         0.00       0.14 r
-  I2/mult_134/U2752/ZN (NOR2_X1)                          0.04       0.18 f
-  I2/mult_134/U2754/ZN (NOR2_X1)                          0.07       0.24 r
-  I2/mult_134/U2863/ZN (NAND2_X1)                         0.04       0.28 f
-  I2/mult_134/U2614/ZN (NOR2_X1)                          0.06       0.34 r
-  I2/mult_134/U1822/ZN (AOI21_X1)                         0.05       0.40 f
-  I2/mult_134/U3093/ZN (OAI21_X1)                         0.06       0.46 r
-  I2/mult_134/U2507/ZN (XNOR2_X2)                         0.08       0.54 r
-  I2/mult_134/U3155/ZN (OAI21_X1)                         0.04       0.58 f
-  I2/mult_134/U1804/ZN (XNOR2_X1)                         0.06       0.64 f
-  I2/mult_134/U529/CO (FA_X1)                             0.09       0.74 f
-  I2/mult_134/U520/CO (FA_X1)                             0.10       0.84 f
-  I2/mult_134/U513/CO (FA_X1)                             0.09       0.93 f
-  I2/mult_134/U506/S (FA_X1)                              0.15       1.08 r
-  I2/mult_134/U2903/ZN (NOR2_X1)                          0.03       1.11 f
-  I2/mult_134/U2880/ZN (INV_X1)                           0.03       1.14 r
-  I2/mult_134/U2875/ZN (NAND2_X1)                         0.03       1.17 f
-  I2/mult_134/U1916/ZN (NOR2_X1)                          0.05       1.22 r
-  I2/mult_134/U2701/ZN (NAND2_X1)                         0.04       1.26 f
-  I2/mult_134/U3030/ZN (OAI21_X1)                         0.07       1.32 r
-  I2/mult_134/U1856/ZN (AOI21_X1)                         0.03       1.36 f
-  I2/mult_134/U3147/ZN (INV_X1)                           0.04       1.40 r
-  I2/mult_134/U1839/ZN (AOI21_X1)                         0.03       1.44 f
-  I2/mult_134/U3117/ZN (OAI21_X1)                         0.04       1.48 r
-  I2/mult_134/U3071/ZN (XNOR2_X1)                         0.06       1.54 r
-  I2/mult_134/product[40] (fpmul_pipeline_DW_mult_uns_1)
+  I2/mult_165/MY_CLK_r_REG231_S1/CK (DFF_X1)              0.00       0.00 r
+  I2/mult_165/MY_CLK_r_REG231_S1/Q (DFF_X1)               0.09       0.09 f
+  I2/mult_165/U2847/ZN (NOR2_X1)                          0.07       0.16 r
+  I2/mult_165/U2575/ZN (OAI21_X1)                         0.04       0.19 f
+  I2/mult_165/U2474/ZN (AOI21_X1)                         0.08       0.27 r
+  I2/mult_165/U2641/ZN (OAI21_X1)                         0.04       0.31 f
+  I2/mult_165/U2303/ZN (AOI21_X1)                         0.06       0.36 r
+  I2/mult_165/U2302/Z (BUF_X2)                            0.06       0.42 r
+  I2/mult_165/U3037/ZN (OAI21_X1)                         0.04       0.46 f
+  I2/mult_165/U2106/ZN (INV_X1)                           0.06       0.52 r
+  I2/mult_165/U2791/ZN (OAI21_X1)                         0.04       0.57 f
+  I2/mult_165/U2652/Z (XOR2_X1)                           0.08       0.65 f
+  I2/mult_165/U520/CO (FA_X1)                             0.10       0.75 f
+  I2/mult_165/U512/CO (FA_X1)                             0.10       0.85 f
+  I2/mult_165/U505/S (FA_X1)                              0.13       0.99 r
+  I2/mult_165/U504/S (FA_X1)                              0.11       1.10 f
+  I2/mult_165/U2560/ZN (NAND2_X1)                         0.04       1.13 r
+  I2/mult_165/U3106/ZN (INV_X1)                           0.03       1.16 f
+  I2/mult_165/U2971/ZN (AOI21_X1)                         0.04       1.20 r
+  I2/mult_165/U2897/ZN (OAI21_X1)                         0.04       1.24 f
+  I2/mult_165/U2702/ZN (AOI21_X1)                         0.04       1.29 r
+  I2/mult_165/U2983/ZN (OAI21_X1)                         0.03       1.32 f
+  I2/mult_165/U3024/ZN (AOI21_X1)                         0.06       1.38 r
+  I2/mult_165/U2994/ZN (OAI21_X1)                         0.05       1.43 f
+  I2/mult_165/U2128/ZN (AOI21_X1)                         0.05       1.48 r
+  I2/mult_165/U2132/ZN (XNOR2_X1)                         0.06       1.54 r
+  I2/mult_165/PRODUCT[46] (fpmul_pipeline_DW02_mult_3)
                                                           0.00       1.54 r
-  I2/SIG_in_reg[20]/D (DFF_X1)                            0.01       1.55 r
+  MY_CLK_r_REG159_S2/D (DFF_X1)                           0.01       1.55 r
   data arrival time                                                  1.55
 
   clock MY_CLK (rise edge)                                1.65       1.65
   clock network delay (ideal)                             0.00       1.65
   clock uncertainty                                      -0.07       1.58
-  I2/SIG_in_reg[20]/CK (DFF_X1)                           0.00       1.58 r
+  MY_CLK_r_REG159_S2/CK (DFF_X1)                          0.00       1.58 r
   library setup time                                     -0.03       1.55
   data required time                                                 1.55
   --------------------------------------------------------------------------

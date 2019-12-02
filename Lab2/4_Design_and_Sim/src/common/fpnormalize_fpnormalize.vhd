@@ -37,7 +37,7 @@ BEGIN
 PROCESS(SIG_in, EXP_in)
 BEGIN
 	IF (SIG_in( SIG_width-1 )='1') THEN
-		SIG_out <= '0' & SIG_in(SIG_width-1 DOWNTO 2) & (SIG_in(1) AND SIG_in(0));
+		SIG_out <= '0' & SIG_in(SIG_width-1 DOWNTO 2) & (SIG_in(1) AND SIG_in(0)); -- la AND non ha senso!!!!!
 		EXP_out <= EXP_in + 1;
 	ELSE
 		SIG_out <= SIG_in;

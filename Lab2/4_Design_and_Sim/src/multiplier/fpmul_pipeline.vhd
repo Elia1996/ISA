@@ -226,6 +226,7 @@ BEGIN
          isNaN_stage2    => isNaN_stage2,
          isZ_tab_stage2  => isZ_tab_stage2
       );
+ ---------------- INSERIRE REGISTRI QUI ---------------------
    I3 : FPmul_stage3
       PORT MAP (
          EXP_in          => EXP_in,

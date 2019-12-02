@@ -101,8 +101,7 @@ BEGIN
 
    -- HDL Embedded Text Block 2 zero
    -- zero 2
-   SIG_isZ <= '1' WHEN ((SIG_out_norm2(26 DOWNTO 3)=X"000000") OR 
-   (EXP_neg='1' AND EXP_out(7)='1')) ELSE '0';
+   SIG_isZ <= '1' WHEN ((SIG_out_norm2(26 DOWNTO 3)=X"000000") OR (EXP_neg='1' AND EXP_out(7)='1')) ELSE '0';
 
    -- HDL Embedded Text Block 3 isINF_logic
    -- isINF_logic 3
@@ -113,7 +112,7 @@ BEGIN
             isINF <= '1';
          ELSIF EXP_out=X"FF" THEN
            isINF <='1';
-         ELSIF ((EXP_pos='1') AND (EXP_out(7)='0'))  THEN
+         ELSIF ((EXP_pos='1') AND (EXP_out(7)='0'))  THEN --entrambi gli exp sono >=128 (quindi nono bit a 1) e la loro somma è >381
            isINF <='1';
          ELSE
            isINF <= '0';
