@@ -12,6 +12,8 @@ Nb=16;
 
 %Mult_VMAT
 
+% file di uscita
+fp=fopen("MBE_port_map.vhd",'w');
 
 % Funzioni
 [C_V] = f_C_V(Nb);
@@ -25,4 +27,6 @@ sign_pp=-ones(1,L_V(nl)-1)
 
 [Mult_VMAT] =f_Mult_VMAT(L_V, PP_MAT, nl, Nb, sign_pp);
 
-[Mult_VMAT] =f_DADDA(Mult_VMAT,C_V,L_V,nl, Nb);
+[Mult_VMAT] =f_DADDA(Mult_VMAT,C_V,L_V,nl, Nb,fp);
+
+Mult_VMAT = flip(Mult_VMAT,2);
