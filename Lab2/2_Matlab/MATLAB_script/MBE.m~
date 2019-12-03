@@ -37,13 +37,8 @@ f_entity_vhdl(fp,fp_pkg,Nb,nl);
 
 Mult_VMAT = flip(Mult_VMAT,2);
 
-fprintf(fp,"\n");
-fprintf(fp,'\n\n\t------------------------------------------\n');
-fprintf(fp,'\t-- OUTPUTS\n');
-fprintf(fp,'\t------------------------------------------\n\n');
-fprintf(fp,"\t\tdata_out1 <= mult_vmat(nl-1,0);\n");
-fprintf(fp,"\t\tdata_out2 <= mult_vmat(nl-1,1);\n");
-fprintf(fp,"\n");
+Result = f_final_add(Mult_VMAT(1,1:end-1,nl),Mult_VMAT(2,1:end-1,nl,fp)
+
 fprintf(fp,"END structure;");
 
 

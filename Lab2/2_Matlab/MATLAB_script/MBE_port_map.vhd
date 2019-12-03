@@ -1,3 +1,76 @@
+-- -- Fiore, Neri, Ribaldone, Zheng
+--
+-- keyword in MAIUSCOLO (es: STD_LOGIC)
+-- dati in minuscolo (es: data_in)
+-- segnali di controllo in MAIUSCOLO (es: EN)
+-- componenti instanziati con l'iniziale maiuscola (es: Shift_register_1)
+-- i segnali attivi bassi con _n finale (es: RST_n)
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE work.all;
+USE work.MBE_pkg.all;
+
+ENTITY MBE_port_map IS
+GENERIC(Nb			: NATURAL:=16);
+PORT(	pp_mat			: IN MATRIX_PP;
+	sign_pp			: IN STD_LOGIC_VECTOR(row_pp-2 DOWNTO 0);
+	data_out1		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0);
+	data_out2		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0));
+END MBE_port_map;
+
+ARCHITECTURE structure OF MBE_port_map IS
+
+------ COMPONENTS -------
+
+COMPONENT FA IS 
+PORT(	a,b,cin	: IN STD_LOGIC;
+	s,cout	: OUT STD_LOGIC);
+END COMPONENT FA;
+
+COMPONENT HA IS 
+PORT(	a,b	: IN STD_LOGIC;
+	s,cout	: OUT STD_LOGIC);
+END COMPONENT HA;
+
+------ SIGNALS -------
+
+SIGNAL mult_vmat	: VECT_MATRIX;
+
+
+BEGIN
+
+
+	------------------------------------------
+	-- PYRAMID
+	------------------------------------------
+
+		mult_vmat(0,0)(19 DOWNTO 0) <= pp_mat(0)(19 DOWNTO 0);
+		mult_vmat(0,1)(0) <= sign_pp(0);
+		mult_vmat(0,1)(19 DOWNTO 2) <= pp_mat(1)(17 DOWNTO 0);
+		mult_vmat(0,2)(2) <= sign_pp(1);
+		mult_vmat(0,7)(20 DOWNTO 20) <= pp_mat(1)(15 DOWNTO 15);
+		mult_vmat(0,2)(19 DOWNTO 4) <= pp_mat(2)(15 DOWNTO 0);
+		mult_vmat(0,3)(4) <= sign_pp(2);
+		mult_vmat(0,6)(22 DOWNTO 20) <= pp_mat(2)(15 DOWNTO 13);
+		mult_vmat(0,3)(19 DOWNTO 6) <= pp_mat(3)(13 DOWNTO 0);
+		mult_vmat(0,4)(6) <= sign_pp(3);
+		mult_vmat(0,5)(24 DOWNTO 20) <= pp_mat(3)(15 DOWNTO 11);
+		mult_vmat(0,4)(19 DOWNTO 8) <= pp_mat(4)(11 DOWNTO 0);
+		mult_vmat(0,5)(8) <= sign_pp(4);
+		mult_vmat(0,4)(26 DOWNTO 20) <= pp_mat(4)(15 DOWNTO 9);
+		mult_vmat(0,5)(19 DOWNTO 10) <= pp_mat(5)(9 DOWNTO 0);
+		mult_vmat(0,6)(10) <= sign_pp(5);
+		mult_vmat(0,3)(28 DOWNTO 20) <= pp_mat(5)(15 DOWNTO 7);
+		mult_vmat(0,6)(19 DOWNTO 12) <= pp_mat(6)(7 DOWNTO 0);
+		mult_vmat(0,7)(12) <= sign_pp(6);
+		mult_vmat(0,2)(30 DOWNTO 20) <= pp_mat(6)(15 DOWNTO 5);
+		mult_vmat(0,7)(19 DOWNTO 14) <= pp_mat(7)(5 DOWNTO 0);
+		mult_vmat(0,8)(14) <= sign_pp(7);
+		mult_vmat(0,1)(31 DOWNTO 20) <= pp_mat(7)(14 DOWNTO 3);
+		mult_vmat(0,8)(19 DOWNTO 16) <= pp_mat(8)(3 DOWNTO 0);
+		mult_vmat(0,0)(31 DOWNTO 20) <= pp_mat(8)(12 DOWNTO 1);
 
 
 	------------------------------------------
@@ -1100,4 +1173,132 @@
 
 
 		FA_3_17_1: FA PORT MAP (
-	
+			mult_vmat(3)(0)(17),
+			mult_vmat(3)(1)(17),
+			mult_vmat(3)(2)(17),
+			mult_vmat(4)(0)(19),
+			mult_vmat(4)(1)(17));
+
+
+		FA_3_18_1: FA PORT MAP (
+			mult_vmat(3)(0)(18),
+			mult_vmat(3)(1)(18),
+			mult_vmat(3)(2)(18),
+			mult_vmat(4)(0)(20),
+			mult_vmat(4)(1)(18));
+
+
+		FA_3_19_1: FA PORT MAP (
+			mult_vmat(3)(0)(19),
+			mult_vmat(3)(1)(19),
+			mult_vmat(3)(2)(19),
+			mult_vmat(4)(0)(21),
+			mult_vmat(4)(1)(19));
+
+
+		FA_3_20_1: FA PORT MAP (
+			mult_vmat(3)(0)(20),
+			mult_vmat(3)(1)(20),
+			mult_vmat(3)(2)(20),
+			mult_vmat(4)(0)(22),
+			mult_vmat(4)(1)(20));
+
+
+		FA_3_21_1: FA PORT MAP (
+			mult_vmat(3)(0)(21),
+			mult_vmat(3)(1)(21),
+			mult_vmat(3)(2)(21),
+			mult_vmat(4)(0)(23),
+			mult_vmat(4)(1)(21));
+
+
+		FA_3_22_1: FA PORT MAP (
+			mult_vmat(3)(0)(22),
+			mult_vmat(3)(1)(22),
+			mult_vmat(3)(2)(22),
+			mult_vmat(4)(0)(24),
+			mult_vmat(4)(1)(22));
+
+
+		FA_3_23_1: FA PORT MAP (
+			mult_vmat(3)(0)(23),
+			mult_vmat(3)(1)(23),
+			mult_vmat(3)(2)(23),
+			mult_vmat(4)(0)(25),
+			mult_vmat(4)(1)(23));
+
+
+		FA_3_24_1: FA PORT MAP (
+			mult_vmat(3)(0)(24),
+			mult_vmat(3)(1)(24),
+			mult_vmat(3)(2)(24),
+			mult_vmat(4)(0)(26),
+			mult_vmat(4)(1)(24));
+
+
+		FA_3_25_1: FA PORT MAP (
+			mult_vmat(3)(0)(25),
+			mult_vmat(3)(1)(25),
+			mult_vmat(3)(2)(25),
+			mult_vmat(4)(0)(27),
+			mult_vmat(4)(1)(25));
+
+
+		FA_3_26_1: FA PORT MAP (
+			mult_vmat(3)(0)(26),
+			mult_vmat(3)(1)(26),
+			mult_vmat(3)(2)(26),
+			mult_vmat(4)(0)(28),
+			mult_vmat(4)(1)(26));
+
+
+		FA_3_27_1: FA PORT MAP (
+			mult_vmat(3)(0)(27),
+			mult_vmat(3)(1)(27),
+			mult_vmat(3)(2)(27),
+			mult_vmat(4)(0)(29),
+			mult_vmat(4)(1)(27));
+
+
+		FA_3_28_1: FA PORT MAP (
+			mult_vmat(3)(0)(28),
+			mult_vmat(3)(1)(28),
+			mult_vmat(3)(2)(28),
+			mult_vmat(4)(0)(30),
+			mult_vmat(4)(1)(28));
+
+
+		FA_3_29_1: FA PORT MAP (
+			mult_vmat(3)(0)(29),
+			mult_vmat(3)(1)(29),
+			mult_vmat(3)(2)(29),
+			mult_vmat(4)(0)(31),
+			mult_vmat(4)(1)(29));
+
+
+		FA_3_30_1: FA PORT MAP (
+			mult_vmat(3)(0)(30),
+			mult_vmat(3)(1)(30),
+			mult_vmat(3)(2)(30),
+			mult_vmat(4)(0)(32),
+			mult_vmat(4)(1)(30));
+
+
+		FA_3_31_1: FA PORT MAP (
+			mult_vmat(3)(0)(31),
+			mult_vmat(3)(1)(31),
+			mult_vmat(3)(2)(31),
+			mult_vmat(4)(0)(33),
+			mult_vmat(4)(1)(31));
+
+
+
+
+	------------------------------------------
+	-- OUTPUTS
+	------------------------------------------
+
+		data_out1 <= mult_vmat(nl-1,0);
+		data_out2 <= mult_vmat(nl-1,1);
+
+END structure;
