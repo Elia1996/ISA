@@ -1,12 +1,12 @@
 function [Mult_VMAT] =f_Mult_VMAT(L_V,PP_MAT,nl,Nb,sign_pp)
 %   Summary of this function goes here
 %   nl=size(L_V)
-%   sign_pp è il vettore dei segni dei prodotti parziali che vanno aggiunti
+%   sign_pp ï¿½ il vettore dei segni dei prodotti parziali che vanno aggiunti
 %   alla piramide
 %   Vettore nl di matrici 2Nb*L_V(nl)
 %   questa funzione crea il vettore di matrici e va ad inizializzare la
 %   prima matrice con la piramide dei prodotti parziali
-%   PP_MAT è una matrice (Nb+4)*L_V(nl) che poi noi andiamo a posizionare a
+%   PP_MAT ï¿½ una matrice (Nb+4)*L_V(nl) che poi noi andiamo a posizionare a
 %   piramide
 
 
@@ -17,12 +17,12 @@ function [Mult_VMAT] =f_Mult_VMAT(L_V,PP_MAT,nl,Nb,sign_pp)
 %2*Nb: numero di colonne della base della piramide
 
 Mult_VMAT = zeros(L_V(nl),2*Nb,nl); %inizializzazione A ZERO
-PP_MAT=flip(PP_MAT,2)
+PP_MAT=flip(PP_MAT,2);
 % scrivere la prima matrice a piramide
 
 
 %%
-z=Nb+4; % numero di bit del primp PP, il +4 per l'estensione di segno e per il bit in più 
+z=Nb+4; % numero di bit del primp PP, il +4 per l'estensione di segno e per il bit in piï¿½ 
         % derivante dalla possibilita di fare *2 o *-2
         
 r=1; %partiamo dalla prima riga (in VHDL mettere 0)
@@ -44,8 +44,9 @@ while r <= L_V(nl) % se non abbiamo finito il numero di prodotti parziali
     end
     
     r=r+1;
-    
 end
+
+%Mult_VMAT= flip(Mult_VMAT,2)
 
 Mult_VMAT;
 end

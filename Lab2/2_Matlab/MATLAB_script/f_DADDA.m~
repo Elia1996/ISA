@@ -8,19 +8,19 @@ function [Mult_VMAT] =f_DADDA(Mult_VMAT, C_V, L_V, nl, Nb)
 N_FA_tot=0; %Numero di FA totali
 N_HA_tot=0; %Numero di HA totali
 
+fprintf('-- LEVEL %d \n', nl-l);
 
 l=nl-1;
 while l>1
-    fprintf('\n\n------------------------------------------\n');
-    fprintf('-- LEVEL %d\n', nl-l);
-    fprintf('------------------------------------------\n\n');
+    fprintf('------------------------------------------');
+    fprintf('\n-- LEVEL %d \n', nl-l);
+    fprintf('------------------------------------------');
     cy_c=0; %numero di carry della colonna
     cy_cp1=0; %numero di carry della colonna successiva
     c=1;
     
     while (c <= 2*Nb) 
-        N_FA=0;
-        N_HA=0;
+        
         if C_V(c) > L_V(l) % se gli elementi della colonna sono maggiori dell'altezza del livello successivo
             
             % troviamo il numero di FA e HA da instanziare in questa
@@ -74,7 +74,7 @@ while l>1
         end
         
         while (r_l <= C_V(c))
-            fprintf('mult_vmat(%d)(%d)(%d) <= mult_vmat(%d)(%d)(%d);\n',nl-l+1-1, cy_c+r_lp1-1, c-1, nl-l-1,  r_l-1, c-1);
+            fprintf('mult_vmat(%d)(%d)(%d) <= mult_vmat(%d)(%d)(%d)\n',nl-l+1-1, cy_c+r_lp1-1, c-1, nl-l-1,  r_l-1, c-1);
 
             % riempimento della matrice successiva (per MATLAB)
             Mult_VMAT(cy_c+r_lp1, c, nl-l+1)=Mult_VMAT(r_l, c, nl-l);
