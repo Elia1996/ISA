@@ -43,12 +43,12 @@ while r <= Nb/2+1 % se non abbiamo finito il numero di prodotti parziali
     end
     
     if r > 1 && r < Nb/2+1-1 %% non consideriamo la prima e le ultime due righe (parte sinistra della piramide)
-        Mult_VMAT(L_V(nl)-r+1, z+2*(r-1)-1:-1:z+1, 1)=PP_MAT(r, Nb:-1:z-(2*r));
+        Mult_VMAT(Nb/2+1-r+1, z+2*(r-1)-1:-1:z+1, 1)=PP_MAT(r, Nb:-1:z-(2*r));
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, (z-1)+2*(r-1)-1, z, r-1, Nb-1, (z-1)-(2*r));
     end
     
     if r >= Nb/2+1-1 %% consideriamo le ultime due della parte sinistra
-        Mult_VMAT(L_V(nl)-r+1, 2*Nb:-1:z+1, 1)=PP_MAT(r, 2*Nb-2*r-1:-1:z-(2*r));
+        Mult_VMAT(Nb/2+1-r+1, 2*Nb:-1:z+1, 1)=PP_MAT(r, 2*Nb-2*r-1:-1:z-(2*r));
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, 2*Nb-1, z, r-1, 2*Nb-2*r-2, z-(2*r)-1);
     end
     
