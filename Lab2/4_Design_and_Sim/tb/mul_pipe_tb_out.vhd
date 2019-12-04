@@ -24,6 +24,7 @@ end mul_pipe_tb_out;
 
 architecture beh of mul_pipe_tb_out is
   signal vmat : VECT_MATRIX; 
+  signal mat_pp: MATRIX_PP;
   signal A_pp, B_pp: STD_LOGIC_VECTOR(Nb-1 downto 0);
 
 begin  -- beh
@@ -32,6 +33,7 @@ begin  -- beh
 	
   begin
   	init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_dadda_tree/mult_vmat","/mul_pipe_tb/TB_OUT/vmat");
+  	init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/pp_mat","/mul_pipe_tb/TB_OUT/mat_pp");
     init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_a","/mul_pipe_tb/TB_OUT/A_pp");
     init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_b","/mul_pipe_tb/TB_OUT/B_pp");
 	wait;
@@ -67,17 +69,34 @@ begin  -- beh
 			hwrite(line_csv_out, B );
 			write(line_csv_out, string'(","));
 			-- file csv verbose
+			-- la composizione del file verbose è la seguente:
+			-- A		vmat(0,0)		mat_pp(0)
+			-- B		vmat(0,1)       mat_pp(1)
+			--          vmat(0,2)       mat_pp(2)
+			--			vmat(0,3)       mat_pp(3)
+			--			   ...             ...
+			--             ..              ...
 			write(line_csv_verbose, A_pp );
-			write(line_csv_verbose, string'(","));
-			write(line_csv_verbose, B_pp);
 			write(line_csv_verbose, string'(","));
 			write(line_csv_verbose, vmat(0,0));
 			write(line_csv_verbose, string'(","));
+			write(line_csv_verbose, mat_pp(0));
+			write(line_csv_verbose, string'(","));
 			writeline(res_csv_verbose, line_csv_verbose);
-      		for i in 1 to Nb/2 loop
-				write(line_csv_verbose, string'(" , ,"));
+			write(line_csv_verbose, B_pp);
+			write(line_csv_verbose, string'(","));
+			write(line_csv_verbose, vmat(0,1));
+			write(line_csv_verbose, string'(","));
+			write(line_csv_verbose, mat_pp(1));
+			write(line_csv_verbose, string'(","));
+			writeline(res_csv_verbose, line_csv_verbose);
+      		for i in 2 to Nb/2 loop
+				write(line_csv_verbose, string'(" ,"));
 				write(line_csv_verbose, vmat(0,i));
 				write(line_csv_verbose, string'(","));
+				write(line_csv_verbose, mat_pp(i));
+				write(line_csv_verbose, string'(","));
+
 				writeline(res_csv_verbose, line_csv_verbose);
 			end loop;
 		

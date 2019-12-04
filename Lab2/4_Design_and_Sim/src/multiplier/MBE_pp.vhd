@@ -41,7 +41,7 @@ ARCHITECTURE Structural OF MBE_pp IS
 	------ SIGNALS -------
 
 	SIGNAL b1_xor_b0, b2_xor_b1, sel0, sel1, sel0_or_sel1	: STD_LOGIC;
-	SIGNAL pp_mux_out, pp_xor_out, a1, a2			: STD_LOGIC_VECTOR(Nb DOWNTO 0);
+	SIGNAL pp_mux_out, a1, a2			: STD_LOGIC_VECTOR(Nb DOWNTO 0);
 	SIGNAL sel	: STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SIGNAL sign_pp_s : STD_LOGIC;
 BEGIN
