@@ -68,7 +68,13 @@ ARCHITECTURE struct OF FPmul_stage2 IS
    SIGNAL dout        : std_logic;
    SIGNAL dout1       : std_logic_vector(7 DOWNTO 0);
    SIGNAL prod        : std_logic_vector(63 DOWNTO 0);
-
+   
+   COMPONENT MBE_multiplier IS
+	PORT(	data_in1		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		data_in2		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+		data_out		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0)
+	);
+   END COMPONENT;
 
 
 BEGIN
@@ -127,13 +133,26 @@ BEGIN
       dout1 <= conv_std_logic_vector(mw_I4sum(7 DOWNTO 0),8);
    END PROCESS I4combo;
 
+
+
+
+   -- MOLTIPLICAZIONE 
+   
+   mult : MBE_multiplier
+	PORTMAP(A_SIG,
+		B_SIG,
+		prod
+	);
+		
+
    -- ModuleWare code(v1.1) for instance 'I2' of 'mult'
-   I2combo : PROCESS (A_SIG, B_SIG)
-   VARIABLE dtemp : unsigned(63 DOWNTO 0);
-   BEGIN
-      dtemp := (unsigned(A_SIG) * unsigned(B_SIG));
-      prod <= std_logic_vector(dtemp);
-   END PROCESS I2combo;
+   --I2combo : PROCESS (A_SIG, B_SIG)
+   --VARIABLE dtemp : unsigned(63 DOWNTO 0);
+   --BEGIN
+   --	dtemp := (unsigned(A_SIG) * unsigned(B_SIG));
+      
+   --	prod <= std_logic_vector(dtemp);
+   --END PROCESS I2combo;
 
    -- ModuleWare code(v1.1) for instance 'I6' of 'vdd'
    dout <= '1';

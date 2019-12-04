@@ -32,22 +32,22 @@ fprintf(fp,'\t------------------------------------------\n\n');
     
 r=1; %partiamo dalla prima riga (in VHDL mettere 0)
 
-while r <= L_V(nl) % se non abbiamo finito il numero di prodotti parziali
+while r <= Nb/2+1 % se non abbiamo finito il numero di prodotti parziali
     
     Mult_VMAT(r, z:-1:(2*r-1), 1)=PP_MAT(r, (z-(2*(r-1))):-1:1); %% tutta la parte destra della piramide
     fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO 0);\n', r-1, z-1, 2*r-2, r-1, (z-1)-(2*(r-1)));
     
-    if r<L_V(nl) 
+    if r < Nb/2+1
         Mult_VMAT(r+1, (2*r-1), 1)=sign_pp(r); %% segni da aggiungere alla parte destra della piramide
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d) <= sign_pp(%d);\n', r, 2*(r-1), r-1);
     end
     
-    if r > 1 && r < L_V(nl)-1 %% non consideriamo la prima e le ultime due righe (parte sinistra della piramide)
+    if r > 1 && r < Nb/2+1-1 %% non consideriamo la prima e le ultime due righe (parte sinistra della piramide)
         Mult_VMAT(L_V(nl)-r+1, z+2*(r-1)-1:-1:z+1, 1)=PP_MAT(r, Nb:-1:z-(2*r));
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, (z-1)+2*(r-1)-1, z, r-1, Nb-1, (z-1)-(2*r));
     end
     
-    if r >= L_V(nl)-1 %% consideriamo le ultime due della parte sinistra
+    if r >= Nb/2+1-1 %% consideriamo le ultime due della parte sinistra
         Mult_VMAT(L_V(nl)-r+1, 2*Nb:-1:z+1, 1)=PP_MAT(r, 2*Nb-2*r-1:-1:z-(2*r));
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, 2*Nb-1, z, r-1, 2*Nb-2*r-2, z-(2*r)-1);
     end
