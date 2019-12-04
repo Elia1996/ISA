@@ -16,7 +16,7 @@ function [Mult_VMAT] =f_Mult_VMAT(L_V,PP_MAT,nl,Nb,sign_pp,fp)
 %L_V(nl): numero di righe massime (ovvero altezza massima della prima matrice)
 %2*Nb: numero di colonne della base della piramide
 
-Mult_VMAT = zeros(L_V(nl),2*Nb,nl); %inizializzazione A ZERO
+Mult_VMAT = zeros(L_V(nl),2*Nb+2,nl); %inizializzazione A ZERO
 PP_MAT=flip(PP_MAT,2);
 % scrivere la prima matrice a piramide
 
