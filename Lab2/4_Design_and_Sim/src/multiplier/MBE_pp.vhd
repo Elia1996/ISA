@@ -34,7 +34,7 @@ ARCHITECTURE Structural OF MBE_pp IS
 			
 			SEL		: IN STD_LOGIC_VECTOR(S-1 DOWNTO 0);
 			q		: OUT STD_LOGIC_VECTOR(P-1 DOWNTO 0));
-	END mux4to1_nbit;
+	END COMPONENT;
 
 
 
@@ -43,7 +43,7 @@ ARCHITECTURE Structural OF MBE_pp IS
 	SIGNAL b1_xor_b0, b2_xor_b1, sel0, sel1, sel0_or_sel1	: STD_LOGIC;
 	SIGNAL pp_mux_out, pp_xor_out, a1, a2			: STD_LOGIC_VECTOR(Nb DOWNTO 0);
 	SIGNAL sel	: STD_LOGIC_VECTOR(1 DOWNTO 0);
-
+	SIGNAL sign_pp_s : STD_LOGIC;
 BEGIN
 
 	-- codifica dei 3 bit di b
@@ -60,10 +60,10 @@ BEGIN
 	MUX: mux4to1_nbit
 		GENERIC MAP(Nb+1,2)
 		PORT MAP(
-			OTHERS => '0',
+			(OTHERS => '0'),
 			a1,
 			a2,
-			OTHERS => '0',
+			(OTHERS => '0'),
 			sel,
 			pp_mux_out
 		);
@@ -73,9 +73,9 @@ BEGIN
 	-- scelta se negare o meno il prodotto parziale
 	-- nel caso in cui abbiamo tutti '0' non neghiamo
 	sel0_or_sel1 <= sel0 or sel1;
-	sign_pp <= sel0_or_sel1 and b(2);
-	pp_out <= (pp_mux_out when sign_pp => '0' else not(pp_mux_out)); 
-				
+	sign_pp_s <= sel0_or_sel1 and b(2);
+	pp_out <= pp_mux_out when ( sign_pp_s = '0' ) else not(pp_mux_out); 
+	sign_pp <= sign_pp_s;
 	
 
 END Structural;

@@ -1,5 +1,9 @@
 vcom -93 -work ./work ../src/common/*.vhd
 
+vcom -93 -work ./work ../src/multiplier/MBE_pp.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_pp_MAT.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_dadda.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_multiplier.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage1.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage2.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage3.vhd
