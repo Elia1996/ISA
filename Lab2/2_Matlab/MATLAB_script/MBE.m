@@ -25,7 +25,7 @@ PP_MAT(end,2:3)=-5;
 sign_pp=-ones(1,L_V(nl)-1)
 
 %% file di uscita
-fp=fopen("../../4_Design_and_Sim/src/multiplier/MBE_port_map.vhd",'w');
+fp=fopen("../../4_Design_and_Sim/src/multiplier/MBE_dadda.vhd",'w');
 fp_pkg=fopen("../../4_Design_and_Sim/src/multiplier/MBE_pkg.vhd",'w');
 f_entity_vhdl(fp,fp_pkg,Nb,nl);
 

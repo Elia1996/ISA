@@ -18,7 +18,10 @@ while l>=1
     cy_cp1=0; %numero di carry della colonna successiva
     c=1;
     
-    while (c <= 2*Nb) 
+    while (c <= 2*Nb)
+        
+        fprintf(fp,'\n\t\t-- COLUMN %d\n', c);
+        
         N_FA=0;
         N_HA=0;
         if C_V(c)+cy_c > L_V(l) % se gli elementi della colonna sono maggiori dell'altezza del livello successivo

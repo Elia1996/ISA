@@ -12,17 +12,17 @@ USE ieee.numeric_std.all;
 USE work.all;
 USE work.MBE_pkg.all;
 
-ENTITY mpy_mbe_dadda IS
+ENTITY MBE_multiplier IS
 PORT(	data_in1		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 	data_in2		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 	data_out		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0));
-END mpy_mbe_dadda;
+END MBE_multiplier;
 
-ARCHITECTURE structure OF mpy_mbe_dadda IS
+ARCHITECTURE structure OF MBE_multiplier IS
 
 ------ COMPONENTS -------
 
-COMPONENT MBE_port_map IS
+COMPONENT MBE_dadda IS
 PORT(	pp_mat			: IN MATRIX_PP;
 	sign_pp			: IN STD_LOGIC_VECTOR(row_pp-2 DOWNTO 0);
 	data_out1		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0);
