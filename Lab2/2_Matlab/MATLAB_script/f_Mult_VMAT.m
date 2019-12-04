@@ -32,24 +32,45 @@ fprintf(fp,'\t------------------------------------------\n\n');
     
 r=1; %partiamo dalla prima riga (in VHDL mettere 0)
 
-while r <= Nb/2+1 % se non abbiamo finito il numero di prodotti parziali
+start_nl = Nb/2+1; % numero di livelli iniziale
+
+while r <= start_nl % se non abbiamo finito il numero di prodotti parziali
+    % to                    from 
+    t_riga= r;              riga= r;
+    t_col_start= z;         col_start= z-(2*(r-1));  
+    t_col_end = (2*r-1);    col_end= 1;
+    t_lev= 1;
+    Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=7.*PP_MAT(riga, col_start:-1:col_end); %% tutta la parte destra della piramide
+    fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO 0);\n',...
+                t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1);
     
-    Mult_VMAT(r, z:-1:(2*r-1), 1)=PP_MAT(r, (z-(2*(r-1))):-1:1); %% tutta la parte destra della piramide
-    fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO 0);\n', r-1, z-1, 2*r-2, r-1, (z-1)-(2*(r-1)));
-    
-    if r < Nb/2+1
-        Mult_VMAT(r+1, (2*r-1), 1)=sign_pp(r); %% segni da aggiungere alla parte destra della piramide
-        fprintf(fp,'\t\tmult_vmat(0,%d)(%d) <= sign_pp(%d);\n', r, 2*(r-1), r-1);
+    if r < start_nl
+        t_riga= r+1;     riga= r;
+        t_col = (2*r-1);
+        Mult_VMAT(t_riga, t_col, 1)=sign_pp(riga); %% segni da aggiungere alla parte destra della piramide
+        fprintf(fp,'\t\tmult_vmat(0,%d)(%d) <= sign_pp(%d);\n', t_riga-1, t_col-1, riga-1);
     end
     
-    if r > 1 && r < Nb/2+1-1 %% non consideriamo la prima e le ultime due righe (parte sinistra della piramide)
-        Mult_VMAT(Nb/2+1-r+1, z+2*(r-1)-1:-1:z+1, 1)=PP_MAT(r, Nb:-1:z-(2*r));
-        fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, (z-1)+2*(r-1)-1, z, r-1, Nb-1, (z-1)-(2*r));
+    if r > 1 && r < start_nl-1 %% non consideriamo la prima e le ultime due righe (parte sinistra della piramide)
+        % to                         from
+        t_riga= start_nl-r+1;        riga= r;
+        t_col_start= z+2*(r-1)-1;    col_start= Nb;  
+        t_col_end = z+1;             col_end= z-(2*r);
+        t_lev= 1;
+        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)= 8.*PP_MAT(riga, col_start:-1:col_end);
+        fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n',...
+                     t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1, col_end-1);
     end
     
-    if r >= Nb/2+1-1 %% consideriamo le ultime due della parte sinistra
-        Mult_VMAT(Nb/2+1-r+1, 2*Nb:-1:z+1, 1)=PP_MAT(r, 2*Nb-2*r-1:-1:z-(2*r));
-        fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n', L_V(nl)-r, 2*Nb-1, z, r-1, 2*Nb-2*r-2, z-(2*r)-1);
+    if r >= start_nl-1 %% consideriamo le ultime due della parte sinistra
+        % to                         from
+        t_riga= start_nl-r+1;        riga= r;
+        t_col_start= 2*Nb;           col_start= 2*Nb-2*r-1;  
+        t_col_end = z+1;             col_end= z-(2*r);
+        t_lev= 1;
+        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=9.*PP_MAT(riga, col_start:-1:col_end);
+        fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n',...
+                    t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1, col_end-1);
     end
     
     r=r+1;
