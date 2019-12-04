@@ -22,6 +22,8 @@ add wave sim:/mul_pipe_tb/UUT/s_fp_b
 add wave sim:/mul_pipe_tb/UUT/fp_a 
 add wave sim:/mul_pipe_tb/UUT/fp_b 
 add wave sim:/mul_pipe_tb/UUT/i2/mult/pp_matrix
+add wave sim:/mul_pipe_tb/TB_OUT/a_pp
+add wave sim:/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_b
 run -all
 
 quit

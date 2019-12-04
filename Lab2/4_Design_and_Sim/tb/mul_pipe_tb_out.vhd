@@ -23,24 +23,26 @@ entity mul_pipe_tb_out is
 end mul_pipe_tb_out;
 
 architecture beh of mul_pipe_tb_out is
-  signal mat_pp : MATRIX_PP; 
-  signal A: STD_LOGIC_VECTOR(64 downto 0);
+  signal vmat : VECT_MATRIX; 
+  signal A_pp, B_pp: STD_LOGIC_VECTOR(Nb-1 downto 0);
 
 begin  -- beh
 
   process 
 	
   begin
-  	init_signal_spy("/mul_pipe_tb/UUT/i2/mult/pp_matrix","/mul_pipe_tb/TB_OUT/mat_pp");
-    init_signal_spy("mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_a","/mul_pipe_tb/TB_OUT/A");
+  	init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_dadda_tree/mult_vmat","/mul_pipe_tb/TB_OUT/vmat");
+    init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_a","/mul_pipe_tb/TB_OUT/A_pp");
+    init_signal_spy("/mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_b","/mul_pipe_tb/TB_OUT/B_pp");
 	wait;
   end process;
 
   process (CLK, RST_n)
     file res_fp : text open WRITE_MODE is "../sim_out/fp_results_v.txt";
+    file res_csv_verbose : text open WRITE_MODE  is "../sim_out/fp_results_v_verbose.csv";
 	file res_csv_fp : text open WRITE_MODE is "../sim_out/fp_results_v.csv";
 	file res_correct : text open READ_MODE is "../sim_out/fp_prod.hex";
-    variable line_out, line_csv_out, line_dout_correct : line;
+    variable line_out, line_csv_verbose, line_csv_out, line_dout_correct : line;
     variable hex_correct : std_logic_vector(32-1 downto 0);
     variable flag : boolean := false;
 
@@ -64,7 +66,20 @@ begin  -- beh
 			write(line_csv_out, string'(","));
 			hwrite(line_csv_out, B );
 			write(line_csv_out, string'(","));
-      	
+			-- file csv verbose
+			write(line_csv_verbose, A_pp );
+			write(line_csv_verbose, string'(","));
+			write(line_csv_verbose, B_pp);
+			write(line_csv_verbose, string'(","));
+			write(line_csv_verbose, vmat(0,0));
+			write(line_csv_verbose, string'(","));
+			writeline(res_csv_verbose, line_csv_verbose);
+      		for i in 1 to Nb/2 loop
+				write(line_csv_verbose, string'(" , ,"));
+				write(line_csv_verbose, vmat(0,i));
+				write(line_csv_verbose, string'(","));
+				writeline(res_csv_verbose, line_csv_verbose);
+			end loop;
 		
 		    -- i simply write output of filter in txt file
 			hwrite(line_out, Z);
