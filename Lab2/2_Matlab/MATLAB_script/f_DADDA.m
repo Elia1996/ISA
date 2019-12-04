@@ -77,7 +77,7 @@ while l>=1
         end
         
         while (r_l <= C_V(c))
-            fprintf(fp,'\t\t%s(%d,%d)(%d) <= %s(%d)(%d)(%d);\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1, mult_vmat_str, nl-l-1,  r_l-1, c-1);
+            fprintf(fp,'\t\t%s(%d,%d)(%d) <= %s(%d,%d)(%d);\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1, mult_vmat_str, nl-l-1,  r_l-1, c-1);
 
             % riempimento della matrice successiva (per MATLAB)
             Mult_VMAT(cy_c+r_lp1, c, nl-l+1)=Mult_VMAT(r_l, c, nl-l);
