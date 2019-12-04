@@ -3,6 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all; 
 use ieee.std_logic_textio.all;
+library modelsim_lib;
+use modelsim_lib.util.all;
+USE work.all;
+USE work.MBE_pkg.all;
 --use work.type_for_IIR_pkg.all;
 
 library std;
@@ -19,8 +23,18 @@ entity mul_pipe_tb_out is
 end mul_pipe_tb_out;
 
 architecture beh of mul_pipe_tb_out is
+  signal mat_pp : MATRIX_PP; 
+  signal A: STD_LOGIC_VECTOR(64 downto 0);
 
 begin  -- beh
+
+  process 
+	
+  begin
+  	init_signal_spy("/mul_pipe_tb/UUT/i2/mult/pp_matrix","/mul_pipe_tb/TB_OUT/mat_pp");
+    init_signal_spy("mul_pipe_tb/UUT/i2/mult/mbe_partial_products/data_a","/mul_pipe_tb/TB_OUT/A");
+	wait;
+  end process;
 
   process (CLK, RST_n)
     file res_fp : text open WRITE_MODE is "../sim_out/fp_results_v.txt";

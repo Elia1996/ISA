@@ -7,7 +7,7 @@ ENTITY HA IS
 
   PORT (
          a,b: IN STD_LOGIC;
-         s,c_out: OUT STD_LOGIC
+         s,cout: OUT STD_LOGIC
   );
            
 END HA; 
@@ -16,5 +16,5 @@ ARCHITECTURE Structure OF HA IS
 
 BEGIN
 	s <= a xor b;
-	c_out <= (a and b);
+	cout <= (a and b);
 END Structure;

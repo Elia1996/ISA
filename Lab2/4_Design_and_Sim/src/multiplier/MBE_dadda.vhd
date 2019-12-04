@@ -25,12 +25,12 @@ ARCHITECTURE structure OF MBE_dadda IS
 
 COMPONENT FA IS 
 PORT(	a,b,cin	: IN STD_LOGIC;
-	s,cout	: OUT STD_LOGIC);
+		s,cout	: OUT STD_LOGIC);
 END COMPONENT FA;
 
 COMPONENT HA IS 
 PORT(	a,b	: IN STD_LOGIC;
-	s,cout	: OUT STD_LOGIC);
+		s,cout	: OUT STD_LOGIC);
 END COMPONENT HA;
 
 ------ SIGNALS -------

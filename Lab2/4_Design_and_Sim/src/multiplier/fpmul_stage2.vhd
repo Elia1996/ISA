@@ -11,6 +11,8 @@
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE work.all;
+USE work.MBE_pkg.all;
 USE ieee.std_logic_arith.all;
 
 ENTITY FPmul_stage2 IS
@@ -70,7 +72,8 @@ ARCHITECTURE struct OF FPmul_stage2 IS
    SIGNAL prod        : std_logic_vector(63 DOWNTO 0);
    
    COMPONENT MBE_multiplier IS
-	PORT(	data_in1		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
+	PORT(	
+		data_in1		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 		data_in2		: IN STD_LOGIC_VECTOR(Nb-1 DOWNTO 0);
 		data_out		: OUT STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0)
 	);
@@ -139,7 +142,7 @@ BEGIN
    -- MOLTIPLICAZIONE 
    
    mult : MBE_multiplier
-	PORTMAP(A_SIG,
+	PORT MAP(A_SIG,
 		B_SIG,
 		prod
 	);

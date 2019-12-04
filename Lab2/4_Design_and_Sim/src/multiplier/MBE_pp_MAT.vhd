@@ -46,10 +46,10 @@ BEGIN
 
 	-- GENERATE ALL THE PARTIAL PRODUCTS WITHOUT SIGN EXTENSION
 	GEN_PP: FOR i in 0 to Nb/2+1-1 GENERATE
-		MBE_i : MBE_pp
+		MBE : MBE_pp
 			PORT MAP(
 				data_a,
-				data_b(2*i+2 DOWNTO 2*i),
+				b_pad(2*i+2 DOWNTO 2*i),
 				pp_mat(i)(Nb DOWNTO 0),
 				sign_pp_temp(i)
 			);

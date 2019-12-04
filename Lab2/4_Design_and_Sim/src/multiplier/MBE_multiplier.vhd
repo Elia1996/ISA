@@ -64,7 +64,6 @@ BEGIN
 				pp_1,
 				pp_2
 		);
-	END COMPONENT;
 
 
 	data_out <= STD_LOGIC_VECTOR(UNSIGNED(pp_1) + UNSIGNED(pp_2));
