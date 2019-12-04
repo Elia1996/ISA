@@ -35,15 +35,24 @@ while l>=1
             
             i_FA=1; %contatore sul numero di FA
             while i_FA <= N_FA % se abbiamo ancora FA da instanziare
-                fprintf(fp,'\n\t\tFA_%d_%d_%d: FA PORT MAP (\n', nl-l-1, c-1, i_FA);
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_cp1, c+1); % carry out
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                if c<2*Nb
+                  fprintf(fp,'\n\t\tFA_%d_%d_%d: FA PORT MAP (\n', nl-l-1, c-1, i_FA);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_cp1, c); % carry out
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
                 
-                % riempimento della matrice successiva (per MATLAB)
-                Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=3; %3 per il carry
+                  % riempimento della matrice successiva (per MATLAB)
+                  Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=3; %3 per il carry
+                else
+                  fprintf(fp,'\n\t\tFA_%d_%d_%d: FA PORT MAP (\n', nl-l-1, c-1, i_FA);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
+                  fprintf(fp,'\t\t\topen,\n'); % carry out
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                end
                 Mult_VMAT(cy_c+r_lp1, c, nl-l+1)=2; %2 per la somma
                 
                 cy_cp1=cy_cp1+1; % il numero di elementi già inseriti nella colonna dei carry out si incrememta di 1 perchè ho messo un FA
