@@ -40,23 +40,6 @@ ENTITY FPmul_stage2 IS
 
 END FPmul_stage2 ;
 
---
--- VHDL Architecture HAVOC.FPmul_stage2.struct
---
--- Created by
--- Guillermo Marcus, gmarcus@ieee.org
--- using Mentor Graphics FPGA Advantage tools.
---
--- Visit "http://fpga.mty.itesm.mx" for more info.
---
--- Copyright 2003-2004. V1.0
---
-
-
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
-
 
 ARCHITECTURE struct OF FPmul_stage2 IS
 
@@ -142,9 +125,9 @@ BEGIN
    -- MOLTIPLICAZIONE 
    
    mult : MBE_multiplier
-	PORT MAP(A_SIG,
-		B_SIG,
-		prod
+	PORT MAP(A_SIG(Nb-1 DOWNTO 0),
+		B_SIG(Nb-1 DOWNTO 0),
+		prod(2*Nb-1 DOWNTO 0)
 	);
 		
 

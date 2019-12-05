@@ -11,10 +11,10 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 PACKAGE MBE_pkg IS
-	CONSTANT column_pp   : NATURAL := 36;
-	CONSTANT row_pp      : NATURAL := 17;
-	CONSTANT Nb          : NATURAL := 32;
-	CONSTANT nl          : NATURAL := 7;
+	CONSTANT column_pp   : NATURAL := 28;
+	CONSTANT row_pp      : NATURAL := 13;
+	CONSTANT Nb          : NATURAL := 24;
+	CONSTANT nl          : NATURAL := 6;
 	TYPE MATRIX_PP IS ARRAY(row_pp-1 DOWNTO 0) OF STD_LOGIC_VECTOR(column_pp-1 DOWNTO 0);
 	TYPE VECT_MATRIX IS ARRAY(0 TO nl-1, 0 TO row_pp-1) OF STD_LOGIC_VECTOR(2*Nb-1 DOWNTO 0);
 
