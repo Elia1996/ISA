@@ -43,8 +43,9 @@ while l>=1
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
-                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_cp1, c); % carry out
-                  fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d)\n\t\t);\n\n',mult_vmat_str, nl-l+1-1, cy_cp1, c); % carry out
+                  
                 
                   % riempimento della matrice successiva (per MATLAB)
                   Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=carry_n; %3 per il carry
@@ -55,8 +56,8 @@ while l>=1
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
-                  fprintf(fp,'\t\t\topen,\n'); % carry out
-                  fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                  fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                   fprintf(fp,'\t\t\topen\n\t\t);\n\n'); % carry out
                   % creo il full adder come box nel vettore di stinghe
                   Str_Mult_VMAT = box_FAHA(Str_Mult_VMAT, r_l,2*Nb+1- c+2, nl-l,L_V(nl), "FA");
                 end
@@ -73,8 +74,8 @@ while l>=1
                 fprintf(fp,'\n\t\tHA_%d_%d: HA PORT MAP (\n', nl-l-1, c-1);
                 fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
                 fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+1-1, c-1);
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_cp1, c+1-1); % carry out
-                fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                fprintf(fp,'\t\t\t%s(%d,%d)(%d)\n\t\t);\n\n',mult_vmat_str, nl-l+1-1, cy_cp1, c+1-1); % carry out
                 
                 % riempimento della matrice successiva (per MATLAB)
                 Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=carry_n; %3 per il carry
