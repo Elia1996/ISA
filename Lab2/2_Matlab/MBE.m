@@ -7,14 +7,14 @@ addpath('./box_drowing/');
 % COMMENTO 
 
 %Variabili globali
-Nb=32;
+Nb=10;
 
 % Inizializzazione variabili utili
 
 %Mult_VMAT
+%debug
 
-
-
+debug=1;
 % Funzioni
 [C_V] = f_C_V(Nb);
 
@@ -38,7 +38,7 @@ f_entity_vhdl(fp,fp_pkg,Nb,nl);
 [Mult_VMAT] =f_Mult_VMAT(L_V, PP_MAT, nl, Nb, sign_pp,fp);
 Str_Mult_VMAT = v_mat_to_strvmat(flip(Mult_VMAT,2));
 
-[Mult_VMAT, Str_Mult_VMAT] =f_DADDA(Mult_VMAT, Str_Mult_VMAT, C_V, L_V, nl, Nb, fp);
+[Mult_VMAT, Str_Mult_VMAT] =f_DADDA(Mult_VMAT, Str_Mult_VMAT, C_V, L_V, nl, Nb, fp, debug);
 
 Mult_VMAT=flip(Mult_VMAT,2);
 n_l=length(Mult_VMAT(1,1,:));
