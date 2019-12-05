@@ -184,14 +184,6 @@
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i3/i11
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__16/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__15/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__14/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__13/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__12/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__11/mbe/mux
@@ -236,14 +228,6 @@
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__16/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__15/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__14/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__13/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__12/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__11/mbe/mux
@@ -270,7 +254,7 @@
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 1  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__0/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__16/mbe/mux
+#    Time: 0 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__12/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__0/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -297,14 +281,6 @@
 #    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__11/mbe/mux
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__12/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__13/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__14/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__15/mbe/mux
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i2/mult/mbe_partial_products/gen_pp__16/mbe/mux
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 5 ns  Iteration: 4  Instance: /mul_pipe_tb/UUT/i3/i11
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
