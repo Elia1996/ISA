@@ -49,8 +49,8 @@ BEGIN
 	-- codifica dei 3 bit di b
 	b2_xor_b1 <= b(2) xor b(1);		
 	b1_xor_b0 <= b(1) xor b(0);
-	sel0 <= b2_xor_b1 and not(b1_xor_b0);
-	sel1 <= b1_xor_b0;
+	sel1 <= b2_xor_b1 and not(b1_xor_b0);
+	sel0 <= b1_xor_b0;
 	
 
 	a1 <= '0' & a;
