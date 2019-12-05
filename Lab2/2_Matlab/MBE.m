@@ -7,14 +7,14 @@ addpath('./box_drowing/');
 % COMMENTO 
 
 %Variabili globali
-Nb=10;
+Nb=32;
 
 % Inizializzazione variabili utili
 
 %Mult_VMAT
 %debug
 
-debug=1;
+debug=0;
 % Funzioni
 [C_V] = f_C_V(Nb);
 
