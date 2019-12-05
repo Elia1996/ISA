@@ -9,8 +9,8 @@ N_FA_tot=0; %Numero di FA totali
 N_HA_tot=0; %Numero di HA totali
 mult_vmat_str = "mult_vmat";
 
-carry_n = 231; % ç
-sum_n = 349; % ś
+carry_n = 231; 
+sum_n = nl+4;
 
 l=nl-1;
 while l>=1

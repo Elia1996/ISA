@@ -40,7 +40,7 @@ while r <= start_nl % se non abbiamo finito il numero di prodotti parziali
     t_col_start= z;         col_start= z-(2*(r-1));  
     t_col_end = (2*r-1);    col_end= 1;
     t_lev= 1;
-    Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=7.*PP_MAT(riga, col_start:-1:col_end); %% tutta la parte destra della piramide
+    Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=PP_MAT(riga, col_start:-1:col_end); %% tutta la parte destra della piramide
     fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO 0);\n',...
                 t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1);
     
@@ -57,7 +57,7 @@ while r <= start_nl % se non abbiamo finito il numero di prodotti parziali
         t_col_start= z+2*(r-1)-1;    col_start= Nb;  
         t_col_end = z+1;             col_end= z-(2*r);
         t_lev= 1;
-        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)= 8.*PP_MAT(riga, col_start:-1:col_end);
+        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)= PP_MAT(riga, col_start:-1:col_end);
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n',...
                      t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1, col_end-1);
     end
@@ -68,7 +68,7 @@ while r <= start_nl % se non abbiamo finito il numero di prodotti parziali
         t_col_start= 2*Nb;           col_start= 2*Nb-2*r-1;  
         t_col_end = z+1;             col_end= z-(2*r);
         t_lev= 1;
-        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=9.*PP_MAT(riga, col_start:-1:col_end);
+        Mult_VMAT(t_riga, t_col_start:-1:t_col_end, t_lev)=PP_MAT(riga, col_start:-1:col_end);
         fprintf(fp,'\t\tmult_vmat(0,%d)(%d DOWNTO %d) <= pp_mat(%d)(%d DOWNTO %d);\n',...
                     t_riga-1, t_col_start-1, t_col_end-1, riga-1, col_start-1, col_end-1);
     end

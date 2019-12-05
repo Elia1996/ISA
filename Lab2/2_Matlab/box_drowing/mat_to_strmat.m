@@ -6,7 +6,7 @@ function [str_mat] = mat_to_strmat(mat)
         line="";
         for c=1:length(mat(r,:))
             spaceline= spaceline + "  ";
-            line= line + " " + num2str(mat(r,c));;;
+            line= line + " " + num2str(char(mat(r,c)+48));
         end
         spaceline= spaceline + " ";
         line= line + " ";

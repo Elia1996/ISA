@@ -7,7 +7,7 @@ addpath('./box_drowing/');
 % COMMENTO 
 
 %Variabili globali
-Nb=16;
+Nb=8;
 
 % Inizializzazione variabili utili
 
@@ -20,13 +20,10 @@ Nb=16;
 
 [L_V,nl] = f_L_V(Nb);
 PP_MAT=ones(Nb/2+1,Nb+4);
-for i=1:length(PP_MAT(:,1))
-   PP_MAT(i,:) = (i+1).*PP_MAT(i,:); 
-end
-PP_MAT(2:end,1)=0;
-PP_MAT(end-1,2)=0;
-PP_MAT(end,2:3)=0;
-sign_pp=1*ones(1,Nb/2+1-1)
+PP_MAT(2:end,1)=5;
+PP_MAT(end-1,2)=5;
+PP_MAT(end,2:3)=5;
+sign_pp=6*ones(1,Nb/2+1-1)
 
 %% file di uscita
 fp=fopen("../4_Design_and_Sim/src/multiplier/MBE_dadda.vhd",'w');
@@ -45,8 +42,8 @@ n_l=length(Mult_VMAT(1,1,:));
 n_r=length(Mult_VMAT(:,1,1));
 n_c=length(Mult_VMAT(1,:,1));
 
-Str_Mult_VMAT'
-% ciclo per sistemare Str_Mult_VMAT
+
+% ciclo per sis
 for l= 1:n_l    % ciclo si livelli
     for r= 1:n_r   % ciclo sulle righe
         str_r= (l-1)*(2*n_r+1) + r*2;  % r for string vector of mat
@@ -55,7 +52,7 @@ for l= 1:n_l    % ciclo si livelli
         for c= 1:n_c % ciclo sulle colonne
             str_c1 = 2*c; % c for space between column
             str_c2 = 2*c+1; % c for string vector of mat, più uno per il primo "" non usato
-            to_line= to_line + line(str_c1) + num2str(char(Mult_VMAT(r,c,l)+48));
+            to_line= to_line + line(str_c1) + num2str(Mult_VMAT(r,c,l));
         end
         to_line= to_line + line(end-1);
         Str_Mult_VMAT(str_r) = to_line;
@@ -76,11 +73,3 @@ fprintf(fp,"END structure;");
 
 fclose('all');
 
-%%  stampa della matrice completa su file
-fp_mat=fopen("../4_Design_and_Sim/sim_out/final_matrix_m.txt",'w');
-
-for i=1:length(Str_Mult_VMAT(1,:))
-    fprintf(fp_mat,"%s\n", Str_Mult_VMAT(i));
-end
-% delete 0's
-system('../4_Design_and_Sim/sim_out/delete_zeros.sh final_matrix_m.txt')
