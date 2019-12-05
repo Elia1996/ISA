@@ -7,7 +7,7 @@ addpath('./box_drowing/');
 % COMMENTO 
 
 %Variabili globali
-Nb=16;
+Nb=32;
 
 % Inizializzazione variabili utili
 
