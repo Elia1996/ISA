@@ -1,12 +1,12 @@
 clear
 close all
 clc
-
+addpath('./box_drowing/');
 
 % COMMENTO 
 
 %Variabili globali
-Nb=32;
+Nb=16;
 
 % Inizializzazione variabili utili
 
@@ -19,21 +19,22 @@ Nb=32;
 
 [L_V,nl] = f_L_V(Nb);
 PP_MAT=ones(Nb/2+1,Nb+4);
-PP_MAT(2:end,1)=-5;
-PP_MAT(end-1,2)=-5;
-PP_MAT(end,2:3)=-5;
-sign_pp=-ones(1,Nb/2+1-1)
+PP_MAT(2:end,1)=5;
+PP_MAT(end-1,2)=5;
+PP_MAT(end,2:3)=5;
+sign_pp=6*ones(1,Nb/2+1-1)
 
 %% file di uscita
-fp=fopen("../../4_Design_and_Sim/src/multiplier/MBE_dadda.vhd",'w');
-fp_pkg=fopen("../../4_Design_and_Sim/src/common/MBE_pkg.vhd",'w');
+fp=fopen("../4_Design_and_Sim/src/multiplier/MBE_dadda.vhd",'w');
+fp_pkg=fopen("../4_Design_and_Sim/src/common/MBE_pkg.vhd",'w');
 f_entity_vhdl(fp,fp_pkg,Nb,nl);
 
 %%
 
 [Mult_VMAT] =f_Mult_VMAT(L_V, PP_MAT, nl, Nb, sign_pp,fp);
+Str_Mult_VMAT = v_mat_to_strvmat(flip(Mult_VMAT,2));
 
-[Mult_VMAT] =f_DADDA(Mult_VMAT,C_V,L_V,nl, Nb,fp);
+[Mult_VMAT, Str_Mult_VMAT] =f_DADDA(Mult_VMAT, Str_Mult_VMAT, C_V, L_V, nl, Nb, fp);
 
 Mult_VMAT = flip(Mult_VMAT,2);
 

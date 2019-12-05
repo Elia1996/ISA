@@ -1,4 +1,4 @@
-function [Mult_VMAT] =f_DADDA(Mult_VMAT, C_V, L_V, nl, Nb,fp)
+function [Mult_VMAT, Str_Mult_VMAT] =f_DADDA(Mult_VMAT, Str_Mult_VMAT, C_V, L_V, nl, Nb,fp)
 %   Summary of this function goes here
 %   Questa funzione riceve il vettore di matrici Mult_VMAT con solo la
 %   prima matrice inizializzata a piramide. Cicla sulle colonne e istanzia
@@ -45,6 +45,7 @@ while l>=1
                 
                   % riempimento della matrice successiva (per MATLAB)
                   Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=3; %3 per il carry
+                  Str_Mult_VMAT = box_FAHA(Str_Mult_VMAT,r_l, 2*Nb+1-c, nl-l,L_V(nl), "FA");
                 else
                   fprintf(fp,'\n\t\tFA_%d_%d_%d: FA PORT MAP (\n', nl-l-1, c-1, i_FA);
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l-1, c-1);
@@ -52,6 +53,7 @@ while l>=1
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d),\n',mult_vmat_str, nl-l-1, r_l+2-1, c-1);
                   fprintf(fp,'\t\t\topen,\n'); % carry out
                   fprintf(fp,'\t\t\t%s(%d,%d)(%d));\n\n',mult_vmat_str, nl-l+1-1, cy_c+r_lp1-1, c-1); % sum
+                  Str_Mult_VMAT = box_FAHA(Str_Mult_VMAT, r_l,2*Nb+1- c, nl-l,L_V(nl), "FA");
                 end
                 Mult_VMAT(cy_c+r_lp1, c, nl-l+1)=2; %2 per la somma
                 
@@ -72,6 +74,8 @@ while l>=1
                 % riempimento della matrice successiva (per MATLAB)
                 Mult_VMAT(cy_cp1+1, c+1, nl-l+1)=3; %3 per il carry
                 Mult_VMAT(cy_c+r_lp1, c, nl-l+1)=2; %2 per la somma
+                
+                Str_Mult_VMAT = box_FAHA(Str_Mult_VMAT, r_l, 2*Nb+1-c, nl-l,L_V(nl), "HA");
                 
                 cy_cp1=cy_cp1+1; % il numero di elementi già inseriti nella colonna dei carry out si incrememta di 1 perchè ho messo un FA
                 r_l=r_l+2; % incrementiamo di 3 perche 3 pallini sono stati presi dal FA
