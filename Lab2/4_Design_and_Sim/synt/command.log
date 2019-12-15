@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Tue Nov 19 16:23:45 2019
+#@ # Date:   Sun Dec 15 14:06:22 2019
 #@ # Run by: isa22@localhost.localdomain
 #@ 
 
@@ -6645,16 +6645,16 @@ source -echo -verbose /home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/save.sc
 #@ # -- Starting source variables.scr
 
 #@ # file da sintetizzare
-#@ variable filetosynt "../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/fpmul_pipeline.vhd"
+#@ variable filetosynt "../src/common/MBE_pkg.vhd ../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/common/HA.vhd ../src/common/FA.vhd ../src/common/mux4to1_nbit.vhd ../src/common/register_nbit.vhd ../src/multiplier/MBE_pp.vhd ../src/multiplier/MBE_pp_MAT.vhd ../src/multiplier/MBE_dadda.vhd ../src/multiplier/MBE_multiplier.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/fpmul_pipeline.vhd"
 #@ # top entity
 #@ variable top_entity "fpmul_pipeline"
 #@ # output directory of syntesys file
 #@ variable out_dir "./synt_out"
 #@ # period of clock
-#@ # max clk = 3.9ns
+#@ # max clk = 1.51ns
 #@ # we set period equal to 4*Tclkmin
-#@ variable period 1.65
-#@ variable ext _1d65
+#@ variable period 1.51
+#@ variable ext _1.51
 #@ # -- End source variables.scr
 
 #@ # script per salvare la simulazione in modo da effettuare

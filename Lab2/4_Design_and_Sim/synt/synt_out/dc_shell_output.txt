@@ -19,12 +19,15 @@
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
             or distribution of this software is strictly prohibited.
 Initializing...
+Initializing gui preferences from file  /home/isa22/.synopsys_dv_prefs.tcl
 source variables.scr
 # This file analyze, elaborate and compile vhdl file
 # -f indica il formato dei file
 # -lib indica dove mettere i file su cui lavora sysnopsys
-analyze -f vhdl -lib WORK {../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_pipeline.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/register_nbit.vhd } 
+analyze -f vhdl -lib WORK ${filetosynt} 
 Running PRESTO HDLC
+-- Compiling Source File ../src/common/MBE_pkg.vhd
+Compiling Package Declaration MBE_PKG
 -- Compiling Source File ../src/common/fpnormalize_fpnormalize.vhd
 Compiling Entity Declaration FPNORMALIZE
 Compiling Architecture FPNORMALIZE of FPNORMALIZE
@@ -37,9 +40,30 @@ Compiling Architecture PACKFP of PACKFP
 -- Compiling Source File ../src/common/unpackfp_unpackfp.vhd
 Compiling Entity Declaration UNPACKFP
 Compiling Architecture UNPACKFP of UNPACKFP
--- Compiling Source File ../src/multiplier/fpmul_pipeline.vhd
-Compiling Entity Declaration FPMUL_PIPELINE
-Compiling Architecture PIPELINE of FPMUL_PIPELINE
+-- Compiling Source File ../src/common/HA.vhd
+Compiling Entity Declaration HA
+Compiling Architecture STRUCTURE of HA
+-- Compiling Source File ../src/common/FA.vhd
+Compiling Entity Declaration FA
+Compiling Architecture STRUCTURE of FA
+-- Compiling Source File ../src/common/mux4to1_nbit.vhd
+Compiling Entity Declaration MUX4TO1_NBIT
+Compiling Architecture BEHAVIOR of MUX4TO1_NBIT
+-- Compiling Source File ../src/common/register_nbit.vhd
+Compiling Entity Declaration REGISTER_NBIT
+Compiling Architecture BEHAVIOR of REGISTER_NBIT
+-- Compiling Source File ../src/multiplier/MBE_pp.vhd
+Compiling Entity Declaration MBE_PP
+Compiling Architecture STRUCTURAL of MBE_PP
+-- Compiling Source File ../src/multiplier/MBE_pp_MAT.vhd
+Compiling Entity Declaration MBE_PP_MAT
+Compiling Architecture STRUCTURE of MBE_PP_MAT
+-- Compiling Source File ../src/multiplier/MBE_dadda.vhd
+Compiling Entity Declaration MBE_DADDA
+Compiling Architecture STRUCTURE of MBE_DADDA
+-- Compiling Source File ../src/multiplier/MBE_multiplier.vhd
+Compiling Entity Declaration MBE_MULTIPLIER
+Compiling Architecture STRUCTURE of MBE_MULTIPLIER
 -- Compiling Source File ../src/multiplier/fpmul_stage1.vhd
 Compiling Entity Declaration FPMUL_STAGE1
 Compiling Architecture STRUCT of FPMUL_STAGE1
@@ -52,9 +76,9 @@ Compiling Architecture STRUCT of FPMUL_STAGE3
 -- Compiling Source File ../src/multiplier/fpmul_stage4.vhd
 Compiling Entity Declaration FPMUL_STAGE4
 Compiling Architecture STRUCT of FPMUL_STAGE4
--- Compiling Source File ../src/multiplier/register_nbit.vhd
-Compiling Entity Declaration REGISTER_NBIT
-Compiling Architecture BEHAVIOR of REGISTER_NBIT
+-- Compiling Source File ../src/multiplier/fpmul_pipeline.vhd
+Compiling Entity Declaration FPMUL_PIPELINE
+Compiling Architecture PIPELINE of FPMUL_PIPELINE
 Presto compilation completed successfully.
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
@@ -78,8 +102,7 @@ set_dont_touch_network MY_CLK
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 1
 # setto in ritardo di tutti gli ingressi, che si suppone uguale
-set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
-Warning: Nothing implicitly matched 'CLK' (SEL-003)
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] clk]
 1
 # setto il ritardo di tutte le uscite
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
@@ -94,11 +117,9 @@ set_load $OLOAD [all_outputs]
 ungroup -all -flatten
 Information: Updating graph... (UID-83)
 1
-set implementation DW02_mult/csa [find cell *mult*]
-Error: wrong # args: should be "set varName ?newValue?"
-	Use error_info for more info. (CMD-013)
+#set implementation DW02_mult/csa [find cell *mult*]
 # compilo
-compile -exact_map > $out_dir/compile$ext.txt
+compile_ultra -exact_map > $out_dir/compile$ext.txt
 report_resources > $out_dir/report_resources$ext.txt
 report_timing > $out_dir/report_timing$ext.txt
 report_area > $out_dir/report_area$ext.txt
@@ -134,6 +155,7 @@ Thank you...
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
             or distribution of this software is strictly prohibited.
 Initializing...
+Initializing gui preferences from file  /home/isa22/.synopsys_dv_prefs.tcl
 source variables.scr
 # script per salvare la simulazione in modo da effettuare
 # poi il calcolo della potenza con la switching activity
@@ -147,15 +169,13 @@ Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sld
   Loading link library 'gtech'
 Reading ddc file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc'.
 Information: Checking out the license 'DesignWare'. (SEC-104)
-Loaded 4 designs.
+Loaded 1 design.
 Current design is 'fpmul_pipeline'.
-fpmul_pipeline fpmul_pipeline_DW01_inc_0 fpmul_pipeline_DW01_add_2 fpmul_pipeline_DW_mult_uns_1
+fpmul_pipeline
 # metto tutti i blocchi allo stesso livello di gerarchia
 ungroup -all -flatten
-Information: Updating graph... (UID-83)
-Warning: Design 'fpmul_pipeline' inherited license information from design 'fpmul_pipeline_DW_mult_uns_1'. (DDB-74)
-Information: Added key list 'DesignWare' to design 'fpmul_pipeline'. (DDB-72)
-1
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
 # per esportare la netlist in verilog dobbiamo cambiare i
 # nomi secondo le regole del verilog
 change_names -hierarchy -rules verilog

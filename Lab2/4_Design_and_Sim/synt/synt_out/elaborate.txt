@@ -11,7 +11,7 @@ Information: Building the design 'register_nbit' instantiated from design 'fpmul
 
 Inferred memory devices in process
 	in routine register_nbit_N32 line 24 in file
-		'../src/multiplier/register_nbit.vhd'.
+		'../src/common/register_nbit.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -39,7 +39,7 @@ Presto compilation completed successfully.
 Information: Building the design 'FPmul_stage2'. (HDL-193)
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 87 in file
+	in routine FPmul_stage2 line 79 in file
 		'../src/multiplier/fpmul_stage2.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -51,7 +51,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine FPmul_stage2 line 99 in file
+	in routine FPmul_stage2 line 91 in file
 		'../src/multiplier/fpmul_stage2.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -101,6 +101,9 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'UnpackFP'. (HDL-193)
 Presto compilation completed successfully.
+Information: Building the design 'MBE_multiplier'. (HDL-193)
+Warning:  ../src/multiplier/MBE_multiplier.vhd:46: The initial value for signal 'pp_matrix' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Presto compilation completed successfully.
 Information: Building the design 'FPnormalize' instantiated from design 'FPmul_stage3' with
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
@@ -108,5 +111,27 @@ Information: Building the design 'FPround' instantiated from design 'FPmul_stage
 	the parameters "SIG_width=28". (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'PackFP'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'MBE_pp_MAT'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'MBE_dadda'. (HDL-193)
+Warning:  ../src/multiplier/MBE_dadda.vhd:38: The initial value for signal 'mult_vmat' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Presto compilation completed successfully.
+Information: Building the design 'MBE_pp'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'HA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'FA'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux4to1_nbit' instantiated from design 'MBE_pp' with
+	the parameters "P=25,S=2". (HDL-193)
+
+Statistics for case statements in always block at line 31 in file
+	'../src/common/mux4to1_nbit.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            33            |    auto/auto     |
+===============================================
 Presto compilation completed successfully.
 1

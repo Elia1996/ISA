@@ -1,5 +1,9 @@
 vcom -93 -work ./work ../src/common/*.vhd
 
+vcom -93 -work ./work ../src/multiplier/MBE_pp.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_pp_MAT.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_dadda.vhd
+vcom -93 -work ./work ../src/multiplier/MBE_multiplier.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage1.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage2.vhd
 vcom -93 -work ./work ../src/multiplier/fpmul_stage3.vhd
@@ -16,5 +20,7 @@ vsim -L /software/dk/nangate45/verilog/msim6.2g -sdftype /mul_pipe_tb/UUT=../net
 vcd file ../vcd/fpmul_pipeline.vcd
 vcd add /mul_pipe_tb/UUT/*
 add wave *
-run 1000ns
+run -all
 quit
+
+

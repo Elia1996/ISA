@@ -3,7 +3,7 @@ source variables.scr
 
 # -f indica il formato dei file
 # -lib indica dove mettere i file su cui lavora sysnopsys
-analyze -f vhdl -lib WORK {../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_pipeline.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/register_nbit.vhd } 
+analyze -f vhdl -lib WORK ${filetosynt} 
 # preserviamo i nomi delle netlist della rete
 set power_preserve_rtl_hier_names true
 # elaborazione dei file, viene data la top entity
@@ -20,7 +20,7 @@ set_dont_touch_network MY_CLK
 # setto l'incertezza del clock
 set_clock_uncertainty 0.07 [get_clocks MY_CLK]
 # setto in ritardo di tutti gli ingressi, che si suppone uguale
-set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] CLK]
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] clk]
 # setto il ritardo di tutte le uscite
 set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
 # setto il carico di ciascun uscita che si suppone uguale a quello 
@@ -30,10 +30,10 @@ set_load $OLOAD [all_outputs]
 
 #set implementation of Mutiplier as CSA adder
 ungroup -all -flatten
-set implementation DW02_mult/csa [find cell *mult*]
+#set implementation DW02_mult/csa [find cell *mult*]
 
 # compilo
-compile -exact_map > $out_dir/compile$ext.txt
+compile_ultra -exact_map > $out_dir/compile$ext.txt
 
 report_resources > $out_dir/report_resources$ext.txt
 report_timing > $out_dir/report_timing$ext.txt

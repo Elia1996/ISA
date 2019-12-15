@@ -1,42 +1,32 @@
-Information: Checking out the license 'DesignWare'. (SEC-104)
-Information: Evaluating DesignWare library utilization. (UISN-27)
 
-============================================================================
-| DesignWare Building Block Library  |         Version         | Available |
-============================================================================
-| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
-| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
-============================================================================
-
-
-Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 48 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'fpmul_pipeline'
+Information: The register 'I1/A_SIG_reg[31]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[28]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[27]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[26]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I1/A_SIG_reg[24]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[31]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[28]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[27]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[26]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[24]' will be removed. (OPT-1207)
 Information: The register 'I3/SIG_out_round_reg[2]' will be removed. (OPT-1207)
 Information: The register 'I3/SIG_out_round_reg[1]' will be removed. (OPT-1207)
 Information: The register 'I3/SIG_out_round_reg[0]' will be removed. (OPT-1207)
 Information: The register 'I2/SIG_in_reg[1]' will be removed. (OPT-1207)
 Information: The register 'I2/SIG_in_reg[0]' will be removed. (OPT-1207)
-Information: The register 'I1/B_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/B_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
-Information: The register 'I1/A_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -47,45 +37,37 @@ Information: Updating design information... (UID-85)
   Processing 'fpmul_pipeline_DW01_add_1'
   Processing 'fpmul_pipeline_DW01_inc_0'
   Processing 'fpmul_pipeline_DW01_add_2'
-  Mapping 'fpmul_pipeline_DW_mult_uns_0'
+  Processing 'fpmul_pipeline_DW01_add_3'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-Information: compile falsified 247 infeasible paths. (OPT-1720)
-  Mapping Optimization (Phase 1)
+Information: compile falsified 296 infeasible paths. (OPT-1720)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:20    4815.4      1.57     122.6       0.2                          
-    0:00:20    4815.4      1.57     122.6       0.2                          
-    0:00:20    4815.4      1.57     122.6       0.2                          
-    0:00:20    4815.4      1.57     122.6       0.2                          
-    0:00:20    4815.4      1.57     122.6       0.2                          
-    0:00:21    4092.7      1.63     117.8       0.2                          
-    0:00:22    4091.1      1.59     118.0       0.2                          
-    0:00:22    4090.5      1.58     117.9       0.2                          
-    0:00:22    4090.5      1.58     117.9       0.2                          
-    0:00:22    4090.8      1.57     117.8       0.2                          
-    0:00:22    4090.8      1.56     117.5       0.2                          
-    0:00:23    4091.6      1.56     117.5       0.2                          
-    0:00:23    4091.9      1.55     117.4       0.2                          
-    0:00:23    4091.6      1.55     117.3       0.2                          
-    0:00:23    4091.6      1.55     117.3       0.2                          
-    0:00:23    4091.6      1.55     117.3       0.2                          
-    0:00:23    4091.6      1.55     117.3       0.2                          
-    0:00:23    4093.2      1.55     115.4       0.0                          
-    0:00:23    4093.2      1.55     115.4       0.0                          
-    0:00:23    4093.2      1.55     115.4       0.0                          
-    0:00:23    4093.2      1.55     115.4       0.0                          
-    0:00:24    4099.9      1.54     115.0       0.0 I2/SIG_in_reg[27]/D      
-    0:00:24    4107.6      1.52     114.7       0.0 I2/SIG_in_reg[16]/D      
-    0:00:24    4110.2      1.51     114.5       0.0 I2/SIG_in_reg[16]/D      
-    0:00:25    4109.4      1.51     114.3       0.0 I2/SIG_in_reg[13]/D      
-    0:00:25    4115.6      1.49     114.0       0.0 I2/SIG_in_reg[16]/D      
-    0:00:26    4118.5      1.48     113.8       0.0 I2/SIG_in_reg[16]/D      
-    0:00:26    4121.4      1.48     113.7       0.0                          
+    0:00:39    5467.6      1.65     124.5       0.2                          
+    0:00:39    5467.6      1.65     124.5       0.2                          
+    0:00:39    5467.6      1.65     124.5       0.2                          
+    0:00:39    5467.6      1.65     124.5       0.2                          
+    0:00:39    5467.6      1.65     124.5       0.2                          
+    0:00:41    5004.5      1.63     119.7       0.2                          
+    0:00:42    5001.3      1.63     120.0       0.2                          
+    0:00:42    5002.1      1.63     119.8       0.2                          
+    0:00:42    5004.5      1.62     119.8       0.2                          
+    0:00:42    5005.3      1.62     119.8       0.2                          
+    0:00:42    5006.1      1.62     119.7       0.2                          
+    0:00:43    5007.2      1.61     119.5       0.2                          
+    0:00:43    5007.2      1.61     119.5       0.2                          
+    0:00:43    5007.2      1.61     119.5       0.2                          
+    0:00:43    5007.2      1.61     119.5       0.2                          
+    0:00:43    5008.8      1.61     118.0       0.0                          
+    0:00:43    5008.8      1.61     118.0       0.0                          
+    0:00:43    5008.8      1.61     118.0       0.0                          
+    0:00:43    5008.8      1.61     118.0       0.0                          
 
 
 
@@ -96,43 +78,68 @@ Information: compile falsified 247 infeasible paths. (OPT-1720)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:26    4121.4      1.48     113.7       0.0                          
-    0:00:26    4123.8      1.48     113.6       0.0 I2/SIG_in_reg[13]/D      
-    0:00:27    4124.9      1.47     113.5       0.0 I2/SIG_in_reg[20]/D      
-    0:00:27    4126.2      1.47     113.4       0.0 I2/SIG_in_reg[20]/D      
-    0:00:27    4126.7      1.47     113.4       0.0 I2/SIG_in_reg[20]/D      
-    0:00:27    4130.7      1.46     113.3       0.0 I2/SIG_in_reg[23]/D      
-    0:00:28    4130.2      1.46     113.2       0.0 I2/SIG_in_reg[23]/D      
-    0:00:28    4132.6      1.46     113.2       0.0 I2/SIG_in_reg[23]/D      
-    0:00:28    4135.0      1.45     113.1       0.0 I2/SIG_in_reg[27]/D      
-    0:00:29    4135.8      1.45     113.0       0.0 I2/SIG_in_reg[23]/D      
-    0:00:29    4139.0      1.45     113.0       0.0 I2/SIG_in_reg[27]/D      
-    0:00:29    4139.0      1.45     113.0       0.0 I2/SIG_in_reg[22]/D      
-    0:00:30    4140.8      1.45     112.9       0.0 I2/SIG_in_reg[7]/D       
-    0:00:30    4144.0      1.44     112.9       0.0 I2/SIG_in_reg[27]/D      
-    0:00:30    4146.9      1.44     112.9       0.0 I2/SIG_in_reg[22]/D      
-    0:00:30    4149.9      1.44     112.8       0.0 I2/SIG_in_reg[27]/D      
-    0:00:30    4151.2      1.43     112.7       0.0 I2/SIG_in_reg[23]/D      
-    0:00:31    4153.6      1.43     112.7       0.0 I2/SIG_in_reg[27]/D      
-    0:00:31    4159.4      1.43     112.6       0.0 I2/SIG_in_reg[27]/D      
-    0:00:31    4164.5      1.43     112.6       0.0 I2/SIG_in_reg[27]/D      
-    0:00:31    4167.7      1.42     112.5       0.0 I2/SIG_in_reg[20]/D      
-    0:00:31    4175.9      1.42     112.5       0.0 I2/SIG_in_reg[27]/D      
-    0:00:32    4180.5      1.42     112.4       0.0 I2/SIG_in_reg[22]/D      
-    0:00:32    4181.8      1.42     112.4       0.0 I2/SIG_in_reg[22]/D      
-    0:00:32    4183.6      1.42     112.4       0.0 I2/SIG_in_reg[27]/D      
-    0:00:32    4189.5      1.42     112.4       0.0 I2/SIG_in_reg[27]/D      
-    0:00:33    4192.2      1.42     112.3       0.0 I2/SIG_in_reg[27]/D      
-    0:00:33    4193.8      1.42     112.3       0.0 I2/SIG_in_reg[27]/D      
-    0:00:33    4193.2      1.42     112.3       0.0 I2/SIG_in_reg[22]/D      
-    0:00:34    4194.6      1.41     112.3       0.0 I2/SIG_in_reg[23]/D      
-    0:00:35    4194.8      1.41     112.2       0.0                          
-    0:00:35    4194.8      1.41     112.2       0.0                          
-    0:00:35    4197.2      1.41     112.2       0.0                          
-    0:00:35    4197.2      1.41     112.2       0.0                          
-    0:00:36    4198.5      1.41     112.2       0.0                          
-    0:00:36    4198.8      1.41     112.2       0.0                          
-    0:00:36    4200.4      1.41     112.2       0.0                          
+    0:00:43    5008.8      1.61     118.0       0.0                          
+    0:00:44    5012.0      1.60     117.8       0.0 I2/SIG_in_reg[25]/D      
+    0:00:44    5016.5      1.60     117.8       0.0 I2/SIG_in_reg[25]/D      
+    0:00:45    5021.0      1.59     117.4       0.0 I2/SIG_in_reg[25]/D      
+    0:00:45    5024.7      1.58     117.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:45    5026.6      1.58     117.3       0.0 I2/SIG_in_reg[25]/D      
+    0:00:45    5030.9      1.58     117.1       0.0 I2/SIG_in_reg[25]/D      
+    0:00:46    5031.7      1.57     116.9       0.0 I2/SIG_in_reg[25]/D      
+    0:00:46    5040.2      1.56     116.8       0.0 I2/SIG_in_reg[25]/D      
+    0:00:46    5044.4      1.56     116.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:47    5046.8      1.56     116.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:48    5048.7      1.56     116.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:48    5055.3      1.55     116.5       0.0 I2/SIG_in_reg[25]/D      
+    0:00:48    5057.5      1.54     116.3       0.0 I2/SIG_in_reg[25]/D      
+    0:00:49    5064.4      1.54     116.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:49    5071.0      1.54     116.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:50    5075.8      1.53     116.1       0.0 I2/SIG_in_reg[25]/D      
+    0:00:51    5083.5      1.53     116.1       0.0 I2/SIG_in_reg[25]/D      
+    0:00:51    5089.6      1.53     116.0       0.0 I2/SIG_in_reg[25]/D      
+    0:00:52    5094.2      1.53     116.0       0.0 I2/SIG_in_reg[25]/D      
+    0:00:53    5100.0      1.52     115.9       0.0 I2/SIG_in_reg[25]/D      
+    0:00:53    5110.1      1.52     115.9       0.0 I2/SIG_in_reg[25]/D      
+    0:00:54    5114.1      1.52     115.8       0.0 I2/SIG_in_reg[25]/D      
+    0:00:55    5116.8      1.52     115.8       0.0 I2/SIG_in_reg[25]/D      
+    0:00:55    5115.7      1.51     115.7       0.0 I2/SIG_in_reg[25]/D      
+    0:00:55    5123.4      1.51     115.5       0.0 I2/SIG_in_reg[25]/D      
+    0:00:56    5129.8      1.51     115.5       0.0 I2/SIG_in_reg[27]/D      
+    0:00:56    5134.3      1.51     115.5       0.0 I2/SIG_in_reg[25]/D      
+    0:00:56    5138.6      1.51     115.4       0.0 I2/SIG_in_reg[25]/D      
+    0:00:57    5146.0      1.50     115.4       0.0 I2/SIG_in_reg[25]/D      
+    0:00:58    5147.1      1.50     115.3       0.0 I2/SIG_in_reg[27]/D      
+    0:00:58    5150.3      1.50     115.3       0.0 I2/SIG_in_reg[25]/D      
+    0:00:58    5154.5      1.50     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:58    5158.8      1.50     115.2       0.0 I2/SIG_in_reg[27]/D      
+    0:00:59    5161.7      1.50     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:00:59    5167.3      1.49     115.1       0.0 I2/SIG_in_reg[27]/D      
+    0:00:59    5174.5      1.49     115.1       0.0 I2/SIG_in_reg[25]/D      
+    0:01:00    5178.2      1.49     115.3       0.0 I2/SIG_in_reg[25]/D      
+    0:01:00    5185.7      1.49     115.3       0.0 I2/SIG_in_reg[25]/D      
+    0:01:00    5188.9      1.49     115.2       0.0 I2/SIG_in_reg[27]/D      
+    0:01:00    5188.3      1.49     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:01:01    5190.7      1.49     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:01:01    5191.8      1.48     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:01:01    5192.1      1.48     115.2       0.0 I2/SIG_in_reg[25]/D      
+    0:01:01    5198.4      1.48     115.1       0.0 I2/SIG_in_reg[25]/D      
+    0:01:02    5206.2      1.48     115.1       0.0 I2/SIG_in_reg[25]/D      
+    0:01:02    5208.8      1.48     115.1       0.0 I2/SIG_in_reg[25]/D      
+    0:01:02    5208.8      1.48     115.0       0.0 I2/SIG_in_reg[27]/D      
+    0:01:02    5210.4      1.48     115.0       0.0 I2/SIG_in_reg[27]/D      
+    0:01:03    5211.7      1.48     115.0       0.0 I2/SIG_in_reg[25]/D      
+    0:01:03    5214.7      1.48     115.0       0.0 I2/SIG_in_reg[25]/D      
+    0:01:05    5216.5      1.48     115.0       0.0                          
+    0:01:05    5216.5      1.48     115.0       0.0                          
+    0:01:05    5217.6      1.48     115.0       0.0                          
+    0:01:05    5218.7      1.48     115.0       0.0                          
+    0:01:05    5221.3      1.48     115.0       0.0                          
+    0:01:06    5221.8      1.48     114.9       0.0                          
+    0:01:06    5222.9      1.48     114.8       0.0                          
+    0:01:06    5223.7      1.48     114.7       0.0                          
+    0:01:06    5223.4      1.48     114.7       0.0                          
+    0:01:07    5223.4      1.48     114.7       0.0                          
+    0:01:07    5224.2      1.48     114.6       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -142,30 +149,75 @@ Information: compile falsified 247 infeasible paths. (OPT-1720)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:36    4200.4      1.41     112.2       0.0                          
-    0:00:37    4200.4      1.41     112.2       0.0                          
-    0:00:37    4174.9      1.41     111.3       0.0                          
-    0:00:37    4157.3      1.41     111.2       0.0                          
-    0:00:37    4148.5      1.41     111.2       0.0                          
-    0:00:37    4145.3      1.41     111.1       0.0                          
-    0:00:37    4144.8      1.41     111.1       0.0                          
-    0:00:37    4144.8      1.41     111.1       0.0                          
-    0:00:37    4144.8      1.41     111.1       0.0                          
-    0:00:38    4140.6      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4139.8      1.42     111.2       0.0                          
-    0:00:38    4141.1      1.41     111.1       0.0 I2/SIG_in_reg[27]/D      
-    0:00:39    4141.1      1.41     111.1       0.0 I2/SIG_in_reg[27]/D      
-    0:00:39    4141.1      1.41     111.1       0.0 I2/SIG_in_reg[27]/D      
-    0:00:39    4141.9      1.41     111.1       0.0 I2/SIG_in_reg[24]/D      
-    0:00:40    4135.0      1.41     111.1       0.0                          
-    0:00:40    4135.0      1.41     111.1       0.0                          
-    0:00:41    4135.2      1.41     111.1       0.0                          
-    0:00:41    4135.5      1.41     111.1       0.0                          
+    0:01:07    5224.2      1.48     114.6       0.0                          
+    0:01:07    5224.2      1.48     114.6       0.0                          
+    0:01:07    5184.3      1.48     114.4       0.0                          
+    0:01:08    5170.0      1.48     114.4       0.0                          
+    0:01:08    5162.3      1.48     114.3       0.0                          
+    0:01:08    5159.6      1.48     114.3       0.0                          
+    0:01:08    5159.6      1.48     114.3       0.0                          
+    0:01:08    5159.6      1.48     114.3       0.0                          
+    0:01:08    5159.6      1.48     114.3       0.0                          
+    0:01:08    5152.4      1.48     114.4       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5150.8      1.48     114.3       0.0                          
+    0:01:08    5154.0      1.48     114.3       0.0 I2/SIG_in_reg[11]/D      
+    0:01:08    5157.5      1.47     114.2       0.0 I2/SIG_in_reg[11]/D      
+    0:01:09    5158.3      1.47     114.2       0.0 I2/SIG_in_reg[11]/D      
+    0:01:09    5158.8      1.47     114.2       0.0 I2/SIG_in_reg[25]/D      
+    0:01:09    5163.1      1.47     114.2       0.0 I2/SIG_in_reg[11]/D      
+    0:01:09    5163.6      1.47     114.2       0.0 I2/SIG_in_reg[11]/D      
+    0:01:09    5165.5      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:10    5166.3      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:10    5166.0      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:10    5166.8      1.47     114.2       0.0 I2/SIG_in_reg[11]/D      
+    0:01:10    5168.1      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:11    5169.4      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:11    5171.8      1.47     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:11    5171.6      1.46     114.1       0.0 I2/SIG_in_reg[11]/D      
+    0:01:11    5172.6      1.46     114.0       0.0 I2/SIG_in_reg[11]/D      
+    0:01:12    5176.4      1.46     114.0       0.0                          
+    0:01:12    5173.2      1.46     114.0       0.0                          
+    0:01:13    5168.4      1.46     114.0       0.0                          
+    0:01:13    5169.2      1.46     113.9       0.0                          
+    0:01:13    5170.2      1.46     113.9       0.0                          
+    0:01:13    5175.3      1.46     113.9       0.0                          
+    0:01:13    5177.4      1.46     113.9       0.0                          
+    0:01:14    5179.0      1.46     113.9       0.0                          
+    0:01:14    5179.8      1.46     113.9       0.0                          
+    0:01:14    5179.8      1.46     113.9       0.0                          
+    0:01:14    5184.1      1.46     113.9       0.0                          
+    0:01:14    5185.9      1.46     113.9       0.0                          
+    0:01:15    5189.9      1.46     113.8       0.0                          
+    0:01:15    5189.9      1.46     113.8       0.0                          
+    0:01:15    5191.8      1.46     113.8       0.0                          
+    0:01:15    5192.6      1.45     113.8       0.0                          
+    0:01:15    5192.6      1.45     113.8       0.0                          
+    0:01:15    5191.8      1.45     113.8       0.0                          
+    0:01:16    5191.0      1.45     113.8       0.0                          
+    0:01:16    5190.2      1.45     113.8       0.0                          
+    0:01:16    5190.5      1.45     113.8       0.0                          
+    0:01:16    5189.7      1.45     113.8       0.0                          
+    0:01:16    5189.4      1.45     113.7       0.0                          
+    0:01:16    5191.8      1.45     113.7       0.0                          
+    0:01:16    5193.4      1.45     113.7       0.0                          
+    0:01:17    5193.4      1.45     113.7       0.0                          
+    0:01:17    5194.4      1.45     113.6       0.0                          
+    0:01:17    5194.4      1.45     113.6       0.0                          
+    0:01:18    5194.7      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:18    5195.5      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:18    5196.0      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:18    5197.9      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:18    5199.5      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:19    5201.1      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:19    5203.5      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:19    5203.5      1.45     113.6       0.0 I2/SIG_in_reg[25]/D      
+    0:01:20    5205.6      1.45     113.6       0.0 I2/SIG_in_reg[11]/D      
+    0:01:20    5207.7      1.45     113.6       0.0                          
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 
 

@@ -8,15 +8,15 @@ Report : timing
         -max_paths 1
 Design : fpmul_pipeline
 Version: O-2018.06-SP4
-Date   : Tue Nov 19 16:21:30 2019
+Date   : Sun Dec 15 13:18:43 2019
 ****************************************
 
 Operating Conditions: typical   Library: NangateOpenCellLibrary
 Wire Load Model Mode: top
 
-  Startpoint: I1/A_SIG_reg[9]
+  Startpoint: I1/B_SIG_reg[6]
               (rising edge-triggered flip-flop clocked by MY_CLK)
-  Endpoint: I2/SIG_in_reg[17]
+  Endpoint: I2/SIG_in_reg[11]
             (rising edge-triggered flip-flop clocked by MY_CLK)
   Path Group: MY_CLK
   Path Type: max
@@ -29,43 +29,48 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  I1/A_SIG_reg[9]/CK (DFF_X1)                             0.00       0.00 r
-  I1/A_SIG_reg[9]/Q (DFF_X1)                              0.15       0.15 r
-  I2/mult_134/a[9] (fpmul_pipeline_DW_mult_uns_1)         0.00       0.15 r
-  I2/mult_134/U2865/ZN (INV_X1)                           0.06       0.21 f
-  I2/mult_134/U2863/ZN (INV_X1)                           0.10       0.31 r
-  I2/mult_134/U1535/ZN (XNOR2_X2)                         0.12       0.43 r
-  I2/mult_134/U2318/ZN (INV_X1)                           0.05       0.47 f
-  I2/mult_134/U2319/ZN (INV_X2)                           0.06       0.54 r
-  I2/mult_134/U2428/ZN (OAI22_X1)                         0.05       0.59 f
-  I2/mult_134/U604/S (FA_X1)                              0.14       0.73 r
-  I2/mult_134/U601/S (FA_X1)                              0.11       0.84 f
-  I2/mult_134/U599/CO (FA_X1)                             0.09       0.93 f
-  I2/mult_134/U588/S (FA_X1)                              0.13       1.07 r
-  I2/mult_134/U587/S (FA_X1)                              0.12       1.19 f
-  I2/mult_134/U1885/ZN (NAND2_X1)                         0.04       1.22 r
-  I2/mult_134/U2656/ZN (OAI21_X1)                         0.04       1.26 f
-  I2/mult_134/U1720/ZN (AOI21_X1)                         0.06       1.32 r
-  I2/mult_134/U1840/ZN (OAI21_X1)                         0.04       1.36 f
-  I2/mult_134/U2434/ZN (AOI21_X1)                         0.08       1.44 r
-  I2/mult_134/U2824/ZN (OAI21_X1)                         0.04       1.48 f
-  I2/mult_134/U2437/ZN (XNOR2_X1)                         0.06       1.53 f
-  I2/mult_134/product[37] (fpmul_pipeline_DW_mult_uns_1)
-                                                          0.00       1.53 f
-  I2/SIG_in_reg[17]/D (DFF_X1)                            0.01       1.54 f
-  data arrival time                                                  1.54
+  I1/B_SIG_reg[6]/CK (DFF_X2)                             0.00       0.00 r
+  I1/B_SIG_reg[6]/Q (DFF_X2)                              0.12       0.12 r
+  U2772/Z (XOR2_X1)                                       0.09       0.22 r
+  U4507/ZN (NAND3_X1)                                     0.04       0.26 f
+  U4508/ZN (OAI21_X1)                                     0.04       0.30 r
+  U4509/Z (XOR2_X1)                                       0.08       0.37 r
+  U4510/ZN (INV_X1)                                       0.03       0.40 f
+  U3284/ZN (XNOR2_X1)                                     0.07       0.47 f
+  U2833/Z (XOR2_X1)                                       0.08       0.55 f
+  U4563/ZN (NAND2_X1)                                     0.04       0.59 r
+  U4564/ZN (INV_X1)                                       0.02       0.61 f
+  U4593/ZN (OAI33_X1)                                     0.06       0.68 r
+  U4594/ZN (INV_X1)                                       0.03       0.70 f
+  U3258/ZN (AND2_X1)                                      0.04       0.74 f
+  U4600/ZN (AOI211_X1)                                    0.08       0.82 r
+  U4604/ZN (OAI22_X1)                                     0.04       0.86 f
+  U2469/ZN (XNOR2_X1)                                     0.06       0.92 f
+  U2910/ZN (XNOR2_X1)                                     0.07       0.99 f
+  I2/mult/add_69/B[23] (fpmul_pipeline_DW01_add_9)        0.00       0.99 f
+  I2/mult/add_69/U795/ZN (NAND2_X1)                       0.04       1.03 r
+  I2/mult/add_69/U651/ZN (OAI21_X1)                       0.04       1.07 f
+  I2/mult/add_69/U485/ZN (AOI21_X1)                       0.04       1.11 r
+  I2/mult/add_69/U799/ZN (OAI21_X1)                       0.03       1.14 f
+  I2/mult/add_69/U664/ZN (AOI21_X1)                       0.06       1.20 r
+  I2/mult/add_69/U663/Z (BUF_X1)                          0.07       1.27 r
+  I2/mult/add_69/U819/ZN (OAI21_X1)                       0.04       1.31 f
+  I2/mult/add_69/U786/ZN (XNOR2_X1)                       0.06       1.36 f
+  I2/mult/add_69/SUM[31] (fpmul_pipeline_DW01_add_9)      0.00       1.36 f
+  I2/SIG_in_reg[11]/D (DFF_X1)                            0.01       1.37 f
+  data arrival time                                                  1.37
 
   clock MY_CLK (rise edge)                                0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                      -0.07      -0.07
-  I2/SIG_in_reg[17]/CK (DFF_X1)                           0.00      -0.07 r
+  I2/SIG_in_reg[11]/CK (DFF_X1)                           0.00      -0.07 r
   library setup time                                     -0.04      -0.11
   data required time                                                -0.11
   --------------------------------------------------------------------------
   data required time                                                -0.11
-  data arrival time                                                 -1.54
+  data arrival time                                                 -1.37
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -1.65
+  slack (VIOLATED)                                                  -1.48
 
 
 1
