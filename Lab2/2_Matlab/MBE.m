@@ -14,7 +14,7 @@ Nb=24;
 %Mult_VMAT
 %debug
 
-debug=0;
+debug=1;
 % Funzioni
 [C_V] = f_C_V(Nb);
 

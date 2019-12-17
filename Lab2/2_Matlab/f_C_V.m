@@ -1,8 +1,5 @@
 function [C_V] = f_C_V(Nb)
-%	Summary of this function goes here
-%   Funzione del vettore di elementi per ogni colonna della piramide
-%   questo vettore si incrementa di livello in livello andando ad
-%   istanziare i vari FA e HA! 
+%	This function find vector with number of bits for every column
 
 C_V=zeros(2*Nb-1,1);
 C_V(0+1)=2; % i vettori in MATLAB partono da 1
