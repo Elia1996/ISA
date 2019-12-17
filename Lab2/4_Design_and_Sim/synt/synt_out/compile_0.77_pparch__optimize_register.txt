@@ -1,0 +1,201 @@
+Alib files are up-to-date.
+
+Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fpmul_pipeline'
+Information: The register 'I3/SIG_out_round_reg[2]' will be removed. (OPT-1207)
+Information: The register 'I3/SIG_out_round_reg[1]' will be removed. (OPT-1207)
+Information: The register 'I3/SIG_out_round_reg[0]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_reg[1]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_pp_reg[1]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_reg[0]' will be removed. (OPT-1207)
+Information: The register 'I2/SIG_in_pp_reg[0]' will be removed. (OPT-1207)
+Information: The register 'I1/B_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Mapping 'fpmul_pipeline_I2_add_157_2_DP_OP_290_6496_0'
+  Mapping 'fpmul_pipeline_DW01_add_0'
+  Mapping 'fpmul_pipeline_DW01_add_1'
+  Mapping 'fpmul_pipeline_DW01_inc_0'
+  Mapping 'fpmul_pipeline_DW02_mult_0'
+
+  Beginning Mapping Optimizations  (Ultra Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'fpmul_pipeline'. (DDB-72)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:25    4888.0      0.77      39.2       0.0                          
+    0:00:25    4888.0      0.77      39.2       0.0                          
+    0:00:25    4888.0      0.77      39.2       0.0                          
+    0:00:25    4888.0      0.77      39.2       0.0                          
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:30    4507.1      0.73      33.1       0.0                          
+    0:00:30    4507.1      0.73      33.1       0.0                          
+    0:00:30    4507.4      0.73      33.1       0.0                          
+    0:00:31    4507.4      0.73      33.1       0.0                          
+    0:00:31    4507.4      0.73      33.1       0.0                          
+    0:00:31    4507.4      0.73      33.1       0.0                          
+    0:00:31    4507.4      0.73      33.1       0.0                          
+    0:00:31    4507.4      0.73      33.1       0.0                          
+    0:00:42    4599.4      0.70      32.2       0.0                          
+    0:00:42    4599.4      0.70      32.2       0.0                          
+    0:00:43    4599.4      0.70      32.2       0.0                          
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:43    4599.4      0.70      32.2       0.0                          
+    0:00:43    4599.4      0.70      32.2       0.0                          
+    0:00:43    4599.4      0.70      32.2       0.0                          
+    0:00:45    4599.4      0.70      32.2       0.0                          
+    0:00:45    4599.4      0.70      32.2       0.0                          
+    0:00:45    4599.4      0.70      32.2       0.0                          
+    0:00:45    4599.4      0.70      32.2       0.0                          
+    0:00:46    4599.4      0.70      32.2       0.0                          
+    0:00:46    4599.4      0.70      32.2       0.0                          
+    0:00:46    4599.4      0.70      32.2       0.0                          
+    0:00:46    4599.4      0.70      32.2       0.0                          
+    0:00:47    4599.4      0.70      32.2       0.0                          
+    0:00:48    4599.4      0.70      32.2       0.0                          
+    0:00:48    4599.4      0.70      32.2       0.0                          
+    0:00:48    4599.4      0.70      32.2       0.0                          
+    0:00:50    4599.4      0.70      32.2       0.0                          
+    0:00:50    4599.4      0.70      32.2       0.0                          
+    0:00:51    4599.4      0.70      32.2       0.0                          
+    0:00:51    4599.4      0.70      32.2       0.0                          
+    0:00:54    4599.4      0.70      32.2       0.0                          
+    0:00:54    4599.4      0.70      32.2       0.0                          
+    0:00:54    4599.4      0.70      32.2       0.0                          
+    0:00:54    4599.4      0.70      32.2       0.0                          
+    0:00:55    4599.4      0.70      32.2       0.0                          
+    0:00:55    4599.4      0.70      32.2       0.0                          
+    0:00:57    4599.4      0.70      32.2       0.0                          
+    0:00:57    4599.4      0.70      32.2       0.0                          
+    0:00:59    4599.4      0.70      32.2       0.0                          
+    0:01:03    4500.2      0.68      31.4       0.0                          
+    0:01:04    4495.4      0.68      31.3       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:04    4495.4      0.68      31.3       0.0                          
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:01:08    4282.1      0.67      31.1       0.0                          
+    0:01:11    4282.1      0.67      31.1       0.0                          
+    0:01:16    4290.0      0.67      30.9       0.0                          
+    0:01:19    4290.0      0.66      30.9       0.0                          
+    0:01:19    4290.0      0.66      30.9       0.0                          
+    0:01:20    4290.0      0.66      30.9       0.0                          
+    0:01:20    4290.0      0.66      30.9       0.0                          
+    0:01:21    4290.0      0.66      30.9       0.0                          
+    0:01:21    4290.0      0.66      30.9       0.0                          
+    0:01:39    4355.2      0.65      30.6       0.0                          
+    0:01:39    4355.2      0.65      30.6       0.0                          
+    0:01:44    4355.2      0.65      30.6       0.0                          
+    0:01:45    4357.9      0.64      30.6       0.0                          
+    0:01:48    4369.6      0.64      30.6       0.0                          
+    0:01:48    4369.6      0.64      30.6       0.0                          
+    0:01:53    4369.6      0.64      30.6       0.0                          
+    0:01:53    4369.6      0.64      30.6       0.0                          
+    0:01:55    4369.6      0.64      30.6       0.0                          
+    0:01:55    4369.6      0.64      30.6       0.0                          
+    0:01:59    4369.6      0.64      30.6       0.0                          
+    0:02:00    4369.6      0.64      30.6       0.0                          
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
