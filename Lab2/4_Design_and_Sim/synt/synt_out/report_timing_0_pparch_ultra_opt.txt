@@ -1,0 +1,49 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fpmul_pipeline
+Version: O-2018.06-SP4
+Date   : Wed Dec 18 00:58:39 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: MY_CLK_r_REG24_S6
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: FP_Z[0] (output port clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpmul_pipeline     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MY_CLK (rise edge)                 0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  MY_CLK_r_REG24_S6/CK (DFF_X1)            0.00       0.00 r
+  MY_CLK_r_REG24_S6/Q (DFF_X1)             0.20       0.20 r
+  U2362/ZN (OAI22_X1)                      0.07       0.27 f
+  FP_Z[0] (out)                            0.02       0.30 f
+  data arrival time                                   0.30
+
+  clock MY_CLK (rise edge)                 0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                       -0.07      -0.07
+  output external delay                   -0.50      -0.57
+  data required time                                 -0.57
+  -----------------------------------------------------------
+  data required time                                 -0.57
+  data arrival time                                  -0.30
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.87
+
+
+1

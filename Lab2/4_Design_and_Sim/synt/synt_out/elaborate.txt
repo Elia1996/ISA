@@ -1,9 +1,9 @@
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
 Running PRESTO HDLC
 Presto compilation completed successfully.
-Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/fpmul_pipeline.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/fpmul_pipeline.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/fpmul_pipeline.db'. (DDB-24)
-Warning: Overwriting design file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/fpmul_pipeline.db'. (DDB-24)
 Elaborated 1 design.
 Current design is now 'fpmul_pipeline'.
 Information: Building the design 'register_nbit' instantiated from design 'fpmul_pipeline' with

@@ -1,0 +1,209 @@
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
+
+Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'fpmul_pipeline'
+
+Loaded alib file './alib-52/NangateOpenCellLibrary_typical_ecsm_nowlm.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fpmul_pipeline'
+Information: HDL directives for resource sharing/implementation are ignored. (HDL-413)
+Information: The register 'I1/A_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/A_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'I1/B_SIG_reg[24]' is a constant and will be removed. (OPT-1206)
+ Implement Synthetic for 'fpmul_pipeline'.
+Information: Added key list 'DesignWare' to design 'fpmul_pipeline'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: compile falsified 231 infeasible paths. (OPT-1720)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:36    4233.1      1.56     123.1       0.0                           86178.1328
+  Mapping 'fpmul_pipeline_DW02_mult_2'
+  Mapping 'fpmul_pipeline_DW01_add_1'
+    0:00:38    4254.1      1.65     124.4       0.0                           86999.2969
+    0:00:39    4250.1      1.59     123.4       0.0                           86855.5781
+    0:00:52    4547.8      1.43     120.1       0.0                           97726.8047
+    0:00:52    4547.8      1.43     120.1       0.0                           97726.8047
+    0:00:52    4547.8      1.43     120.1       0.0                           97726.8047
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:01    4407.1      1.44     120.1       0.0                           92874.5703
+    0:01:02    4407.1      1.44     120.1       0.0                           92874.5703
+    0:01:02    4407.1      1.44     120.1       0.0                           92874.5703
+    0:01:05    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:05    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:05    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:05    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:06    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:06    4428.9      1.44     119.9       0.0                           93640.9062
+    0:01:08    4457.1      1.42     119.6       0.0                           94667.6875
+    0:01:08    4457.1      1.42     119.6       0.0                           94667.6875
+    0:01:11    4475.7      1.42     119.5       0.0                           95275.5547
+    0:01:11    4475.7      1.42     119.5       0.0                           95275.5547
+    0:01:15    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:15    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:16    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:16    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:16    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:16    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:16    4479.7      1.42     119.5       0.0                           95434.0938
+    0:01:20    4480.0      1.39     118.9       0.0 I2/SIG_in_pp_reg[16]/D    95042.2188
+    0:01:20    4477.8      1.39     118.9       0.0                           94949.1953
+    0:01:23    4486.6      1.39     118.9       0.0                           95236.8125
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:23    4486.6      1.39     118.9       0.0                           95236.8125
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:01:34    4398.0      1.37     118.4       0.0 I2/SIG_in_pp_reg[23]/D    91693.7188
+    0:01:37    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:39    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:39    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:40    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:40    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:42    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:42    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:42    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:42    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:43    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:43    4418.0      1.36     118.3       0.0                           92297.4609
+    0:01:52    4482.6      1.35     118.1       0.0                           94664.9609
+    0:01:52    4482.6      1.35     118.1       0.0                           94664.9609
+    0:01:53    4481.8      1.35     118.1       0.0                           94648.4297
+    0:01:53    4481.8      1.35     118.1       0.0                           94648.4297
+    0:01:55    4495.7      1.35     118.0       0.0                           95208.3047
+    0:01:55    4495.7      1.35     118.0       0.0                           95208.3047
+    0:01:58    4496.2      1.35     118.0       0.0                           95230.6172
+    0:01:58    4496.2      1.35     118.0       0.0                           95230.6172
+    0:01:58    4496.2      1.35     118.0       0.0                           95230.6172
+    0:01:58    4496.2      1.35     118.0       0.0                           95230.6172
+    0:02:01    4496.2      1.35     118.0       0.0                           95230.6172
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:01    4496.2      1.35     118.0       0.0                           95230.6172
+    0:02:02    4426.5      1.35     122.6       0.0                           92137.2734
+    0:02:02    4419.3      1.35     122.6       0.0                           92009.9688
+    0:02:02    4419.3      1.35     122.6       0.0                           92009.9688
+    0:02:03    4420.9      1.35     120.3       0.0                           92120.8516
+    0:02:04    4413.2      1.35     120.3       0.0                           91941.6797
+    0:02:05    4431.3      1.35     120.2       0.0                           92658.3359
+    0:02:06    4431.3      1.35     120.2       0.0                           92658.3359
+    0:02:06    4431.3      1.35     120.2       0.0                           92658.3359
+    0:02:06    4429.4      1.35     120.2       0.0                           92594.8438
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+1

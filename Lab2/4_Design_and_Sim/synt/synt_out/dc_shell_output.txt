@@ -1,0 +1,201 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/isa22/.synopsys_dv_prefs.tcl
+source variables.scr
+# This file analyze, elaborate and compile vhdl file
+# -f indica il formato dei file
+# -lib indica dove mettere i file su cui lavora sysnopsys
+analyze -f vhdl -lib WORK {../src/common/fpnormalize_fpnormalize.vhd ../src/common/fpround_fpround.vhd ../src/common/packfp_packfp.vhd ../src/common/unpackfp_unpackfp.vhd ../src/multiplier/fpmul_pipeline.vhd ../src/multiplier/fpmul_stage1.vhd ../src/multiplier/fpmul_stage2.vhd ../src/multiplier/fpmul_stage3.vhd ../src/multiplier/fpmul_stage4.vhd ../src/multiplier/register_nbit.vhd } 
+Running PRESTO HDLC
+-- Compiling Source File ../src/common/fpnormalize_fpnormalize.vhd
+Compiling Entity Declaration FPNORMALIZE
+Compiling Architecture FPNORMALIZE of FPNORMALIZE
+-- Compiling Source File ../src/common/fpround_fpround.vhd
+Compiling Entity Declaration FPROUND
+Compiling Architecture FPROUND of FPROUND
+-- Compiling Source File ../src/common/packfp_packfp.vhd
+Compiling Entity Declaration PACKFP
+Compiling Architecture PACKFP of PACKFP
+-- Compiling Source File ../src/common/unpackfp_unpackfp.vhd
+Compiling Entity Declaration UNPACKFP
+Compiling Architecture UNPACKFP of UNPACKFP
+-- Compiling Source File ../src/multiplier/fpmul_pipeline.vhd
+Compiling Entity Declaration FPMUL_PIPELINE
+Compiling Architecture PIPELINE of FPMUL_PIPELINE
+-- Compiling Source File ../src/multiplier/fpmul_stage1.vhd
+Compiling Entity Declaration FPMUL_STAGE1
+Compiling Architecture STRUCT of FPMUL_STAGE1
+-- Compiling Source File ../src/multiplier/fpmul_stage2.vhd
+Compiling Entity Declaration FPMUL_STAGE2
+Compiling Architecture STRUCT of FPMUL_STAGE2
+-- Compiling Source File ../src/multiplier/fpmul_stage3.vhd
+Compiling Entity Declaration FPMUL_STAGE3
+Compiling Architecture STRUCT of FPMUL_STAGE3
+-- Compiling Source File ../src/multiplier/fpmul_stage4.vhd
+Compiling Entity Declaration FPMUL_STAGE4
+Compiling Architecture STRUCT of FPMUL_STAGE4
+-- Compiling Source File ../src/multiplier/register_nbit.vhd
+Compiling Entity Declaration REGISTER_NBIT
+Compiling Architecture BEHAVIOR of REGISTER_NBIT
+Presto compilation completed successfully.
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
+1
+# preserviamo i nomi delle netlist della rete
+set power_preserve_rtl_hier_names true
+true
+# elaborazione dei file, viene data la top entity
+elaborate $top_entity -arch pipeline -lib WORK > $out_dir/elaborate.txt
+###  Applico le limitazioni 
+# creo il clock di sistema, in ns
+create_clock -name MY_CLK -period $period clk
+Error: can't read "period": no such variable
+	Use error_info for more info. (CMD-013)
+# poichè il clock è un segnale particolare
+# setto la proprietà don't touch
+# ciò è fatto perchè col comando ungroup vengono modificate tutte
+# le celle tranne quelle dont_touch
+set_dont_touch_network MY_CLK
+Warning: Can't find object 'MY_CLK' in design 'fpmul_pipeline'. (UID-95)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+0
+# setto l'incertezza del clock
+set_clock_uncertainty 0.07 [get_clocks MY_CLK]
+Warning: Can't find clock 'MY_CLK' in design 'fpmul_pipeline'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+# setto in ritardo di tutti gli ingressi, che si suppone uguale
+set_input_delay 0.5 -max -clock MY_CLK [ remove_from_collection [all_inputs] clk]
+Warning: Can't find clock 'MY_CLK' in design 'fpmul_pipeline'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+# setto il ritardo di tutte le uscite
+set_output_delay 0.5 -max -clock MY_CLK [all_outputs]
+Warning: Can't find clock 'MY_CLK' in design 'fpmul_pipeline'. (UID-95)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+0
+# setto il carico di ciascun uscita che si suppone uguale a quello 
+#  di un buffer
+set OLOAD [load_of NangateOpenCellLibrary/BUF_X4/A] 
+3.40189
+set_load $OLOAD [all_outputs]
+1
+#set implementation of Mutiplier as PPARCH adder
+ungroup -all -flatten
+Information: Updating graph... (UID-83)
+1
+set_implementation DW02_mult/pparch [find cell *mult*]
+1
+# compilo
+#compile -exact_map > $out_dir/compile$ext.txt
+compile_ultra -exact_map > $out_dir/compile_ultra$ext.txt
+Error: can't read "ext": no such variable
+	Use error_info for more info. (CMD-013)
+# retiming dei registri con compile_ultra
+#optimize_registers
+report_resources > $out_dir/report_resources$ext.txt
+Error: can't read "ext": no such variable
+	Use error_info for more info. (CMD-013)
+report_timing > $out_dir/report_timing$ext.txt
+Error: can't read "ext": no such variable
+	Use error_info for more info. (CMD-013)
+report_area > $out_dir/report_area$ext.txt
+Error: can't read "ext": no such variable
+	Use error_info for more info. (CMD-013)
+# salvo la sintesi corrente
+write_partition -type post -destination synt_db
+Information: Use of command 'write_partition' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Current design is 'fpmul_pipeline'.
+Information: Use of command 'shell_is_in_xg_mode' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Information: Use of command 'acs_get_path' is not recommended. This command will be obsolete in a future release. (INFO-103)
+Writing ddc file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc'.
+1
+quit
+
+Thank you...
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/isa22/.synopsys_dv_prefs.tcl
+source variables.scr
+# script per salvare la simulazione in modo da effettuare
+# poi il calcolo della potenza con la switching activity
+# carico l'ultima sintesi
+read_file -format ddc {~/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc}
+Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Reading ddc file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/synt/synt_db/db/post_compile/fpmul_pipeline.ddc'.
+Loaded 1 design.
+Current design is 'fpmul_pipeline'.
+fpmul_pipeline
+# metto tutti i blocchi allo stesso livello di gerarchia
+ungroup -all -flatten
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+# per esportare la netlist in verilog dobbiamo cambiare i
+# nomi secondo le regole del verilog
+change_names -hierarchy -rules verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+# creiamo il file di ritardi della netlist
+write_sdf ../netlist/$top_entity.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Error: Cannot write the '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/netlist/fpmul_pipeline.sdf' file. (UID-29)
+0
+# scriviamo la netlist
+write -f verilog -hierarchy -output ../netlist/$top_entity.v
+Error: Can't open export file '/home/isa22/Desktop/ISA/Lab2/4_Design_and_Sim/netlist/fpmul_pipeline.v'. (EXPT-4)
+Error: Write command failed. (UID-25)
+0
+# salviamo i limiti
+write_sdc ../netlist/$top_entity.sdc
+Error: Cannot write the '../netlist/fpmul_pipeline.sdc' script file. (UID-270)
+0
+# usciamo da synopsys
+# questo dev'essere fatto ogni volta perchè se non si esce
+# le nuove simulazioni vengono fatte anche in base a quelle vecchie
+# e non sono più riproducibili.
+quit
+
+Thank you...

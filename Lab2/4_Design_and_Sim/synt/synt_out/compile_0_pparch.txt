@@ -1,4 +1,13 @@
-Alib files are up-to-date.
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.4 |     *     |
+============================================================================
+
 
 Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
@@ -36,56 +45,51 @@ Information: Updating design information... (UID-85)
 
   Beginning Implementation Selection
   ----------------------------------
-  Mapping 'fpmul_pipeline_I2_add_157_2_DP_OP_288_6496_0'
-  Mapping 'fpmul_pipeline_DW01_add_0'
-  Mapping 'fpmul_pipeline_DW01_add_1'
-  Mapping 'fpmul_pipeline_DW01_inc_0'
+  Processing 'fpmul_pipeline_DW01_add_0'
+  Processing 'fpmul_pipeline_DW01_add_1'
+  Processing 'fpmul_pipeline_DW01_inc_0'
   Mapping 'fpmul_pipeline_DW02_mult_0'
+  Processing 'fpmul_pipeline_DW01_add_2'
 
-  Beginning Mapping Optimizations  (Ultra Medium effort)
+  Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
-Information: Added key list 'DesignWare' to design 'fpmul_pipeline'. (DDB-72)
-Information: compile falsified 290 infeasible paths. (OPT-1720)
-  Mapping Optimization (Phase 2)
+Information: compile falsified 292 infeasible paths. (OPT-1720)
+  Mapping Optimization (Phase 1)
 
                                   TOTAL                                      
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:40    5051.1      1.55     124.4       1.8                          
-    0:00:40    5051.1      1.55     124.4       1.8                          
-    0:00:40    5051.1      1.55     124.4       1.8                          
-    0:00:40    5051.1      1.55     124.4       1.8                          
-  Global Optimization (Phase 1)
-  Global Optimization (Phase 2)
-  Global Optimization (Phase 3)
-  Global Optimization (Phase 4)
-  Global Optimization (Phase 5)
-  Global Optimization (Phase 6)
-  Global Optimization (Phase 7)
-  Global Optimization (Phase 8)
-  Global Optimization (Phase 9)
-  Global Optimization (Phase 10)
-  Global Optimization (Phase 11)
-  Global Optimization (Phase 12)
-  Global Optimization (Phase 13)
-  Global Optimization (Phase 14)
-  Global Optimization (Phase 15)
-  Global Optimization (Phase 16)
-  Global Optimization (Phase 17)
-  Global Optimization (Phase 18)
-  Global Optimization (Phase 19)
-  Global Optimization (Phase 20)
-  Global Optimization (Phase 21)
-  Global Optimization (Phase 22)
-  Global Optimization (Phase 23)
-  Global Optimization (Phase 24)
-  Global Optimization (Phase 25)
-  Global Optimization (Phase 26)
-  Global Optimization (Phase 27)
-  Global Optimization (Phase 28)
-  Global Optimization (Phase 29)
-  Global Optimization (Phase 30)
+    0:00:16    4986.2      1.55     128.6      65.1                          
+    0:00:16    4986.2      1.55     128.6      65.1                          
+    0:00:16    4986.2      1.55     128.6      65.1                          
+    0:00:16    4986.2      1.55     128.6      65.1                          
+    0:00:16    4986.2      1.55     128.6      65.1                          
+    0:00:18    4282.1      1.61     123.8       0.2                          
+    0:00:18    4277.3      1.55     123.1       0.2                          
+    0:00:18    4276.7      1.52     122.5       0.2                          
+    0:00:19    4279.1      1.52     122.4       0.2                          
+    0:00:19    4279.4      1.51     122.2       0.2                          
+    0:00:19    4281.0      1.50     122.2       0.2                          
+    0:00:19    4281.3      1.50     122.2       0.2                          
+    0:00:19    4282.1      1.50     122.1       0.2                          
+    0:00:20    4282.1      1.50     122.1       0.2                          
+    0:00:20    4282.1      1.50     122.1       0.2                          
+    0:00:20    4282.1      1.50     122.1       0.2                          
+    0:00:20    4283.7      1.50     120.5       0.0                          
+    0:00:20    4283.7      1.50     120.5       0.0                          
+    0:00:20    4283.7      1.50     120.5       0.0                          
+    0:00:20    4283.7      1.50     120.5       0.0                          
+    0:00:20    4290.6      1.48     120.2       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:21    4322.0      1.48     120.0       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:21    4325.7      1.47     119.9       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:22    4327.3      1.47     119.8       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:22    4331.8      1.47     119.6       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:23    4332.9      1.46     119.4       0.0 I2/SIG_in_pp_reg[23]/D   
+    0:00:23    4338.5      1.46     119.3       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:23    4340.1      1.46     119.3       0.0 I2/SIG_in_pp_reg[26]/D   
+    0:00:24    4340.9      1.45     119.3       0.0 I2/SIG_in_pp_reg[23]/D   
+    0:00:24    4340.6      1.45     119.3       0.0 I2/SIG_in_pp_reg[18]/D   
 
 
 
@@ -96,50 +100,38 @@ Information: compile falsified 290 infeasible paths. (OPT-1720)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:47    4653.1      1.54     117.3       1.6                          
-    0:00:47    4653.1      1.54     117.3       1.6                          
-    0:00:52    4654.5      1.53     117.2       1.6                          
-    0:00:53    4654.5      1.53     117.2       1.6                          
-    0:00:53    4654.5      1.53     117.2       1.6                          
-    0:00:53    4654.5      1.53     117.2       1.6                          
-    0:00:58    4654.5      1.53     117.2       1.6                          
-    0:00:58    4654.5      1.53     117.2       1.6                          
-    0:01:11    4707.4      1.51     116.5       0.0                          
-    0:01:11    4707.4      1.51     116.5       0.0                          
-    0:01:15    4707.4      1.51     116.5       0.0                          
-
-  Beginning Delay Optimization
-  ----------------------------
-    0:01:15    4707.4      1.51     116.5       0.0                          
-    0:01:16    4707.4      1.51     116.5       0.0                          
-    0:01:16    4707.4      1.51     116.5       0.0                          
-    0:01:18    4707.4      1.51     116.5       0.0                          
-    0:01:19    4707.4      1.51     116.5       0.0                          
-    0:01:19    4707.4      1.51     116.5       0.0                          
-    0:01:19    4707.4      1.51     116.5       0.0                          
-    0:01:22    4707.4      1.51     116.5       0.0                          
-    0:01:23    4707.4      1.51     116.5       0.0                          
-    0:01:23    4707.4      1.51     116.5       0.0                          
-    0:01:23    4707.4      1.51     116.5       0.0                          
-    0:01:26    4707.4      1.51     116.5       0.0                          
-    0:01:26    4707.4      1.51     116.5       0.0                          
-    0:01:26    4707.4      1.51     116.5       0.0                          
-    0:01:26    4707.4      1.51     116.5       0.0                          
-    0:01:29    4707.4      1.51     116.5       0.0                          
-    0:01:29    4707.4      1.51     116.5       0.0                          
-    0:01:30    4707.4      1.51     116.5       0.0                          
-    0:01:30    4707.4      1.51     116.5       0.0                          
-    0:01:31    4707.4      1.51     116.5       0.0                          
-    0:01:31    4707.4      1.51     116.5       0.0                          
-    0:01:32    4707.4      1.51     116.5       0.0                          
-    0:01:32    4707.4      1.51     116.5       0.0                          
-    0:01:34    4707.4      1.51     116.5       0.0                          
-    0:01:34    4707.4      1.51     116.5       0.0                          
-    0:01:35    4707.4      1.51     116.5       0.0                          
-    0:01:35    4707.4      1.51     116.5       0.0                          
-    0:01:37    4707.4      1.51     116.5       0.0                          
-    0:01:47    4525.2      1.46     115.2       0.0                          
-    0:01:48    4515.9      1.46     115.0       0.0                          
+    0:00:24    4340.6      1.45     119.3       0.0                          
+    0:00:24    4342.2      1.45     119.4       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:25    4342.4      1.45     119.4       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:25    4345.9      1.45     119.3       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:25    4348.3      1.44     119.1       0.0 I2/SIG_in_pp_reg[23]/D   
+    0:00:26    4354.7      1.44     119.1       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:26    4358.1      1.44     119.1       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:27    4359.7      1.44     119.0       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:27    4360.0      1.44     119.0       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:27    4361.9      1.43     119.0       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:28    4365.3      1.43     119.0       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:28    4369.8      1.43     118.9       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:29    4369.3      1.43     118.9       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:29    4371.2      1.43     118.8       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:30    4371.2      1.43     118.8       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:30    4373.3      1.43     118.8       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:30    4374.9      1.43     118.8       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:31    4375.4      1.42     118.8       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:31    4375.7      1.42     118.7       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:31    4378.9      1.42     118.7       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:32    4378.9      1.42     118.6       0.0                          
+    0:00:32    4378.9      1.42     118.6       0.0                          
+    0:00:33    4378.9      1.42     118.6       0.0                          
+    0:00:33    4380.2      1.42     118.6       0.0                          
+    0:00:33    4380.5      1.42     118.5       0.0                          
+    0:00:33    4381.0      1.42     118.5       0.0                          
+    0:00:34    4384.5      1.42     118.4       0.0                          
+    0:00:34    4385.8      1.42     118.4       0.0                          
+    0:00:35    4386.3      1.42     118.4       0.0                          
+    0:00:35    4388.7      1.42     118.4       0.0                          
+    0:00:35    4387.4      1.42     118.2       0.0                          
+    0:00:35    4388.2      1.42     118.2       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -149,48 +141,34 @@ Information: compile falsified 290 infeasible paths. (OPT-1720)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:48    4515.9      1.46     115.0       0.0                          
-  Global Optimization (Phase 31)
-  Global Optimization (Phase 32)
-  Global Optimization (Phase 33)
-  Global Optimization (Phase 34)
-  Global Optimization (Phase 35)
-  Global Optimization (Phase 36)
-  Global Optimization (Phase 37)
-  Global Optimization (Phase 38)
-  Global Optimization (Phase 39)
-  Global Optimization (Phase 40)
-  Global Optimization (Phase 41)
-  Global Optimization (Phase 42)
-  Global Optimization (Phase 43)
-  Global Optimization (Phase 44)
-  Global Optimization (Phase 45)
-  Global Optimization (Phase 46)
-  Global Optimization (Phase 47)
-  Global Optimization (Phase 48)
-  Global Optimization (Phase 49)
-    0:02:04    4302.0      1.43     114.6       0.0 I2/SIG_in_pp_reg[27]/D   
-    0:02:08    4306.3      1.43     114.5       0.0                          
-    0:02:13    4306.5      1.43     114.5       0.0                          
-    0:02:18    4314.5      1.43     114.3       0.0                          
-    0:02:24    4314.5      1.43     114.3       0.0                          
-    0:02:24    4314.5      1.43     114.3       0.0                          
-    0:02:24    4314.5      1.43     114.3       0.0                          
-    0:02:24    4314.5      1.43     114.3       0.0                          
-    0:02:26    4314.5      1.43     114.3       0.0                          
-    0:02:26    4314.5      1.43     114.3       0.0                          
-    0:02:28    4315.3      1.43     114.3       0.0                          
-    0:02:28    4315.3      1.43     114.3       0.0                          
-    0:02:32    4315.3      1.43     114.3       0.0                          
-    0:02:32    4315.3      1.43     114.3       0.0                          
-    0:02:33    4315.3      1.43     114.3       0.0                          
-    0:02:33    4315.3      1.43     114.3       0.0                          
-    0:02:36    4315.3      1.43     114.3       0.0                          
-    0:02:37    4315.3      1.43     114.3       0.0                          
-    0:02:37    4315.3      1.43     114.3       0.0                          
-    0:02:37    4315.3      1.43     114.3       0.0                          
-    0:02:39    4315.3      1.43     114.3       0.0                          
-    0:02:39    4315.3      1.43     114.3       0.0                          
+    0:00:35    4388.2      1.42     118.2       0.0                          
+    0:00:35    4388.2      1.42     118.2       0.0                          
+    0:00:36    4360.8      1.42     118.0       0.0                          
+    0:00:36    4347.0      1.42     118.0       0.0                          
+    0:00:37    4340.3      1.42     117.9       0.0                          
+    0:00:37    4337.1      1.42     117.9       0.0                          
+    0:00:37    4336.6      1.42     117.9       0.0                          
+    0:00:37    4336.6      1.42     117.9       0.0                          
+    0:00:37    4336.6      1.42     117.9       0.0                          
+    0:00:37    4333.4      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:37    4332.3      1.42     117.9       0.0                          
+    0:00:38    4337.1      1.41     117.9       0.0 I2/SIG_in_pp_reg[18]/D   
+    0:00:38    4339.3      1.41     117.8       0.0 I2/SIG_in_pp_reg[27]/D   
+    0:00:38    4343.8      1.41     118.0       0.0 I2/SIG_in_pp_reg[26]/D   
+    0:00:39    4345.6      1.41     118.1       0.0 I2/SIG_in_pp_reg[25]/D   
+    0:00:40    4344.0      1.41     118.1       0.0                          
+    0:00:40    4341.4      1.41     118.1       0.0                          
+    0:00:40    4344.0      1.41     118.1       0.0                          
+    0:00:41    4344.0      1.41     118.1       0.0                          
+    0:00:41    4343.5      1.41     118.1       0.0                          
+    0:00:41    4343.5      1.41     118.1       0.0                          
+    0:00:42    4345.4      1.41     118.1       0.0                          
+    0:00:43    4345.6      1.41     118.1       0.0                          
 Loading db file '/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db'
 
 

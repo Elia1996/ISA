@@ -33,7 +33,8 @@ ungroup -all -flatten
 set_implementation DW02_mult/pparch [find cell *mult*]
 
 # compilo
-compile -exact_map > $out_dir/compile$ext.txt
+#compile -exact_map > $out_dir/compile$ext.txt
+compile_ultra -exact_map > $out_dir/compile_ultra$ext.txt
 
 # retiming dei registri con compile_ultra
 optimize_registers
